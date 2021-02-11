@@ -38,7 +38,7 @@ const Banner = () => {
             variants={variants}
             transition={{ ease: "easeOut", duration: 0.8, delay: 1 }}
           >
-            It's time to make your business <span>stand out</span>
+            A new dawn <br/> <span>For your business</span>
           </motion.h1>
           <motion.p
             initial="hidden"
@@ -46,13 +46,12 @@ const Banner = () => {
             variants={variants}
             transition={{ ease: "easeOut", duration: 0.8, delay: 1.5 }}
           >
-            Startup is here to help you achieve your business and personal
-            goals, all through a stylish theme
+            Prophetic solutions are here to help you make the most out of the digital age
           </motion.p>
           <Link to="about" smooth={true} duration={500}>
             <span className="sr-only">Jump to about</span>
             <Button
-              cta="Learn More"
+              cta="Control the future"
               label="Banner Learn More"
               anchor={true}
               href="linking"
