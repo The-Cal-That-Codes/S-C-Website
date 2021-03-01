@@ -47,11 +47,11 @@ export const socialMenuItems = [
 
 export const footerMenuItems = [
   {
-    path: "/privacy",
-    title: "privacy",
+    path: "",
+    title: "",
   },
   {
-    path: "/cookies",
-    title: "cookies",
+    path: "",
+    title: "c",
   },
 ]
