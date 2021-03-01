@@ -1,5 +1,5 @@
 import React from "react"
-import { DiGithubBadge } from "react-icons/di"
+// import { DiGithubBadge } from "react-icons/di"
 import { FaHtml5, FaCss3, FaJsSquare, FaReact } from "react-icons/fa"
 
 export const mainMenuItems = [
@@ -45,13 +45,13 @@ export const socialMenuItems = [
  
 ]
 
-// export const footerMenuItems = [
-//   {
-//     path: "/privacy",
-//     title: "privacy",
-//   },
-//   {
-//     path: "/cookies",
-//     title: "cookies",
-//   },
-// ]
+export const footerMenuItems = [
+  {
+    path: "/privacy",
+    title: "privacy",
+  },
+  {
+    path: "/cookies",
+    title: "cookies",
+  },
+]
