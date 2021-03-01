@@ -17,6 +17,7 @@ const Perk = ({ img, alt, title, content }) => {
   }, [controls, inView])
   return (
     <motion.div
+    className="perkmotiondiv"
       ref={ref}
       animate={controls}
       initial="hidden"
@@ -24,10 +25,10 @@ const Perk = ({ img, alt, title, content }) => {
         visible: { opacity: 1, y: 0 },
         hidden: { opacity: 0, y: 25 },
       }}
-      transition={{ ease: "easeOut", duration: 1.25, delay: 0.35 }}
+      transition={{ ease: "easeOut", duration: 1, delay: 1.25 }}
     >
       <PerkWrapper className="perk">
-        <img src={img} alt={alt} />
+        {/* <img src={img} alt={alt} /> */}
         <h3>{title}</h3>
         <p>{content}</p>
       </PerkWrapper>
@@ -38,19 +39,70 @@ const Perk = ({ img, alt, title, content }) => {
 const PerkWrapper = styled.article`
   padding: 1rem;
   max-width: 260px;
-  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+ 
+   
+  @media (max-width: 1450px){
+    padding-top: 0px;
+  }
 
-  img {
-    box-sizing: border-box;
-    width: 100%;
+  @media(max-width: 600px){
+    max-width: 30vw;
+    padding: 0.5rem;
+    float: left;
+    animation: none !important;
+    transition: none !important;
 
-    @media (min-width: 992px) {
-      padding: 0 1.75rem;
+    
+  }
+
+  @media(max-width: 376px){
+    max-width: 30vw;
+    margin:1vw;
+    padding: 0px;
+  }
+
+  
+  h3 {
+    font-weight: 400;
+    color:#f9fbfd;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    @media (max-width: 1450px){
+      margin: 1vh;
+      margin-bottom: 0px;
+    }
+
+    @media(max-width: 600px){
+      font-size: 16px;
+      width: auto;
+      opacity: 1 !important; 
+    }
+    @media (max-width: 413px){
+      margin-bottom: 1px;
+      
     }
   }
 
-  h3 {
-    font-weight: 400;
+  p{
+     
+  @media (max-width: 1450px){
+    margin: 1vh;
+    margin-top: 0px;
+  }
+
+    @media(max-width: 600px){
+      font-size: 14px;
+      margin-top: 0px;
+      opacity: 1 !important; 
+    }
+    @media(max-width: 376px){
+      margin: 0px;
+      max-width: 30vw;
+      margin-bottom: 2vh;
+    }
   }
 `
 

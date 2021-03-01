@@ -1,42 +1,48 @@
 import React from "react"
 import { DiGithubBadge } from "react-icons/di"
-import { FaTwitter, FaLinkedin } from "react-icons/fa"
+import { FaHtml5, FaCss3, FaJsSquare, FaReact } from "react-icons/fa"
 
 export const mainMenuItems = [
   {
-    path: "/",
-    title: "home",
+    path: "",
+    title: "",
   },
   {
-    path: "/about",
-    title: "about",
+    path: "packages",
+    title: "Services",
   },
   {
-    path: "/packages",
-    title: "packages",
+    path: "perks",
+    title: "Benefits",
   },
   {
-    path: "/contact",
-    title: "contact",
+    path: "about",
+    title: "About",
   },
 ]
 
 export const socialMenuItems = [
   {
-    icon: <FaLinkedin />,
-    url: "https://www.linkedin.com/in/morgan-baker-developer-inverness",
-    name: "LinkedIn",
+    icon: <FaHtml5 />,
+    // url: "",
+    name: "html5",
   },
   {
-    icon: <FaTwitter />,
-    url: "https://www.twitter.com",
-    name: "Twitter",
+    icon: <FaCss3 />,
+    // url: ,
+    name: "Css3",
   },
   {
-    icon: <DiGithubBadge />,
-    url: "https://github.com/bagseye",
-    name: "GitHub",
+    icon: <FaJsSquare />,
+    // url: ,
+    name: "JS",
   },
+  {
+    icon: <FaReact />,
+    // url: "",
+    name: "React",
+  },
+ 
 ]
 
 // export const footerMenuItems = [

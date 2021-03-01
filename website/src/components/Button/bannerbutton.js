@@ -1,15 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 
-const Button = props => {
+const BannerButton = props => {
   return (
     <>
       {props.anchor ? (
         <ButtonWrapper
           aria-label={props.label}
-          className="anchor"
-          as="a"
-          href={props.href}
+          className={props.className}
+          onClick={props.onClick}
         >
           {props.cta}
         </ButtonWrapper>
@@ -30,30 +29,32 @@ const ButtonWrapper = styled.button`
   text-align: center;
   line-height: 50px;
   color: #fff;
-  font-size: 0.85em;
-  letter-spacing: 0.25em;
+  font-size: 0.85rem;
+  letter-spacing: 0.25rem;
   text-transform: uppercase;
   text-decoration: none;
   box-sizing: border-box;
-  background: linear-gradient(90deg, #581534, #ca3e33, #ffeb3b, #581534 );
+  background: rgb(1,1,1,0);
   background-size: 400%;
-  border-radius: 30px;
-  border: none;
+  border-radius: 15px;
+  border: 2px solid rgba(255,255,255,0.8);
   z-index: 1;
-  
-@media(max-width: 1050px){
-  transform: scale(1.5);
-}
 
-@media (max-width: 768px){
-  margin-bottom: 10vh;
-}
+  @media(max-width: 1050px){
+    transform: scale(1.5);
+    
+  }
+
+  @media(max-width: 800px){
+    margin-top: 5vh !important;
+  }
 
 
   &:hover {
     cursor: pointer;
-    animation: animate 8s linear infinite;
     scale: 1.015;
+    animation: animate 8s linear infinite;
+    border: 2px solid rgba(255,255,255, 0);
 
     &::before {
       filter: blur(20px);
@@ -70,7 +71,8 @@ const ButtonWrapper = styled.button`
     right: -5px;
     bottom: -5px;
     z-index: -1;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background: linear-gradient(90deg, #8a262f, #ea6147, #fd6b19, #8a262f);
+    // background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
     background-size: 400%;
     border-radius: 40px;
     opacity: 0;
@@ -86,6 +88,8 @@ const ButtonWrapper = styled.button`
       background-position: 400%;
     }
   }
+
+ 
 `
 
-export default Button
+export default BannerButton

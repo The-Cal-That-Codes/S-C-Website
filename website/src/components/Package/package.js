@@ -5,8 +5,8 @@ const Package = ({ title, children, active }) => {
   return (
     <PackageWrapper className={active ? "active" : "not-active"}>
       <div className="content">
-        <h2>{title}</h2>
-        {children}
+        <h2>{title}</h2> 
+         {children}
       </div>
     </PackageWrapper>
   )
@@ -14,17 +14,20 @@ const Package = ({ title, children, active }) => {
 
 const PackageWrapper = styled.article`
   position: relative;
+  display: flex;
+  flex-flow: row wrap;
   z-index: 1;
-  width: 100%;
-  max-width: 350px;
+  width: auto;
   margin-bottom: 3rem;
+  background: black;
 
   @media (min-width: 992px) {
-    width: calc(100% / 3);
+    width: auto;
     margin-bottom: 0;
   }
 
   .content {
+    width: 20vw;
     background: #051342;
     color: #fff;
     text-align: center;

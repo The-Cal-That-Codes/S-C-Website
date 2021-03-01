@@ -1,5 +1,6 @@
 import React from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "react-scroll"
 import {
   mainMenuItems,
   footerMenuItems,
@@ -32,20 +33,18 @@ const Footer = ({ Logo }) => {
           <div className="brand-cont">
             {/* If there is a logo, render this */}
             {Logo && (
-              <Link to="/">
+              <Link to="home" smooth={true} duration={500}>
                 <img src={Logo} alt={`${footerData.title} logo`} />
               </Link>
             )}
             <address>
-              85 Simone Weil Avenue
+              Web Development- CalsCodes@gmail.com
               <br />
-              Watton-at-Stone
+              
               <br />
-              SG14 8BL
+              Digital Marketing- Sam@samsaddress.com
             </address>
-            <a className="telephone" href="tel:+004407076009211">
-              07076 009 211
-            </a>
+         
           </div>
         ) : null}
 
@@ -61,7 +60,7 @@ const Footer = ({ Logo }) => {
                   })
                   .map((item, index) => (
                     <li key={`menuItem${index}`}>
-                      <Link to={item.path}>{item.title}</Link>
+                      <Link to={item.path} smooth={true} duration={500} className="footerlinks">{item.title}</Link>
                     </li>
                   ))}
               </ul>
@@ -72,7 +71,7 @@ const Footer = ({ Logo }) => {
               <ul className="footer-menu">
                 {footerMenuItems.map((item, index) => (
                   <li key={`footerMenuItem${index}`}>
-                    <Link to={item.path}>{item.title}</Link>
+                    <Link to={item.path} smooth={true} duration={500}>{item.title}</Link>
                   </li>
                 ))}
               </ul>
@@ -81,6 +80,7 @@ const Footer = ({ Logo }) => {
             {/* If social menu items are being imported, render this */}
             {socialMenuItems && (
               <ul className="footer-menu socials">
+                
                 {socialMenuItems.map((item, index) => {
                   return (
                     <li key={index}>
@@ -108,7 +108,7 @@ const Footer = ({ Logo }) => {
             {footerData.author && (
               <li>
                 <a
-                  href={footerData.authorSite}
+                  
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -159,6 +159,10 @@ const FooterStyles = styled.footer`
   address {
     font-style: normal;
     margin-bottom: var(--spacing);
+
+    @media( max-width: 1050px){
+      font-size: 1.5rem;
+    }
   }
 
   li {
@@ -180,7 +184,9 @@ const FooterStyles = styled.footer`
     transition: var(--transMed);
 
     &:hover {
-      color: var(--primaryColor);
+      color: #db4a37;
+      cursor: pointer;
+     
     }
   }
 
@@ -197,6 +203,7 @@ const FooterStyles = styled.footer`
   .brand-cont {
     width: 100%;
 
+
     @media (min-width: 768px) {
       width: 25%;
     }
@@ -206,8 +213,12 @@ const FooterStyles = styled.footer`
     }
 
     img {
-      max-width: 125px;
+      max-width: 15vw;
       width: 100%;
+
+      @media( max-width: 1050px){
+        max-width: 25vw;
+      }
     }
   }
 
@@ -236,6 +247,11 @@ const FooterStyles = styled.footer`
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      @media( max-width: 1050px){
+        font-size: 1.5rem;
+        margin-bottom: 3vh;
       }
     }
 
@@ -308,6 +324,12 @@ const FooterStyles = styled.footer`
           font-size: 0.75rem;
         }
       }
+    }
+  }
+
+  .footerlinks:hover{
+   cursor: pointer;
+      
     }
   }
 `

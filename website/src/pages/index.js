@@ -3,145 +3,97 @@ import Banner from "../components/Banner/banner"
 import TextBlock from "../components/TextBlock/textBlock"
 import TextBlockImg from "../components/TextBlockImg/textBlockImg"
 import Perk from "../components/Perk/perk"
-import Button from "../components/Button/button"
+
+import BirdButton from "../components/Button/birdbutton"
 import Packages from "../components/Packages/packages"
-import Package from "../components/Package/package"
+// import Package from "../components/Package/package"
 import Contact from "../components/Contact/contact"
 import { Link } from "react-scroll"
 
 import perk1Img from "../images/speed.svg"
 import perk2Img from "../images/piggy-bank.svg"
 import perk3Img from "../images/friendly-staff.svg"
+import portraitimage1 from "../images/portrait1.jpg"
+import portraitimage2 from "../images/portrait2.jpg"
+import uximg from "../images/ux.png"
+import desimg from "../images/des.png"
+import devimg from "../images/dev.png"
+import digchart from "../images/digchart.png"
+import digbubbles from "../images/digbubbles.png"
+import diglogo from "../images/diglogo.png"
 
-import { IconContext } from "react-icons"
-import { MdDone, MdClear } from "react-icons/md"
+
+
+
+// import { MdDone, MdClear } from "react-icons/md"
 
 export default () => (
   <>
     <Banner />
-    <TextBlock
-      id="about"
-      title="A fresh coat of paint goes a long way"
-      paragraph="With a super-fast customised website to help turn your idea into reality. Our development services can give you the 
-      platform you need to attract customers and keep them coming back."
+    <Packages
+      uximg={uximg}
+      digchart={digchart}
+      desimg={desimg}
+      devimg={devimg}
+      digbubbles={digbubbles}
+      diglogo={diglogo}
+      
+      id="packages"
+      title="Web Development to impress your clients"
+      title2="Digital Marketing to boost your presence"
+      para="Hand coded websites built to achieve your goals and tailored to your satsifaction. All sites are designed to be a high quality asset to your business including User Experience and SEO integration."
+      para2="Holistic digital advertising structure across a wide range of channels. Reach the right people in the right places, and see exactly how they interact with your website."
     >
-      <Link to="perks" smooth={true} duration={500}>
-        <Button label="Tell Me More" cta="Tell Me More!" />
-      </Link>
-    </TextBlock>
+    
+    </Packages>
     <TextBlockImg
       id="perks"
-      title="We have the tools to help you suceed"
-      subtitle="Startup is perfect for helping to to start and grow your business. As
-          you begin to gain new clients and expand you will see the benefits of
-          a super-fast Gatsby website"
+      title="Digital Marketing and Digital Design combined to bring you success"
+      subtitle="In Modern business an online presence is almost a requirement and with so many complicated aspects achieving the identity and results you desire while staying on budget can be difficult at best.
+       We are here to make it easier with everything you need in one place, offering sophisticated web development- to engage your customers
+        customers with the information they need to make the most out of your services as well as comprehensive marketing- to provide your business with an evolving and expanding pool of new clientele. "
     >
       <div className="flex-container trio-block">
         <Perk
           img={perk1Img}
-          alt="Super fast speed increases"
-          title="Speedy"
-          content="Super-fast response times ensure your business is not affected"
+          alt="Presence increases"
+          title="Impactful Presence"
+          content="Influential UX and calculated marketing to ensure every advantage."
         />
         <Perk
           img={perk2Img}
-          alt="Great savings to be made"
-          title="Affordable"
-          content="A choice of packages to suit every business type and size"
+          alt=""
+          title="Unlocked potential"
+          content="Increase your revenue and stay ahead of the competition."
         />
         <Perk
           img={perk3Img}
-          alt="Super fast speed increases"
-          title="Friendly"
-          content="Advisors who are available 24/7, all with exprt knowledge"
+          alt="Great savings to be made"
+          title="Flexible packages"
+          content="We cooperate with you and your budget to achieve your goals."
         />
+         <Link to="about" smooth={true} duration={500}>
+          <BirdButton label="So who are we?" cta="So who are we?" className="birdbutton"/>
+          </Link>
       </div>
+    
     </TextBlockImg>
-    <Packages
-      title="Our Packages"
-      para="Choose the perfect solution for you. With benefits to suit all budgets Startup can offer amazing value and expert advice"
-    >
-      <IconContext.Provider
-        value={{
-          color: "#7FFF00",
-          size: "1.2em",
-          style: { verticalAlign: "middle", marginRight: "5px" },
-        }}
-      >
-        <Package title="Standard">
-          <ul>
-            <li>
-              <MdDone />1 User
-            </li>
-            <li>
-              <MdDone />
-              1GB Storage
-            </li>
-            <li className="linethrough">
-              <MdClear color="red" />
-              Dedicated Advisor
-            </li>
-            <li className="linethrough">
-              <MdClear color="red" />
-              24/7 Support
-            </li>
-          </ul>
-          <Link to="contact" smooth={true} duration={500}>
-            <Button label="I want this" cta="I want this!" />
-          </Link>
-        </Package>
-        <Package title="Hyper" active={true}>
-          <ul>
-            <li>
-              <MdDone />
-              24/7 Support
-            </li>
-            <li>
-              <MdDone />
-              Dedicated Advisor
-            </li>
-            <li>
-              <MdDone />
-              Unlimited Storage
-            </li>
-            <li>
-              <MdDone />
-              Unlimited Users
-            </li>
-          </ul>
-          <Link to="contact" smooth={true} duration={500}>
-            <Button label="I want this" cta="I want this!" />
-          </Link>
-        </Package>
-        <Package title="Super">
-          <ul>
-            <li>
-              <MdDone />
-              10 Users
-            </li>
-            <li>
-              <MdDone />
-              500GB Storage
-            </li>
-            <li>
-              <MdDone />
-              Advice Support
-            </li>
-            <li className="linethrough">
-              <MdClear color="red" />
-              Dedicated Advisor
-            </li>
-          </ul>
-          <Link to="contact" smooth={true} duration={500}>
-            <Button label="I want this" cta="I want this!" />
-          </Link>
-        </Package>
-      </IconContext.Provider>
-    </Packages>
+    <TextBlock
+      portraitimage1={portraitimage1}
+      portraitimage2={portraitimage2}
+      alt="A picture of Sam/Cal"
+      id="about"
+      title="Web development"
+      title2="Digital Marketing"
+       >
+      
+    </TextBlock>
+    
+   
     <Contact
       id="contact"
-      title="Contact Startup today and see how we can help your business grow"
-      subtitle="Every second counts when you're looking to get your new business started. Drop Startup a message and one of our representatives will be in contact"
+      title="Get your project started today!"
+      subtitle="Every second counts when you're looking to get your new business started or start making the most of your current one. Drop Startup a message and start making the most of the digital age."
     />
   </>
 )

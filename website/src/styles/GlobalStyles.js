@@ -1,7 +1,9 @@
 import { createGlobalStyle } from "styled-components"
 
+
 const GlobalStyles = createGlobalStyle`
 :root {
+  
     --heavyWeight: 900;
     --transMed: 0.3s;
     --transSlow: 0.5s;
@@ -53,10 +55,12 @@ body {
 }
 
 
+
   .content-container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 500px;
+    margin: auto;
+    width: auto;
+    height:auto;
+    
 
     @media (min-width: 1080px) {
       max-width: 650px;
@@ -66,13 +70,26 @@ body {
   .flex-container {
     display: flex;
 
-    &.trio-block {
-      flex-direction: column;
-      justify-content: center;
+    a{
+      height: 50px;
+      align-self: center;
+      margin-bottom: 6vh;
+   
+    }
 
-      @media (min-width: 992px) {
-        flex-direction: row;
+    &.trio-block {
+      flex-direction: row;
+      
+      @media (max-width: 1050px) {
+        margin-top: 2vh;
       }
+
+      @media (max-width: 992px) {
+        flex-flow: row wrap;
+        
+      }
+      
+      
     }
   }
 
@@ -108,6 +125,22 @@ body {
     overflow: visible !important;
     width: auto !important;
     white-space: normal !important;
+  }
+
+  .perkmotiondiv{
+    
+   @media(max-width: 900px){
+    width: 30vw;
+    
+   } 
+  }
+
+  .bbmotiondiv{
+    @media(max-width: 1050px){
+      animation: none !important;
+      opacity: 1 !important;
+    transform: none !important;
+     } 
   }
 `
 export default GlobalStyles

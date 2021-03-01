@@ -1,6 +1,9 @@
 import React, { useState } from "react"
 import links from "../constants/links"
 import styled from "styled-components"
+import { animateScroll as scroll, Link } from "react-scroll"
+import "@fontsource/roboto"
+
 
 const Navbar = ({ Logo }) => {
   const [isOpen, setNav] = useState(false)
@@ -8,10 +11,25 @@ const Navbar = ({ Logo }) => {
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
   }
+  // let scrollPercentage = (scroll.y / (document.documentElement.offsetHeight - window.innerHeight)) * 100;
+  // if (scrollPercentage > 50) {
+  //   classchange === true;
+  // } else {
+  //   classchange === false
+  // }
+  
   return (
     <NavStyles>
       <div className="masthead flex-container">
-        <img src={Logo} alt="Startup Logo" />
+       <div 
+       className="logo-container" 
+       onClick={() => scroll.scrollToTop()}>
+         
+       <img src={Logo} alt="Startup Logo" />
+
+      </div> 
+        
+        
         <button
           className={isOpen ? "toggle-btn toggle-btn-active" : "toggle-btn"}
           type="button"
@@ -23,12 +41,14 @@ const Navbar = ({ Logo }) => {
           <span></span>
         </button>
       </div>
-      <ul className={isOpen ? "nav-links show-nav" : "nav-links"}>
+      <ul className={isOpen ? "nav-links show-nav navfontplus" : "nav-links"}>
         {links.map((item, index) => {
           return (
-            <li key={index}>
-              <a href="#">{item.text}</a>
+            <Link to={item.path} smooth={true} duration={500}>
+            <li key={index} className="navlist" onClick={toggleNav} >
+              {item.text}
             </li>
+            </Link>
           )
         })}
       </ul>
@@ -45,23 +65,46 @@ export const NavStyles = styled.nav`
   right: 0;
   display: flex;
   padding: 1rem;
+  padding-top: 0.5rem;
   box-sizing: border-box;
+  
+
+
+  .logo-container{
+    height:100%;
+    width: auto;
+  }
 
   .masthead {
     z-index: 3;
-    width: 100%;
+    width: auto;
     justify-content: space-between;
 
+    @media (max-width: 1050px){
+      width: 100%;
+    }
+
     img {
-      width: 90px;
+      width: 300px;
+      height: auto;
+      transition: 0.4s ease-in-out;
 
-      @media (min-width: 768px) {
-        width: 100px;
+      :hover{
+        scale: 1.04
       }
 
-      @media (min-width: 1200px) {
-        width: 120px;
+      @media (max-width: 1450px) {
+        width: 15vw;
       }
+      @media (max-width: 1050px){
+        width: 30vw;
+        
+      }
+      @media (max-width: 600px) {
+        width: 40vw;
+      }
+
+    
     }
   }
 
@@ -69,9 +112,10 @@ export const NavStyles = styled.nav`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     position: fixed;
     text-align: center;
-    background: linear-gradient(45deg, #060c21, #0d0139);
+    background: linear-gradient(45deg, rgba(6, 12, 33, 0.9), rgba(13, 1, 57,0.9));
     margin: 0;
     height: 100%;
     top: 0;
@@ -81,35 +125,64 @@ export const NavStyles = styled.nav`
     transform: translateX(100%);
     transition: 0.3s ease-in;
     list-style: none;
-    padding-left: 0;
+    padding-left: 20vw;
+
+    @media(max-width: 1050px){
+      padding-left: 10vw;
+    }
+
+    @media (max-width: 993px){
+      padding-left: 30vw;
+      
+    }
 
     li {
       list-style: none;
-      font-size: 1.25rem;
-      font-weight: 400;
+      font-size: 1.75rem; 
+      // ^^worthless
+      font-weight: 550;
       margin-left: 0;
+      margin-right: 5px;
       padding: 0.75rem 0;
-      a {
+      color: #F0EAEA;
+      padding-bottom: 5vh;
+    }
+
+      .navlist{
         text-decoration: none;
         text-transform: capitalize;
-        color: #fff;
         transition: 0.3s;
+        font-family: "Roboto";
+        font-size: 1.7rem;
+
+        @media (max-width: 1050px){
+          font-size: 2rem !important;
+          
+        }
 
         &.active {
           color: #e609b5;
         }
       }
-      &:hover {
+      .navlist:hover {
+        postion:relative;
         cursor: pointer;
-        a {
-          color: #e609b5;
+        color: #db4a37;
+        transform: translateY(-3px);
+        transition: transform 0.3s linear;
+        // filter: drop-shadow(3px 4px 2px #db4a37);
+      }
+
+      &.show-nav {
+
+        @media (max-width: 993px){
+        transform: translateX(25%);
         }
+        
       }
     }
 
-    &.show-nav {
-      transform: translateX(0%);
-    }
+    
   }
 
   .toggle-btn {
@@ -176,6 +249,7 @@ export const NavStyles = styled.nav`
       }
     }
   }
+
 `
 
 export default Navbar
