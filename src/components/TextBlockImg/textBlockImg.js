@@ -1,219 +1,443 @@
-import React, { useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import "@fontsource/ibm-plex-sans"
-import "@fontsource/inter"
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
+// import { useInView } from "react-intersection-observer";
+// import { useAnimation } from "framer-motion";
+import { BsDiamondFill, BsDropletHalf , BsTerminalFill,BsLayersFill } from "react-icons/bs";
+import { IconContext } from "react-icons";
 
-const TextBlockImg = ({ title, children, subtitle, id}) => {
 
-  const controls = useAnimation()
-  const [ref, inView] = useInView({
-    // Percentage of item in view to trigger animation
-    threshold: 0.25,
-  })
+const TextBlockImg = ({id}) => {
 
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "purple-bg.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 6000, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
+  
 
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible")
-    }
-  }, [controls, inView])
+  let [iconColour, seticonColour] = useState(1);
+  let [classControl, setclassControl] = useState(1);
+ 
+
+const controller = (index) => {
+ setclassControl(index)
+
+  setTimeout(() => {
+    seticonColour(index);
+  } , 450);
+}
+
+
+
+  // const controls = useAnimation()
+  // const [ref, inView] = useInView({
+  //   // Percentage of item in view to trigger animation
+  //   threshold: 0.25,
+  // })
+
+
+  // useEffect(() => {
+  //   if (inView) {
+  //     controls.start("visible")
+  //   }
+  // }, [controls, inView])
 
   return (
-    <BackgroundImage
-      id="perks"
-      Tag="section"
-      fluid={data.file.childImageSharp.fluid}
-      loading="eager"
-      fadeIn={false}
-      
-    >
-      <TextBlockImgWrapper id={id}>
    
-       <div className="flex-wrapper">
-        <div className="content-container2 bird-card">
-
-          <motion.h2
-          ref={ref}
-          animate={controls}
-          initial="hidden"
-          variants={{
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: 25 },
-          }}
-          transition={{ ease: "easeOut", duration: 1.25, delay: 0.25 }}>
-            {title}
-            </motion.h2>
-
-          <motion.p
-          className="tbiheadpara"
-          ref={ref}
-          animate={controls}
-          initial="hidden"
-          variants={{
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: 25 },
-          }}
-          transition={{ ease: "easeOut", duration: 1.15, delay: 0.75 }}>
-          {subtitle}
-          </motion.p>
-
-        
-          {children}
-        
-
-       </div>
-
-      </div> 
+      <TextBlockImgWrapper id={id}>
+        <div className="contentwrapper">
+          <h1>Design, Dev and Deployment all in one place!</h1>
+          <div className="iconbox">
+          <IconContext.Provider value={classControl === 1 ?{ color: "#7271d1", size: "2.5rem", className:"iconmedia" }:
+                                                         {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" } }>
+            <BsDiamondFill onClick={() => controller(1)}/>
+          </IconContext.Provider>
+          <h3>General</h3>
+          <IconContext.Provider value={classControl === 2 ?{ color: "#7271d1", size: "2.5rem", className:"iconmedia" }:
+                                      {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
+            <BsTerminalFill onClick={() => controller(2)} />
+          </IconContext.Provider>
+          <h3>Title 2</h3>
+          <IconContext.Provider value={classControl === 3 ?{ color: "#7271d1", size: "2.5rem", className:"iconmedia" }:
+                                      {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
+            <BsDropletHalf onClick={() => controller(3)}/>
+          </IconContext.Provider>
+          <h3>Title 3</h3>
+          <IconContext.Provider value={classControl === 4 ?{ color: "#7271d1", size: "2.5rem", className:"iconmedia" }:
+                                      {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
+          
+            <BsLayersFill onClick={() => controller(4)}/>
+          </IconContext.Provider>
+          <h3>Title4</h3>
+          </div>
+          <hr className="longLine"/>
+          {
+          iconColour === 1 ?
+          <div className={classControl === 1 ? "paraEnter" : "paraExit"}>
+          <p>
+          First ipsum dolor, sit amet consectetur adipisicing elit.
+          Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
+          Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+         </p>
+         <p>
+           First ipsum dolor, sit amet consectetur adipisicing elit.
+           Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
+           Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+         </p>
+         </div> : iconColour === 2 ?
+       <div className={classControl === 2 ? "paraEnter" : "paraExit"}>
+       <p>
+       Second ipsum dolor, sit amet consectetur adipisicing elit.
+       Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
+       Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+      </p>
+      <p>
+        First ipsum dolor, sit amet consectetur adipisicing elit.
+        Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
+        Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+      </p>
+      </div> : iconColour === 3 ?
+         <div className={classControl === 3 ? "paraEnter" : "paraExit"}>
+         <p>
+         Third ipsum dolor, sit amet consectetur adipisicing elit.
+         Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
+         Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+        </p>
+        <p>
+          First ipsum dolor, sit amet consectetur adipisicing elit.
+          Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
+          Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+        </p>
+        </div> :
+          <div className={classControl === 4 ? "paraEnter" : "paraExit"}>
+           <p>
+           FOURTH ipsum dolor, sit amet consectetur adipisicing elit.
+           Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
+           Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+          </p>
+          <p>
+            First ipsum dolor, sit amet consectetur adipisicing elit.
+            Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
+            Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+          </p>
+          </div>
+           }
+          <hr className="smallLine"/>
+          <div className="iconbox2 iconNav">
+          <IconContext.Provider value={classControl === 1 ?{ color: "#7271d1", className: "countermedia"}:
+                                                         {color:"#969ABE", className: "countermedia"} }>
+            <BsDiamondFill/>
+          </IconContext.Provider>
+          
+          <IconContext.Provider value={classControl === 2 ?{ color: "#7271d1", className: "countermedia"}:
+                                                         {color:"#969ABE",className: "countermedia"} }>
+            <BsDiamondFill/>
+          </IconContext.Provider>
+          <IconContext.Provider value={classControl === 3 ?{ color: "#7271d1",className: "countermedia" }:
+                                                         {color:"#969ABE",className: "countermedia"} }>
+            <BsDiamondFill/>
+          </IconContext.Provider>
+          <IconContext.Provider value={classControl === 4 ?{ color: "#7271d1",className: "countermedia" }:
+                                                         {color:"#969ABE",className: "countermedia"} }>
+            <BsDiamondFill/>
+          </IconContext.Provider>
+          
+          </div>
+        </div>
      
 
       </TextBlockImgWrapper>
-      
-    </BackgroundImage>
+    
+   
   )
 }
 
 const TextBlockImgWrapper = styled.section`
   text-align: left;
-  
-  height: 100vh;
-  
-  @media (max-width: 450px){
-    height: 120vh;
-    padding-left: 1vw;
-  }
-
-  body{
-    background-color: rgb(255, 255, 255, 0)
-    
-  }
-
-
-  .flex-wrapper{
-    display: flex;
-    justify-content: space-between;
-    height:100%;
-    flex-flow: row wrap;
-
-    
-  }
+  padding: 12vh 1rem;
+  padding-bottom: 7vh;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #03233c, #03233c);
 
  
-  
 
-  }
- 
+h1{
+  margin: 0 0;
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+  font-family: var(--Font-Title);
+}
 
-  .content-container2 {
+h3{
+  display: none
+}
+
+.iconbox{
   display: flex;
-  flex-direction: column;
-  align-self: flex-end;
-  height: 45vh;
-  width: 100vw;
-  padding: 3vh;
-  background: rgba(1,1,1,0);
-  transform: skew(0deg, 0deg);
- 
-   
-  @media (max-width: 1450px){
-    margin-bottom: 10vh;
-  }
+  justify-content: space-between;
+  padding: 0.5rem 0rem;
+  padding-top: 0px;
 
-  @media (max-width: 1050px){
-    margin-bottom: 5vh;
-    height: auto;
-    padding: 0px;
-    padding-top: 5vh;
-    padding-left: 2vw;
+}
+
+.iconbox2{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0rem;
+  padding-top: 0px;
+
+}
+
+.iconNav{
+  justify-content: center;
+  padding-top: 0.5rem;
+
+  
+  >* + * {
+    margin-left: 0.5rem;
+  }
+}
+
+
+ 
+.longLine{
+  max-width: 90%;
+  margin: 0 auto;
+  height: 5px;
+  border: 0px;
+  background-color: #7271d1;
+  opacity: 0.8;
+
+}
+
+.smallLine{
+  max-width: 80%;
+  margin: 0 auto;
+  height: 4px;
+  border: 0px;
+  background-color: #969ABE;
+  opacity: 0.8;
+}
+
+.icon{
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+.icon:hover{
+  transform: translateY(-5px);
+  
+}
+  
+
+.paraEnter{
+  display: flex;
+  flex-flow: column;
+  animation: paraEnter 0.45s ease-out;
+
+  p{
+    padding: 0.5rem 1.2rem;
+    padding-right: 0.4rem;
+    margin: 0 0.3rem;
+    line-height: 1.5;
+    font-family: var(--Font-Second);
+    font-size: 1.1rem;
     
   }
 
-  @media(max-width: 600px){
-    font-size: 14px;
-    height: 60vh;
-    padding-top: 15vh;
+}
+
+.paraExit{
+  display: flex;
+  flex-flow: column;
+  animation: paraExit 0.45s ease-out;
+
+  p{
+    padding: 0.5rem 1.2rem;
+    padding-right: 0.4rem;
+    margin: 0 0.3rem;
+    line-height: 1.5;
+    font-family: var(--Font-Second);
+    font-size: 1.1rem;
   }
  
-
-  @media (max-width: 450px){
-    margin-top: 0vh;
-    padding-top: 5vh;
-    padding-left: 2vw;
-  }
-  
-  }
-
-  h2 {
-    font-weight: bolder;
-    font-size: 36px;
-    // background: -webkit-linear-gradient(45deg, #513515, #db671e);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    font-family: "IBM Plex Sans";
-
-    @media(max-width: 1367px){
-      margin: 0px;
-    }
-   
-    @media(max-width: 1050px){
-      font-size: 2.5rem;
-      font-weight: 500;
-      opacity: 1 !important;
-      animation: none !important;
-      
-    }
-
-    @media(max-width: 600px){
-      font-size: 20px;
-    }
-  }
-
-
-  p {
-    margin-bottom: 2vh;
-    font-family: "Inter";
-    background: rgba(255,255,255,0.7);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text; 
-  }
-
-.tbiheadpara{
-
-  @media(max-width: 1050px){
-    display: none;
-    animation: none !important;
-  }
-}
-  
-.perkmotiondiv{
-  @media(max-width: 1050px){
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
 }
 
-
-  @keyframes test {
-  0%{ opacity: 0;
-
+@keyframes paraEnter{
+  0%{
+    opacity: 0;
+    transform: translateX(-50px);
   }
   100%{
-    opacity:1;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes paraExit{
+  0%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+@media (min-width: 519px){
+  padding: 3rem 3rem;
+  padding-bottom: 0rem;
+
+  h1{
+    font-size: 1.8rem;
+    padding: 2rem 1rem;
+    padding-bottom:1rem;
+  }
+  .paraEnter,.paraExit{
+    flex-flow: row;
+
+    p{
+    font-size: 1.1rem ;
+    padding: 1.5rem 0.5rem ;
+    
+    }
+  }
+  
+  .iconbox{
+    justify-content: space-evenly;
+  }
+
+  .iconbox2{
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .iconmedia{
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .countermedia{
+    height: 1.7rem;
+    width: 1.7rem;
+    margin-left: 1rem;
+
+  }
+}
+
+@media(min-width: 1000px){
+  padding: 1rem 1rem;
+  
+  
+
+  h1{
+    font-size: 2.5rem;
+   padding: 1rem 1rem;
+  }
+
+  h3{
+    display: block;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+  }
+
+  .longLine{
+    margin: 0rem 1rem;
+    max-width: 100%;
+    
+  }
+
+  .smallLine{
+    margin: 0 1rem;
+    max-width: 100%;
+  }
+
+  .contentwrapper{
+ display: flex;
+ flex-flow: column nowrap;
+ justify-content: center;
+ height: 100vh;
+    
+  }
+
+.iconbox{
+  justify-content: flex-start;
+  padding: 1rem 1rem;
+}
+  .iconbox2{
+  justify-content: center;
+  display: flex;
+  
+
+  svg{
+    margin-left: 1rem;
+  }
+
+  }
+
+.paraEnter, .paraExit {
+    max-width: 100%;
+    
+    p{
+      font-size: 1.35rem ;
+      padding: 2rem 1rem;
+    }
+   
+  }
+
+  .countermedia{
+    height: 2rem;
+    width: 2rem;
+    margin-left: 0rem;
+
+  }
+
+
+}
+
+@media(min-width: 1359px){
+  padding: 2rem 2rem;
+
+  h1{
+    padding-bottom: 0px;
+  
+  }
+  
+  .iconbox{
+    padding-bottom: 0px;
+  }
+
+  .paraEnter, .paraExit {
+    max-width: 100%;
+    
+    p{
+      font-size: 1.2rem ;
+      padding: 1rem 1rem;
+    }
+   
+  }
+}
+
+@media(min-width: 1390px){
+  padding 1rem 2rem;
+
+  h1{
+    padding-bottom: 1rem;
+  }
+
+  .iconbox{
+    padding-bottom: 1rem;
+  }
+  .iconbox2{
+    padding-bottom: 0rem;
+  }
+  
+
+  .paraEnter, .paraExit {
+    max-width: 100%;
+    
+    p{
+      font-size: 1.2rem ;
+      padding: 2rem 2rem;
+    }
+   
   }
 }
 `

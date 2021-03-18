@@ -2,63 +2,40 @@ import styled from "styled-components"
 
 export const BannerStyles = styled.section`
   .gatsby-image-wrapper {
-    height: 100vh;
     color: #fff;
-
-    @media(max-width:365px){
-      height: 110vh;
-    }
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    padding-bottom: 2rem;
   }
 
-.testh1{
-  height:50px;
-  width:80px;
-  position: relative;
-  top: 40vh;
-  left: 50vw;
-}
+
 
 .hide{
   display none;
 }
 
-.contactwrap-banner{
-  animation: revealcontact 1s 1s normal ease-out forwards;
 
-}
 
 
 .mainbutton{
-  filter: drop-shadow(0px 2px 2px black);
+    a{filter: drop-shadow(0px 2px 2px black);}
+    font-size: 0.8rem;
+    background: rgba(1,1,1,0);
+    margin: 1rem auto;
+    border: 2px solid var(--Clr-Primary500);
+
 }
 
-.button-div{
-  display: flex;
-  flex-flow: column;
-  width: auto;
-  height: 18vh;
-  justify-content: space-evenly;
-  justify-self: center;
-  margin-left: auto;
-  margin-right: auto;
-
-
-  @media (max-width: 768px){
-    height: 20vh;
-  }
-
- 
-    
-    @media (max-width: 834px) {
-      height: 15vh;
-    }
-
-    @media(max-width: 600px){
-      height: 19vh;
-    }
-  }
- 
+.bannercontactbutton{
+  font-size: 0.7rem;
+  background: rgba(1,1,1,0);
+  border: 0px;
+  margin: 0 auto;
 }
+
 
 .hero-hide {
   
@@ -81,127 +58,91 @@ export const BannerStyles = styled.section`
 
 
   .hero-content {
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    max-width: 400px;
-    padding: 0 20px;
+    margin: 0 auto;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0 0.5rem;
+    background-color: rgba(1, 1, 1, 0);
     
 
-    @media (min-width: 768px) {
-      max-width: 650px;
-      
-    }
+
 
     h1 {
-      font-size: 2.5rem;
+      margin: 0px;
+      font-size: 2rem;
       line-height: 1.2;
-
-      @media (max-width: 600px){
-          font-size: 2rem;
+      padding: 0.5rem 0;
+      font-family: var(--Font-Title);
+       
+      span{
+        color: var(--Clr-Primary500);
+        
       }
 
-    
-
-      span {
-        background: -webkit-linear-gradient(90deg,#C6FFDD,#FBD786,#f7797d );
-        -webkit-background-clip: text; 
-        -webkit-text-fill-color: transparent;
-        font-size: 2.5rem;
-
-        @media (max-width: 600px){
-          font-size: 2rem;
-          font-weight: 650;
-        }
-        @media (max-width: 450px){
-          margin: 0px;
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-        }
       }
-    }
+
 
     p {
-      margin-top: 0;
-      margin-bottom: 2rem;
-      line-height: 1.2;
-      font-size: 1.15rem;
-
-      @media (min-width: 768px) {
-        font-size: 1.35rem;
-      }
-
-      @media(max-width: 1050px){
-        font-size: 1.5rem;
-      }
-      
-
-    
-    }
-
-    button,
-    .anchor {
-      margin: 0 auto;
-      filter: drop-shadow(0px 2px 2px black);
-      border-radius: 20px;
-      // border: 2px solid rgba(1,1,1,0.4);
-      
-    }
-
-    @media (min-width: 768px) {
-      max-width: 800px;
-
-      h1 {
-        font-size: 3rem;
-      }
-    }
-
-    @media (min-width: 1200px) {
-      h1 {
-        font-size: 3rem;
-      }
-    }
-  
-    @keyframes disappear {
-      0% {
-        opacity: 1;
-        
-      }
-      50% {
-        opacity: 0.5;
-        
-      }
-      100% {
-        opacity: 0;
-       
-        
-      }
-
-      @keyframes revealcontact {
-        0% { display: none;
-          opacity: 0;
-          
-        }
-        50% {
-          display: flex;
-          opacity: 0.5;
-          
-        }
-        100% {
-          display: flex;
-          opacity: 1;
-         
-          
-        }
-      
+      line-height: 1.5;
+      font-size: 1.3rem; 
+      font-family: var(--Font-Accent);
+      margin: 0 0;
+      padding: 0.2rem 0;
      
     }
 
-    
+    }
+
+
+.hero-leave{
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.4s linear;
+}
+
+.contact-leave{
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.4s linear;
+}
+
+.hero-enter{
+  animation: hero-enter 0.6s ease-out;
+  
+}
+  
+@keyframes hero-enter {
+ 0%{
+   transform: translateY(-50px);
+   opacity: 0;
+ }
+ 100%{
+   transform: translateY(0px);
+   opacity: 1;
+ }
+}
+
+
+@media (min-width: 1100px){
+
+  .gatsby-image-wrapper {
+    padding: 1rem 8rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-content{
+    padding-top: 3rem;
+    h1{
+      font-size: 2.5rem;
+    }
+
+   p{
+     font-size: 1.5rem;
+     padding-right: 2rem;
+     margin-bottom: 1rem;
+   }
+  }
+}
 
 `

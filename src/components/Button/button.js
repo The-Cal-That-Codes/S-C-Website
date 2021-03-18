@@ -1,53 +1,46 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "react-scroll"
+
 
 const Button = props => {
   return (
     <>
       {props.anchor ? (
-        <ButtonWrapper
-          aria-label={props.label}
-          className="anchor"
-          as="a"
-          href={props.href}
-        >
-          {props.cta}
-        </ButtonWrapper>
+            <ButtonWrapper
+                aria-label={props.label}
+                className={props.className}
+                onClick={props.onClick}
+            >
+              <Link to="packages" smooth={true} duration={500}>
+                {props.cta}
+              </Link>
+            </ButtonWrapper>
       ) : (
-        <ButtonWrapper aria-label={props.label} type={props.type} className={props.className} onClick={props.onClick}>
-          {props.cta}
-        </ButtonWrapper>
+            <ButtonWrapper aria-label={props.label} type={props.type} className={props.className} onClick={props.onClick}>
+              {props.cta}
+            </ButtonWrapper>
       )}
     </>
   )
 }
 
 const ButtonWrapper = styled.button`
-  position: relative;
-  display: inline-block;
-  padding: 0 20px;
-  height: 50px;
+  
+  padding: 0.9rem;
   text-align: center;
-  line-height: 50px;
+  line-height: 1.4;
   color: #fff;
-  font-size: 0.85em;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.25rem;
   text-transform: uppercase;
   text-decoration: none;
   box-sizing: border-box;
-  background: linear-gradient(90deg, #581534, #ca3e33, #ffeb3b, #581534 );
   background-size: 400%;
-  border-radius: 30px;
-  border: none;
+  border: 2px solid var(--Clr-Primary500);
   z-index: 1;
-  
-@media(max-width: 1050px){
-  transform: scale(1.5);
-}
-
-@media (max-width: 768px){
-  margin-bottom: 10vh;
-}
+  font-family: var(--Font-Title);
+  filter: drop-shadow(0px 2px 2px black);
+  background: rgba(1,1,1,0);
 
 
   &:hover {
@@ -70,14 +63,14 @@ const ButtonWrapper = styled.button`
     right: -5px;
     bottom: -5px;
     z-index: -1;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background: rgba(1,1,1,0.4);
     background-size: 400%;
     border-radius: 40px;
     opacity: 0;
     transition: 0.5s;
   }
 
-  
+
   @keyframes animate {
     0% {
       background-position: 0%;

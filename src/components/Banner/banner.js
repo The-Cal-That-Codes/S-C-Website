@@ -2,18 +2,18 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Button from "../Button/button"
-import BannerButton from "../Button/bannerbutton"
-import { Link } from "react-scroll"
-import { motion} from "framer-motion"
+import TextLoop from "react-text-loop";
+import {motion} from "framer-motion"
 import BannerContact from "../Contact/bannercontact"
 import { BannerStyles } from "../../styles/bannerStyles"
+
 
 const Banner = (id) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "flames.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 2000, quality: 90) {
+          fluid(maxWidth: 5184, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -27,13 +27,27 @@ const Banner = (id) => {
   }
 
 
-let [showContact, setShowContact] = useState(false);
+let [showContact, setShowContact] = useState("starting");
+let [changetoContact, setchangetoContact] = useState(false);
+
 
 const showContactonClick = () => {
 
-    setShowContact(!showContact);
+    setShowContact("leaving");
 
-    console.log('done'+ showContact);
+    setTimeout(() => {
+      setchangetoContact(!changetoContact)
+    }, 400)
+}
+
+const removeContactonClick = () => {
+  setShowContact("entering");
+  
+
+    setTimeout(() => {
+      setchangetoContact(!changetoContact)
+      
+    }, 400)
 }
 
 
@@ -44,62 +58,67 @@ const showContactonClick = () => {
         className="hero-image"
         fluid={data.file.childImageSharp.fluid}
       >
-  <motion.div
-  initial="hidden"
-  animate="visible"
-  variants={variants}
-  transition={{ ease: "easeOut", duration: 0.8, delay: 0.8 }}>
-   <BannerContact className={showContact?"contactwrap-banner":"hide"} 
-   onClick={showContactonClick} title="Contact us now" subtitle="and make your dreams a reality"/>    
-       </motion.div>
-      <div className={showContact ?"hero-content hero-hide":"hero-content"} >
-            <motion.h1
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              transition={{ ease: "easeOut", duration: 0.8, delay: 0.8 }}
-            >
-              Custom Websites and Marketing <br/> <span>An Online Identity Built For Your Needs</span>
-            </motion.h1>
+
+   {changetoContact ?
+  
+
+      <BannerContact 
+      className= {showContact === "leaving" ? "content-container" : "content-container contact-leave" }
+      title="Contact us now" 
+      subtitle="and make your dreams a reality"
+      onClick={removeContactonClick} 
+      showContact={showContact}
+        />    
+
+      :
+      <div
+
+      className={showContact === "leaving" ? "hero-content hero-leave" : 
+                  showContact === "starting" ? "hero-content " :
+                  showContact=== "entering" ? "hero-enter hero-content" :
+                  "hero-content"
+                  }
+       >
+
+            <h1>
+              Elevate Your <TextLoop  mask={true} interval={2700}>
+                              <span>Business</span>
+                              <span>Revenue</span>
+                              <span>Presence</span>
+                              <span>Potential</span>
+                          </TextLoop>{" "}!
+            </h1>
             <motion.p
               initial="hidden"
               animate="visible"
               variants={variants}
-              transition={{ ease: "easeOut", duration: 0.8, delay: 1.3 }}
+              transition={{ ease: "easeOut", duration: 0.8, delay: 0.2 }}
             >
-              Personalised sites, support and advertising strategies to make life easy and for you and your business.
+              Personalised sites, support and advertising strategies to expand your client base and keep revenue coming in.
             </motion.p>
-          
-            <motion.div className="button-div"
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            transition={{ ease: "easeOut", duration: 0.8, delay: 1.8 }}>
-            <Link to="packages" smooth={true} duration={500}>
+
               <span className="sr-only">Jump to about</span>
               <Button
                 className="mainbutton"
-                cta="discover your potential"
+                cta="View our services"
                 label="Banner Learn More"
                 anchor={true}
-                href="linking"
               />
-              </Link>
+             
       
-              <BannerButton
+              <Button
                 cta="Or contact us now!"
                 label="Banner Learn More"
                 className="bannercontactbutton"
                 onClick={showContactonClick}
               />
-     
-              </motion.div>
-            
+  
           </div>
-          
-        
+          }
+
       </BackgroundImage>
     </BannerStyles>
+  
   )
 }
 

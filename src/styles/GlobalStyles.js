@@ -1,4 +1,8 @@
 import { createGlobalStyle } from "styled-components"
+import "@fontsource/ibm-plex-sans";
+import "@fontsource/inter";
+import "@fontsource/poppins";
+import "@fontsource/roboto-slab";
 
 
 const GlobalStyles = createGlobalStyle`
@@ -21,8 +25,19 @@ const GlobalStyles = createGlobalStyle`
     --footerMenuItem: 0.85rem;
     --para: 1rem;
     --spacing: 1rem;
+    // --Clr-Primary500: #489BC4;
+    --Clr-Primary500: #7271d1;
+    // --Clr-tintPackageblue600: #183c4c;
+    --Clr-tintPackageblue600: rgba(150, 154, 190, 0.3);
+    --Clr-Secondaryfade: rgba(255,255,255, 0.9);
+    --Font-Title: "Poppins", sans-serif;
+    --Font-Second: "Inter", sans-serif;
+    --Font-Accent: "Roboto Slab", serif;
 
-    @media (min-width: 768px) {
+    font-size: 16px;
+
+    @media (min-width: 670px) {
+      font-size: 1.2rem;
       --h1: 2.6rem;
       --h2: 2.4rem;
       --h3: 1.75rem;
@@ -33,7 +48,8 @@ const GlobalStyles = createGlobalStyle`
       --para: 1.1rem;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 1360px) {
+      font-size: 1.35rem;
       --h1: 3rem;
       --h2: 2.8rem;
       --h3: 2rem;
@@ -41,7 +57,34 @@ const GlobalStyles = createGlobalStyle`
       --h5: 1.35rem;
       --para: 1.15rem;
     }
+
+    @media(min-width: 1580px){
+      font-size: 1.5rem;
+    }
+
+    @media(min-width: 1700px){
+      font-size: 1.55rem;
+    }
   }
+
+// utility
+
+.no-pointer:hover{
+  cursor: default !important;
+}
+
+.flex-column{
+  display: flex;
+  flex-flow: column;
+}
+
+.display-block{
+  margin: 0 auto;
+}
+
+
+
+
 
 * {
     box-sizing: border-box;
@@ -58,8 +101,7 @@ body {
 
   .content-container {
     margin: auto;
-    width: auto;
-    height:auto;
+    
     
 
     @media (min-width: 1080px) {
@@ -70,26 +112,9 @@ body {
   .flex-container {
     display: flex;
 
-    a{
-      height: 50px;
-      align-self: center;
-      margin-bottom: 6vh;
-   
-    }
 
     &.trio-block {
-      flex-direction: row;
-      
-      @media (max-width: 1050px) {
-        margin-top: 2vh;
-      }
-
-      @media (max-width: 992px) {
-        flex-flow: row wrap;
-        
-      }
-      
-      
+      flex-direction: row;  
     }
   }
 

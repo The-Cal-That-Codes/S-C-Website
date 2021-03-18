@@ -64,7 +64,7 @@ export const NavStyles = styled.nav`
   left: 0;
   right: 0;
   display: flex;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   padding-top: 0.5rem;
   box-sizing: border-box;
   
@@ -85,24 +85,16 @@ export const NavStyles = styled.nav`
     }
 
     img {
-      width: 300px;
+      width: 11rem;
       height: auto;
+      padding-top: 1rem;
       transition: 0.4s ease-in-out;
 
       :hover{
         scale: 1.04
       }
 
-      @media (max-width: 1450px) {
-        width: 15vw;
-      }
-      @media (max-width: 1050px){
-        width: 30vw;
-        
-      }
-      @media (max-width: 600px) {
-        width: 40vw;
-      }
+    
 
     
     }
@@ -115,7 +107,7 @@ export const NavStyles = styled.nav`
     align-items: flex-start;
     position: fixed;
     text-align: center;
-    background: linear-gradient(45deg, rgba(6, 12, 33, 0.9), rgba(13, 1, 57,0.9));
+    background: linear-gradient(45deg, rgba(25, 54, 64, 0.9), rgba(25, 54, 64, 0.9));
     margin: 0;
     height: 100%;
     top: 0;
@@ -125,16 +117,9 @@ export const NavStyles = styled.nav`
     transform: translateX(100%);
     transition: 0.3s ease-in;
     list-style: none;
-    padding-left: 20vw;
 
-    @media(max-width: 1050px){
-      padding-left: 10vw;
-    }
 
-    @media (max-width: 993px){
-      padding-left: 30vw;
-      
-    }
+    
 
     li {
       list-style: none;
@@ -155,19 +140,16 @@ export const NavStyles = styled.nav`
         font-family: "Roboto";
         font-size: 1.7rem;
 
-        @media (max-width: 1050px){
-          font-size: 2rem !important;
-          
-        }
+      
 
         &.active {
-          color: #e609b5;
+          color: #7271d1;
         }
       }
       .navlist:hover {
         postion:relative;
         cursor: pointer;
-        color: #db4a37;
+        color: #7271d1;
         transform: translateY(-3px);
         transition: transform 0.3s linear;
         // filter: drop-shadow(3px 4px 2px #db4a37);
@@ -189,6 +171,7 @@ export const NavStyles = styled.nav`
     width: 40px;
     height: 40px;
     padding: 5px;
+    padding-top: 2.5rem;
     background-color: transparent;
     border: none;
 
@@ -249,6 +232,21 @@ export const NavStyles = styled.nav`
       }
     }
   }
+
+  @media(min-width: 1000px){
+   
+    .navlist{
+      
+      font-size: 1.5rem !important;
+      padding-top: 2rem !important;
+    }
+
+    img{
+      padding: 1rem 2rem !important;
+      width: 17rem !important;
+    }
+   
+   }
 
 `
 

@@ -1,6 +1,5 @@
 import React from "react"
-// import { DiGithubBadge } from "react-icons/di"
-import { FaHtml5, FaCss3, FaJsSquare, FaReact } from "react-icons/fa"
+
 
 export const mainMenuItems = [
   {
@@ -13,37 +12,14 @@ export const mainMenuItems = [
   },
   {
     path: "perks",
-    title: "Benefits",
+    title: "Web Dev",
   },
   {
     path: "about",
-    title: "About",
+    title: "Marketing",
   },
 ]
 
-export const socialMenuItems = [
-  {
-    icon: <FaHtml5 />,
-    // url: "",
-    name: "html5",
-  },
-  {
-    icon: <FaCss3 />,
-    // url: ,
-    name: "Css3",
-  },
-  {
-    icon: <FaJsSquare />,
-    // url: ,
-    name: "JS",
-  },
-  {
-    icon: <FaReact />,
-    // url: "",
-    name: "React",
-  },
- 
-]
 
 export const footerMenuItems = [
   {
@@ -52,6 +28,6 @@ export const footerMenuItems = [
   },
   {
     path: "",
-    title: "c",
+    title: "",
   },
 ]

@@ -1,15 +1,24 @@
 import React from "react"
 import styled from "styled-components"
 import Button from "../Button/button"
+import {motion} from 'framer-motion';
 import "@fontsource/ibm-plex-sans"
 import "@fontsource/inter"
 
 const BannerContact = ({ title, subtitle, className, onClick}) => {
   return (
-    <ContactWrapper className={className}>
-      <div className="content-container" >
+    <motion.div
+    
+    initial={{opacity:0, y: -50}}
+    animate={{opacity: 1, y: 0}}
+    transition={{duration: 0.6}}>
+    <ContactWrapper 
+    className={className}
+    >
+        <div className="contactheaderbrick">
         <h2>{title}</h2>
         <p>{subtitle}</p>
+        </div>
         <form name="contact" netlify>
           <div className="input-area">
             <input
@@ -51,54 +60,43 @@ const BannerContact = ({ title, subtitle, className, onClick}) => {
             </label>
           </div>
 
-          <div className="input-area button-area">
+        
+        </form>
+        <div className="input-area button-area">
             <Button className="formsubmitbutton" label="Send Contact Form" cta="Send" type="submit" />
             <Button className="backbutton"  cta="back"  onClick={onClick} />
-          </div>
-        </form>
-      </div>
+        </div>
+      
     </ContactWrapper>
-  )
+    </motion.div>
+    
+    )
+   
+  
+
+  
 }
 
-const ContactWrapper = styled.section`
-  padding: 100px 30px;
-  height: auto ;
-  max-width: 40vw;
-  position: relative;
-  left: 30vw;
-  top: 10vh;
+const ContactWrapper = styled.div`
 
-  @media(max-width: 1400px){
-    top: -1vh;
-  }
-  
-  @media(max-width: 1050px){
-    left: 15vw;
-    top: 13vh;
-    max-width: 70vw;
-    text-align: centre;
+margin: 0 0;
+padding: 2rem 0.5rem;
+padding-bottom: 0px;
+display: flex;
+flex-flow: column;
+align-items: center;
+justify-content: center;
+
+  .contactheaderbrick{
+    padding: 1px 0;
+   
   }
 
-
-  @media(max-width: 600px){
-
-    top: 3vh;
-    
-  }
-
-  @media (max-width: 450px){
-    max-width: 85vw;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0px;
-    top: 0px;
-  }
 
   .formsubmitbutton{
     border: 2px solid rgba(255,255,255,0.8);
     background: rgba(1,1,1,0);
-    border-radius: 20px;
+    border-radius: 5px;
     color: rgba(255,255,255,1);
     font-weight: bolder;
     font-size: 0.9rem;
@@ -113,84 +111,72 @@ const ContactWrapper = styled.section`
   .backbutton{
     background: rgb(1,1,1,0);
     border: 2px solid rgba(1,1,1,0);
-    margin-left: 2vw;
     color: rgba(255,255,255,1);
     font-weight: 600;
     font-size: 0.8rem;
     border-radius: 20px;
     filter: drop-shadow(0px 2px 2px black);
+    margin-left: 1rem;
+    
   }
 
-  .content-container {
-    width: 100%;
-    margin: auto auto;
+ 
 
 
    
 
     h2 {
-      font-size: 2.5rem;
-      // text-align: left;
+      font-size: 2rem;
       text-align: center;
-      background: -webkit-linear-gradient(45deg, #fd9126, #c33c33);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--Clr-Primary500);
       font-family: "IBM Plex Sans";
-      @media (min-width: 768px) {
-        text-align: center;
-      }
+      margin: 0rem 0.5rem;
 
-      @media (min-width: 768px) {
-        text-align: center;
-      }
-
-      @media (max-width: 375px){
-        font-size: 2.2rem;
-      }
     }
+
+     
+      
     p {
-      margin-bottom: 2rem;
+      text-align: center;
+      margin: 0.5rem 0;
       color: rgba(255,255,255,0.8);
-      @media (min-width: 768px) {
-        text-align: center;
-        font-family: "Inter";
-      }
-      @media (max-width: 450px){
-        display: none;
-      }
+     
     }
 
-    form {
-      height:100vh;
-      position: relative;
-      overflow: hidden;
+form {
+  
+  position: relative;
+  overflow: hidden;
 
-      .input-area {
-        margin-bottom: 40px;
-        position: relative;
 
-        &.button-area {
-          text-align: center;
-          margin-bottom: 0;
-        }
-      }
+   .input-area {
+    
+    margin-bottom: 1rem;
+   position: relative;
+
+   &.button-area {
+   text-align: center;
+   padding: 1rem 1rem;
+   }
+  }
+
+
 
       input,
       textarea {
-        height: 100%;
-        font-size: 1rem;
-        letter-spacing: 0.25rem;
-        padding: 20px;
-        display: block;
-        width: 100% !important;
-        border: none;
-        background-color: #0b132e;
-        color: #fff;
-        text-transform: uppercase;
         position: relative;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        display: block;
+        border: none;
+        background-color: rgba(43, 102, 131, 0.5);
+        color: #fff;
         box-sizing: border-box;
         outline: none;
         box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+        width: 100% !important;
+        height: 100%;
+        padding: 0.8rem 0.4rem;
 
         &:focus,
         &:valid {
@@ -222,7 +208,7 @@ const ContactWrapper = styled.section`
           left: 0px;
           bottom: -1px;
           height: 1px;
-          background: linear-gradient(90deg, #ec772a, #03a9f4);
+          background: linear-gradient(90deg,#7271d1, #7271d1);
           width: 100%;
           transform: translateX(-100%);
           transition: transform 0.3s ease;
@@ -239,7 +225,7 @@ const ContactWrapper = styled.section`
         font-size: 0.8rem;
       }
     }
-  }
+
 `
 
 export default BannerContact

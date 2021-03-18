@@ -1,11 +1,34 @@
 import React from "react"
 import styled from "styled-components"
 import Button from "../Button/button"
+import BackgroundImage from "gatsby-background-image"
+import { useStaticQuery, graphql } from "gatsby"
 import "@fontsource/ibm-plex-sans"
 import "@fontsource/inter"
 
 const Contact = ({ title, subtitle, className}) => {
+
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "purple-bg.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 6000, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
+    <BackgroundImage
+      id="perks"
+      Tag="section"
+      fluid={data.file.childImageSharp.fluid}
+      loading="eager"
+      fadeIn={false}
+      
+    >
     <ContactWrapper id="contact" className={className} >
       <div className="content-container" >
         <h2>{title}</h2>
@@ -57,90 +80,66 @@ const Contact = ({ title, subtitle, className}) => {
         </form>
       </div>
     </ContactWrapper>
+    </BackgroundImage>
   )
 }
 
 const ContactWrapper = styled.section`
-  background: #001a3e;
-  height: 100vh;
-  padding-top: 20vh;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 0 0;
+  padding: 1rem 1rem;
+  padding-top: 3rem;
 
-  // @media (max-width: 1050px){
-  //   padding-top: 8vh;
-  // }
-
-  @media (max-width: 1400px){
-    padding-top: 12vh;
-    height: 113vh;
-  }
+  
 
   .formsubmitbutton{
-    // box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+    text-align: center;
+    // box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.4), 0 6px 10px 10px rgba(0, 0, 0, 0.39);
     border-radius: 0px;
     border: 2px solid rgba(255,255,255, 0.8);
     background: rgba(1,1,1,0);
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
     
     &::before{
       border-radius: 0px;
       border: 2px solid rgba(255,255,255, 0.8);
     }
 
-    @media (max-width: 1050px){
-      transform: scale(1.4);
-      
-    }
-    @media (max-width: 600px){
-      transform: scale(1);
-      
-    }
   }
 
   .button-area{
-    padding-bottom: 5vh;
+
   }
 
   .content-container {
-    height: auto;
-    margin: auto;
     
-    @media (max-width: 1050px){
-      width: 80vw;
-      height: 50vh;
-    }
+ 
+  
     
 
     h2 {
-      text-align: center;
-      background: -webkit-linear-gradient(45deg, #fd9126, #c33c33);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: -webkit-linear-gradient(45deg, #fd9126, #c33c33);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       font-family: "IBM Plex Sans";
-      font-size: 3rem;
-      @media (min-width: 1050px) {
-        text-align: center;
-      }
-      @media (max-width: 450px){
-        font-size: 2.3rem;
-      }
-
+      font-size: 2.2rem;
+      text-align: center;
+      margin: 0 0;
+      color: #7271d1;
+    
     }
     p {
-      margin-bottom: 2rem;
+      text-align: center;
+      margin: 0 0;
+      font-size: 1rem;
       color: rgba(255,255,255,0.8);
       font-family: "Inter";
-
-      @media (max-width: 1050px){
-        font-size: 1.6rem;
-      }
-
-      @media (min-width: 768px) {
-        text-align: center;
-        font-family: "Inter";
-      }
-
-      @media (max-width: 450px){
-        display: none;
-      }
+      padding: 0rem 0.5rem;
+      margin-bottom: 0.5rem;
     }
 
     form {
@@ -148,7 +147,7 @@ const ContactWrapper = styled.section`
       overflow: hidden;
 
       .input-area {
-        margin-bottom: 40px;
+        margin-bottom: 0.7rem;
         position: relative;
 
         &.button-area {
@@ -160,18 +159,19 @@ const ContactWrapper = styled.section`
       input,
       textarea {
         height: 100%;
-        font-size: 1rem;
+        font-size: 1.3rem;
         letter-spacing: 0.25rem;
-        padding: 20px;
+        padding: 0.5rem;
         display: block;
         width: 100% !important;
         border: none;
-        background-color: #0b132e;
+        background-color: rgba(38, 82, 84, 0.6);
         color: #fff;
         text-transform: uppercase;
         position: relative;
         box-sizing: border-box;
         outline: none;
+        box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
 
         &:focus,
         &:valid {
@@ -203,7 +203,7 @@ const ContactWrapper = styled.section`
           left: 0px;
           bottom: -1px;
           height: 1px;
-          background: linear-gradient(90deg, #ec772a, #03a9f4);
+          background: linear-gradient(90deg, #7271d1, #7271d1);
           width: 100%;
           transform: translateX(-100%);
           transition: transform 0.3s ease;

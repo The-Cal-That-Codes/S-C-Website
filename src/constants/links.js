@@ -1,14 +1,14 @@
 export default [
   {
     path: "packages",
-    text: "Packages",
+    text: "Services",
   }, {
     path:"perks",
-    text:"Benefits"
+    text:"Web Dev"
   }, 
   {
     path: "about",
-    text: "About",
+    text: "Marketing",
   },
   {
     path: "contact",

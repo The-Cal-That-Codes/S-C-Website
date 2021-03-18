@@ -4,7 +4,6 @@ import { Link } from "react-scroll"
 import {
   mainMenuItems,
   footerMenuItems,
-  socialMenuItems,
 } from "../constants/menu-items"
 import styled from "styled-components"
 import PropTypes from "prop-types"
@@ -38,17 +37,13 @@ const Footer = ({ Logo }) => {
               </Link>
             )}
             <address>
-              Web Development- CalsCodes@gmail.com
-              <br />
-              
-              <br />
-              Digital Marketing- Sam@samsaddress.com
+              CroftDigital@gmail.com
             </address>
          
           </div>
         ) : null}
 
-        {mainMenuItems || socialMenuItems || footerMenuItems ? (
+        {mainMenuItems || footerMenuItems ? (
           <div className="menus-cont">
             {/* If main menu items are being imported, render this */}
             {mainMenuItems && (
@@ -77,26 +72,7 @@ const Footer = ({ Logo }) => {
               </ul>
             )}
 
-            {/* If social menu items are being imported, render this */}
-            {socialMenuItems && (
-              <ul className="footer-menu socials">
-                
-                {socialMenuItems.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {item.icon}
-                        <span className="sr-only">{item.name}</span>
-                      </a>
-                    </li>
-                  )
-                })}
-              </ul>
-            )}
+            
           </div>
         ) : null}
 
@@ -108,7 +84,7 @@ const Footer = ({ Logo }) => {
             {footerData.author && (
               <li>
                 <a
-                  
+                  className="no-pointer"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -129,8 +105,8 @@ Footer.propTypes = {
 
 const FooterStyles = styled.footer`
   padding: calc(var(--spacing) * 2);
-  background-color: var(--black);
-  font-family: var(--sansSerif);
+  background-color: #010108;
+  font-family: var(--Font-Accent);
   font-weight: 300;
   font-style: normal;
   color: #fff;
@@ -184,7 +160,7 @@ const FooterStyles = styled.footer`
     transition: var(--transMed);
 
     &:hover {
-      color: #db4a37;
+      color: #7271d1;
       cursor: pointer;
      
     }
