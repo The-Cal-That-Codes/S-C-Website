@@ -9,6 +9,10 @@ export const BannerStyles = styled.section`
     justify-content: center;
     padding: 1rem 0.5rem;
     padding-bottom: 2rem;
+
+    @media(min-width: 600px){
+      padding: 1rem 2.5rem;
+    }
   }
 
 
@@ -22,15 +26,15 @@ export const BannerStyles = styled.section`
 
 .mainbutton{
     a{filter: drop-shadow(0px 2px 2px black);}
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     background: rgba(1,1,1,0);
     margin: 1rem auto;
-    border: 2px solid var(--Clr-Primary500);
+    border: 3px solid var(--Clr-Primary500);
 
 }
 
 .bannercontactbutton{
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   background: rgba(1,1,1,0);
   border: 0px;
   margin: 0 auto;
@@ -88,6 +92,7 @@ export const BannerStyles = styled.section`
       font-size: 1.3rem; 
       font-family: var(--Font-Accent);
       margin: 0 0;
+      margin-bottom: 0.5rem;
       padding: 0.2rem 0;
      
     }
@@ -127,21 +132,29 @@ export const BannerStyles = styled.section`
 @media (min-width: 1100px){
 
   .gatsby-image-wrapper {
-    padding: 1rem 8rem;
+    padding: 1rem 6rem;
     padding-bottom: 2rem;
   }
 
   .hero-content{
     padding-top: 3rem;
     h1{
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
 
    p{
-     font-size: 1.5rem;
+     font-size: 1.4rem;
      padding-right: 2rem;
      margin-bottom: 1rem;
    }
+  }
+
+  .mainbutton{
+    font-size: 0.7rem;
+  }
+
+  .bannercontactbutton{
+    font-size: 0.6rem;
   }
 }
 

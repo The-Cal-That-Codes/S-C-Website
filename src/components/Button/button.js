@@ -63,7 +63,7 @@ const ButtonWrapper = styled.button`
     right: -5px;
     bottom: -5px;
     z-index: -1;
-    background: rgba(1,1,1,0.4);
+    background: linear-gradient(90deg, #0c3f57,#1b4347, #1b4347,#0c3f57);
     background-size: 400%;
     border-radius: 40px;
     opacity: 0;
@@ -78,6 +78,10 @@ const ButtonWrapper = styled.button`
     100% {
       background-position: 400%;
     }
+  }
+
+  @media(min-width: 1100px){
+    font-size: 1rem;
   }
 `
 

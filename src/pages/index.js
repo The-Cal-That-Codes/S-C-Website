@@ -28,8 +28,7 @@ export default () => (
       
       id="packages"
       title2="Digital Marketing"
-      para="Sites designed to excel your brand and hand coded for the online presence you need"
-      para2="Holistic digital advertising structure across a wide range of channels."
+     
     />
     
   

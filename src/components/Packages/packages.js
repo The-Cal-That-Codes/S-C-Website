@@ -7,7 +7,7 @@ import { motion, useAnimation } from "framer-motion";
 
 
 
-const Packages = ({ title,title2, para, para2, uximg, devimg, desimg, digbubbles, diglogo, digchart}) => {
+const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart}) => {
 
   
 
@@ -92,8 +92,7 @@ useEffect(() => {
       <div className="flex-container">
 
         <div className="headerServices">
-              <h1>Web Design and Development</h1>
-              <p>{para}</p>
+              <h1>Digital solutions for  <span className="marketing">Marketing</span> and <span className="devword">Development</span></h1>
           </div>
           
         <div className="servicecards">
@@ -262,22 +261,24 @@ const PackagesWrapper = styled.section`
     flex-flow: column;
     
    
-    p{
-      font-family: var(--Font-Accent);
-      color: var(--Clr-Secondaryfade);
-      font-size: 1.1rem;
-      margin: 0px;
-      padding: 0.5rem 0.5rem;
-    }
+    // p{
+    //   font-family: var(--Font-Accent);
+    //   color: var(--Clr-Secondaryfade);
+    //   font-size: 1.1rem;
+    //   margin: 0px;
+    //   padding: 0.5rem 0.5rem;
+    // }
 
     h1 {
       font-weight: 600;
       font-size: 2rem;
       font-family: var(--Font-Title);
       margin: 0px;
-      padding: 0.5rem 0.5rem;
-      padding-top: 1rem;
-
+      padding: 1rem 0.5rem;
+      
+       .marketing, .devword{
+         color: var(--Clr-Primary500);
+       }
     }
   }
 
@@ -343,7 +344,7 @@ const PackagesWrapper = styled.section`
     border-radius: 10px;
     width: 100%;
     padding: 1rem 0.3rem;
-    margin: 0.5rem 0.5rem;
+    
     display: flex;
     
     align-items: center;
@@ -426,11 +427,11 @@ const PackagesWrapper = styled.section`
 @media (min-width: 550px){
   padding: 5rem 3rem;
 
-  .headerServices{
-    p{
-    font-size: 1.3rem;
-  }
-}
+//   .headerServices{
+//     p{
+//     font-size: 1.3rem;
+//   }
+// }
 
 .cardContentH1Image{
   margin-right: auto;
@@ -462,21 +463,20 @@ padding-top: 3.5rem;
   }
 
   h1,h2,p{
-    text-align: center;
+    // text-align: center;
   }
 
   .headerServices{
-    p{
-    font-size: 1.3rem;
-    max-width: 80%;
-    margin: auto;
+    h1{
+   padding: 1rem 0.5rem;
+   padding-top: 2rem;
   }
 }
 
   .servicecards{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 15px;
+    grid-gap: 20px;
     
     
   }

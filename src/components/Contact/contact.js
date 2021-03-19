@@ -112,7 +112,7 @@ const ContactWrapper = styled.section`
   }
 
   .button-area{
-
+  padding: 1.2rem 0rem;
   }
 
   .content-container {

@@ -169,7 +169,7 @@ h3{
 
 .iconbox{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0.5rem 0rem;
   padding-top: 0px;
 

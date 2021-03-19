@@ -80,8 +80,8 @@ export const NavStyles = styled.nav`
     width: auto;
     justify-content: space-between;
 
-    @media (max-width: 1050px){
-      width: 100%;
+    @media (max-width: 1128px){
+      width: 95%;
     }
 
     img {
@@ -90,13 +90,11 @@ export const NavStyles = styled.nav`
       padding-top: 1rem;
       transition: 0.4s ease-in-out;
 
+      
+
       :hover{
         scale: 1.04
       }
-
-    
-
-    
     }
   }
 
@@ -107,7 +105,7 @@ export const NavStyles = styled.nav`
     align-items: flex-start;
     position: fixed;
     text-align: center;
-    background: linear-gradient(45deg, rgba(25, 54, 64, 0.9), rgba(25, 54, 64, 0.9));
+    background: linear-gradient(45deg, rgba(25, 54, 64, 0.95), rgba(25, 54, 64, 0.95));
     margin: 0;
     height: 100%;
     top: 0;
@@ -117,6 +115,15 @@ export const NavStyles = styled.nav`
     transform: translateX(100%);
     transition: 0.3s ease-in;
     list-style: none;
+    padding-left: 15vw;
+
+    @media(min-width: 500px ){
+      padding-left: 30vw;
+    }
+
+      @media(min-width: 1128px ){
+      padding-left: 0vw;
+    }
 
 
     
@@ -129,7 +136,7 @@ export const NavStyles = styled.nav`
       margin-left: 0;
       margin-right: 5px;
       padding: 0.75rem 0;
-      color: #F0EAEA;
+      color: #ffffff;
       padding-bottom: 5vh;
     }
 
@@ -137,7 +144,7 @@ export const NavStyles = styled.nav`
         text-decoration: none;
         text-transform: capitalize;
         transition: 0.3s;
-        font-family: "Roboto";
+        font-family: var(--Font-Title);
         font-size: 1.7rem;
 
       
@@ -157,8 +164,8 @@ export const NavStyles = styled.nav`
 
       &.show-nav {
 
-        @media (max-width: 993px){
-        transform: translateX(25%);
+        @media (max-width: 1128px){
+        transform: translateX(20%);
         }
         
       }
@@ -209,7 +216,9 @@ export const NavStyles = styled.nav`
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 1128px) {
+
+    padding-bottom: 0px;
     .masthead {
       flex-direction: column;
       justify-content: center;
@@ -223,29 +232,47 @@ export const NavStyles = styled.nav`
       background: transparent;
       flex-direction: row;
       margin-left: auto;
+      margin-right: 2vw;
       position: relative;
       transform: translateX(0);
       transition: none;
 
+      .navlist{
+        font-size: 1.2rem;
+        padding-top: 1.5rem;
+      }
+
       li {
+        padding: 0 0;
         margin-left: 1rem;
+      }
+    }
+
+    .masthead {
+      img {
+        padding: 0rem 3rem ;
+        width: 20rem ;
       }
     }
   }
 
-  @media(min-width: 1000px){
-   
-    .navlist{
-      
-      font-size: 1.5rem !important;
-      padding-top: 2rem !important;
-    }
+  @media(min-width: 1212px){
 
-    img{
-      padding: 1rem 2rem !important;
-      width: 17rem !important;
+    .nav-links{
+      .navlist{
+      
+        font-size: 1.3rem;
+        padding-top: 2.3rem;
+      }
     }
    
+   
+    .masthead {
+    img {
+      padding: 1rem 3rem ;
+      width: 20rem ;
+    }
+  }
    }
 
 `

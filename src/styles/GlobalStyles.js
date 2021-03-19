@@ -26,7 +26,8 @@ const GlobalStyles = createGlobalStyle`
     --para: 1rem;
     --spacing: 1rem;
     // --Clr-Primary500: #489BC4;
-    --Clr-Primary500: #7271d1;
+    // --Clr-Primary500: #7271d1;
+    --Clr-Primary500: #0395E4;
     // --Clr-tintPackageblue600: #183c4c;
     --Clr-tintPackageblue600: rgba(150, 154, 190, 0.3);
     --Clr-Secondaryfade: rgba(255,255,255, 0.9);

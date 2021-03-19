@@ -4,7 +4,7 @@ export default [
     text: "Services",
   }, {
     path:"perks",
-    text:"Web Dev"
+    text:"Development"
   }, 
   {
     path: "about",
