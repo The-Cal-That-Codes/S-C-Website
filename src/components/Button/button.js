@@ -12,7 +12,7 @@ const Button = props => {
                 className={props.className}
                 onClick={props.onClick}
             >
-              <Link to="packages" smooth={true} duration={500}>
+              <Link to={props.index} smooth={true} duration={500}>
                 {props.cta}
               </Link>
             </ButtonWrapper>

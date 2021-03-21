@@ -23,14 +23,13 @@ export const BannerStyles = styled.section`
 
 
 
-
+ 
 .mainbutton{
     a{filter: drop-shadow(0px 2px 2px black);}
     font-size: 0.9rem;
     background: rgba(1,1,1,0);
-    margin: 1rem auto;
     border: 3px solid var(--Clr-Primary500);
-
+   margin: 1rem auto;
 }
 
 .bannercontactbutton{

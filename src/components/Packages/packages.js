@@ -218,14 +218,14 @@ useEffect(() => {
 
         </div>
       <div className="buttoncontainer">
-        <Link to="packages" smooth={true} duration={500}>
-              <span className="sr-only">Jump to perks</span>
-            <Button label="Discover more" cta="Development and Design" className="discoverbutton"/>
-        </Link>
-        <Link to="about" smooth={true} duration={500}>
-              <span className="sr-only">Jump to perks</span>
-            <Button label="Discover more" cta="Digital Marketing" className="discoverbutton"/>
-        </Link>
+        
+              <span className="sr-only">Jump to marketing</span>
+            <Button label="Discover more" cta="Development and Design" className="discoverbutton" anchor={true} index="perks"/>
+        
+        
+              <span className="sr-only">Jump to Development</span>
+            <Button label="Discover more" cta="Digital Marketing" anchor={true} className="discoverbutton" index="about"/>
+      
     </div>
       </div>
       
@@ -277,7 +277,7 @@ const PackagesWrapper = styled.section`
       padding: 1rem 0.5rem;
       
        .marketing, .devword{
-         color: #7271d1;
+         color: #4193e0;
        }
     }
   }

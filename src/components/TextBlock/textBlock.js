@@ -43,22 +43,22 @@ const controller = (index) => {
         <div className="contentwrapper">
           <h1>Marketing title that sells and makes people want!</h1>
           <div className="iconbox">
-          <IconContext.Provider value={classControl === 1 ?{ color: "#7271d1", size: "2.5rem", className:"iconmedia" }:
+          <IconContext.Provider value={classControl === 1 ?{ color: "#4193e0", size: "2.5rem", className:"iconmedia" }:
                                                          {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" } }>
             <BsDiamondFill onClick={() => controller(1)}/>
           </IconContext.Provider>
           <h3>General</h3>
-          <IconContext.Provider value={classControl === 2 ?{ color: "#7271d1", size: "2.5rem", className:"iconmedia" }:
+          <IconContext.Provider value={classControl === 2 ?{ color: "#4193e0", size: "2.5rem", className:"iconmedia" }:
                                       {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
             <BsFillPieChartFill onClick={() => controller(2)} />
           </IconContext.Provider>
           <h3>Title 2</h3>
-          <IconContext.Provider value={classControl === 3 ?{ color: "#7271d1", size: "2.5rem", className:"iconmedia" }:
+          <IconContext.Provider value={classControl === 3 ?{ color: "#4193e0", size: "2.5rem", className:"iconmedia" }:
                                       {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
             <BsFillPeopleFill onClick={() => controller(3)}/>
           </IconContext.Provider>
           <h3>Title 3</h3>
-          <IconContext.Provider value={classControl === 4 ?{ color: "#7271d1", size: "2.5rem", className:"iconmedia" }:
+          <IconContext.Provider value={classControl === 4 ?{ color: "#4193e0", size: "2.5rem", className:"iconmedia" }:
                                       {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
           
             <BsChatDotsFill onClick={() => controller(4)}/>
@@ -119,20 +119,20 @@ const controller = (index) => {
            }
           <hr className="smallLine"/>
           <div className="iconbox2 iconNav">
-          <IconContext.Provider value={classControl === 1 ?{ color: "#7271d1", className: "countermedia"}:
+          <IconContext.Provider value={classControl === 1 ?{ color: "#4193e0", className: "countermedia"}:
                                                          {color:"#969ABE", className: "countermedia"} }>
             <BsDiamondFill/>
           </IconContext.Provider>
           
-          <IconContext.Provider value={classControl === 2 ?{ color: "#7271d1", className: "countermedia"}:
+          <IconContext.Provider value={classControl === 2 ?{ color: "#4193e0", className: "countermedia"}:
                                                          {color:"#969ABE",className: "countermedia"} }>
             <BsDiamondFill/>
           </IconContext.Provider>
-          <IconContext.Provider value={classControl === 3 ?{ color: "#7271d1",className: "countermedia" }:
+          <IconContext.Provider value={classControl === 3 ?{ color: "#4193e0",className: "countermedia" }:
                                                          {color:"#969ABE",className: "countermedia"} }>
             <BsDiamondFill/>
           </IconContext.Provider>
-          <IconContext.Provider value={classControl === 4 ?{ color: "#7271d1",className: "countermedia" }:
+          <IconContext.Provider value={classControl === 4 ?{ color: "#4193e0",className: "countermedia" }:
                                                          {color:"#969ABE",className: "countermedia"} }>
             <BsDiamondFill/>
           </IconContext.Provider>

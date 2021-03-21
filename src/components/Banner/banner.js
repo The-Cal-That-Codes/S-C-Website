@@ -96,15 +96,16 @@ const removeContactonClick = () => {
             >
               Personalised sites, support and advertising strategies to expand your client base and keep revenue coming in.
             </motion.p>
-            <Link to="perks" smooth={true} duration={500}>
+           
               <span className="sr-only">Jump to about</span>
               <Button
                 className="mainbutton"
                 cta="View our services"
                 label="Banner Learn More"
                 anchor={true}
+                index="packages"
               />
-             </Link>
+            
       
               <Button
                 cta="Or contact us now!"

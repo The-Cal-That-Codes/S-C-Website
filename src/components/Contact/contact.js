@@ -129,7 +129,7 @@ const ContactWrapper = styled.section`
       font-size: 2.2rem;
       text-align: center;
       margin: 0 0;
-      color: #7271d1;
+      color: #4193e0;
     
     }
     p {
