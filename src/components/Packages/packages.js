@@ -277,7 +277,7 @@ const PackagesWrapper = styled.section`
       padding: 1rem 0.5rem;
       
        .marketing, .devword{
-         color: var(--Clr-Primary500);
+         color: #7271d1;
        }
     }
   }
@@ -446,15 +446,17 @@ img{
 
 @media(min-height: 880px){
   .buttoncontainer{
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
+
+ 
 }
 
 @media(min-width: 1000px){
 padding-top: 3.5rem;
 
 .buttoncontainer{
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
   .maincontainer{
@@ -462,14 +464,26 @@ padding-top: 3.5rem;
    
   }
 
-  h1,h2,p{
-    // text-align: center;
+  h2,p{
+    text-align: center;
   }
 
   .headerServices{
     h1{
    padding: 1rem 0.5rem;
-   padding-top: 2rem;
+   padding-top: 1rem;
+
+   @media (min-width: 1235px) and (min-height: 780px ){
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+        font-size: 2.3rem;
+      }
+
+      @media (min-width: 1499px){
+        padding-top:2rem;
+        padding-bottom: 1rem;
+        font-size: 2rem;
+      }
   }
 }
 
@@ -502,6 +516,11 @@ padding-top: 3.5rem;
   }
 
  }
+
+ 
+
+  
+ 
 
 `
 

@@ -229,28 +229,23 @@ h3{
   display: flex;
   flex-flow: column;
   animation: paraEnter 0.45s ease-out;
-
-  p{
-    padding: 0.5rem 1.2rem;
-    padding-right: 0.4rem;
-    margin: 0 0.3rem;
-    line-height: 1.5;
-    font-family: var(--Font-Second);
-    font-size: 1.1rem;
-    
-  }
-
 }
 
 .paraExit{
   display: flex;
   flex-flow: column;
   animation: paraExit 0.45s ease-out;
+}
 
-  p{
-    padding: 0.5rem 0.5rem;
-  }
- 
+.paraEnter, .paraExit {
+   p{
+    padding: 0.5rem 1.2rem;
+    padding-right: 0.4rem;
+    margin: 0 0.3rem;
+    line-height: 1.5;
+    font-family: var(--Font-Second);
+    font-size: 1.1rem;
+   }
 }
 
 @keyframes paraEnter{

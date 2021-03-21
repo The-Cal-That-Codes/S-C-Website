@@ -256,7 +256,7 @@ export const NavStyles = styled.nav`
     }
   }
 
-  @media(min-width: 1212px){
+  @media(min-width: 1300px){
 
     .nav-links{
       .navlist{

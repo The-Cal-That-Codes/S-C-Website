@@ -43,22 +43,22 @@ const controller = (index) => {
         <div className="contentwrapper">
           <h1>Design, Dev and Deployment all in one place!</h1>
           <div className="iconbox">
-          <IconContext.Provider value={classControl === 1 ?{ color: "#7271d1", size: "2.5rem", className:"iconmedia" }:
+          <IconContext.Provider value={classControl === 1 ?{ color: "#ab3140", size: "2.5rem", className:"iconmedia" }:
                                                          {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" } }>
             <BsDiamondFill onClick={() => controller(1)}/>
           </IconContext.Provider>
           <h3>General</h3>
-          <IconContext.Provider value={classControl === 2 ?{ color: "#7271d1", size: "2.5rem", className:"iconmedia" }:
+          <IconContext.Provider value={classControl === 2 ?{ color: "#ab3140", size: "2.5rem", className:"iconmedia" }:
                                       {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
             <BsTerminalFill onClick={() => controller(2)} />
           </IconContext.Provider>
           <h3>Title 2</h3>
-          <IconContext.Provider value={classControl === 3 ?{ color: "#7271d1", size: "2.5rem", className:"iconmedia" }:
+          <IconContext.Provider value={classControl === 3 ?{ color: "#ab3140", size: "2.5rem", className:"iconmedia" }:
                                       {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
             <BsDropletHalf onClick={() => controller(3)}/>
           </IconContext.Provider>
           <h3>Title 3</h3>
-          <IconContext.Provider value={classControl === 4 ?{ color: "#7271d1", size: "2.5rem", className:"iconmedia" }:
+          <IconContext.Provider value={classControl === 4 ?{ color: "#ab3140", size: "2.5rem", className:"iconmedia" }:
                                       {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
           
             <BsLayersFill onClick={() => controller(4)}/>
@@ -69,48 +69,48 @@ const controller = (index) => {
           {
           iconColour === 1 ?
           <div className={classControl === 1 ? "paraEnter" : "paraExit"}>
-          <p>
+          <p className="paraLeft">
           First ipsum dolor, sit amet consectetur adipisicing elit.
           Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
           Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
          </p>
-         <p>
+         <p className="paraRight">
            First ipsum dolor, sit amet consectetur adipisicing elit.
            Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
            Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
          </p>
          </div> : iconColour === 2 ?
        <div className={classControl === 2 ? "paraEnter" : "paraExit"}>
-       <p>
+       <p className="paraLeft">
        Second ipsum dolor, sit amet consectetur adipisicing elit.
        Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
        Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
       </p>
-      <p>
+      <p className="paraRight">
         First ipsum dolor, sit amet consectetur adipisicing elit.
         Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
         Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
       </p>
       </div> : iconColour === 3 ?
          <div className={classControl === 3 ? "paraEnter" : "paraExit"}>
-         <p>
+         <p className="paraLeft">
          Third ipsum dolor, sit amet consectetur adipisicing elit.
          Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
          Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
         </p>
-        <p>
+        <p className="paraRight">
           First ipsum dolor, sit amet consectetur adipisicing elit.
           Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
           Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
         </p>
         </div> :
           <div className={classControl === 4 ? "paraEnter" : "paraExit"}>
-           <p>
+           <p className="paraLeft">
            FOURTH ipsum dolor, sit amet consectetur adipisicing elit.
            Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
            Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
           </p>
-          <p>
+          <p className="paraRight">
             First ipsum dolor, sit amet consectetur adipisicing elit.
             Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
             Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
@@ -119,20 +119,20 @@ const controller = (index) => {
            }
           <hr className="smallLine"/>
           <div className="iconbox2 iconNav">
-          <IconContext.Provider value={classControl === 1 ?{ color: "#7271d1", className: "countermedia"}:
+          <IconContext.Provider value={classControl === 1 ?{ color: "#ab3140", className: "countermedia"}:
                                                          {color:"#969ABE", className: "countermedia"} }>
             <BsDiamondFill/>
           </IconContext.Provider>
           
-          <IconContext.Provider value={classControl === 2 ?{ color: "#7271d1", className: "countermedia"}:
+          <IconContext.Provider value={classControl === 2 ?{ color: "#ab3140", className: "countermedia"}:
                                                          {color:"#969ABE",className: "countermedia"} }>
             <BsDiamondFill/>
           </IconContext.Provider>
-          <IconContext.Provider value={classControl === 3 ?{ color: "#7271d1",className: "countermedia" }:
+          <IconContext.Provider value={classControl === 3 ?{ color: "#ab3140",className: "countermedia" }:
                                                          {color:"#969ABE",className: "countermedia"} }>
             <BsDiamondFill/>
           </IconContext.Provider>
-          <IconContext.Provider value={classControl === 4 ?{ color: "#7271d1",className: "countermedia" }:
+          <IconContext.Provider value={classControl === 4 ?{ color: "#ab3140",className: "countermedia" }:
                                                          {color:"#969ABE",className: "countermedia"} }>
             <BsDiamondFill/>
           </IconContext.Provider>
@@ -200,13 +200,13 @@ h3{
   margin: 0 auto;
   height: 5px;
   border: 0px;
-  background-color: #7271d1;
+  background-color: #ab3140;
   opacity: 0.8;
 
 }
 
 .smallLine{
-  max-width: 80%;
+  width: 80%;
   margin: 0 auto;
   height: 4px;
   border: 0px;
@@ -345,8 +345,7 @@ h3{
   }
 
   .smallLine{
-    margin: 0 1rem;
-    max-width: 100%;
+    width: 85%;
   }
 
   .contentwrapper{
@@ -375,11 +374,19 @@ h3{
 .paraEnter, .paraExit {
     max-width: 100%;
     
-    p{
-      font-size: 1.35rem ;
+    .paraLeft,.paraRight{
+      font-size: 1.3rem ;
       padding: 2rem 1rem;
+      line-height: 1.6
+    }
+
+    .paraLeft{
+      margin-left: 8vw;
     }
    
+    .paraRight{
+      margin-right: 8vw;
+    }
   }
 
   .countermedia{
@@ -416,30 +423,30 @@ h3{
 }
 
 @media(min-width: 1390px){
-  padding 1rem 2rem;
+  padding 1rem 4rem;
 
   h1{
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 2.3rem;
   }
 
   .iconbox{
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    svg{
+      margin: 0.3rem;
+    }
   }
   .iconbox2{
-    padding-bottom: 0rem;
-  }
-  
+    padding: 0rem;
 
-  .paraEnter, .paraExit {
-    max-width: 100%;
-    
-    p{
-      font-size: 1.2rem ;
-      padding: 2rem 2rem;
+    svg{
+      margin: 0.3rem;
     }
-   
   }
-}
+}  
+
+
 `
 
 export default TextBlockImg
