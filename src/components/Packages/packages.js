@@ -218,7 +218,7 @@ useEffect(() => {
 
         </div>
       <div className="buttoncontainer">
-        <Link to="perks" smooth={true} duration={500}>
+        <Link to="packages" smooth={true} duration={500}>
               <span className="sr-only">Jump to perks</span>
             <Button label="Discover more" cta="Development and Design" className="discoverbutton"/>
         </Link>
