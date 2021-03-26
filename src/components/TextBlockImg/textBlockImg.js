@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 // import { useInView } from "react-intersection-observer";
 // import { useAnimation } from "framer-motion";
-import { BsDiamondFill, BsDropletHalf , BsTerminalFill,BsLayersFill } from "react-icons/bs";
+import { BsXDiamondFill, BsDropletHalf , BsTerminalFill,BsLayersFill,BsFillCircleFill,BsPeopleFill, BsChatSquareDotsFill} from "react-icons/bs";
 import { IconContext } from "react-icons";
+import { Link } from "react-scroll";
 
 
 const TextBlockImg = ({id}) => {
@@ -43,27 +44,28 @@ const controller = (index) => {
         <div className="contentwrapper">
           <h1>Design, Dev and Deployment all in one place!</h1>
           <div className="iconbox">
-          <IconContext.Provider value={classControl === 1 ?{ color: "#4193e0", size: "2.5rem", className:"iconmedia" }:
+          <IconContext.Provider value={classControl === 1 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
                                                          {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" } }>
-            <BsDiamondFill onClick={() => controller(1)}/>
+            <BsXDiamondFill onClick={() => controller(1)}/>
           </IconContext.Provider>
           <h3>General</h3>
-          <IconContext.Provider value={classControl === 2 ?{ color: "#4193e0", size: "2.5rem", className:"iconmedia" }:
+          <IconContext.Provider value={classControl === 2 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
                                       {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
             <BsTerminalFill onClick={() => controller(2)} />
           </IconContext.Provider>
           <h3>Title 2</h3>
-          <IconContext.Provider value={classControl === 3 ?{ color: "#4193e0", size: "2.5rem", className:"iconmedia" }:
+          <IconContext.Provider value={classControl === 3 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
                                       {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
             <BsDropletHalf onClick={() => controller(3)}/>
           </IconContext.Provider>
           <h3>Title 3</h3>
-          <IconContext.Provider value={classControl === 4 ?{ color: "#4193e0", size: "2.5rem", className:"iconmedia" }:
+          <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
                                       {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
           
             <BsLayersFill onClick={() => controller(4)}/>
           </IconContext.Provider>
           <h3>Title4</h3>
+          
           </div>
           <hr className="longLine"/>
           {
@@ -117,27 +119,55 @@ const controller = (index) => {
           </p>
           </div>
            }
-          <hr className="smallLine"/>
+          {/* <hr className="smallLine"/> */}
+         
           <div className="iconbox2 iconNav">
-          <IconContext.Provider value={classControl === 1 ?{ color: "#4193e0", className: "countermedia"}:
-                                                         {color:"#969ABE", className: "countermedia"} }>
-            <BsDiamondFill/>
-          </IconContext.Provider>
-          
-          <IconContext.Provider value={classControl === 2 ?{ color: "#4193e0", className: "countermedia"}:
-                                                         {color:"#969ABE",className: "countermedia"} }>
-            <BsDiamondFill/>
-          </IconContext.Provider>
-          <IconContext.Provider value={classControl === 3 ?{ color: "#4193e0",className: "countermedia" }:
-                                                         {color:"#969ABE",className: "countermedia"} }>
-            <BsDiamondFill/>
-          </IconContext.Provider>
-          <IconContext.Provider value={classControl === 4 ?{ color: "#4193e0",className: "countermedia" }:
-                                                         {color:"#969ABE",className: "countermedia"} }>
-            <BsDiamondFill/>
-          </IconContext.Provider>
-          
+
+          <Link to="contact" smooth={true} duration={500}>
+            <div className="contactLink">
+            
+            <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)",className: "countermedia contactIcon" }:
+                                                           {color:"#969ABE",className: "countermedia contactIcon"} }>
+              <BsChatSquareDotsFill/>
+            </IconContext.Provider>
+            <p>Contact Now!</p>
+           
+            </div>
+            </Link>
+
+          <div className="InnerIconbox">
+            <IconContext.Provider value={classControl === 1 ?{ color: "var(--Clr-Primary500)", className: "countermedia"}:
+                                                           {color:"#969ABE", className: "countermedia"} }>
+              <BsFillCircleFill/>
+            </IconContext.Provider>
+            
+            <IconContext.Provider value={classControl === 2 ?{ color: "var(--Clr-Primary500)", className: "countermedia"}:
+                                                           {color:"#969ABE",className: "countermedia"} }>
+              <BsFillCircleFill/>
+            </IconContext.Provider>
+            <IconContext.Provider value={classControl === 3 ?{ color: "var(--Clr-Primary500)",className: "countermedia" }:
+                                                           {color:"#969ABE",className: "countermedia"} }>
+              <BsFillCircleFill/>
+            </IconContext.Provider>
+            <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)",className: "countermedia" }:
+                                                           {color:"#969ABE",className: "countermedia"} }>
+              <BsFillCircleFill/>
+            </IconContext.Provider>
           </div>
+          <Link to="about" smooth={true} duration={500}>
+          <div className="marketingLink">
+            
+            <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)",className: "countermedia marketingIcon" }:
+                                                           {color:"#969ABE",className: "countermedia marketingIcon"} }>
+              <BsPeopleFill/>
+            </IconContext.Provider>
+            <p>To Marketing</p>
+            
+          </div>
+          </Link>
+
+          </div>
+         
         </div>
      
 
@@ -154,6 +184,9 @@ const TextBlockImgWrapper = styled.section`
   min-height: 100vh;
   background: linear-gradient(to bottom, #03233c, #03233c);
 
+  .FooterButton{
+    display: none;
+  }
  
 
 h1{
@@ -173,19 +206,30 @@ h3{
   padding: 0.5rem 0rem;
   padding-top: 0px;
 
+  svg{
+    overflow: visible;
+  }
+
 }
 
 .iconbox2{
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0rem;
-  padding-top: 0px;
+  padding: 0.3rem 0rem;
+
+  .contactLink, .marketingLink{
+    display: none;
+  }
+
+  .countermedia{
+    margin-left: 1rem;
+  }
 
 }
 
 .iconNav{
   justify-content: center;
-  padding-top: 0.5rem;
+  
 
   
   >* + * {
@@ -196,17 +240,17 @@ h3{
 
  
 .longLine{
-  max-width: 90%;
+  max-width: 96%;
   margin: 0 auto;
   height: 5px;
   border: 0px;
-  background-color: #ab3140;
+  background-color: var(--Clr-Primary500);
   opacity: 0.8;
 
 }
 
 .smallLine{
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto;
   height: 4px;
   border: 0px;
@@ -276,7 +320,7 @@ h3{
   }
   100%{
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(50px);
   }
 }
 
@@ -285,9 +329,14 @@ h3{
   padding-bottom: 0rem;
 
   h1{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     padding: 2rem 1rem;
-    padding-bottom:1rem;
+    padding-bottom: 1rem;
+
+    @media(min-width: 790px){
+      padding-bottom: 2rem;
+      font-size: 2rem;
+    }
   }
   .paraEnter,.paraExit{
     flex-flow: row;
@@ -301,11 +350,18 @@ h3{
   
   .iconbox{
     justify-content: space-evenly;
+  
+
+    svg{
+      padding: 0.1rem;
+    }
   }
 
   .iconbox2{
     justify-content: center;
     margin-top: 0.5rem;
+    
+    
   }
 
   .iconmedia{
@@ -314,11 +370,34 @@ h3{
   }
 
   .countermedia{
-    height: 1.7rem;
-    width: 1.7rem;
+    height: 1.4rem;
+    width: 1.4rem;
     margin-left: 1rem;
 
   }
+
+  .contentwrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 80vh;
+       
+     }
+
+     .footerWrap{
+       display: flex;
+       margin: 0.5rem auto;
+       width: 100%;
+       justify-content: space-evenly;
+       
+      .FooterButton{
+        display: block;
+        margin: 0 0.5rem;
+        background: rgba(1,1,1,0);
+      }
+     }
+
+    
 }
 
 @media(min-width: 1000px){
@@ -327,8 +406,9 @@ h3{
   
 
   h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
    padding: 1rem 1rem;
+   
   }
 
   h3{
@@ -340,7 +420,7 @@ h3{
 
   .longLine{
     margin: 0rem 1rem;
-    max-width: 100%;
+    width: 100%;
     
   }
 
@@ -358,18 +438,73 @@ h3{
 
 .iconbox{
   justify-content: flex-start;
-  padding: 1rem 1rem;
+  padding: 0rem 1rem;
 }
   .iconbox2{
-  justify-content: center;
+  justify-content: space-around;
   display: flex;
-  
+  margin-top: 1rem;
 
   svg{
     margin-left: 1rem;
   }
+  .contactLink, .marketingLink{
+    display: flex;   
+    cursor: pointer;
 
+
+    p{
+      margin: 0 0;
+      margin-bottom: 0.2rem;
+      align-self: center;
+      font-size: 1.2rem;
+    }
+
+    svg{
+      margin: 0 0.3rem;
+      margin-bottom: 0.3rem;
+      align-self: center;
+    }
+    .marketingIcon,.contactIcon{
+      transition: 0.3s ease-out;
+      height: 2rem;
+      width: 2rem;
+    }
+
+    
+    }
+
+    .marketingLink,.contactLink{
+      transition: 0.3s ease-out;
+    }
+
+    .marketingLink:hover{
+     
+      transform: scale(1.2);
+      transition: 0.3s ease-out;
+
+      .marketingIcon{
+        
+        fill: var(--Clr-Primary500);
+       
+      }
   }
+
+  .contactLink:hover{
+     
+    transform: scale(1.2);
+    transition: 0.3s ease-out;
+
+    .contactIcon{
+      
+      fill: var(--Clr-Primary500);
+     
+    }
+}
+
+ 
+
+}
 
 .paraEnter, .paraExit {
     max-width: 100%;
@@ -377,6 +512,7 @@ h3{
     .paraLeft,.paraRight{
       font-size: 1.3rem ;
       padding: 2rem 1rem;
+      padding-bottom: 0.5rem;
       line-height: 1.6
     }
 
@@ -390,9 +526,10 @@ h3{
   }
 
   .countermedia{
-    height: 2rem;
-    width: 2rem;
+    max-height: 1.6rem;
+    max-width: 1.6rem;
     margin-left: 0rem;
+    padding: 0.1rem;
 
   }
 
@@ -403,7 +540,9 @@ h3{
   padding: 2rem 2rem;
 
   h1{
-    padding-bottom: 0px;
+
+    padding: 0rem 1rem;
+    padding-bottom: 1.5rem;
   
   }
   
@@ -423,15 +562,16 @@ h3{
 }
 
 @media(min-width: 1390px){
-  padding 1rem 4rem;
+  padding: 1rem 4rem;
+  
 
   h1{
-    padding-bottom: 0.5rem;
+ 
     font-size: 2.3rem;
   }
 
   .iconbox{
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 
     svg{
       margin: 0.3rem;
@@ -439,13 +579,69 @@ h3{
   }
   .iconbox2{
     padding: 0rem;
+    padding-top: 1rem;
+    margin-top: 1rem;
 
     svg{
       margin: 0.3rem;
+      overflow: visible;
     }
   }
 }  
 
+@media(min-height: 809px){
+  padding-bottom: 0.5rem;
+  h1{
+    padding-bottom: 2.5rem;
+    font-size: 2.3rem;
+  }
+
+  @media(min-width: 1580px){
+    h1{
+      padding-bottom: 0rem;
+    }
+
+    .iconbox2{
+      padding-top: 0.5rem;
+      
+    }
+  }
+}
+
+@media(min-height: 865px){
+  padding-bottom: 0.5rem;
+  h1{
+    padding-bottom: 2.5rem;
+    font-size: 2.3rem;
+  }
+
+  @media(min-width: 1620px){
+    h1{
+      padding-bottom: 1rem;
+    }
+
+    .iconbox2{
+      padding-top: 0.5rem;
+      
+    }
+  }
+}
+
+@media(min-height: 865px){
+  
+  @media(min-width: 1800px){
+ 
+
+    h1{
+      padding-bottom: 2rem;
+    }
+
+    .iconbox2{
+      padding-top: 2rem;
+      
+    }
+  }
+}
 
 `
 

@@ -67,7 +67,13 @@ export const NavStyles = styled.nav`
   padding: 1rem 0.5rem;
   padding-top: 0.5rem;
   box-sizing: border-box;
+  transition: 0.35s ease-out;
   
+  // :hover{
+  //   background: rgba(1,1,1, 0.9);
+  //   cursor: pointer;
+    
+  // }
 
 
   .logo-container{
@@ -87,13 +93,14 @@ export const NavStyles = styled.nav`
     img {
       width: 11rem;
       height: auto;
-      padding-top: 1rem;
+     
       transition: 0.4s ease-in-out;
 
       
 
       :hover{
-        scale: 1.04
+        transform: scale(1.04);
+        cursor: pointer;
       }
     }
   }
@@ -156,7 +163,7 @@ export const NavStyles = styled.nav`
       .navlist:hover {
         postion:relative;
         cursor: pointer;
-        color: #7271d1;
+        color: var(--Clr-Primary500);
         transform: translateY(-3px);
         transition: transform 0.3s linear;
         // filter: drop-shadow(3px 4px 2px #db4a37);
@@ -178,7 +185,7 @@ export const NavStyles = styled.nav`
     width: 40px;
     height: 40px;
     padding: 5px;
-    padding-top: 2.5rem;
+    padding-top: 1.4rem;
     background-color: transparent;
     border: none;
 
@@ -239,7 +246,7 @@ export const NavStyles = styled.nav`
 
       .navlist{
         font-size: 1.2rem;
-        padding-top: 1.5rem;
+        padding-top: 1.3rem;
       }
 
       li {
@@ -251,7 +258,7 @@ export const NavStyles = styled.nav`
     .masthead {
       img {
         padding: 0rem 3rem ;
-        width: 20rem ;
+        width: 18rem ;
       }
     }
   }
@@ -262,15 +269,15 @@ export const NavStyles = styled.nav`
       .navlist{
       
         font-size: 1.3rem;
-        padding-top: 2.3rem;
+        padding-top: 1.3rem;
       }
     }
    
    
     .masthead {
     img {
-      padding: 1rem 3rem ;
-      width: 20rem ;
+   
+      width: 18rem ;
     }
   }
    }

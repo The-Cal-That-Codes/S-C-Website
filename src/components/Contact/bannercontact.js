@@ -59,13 +59,13 @@ const BannerContact = ({ title, subtitle, className, onClick}) => {
               <span className="content-name">Message</span>
             </label>
           </div>
-
+          <div className="input-area button-area">
+            <Button className="formsubmitbutton" label="Send Contact Form" cta="Send" type="submit" />
+            <Button className="backbutton"  cta="back" type="button" onClick={onClick} />
+        </div>
         
         </form>
-        <div className="input-area button-area">
-            <Button className="formsubmitbutton" label="Send Contact Form" cta="Send" type="submit" />
-            <Button className="backbutton"  cta="back"  onClick={onClick} />
-        </div>
+       
       
     </ContactWrapper>
     </motion.div>
@@ -94,18 +94,15 @@ justify-content: center;
 
 
   .formsubmitbutton{
-    border: 2px solid rgba(255,255,255,0.8);
     background: rgba(1,1,1,0);
-    border-radius: 5px;
     color: rgba(255,255,255,1);
-    font-weight: bolder;
     font-size: 0.9rem;
-    filter: drop-shadow(0px 2px 2px black);
-
+    a{filter: drop-shadow(0px 2px 2px black);}
     &::before{
       border-radius: 20px;
       border: 2px solid rgba(255,255,255, 0.8);
     }
+    
   }
 
   .backbutton{
@@ -147,7 +144,7 @@ form {
   
   position: relative;
   overflow: hidden;
-
+ 
 
    .input-area {
     
@@ -225,6 +222,8 @@ form {
         font-size: 0.8rem;
       }
     }
+
+   
 
 `
 

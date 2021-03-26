@@ -50,7 +50,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     @media (min-width: 1500px) {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       --h1: 3rem;
       --h2: 2.8rem;
       --h3: 2rem;

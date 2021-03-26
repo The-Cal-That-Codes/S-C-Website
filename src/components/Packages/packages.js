@@ -97,12 +97,15 @@ useEffect(() => {
           
         <div className="servicecards">
           <div className="ux" onClick = {() => cardControl() } >
-          <img src={uximg} alt="Icon by Muhammad Haq on freeicons.io"></img>
-          <div className="cardContentH1Image">
+          
+          
             {cardStateA ? 
               <div className={cardState2A?"cardEnter":"cardExit"}>
+              <img src={uximg} alt="Icon by Muhammad Haq on freeicons.io"/>
+              <div className="cardContentH1Image">
               <h2>UX and SEO</h2>
               <p>Industry practices applied to achieve your goals</p>
+              </div>
               </div>
             :
               <ul className={!cardState2A?"cardEnter cardlist":"cardExit cardlist"}>
@@ -112,17 +115,20 @@ useEffect(() => {
               </ul>
             }
            
-          </div>
+         
             
           </div>
           <div className="des" onClick = {() => cardControl2()}>
-          <img src={desimg} alt="Icon by Muhammad Haq on freeicons.io"></img>
-          <div className="cardContentH1Image">
+          
+          
           {cardStateB ? 
-              <>
-              <h2 className={cardState2B?"cardEnter":"cardExit"}>Custom Designs</h2>
-              <p className={cardState2B?"cardEnter":"cardExit"}>A modern web presence tailored to your brand</p>
-              </>
+              <div className={cardState2B?"cardEnter":"cardExit"}>
+              <img src={desimg} alt="Icon by Muhammad Haq on freeicons.io"/>
+              <div className="cardContentH1Image">
+              <h2>Custom Designs</h2>
+              <p>A modern web presence tailored to your brand</p>
+              </div>
+              </div>
             :
               <ul className={!cardState2B?"cardEnter cardlist":"cardExit cardlist"}>
                 <li>thing i want to say one</li>
@@ -132,19 +138,23 @@ useEffect(() => {
             }
             </div>
             
-          </div>
+        
 
 
           <div className="dev" onClick = {() => cardControl3()}>
 
-        <img src={devimg} alt="Icon by Muhammad Haq on freeicons.io"></img>
-        <div className="cardContentH1Image">
+        
+      
           
         {cardStateC ? 
-              <>
-              <h2 className={cardState2C?"cardEnter":"cardExit"}>Modern Principles</h2>
-              <p className={cardState2C?"cardEnter":"cardExit"}>Responsive design and fast, optimised code</p>
-              </>
+          <div className={cardState2C?"cardEnter":"cardExit"}>
+            <img src={devimg} alt="Icon by Muhammad Haq on freeicons.io"/>
+          <div className="cardContentH1Image">
+            <h2>Modern Principles</h2>
+            <p>Responsive design and fast, optimised code</p>
+          </div>
+          </div>
+
             :
               <ul className={!cardState2C?"cardEnter cardlist":"cardExit cardlist"}>
                 <li>thing i want to say one</li>
@@ -154,18 +164,20 @@ useEffect(() => {
             }
           </div>
 
-        </div>
+       
 
 
-          <div className="SM">
-
-          <img src={digchart} alt="Icon by Muhammad Haq on freeicons.io"></img>
-          <div className="cardContentH1Image" onClick = {() => cardControl4()}>
+          <div className="SM" onClick = {() => cardControl4()}>
+         
           {cardStateD ? 
-              <>
-              <h2 className={cardState2D?"cardEnter":"cardExit"}>Social Media</h2>
-              <p className={cardState2D?"cardEnter":"cardExit"}>Facebook, Instagram, Linked In, Snapchat and more</p>
-              </>
+              <div className={cardState2D?"cardEnter":"cardExit"}>
+              <img src={digchart} alt="Icon by Muhammad Haq on freeicons.io"/>
+              <div className="cardContentH1Image">
+              <h2>Social Media</h2>
+              <p>Facebook, Instagram, Linked In, Snapchat and more</p>
+              </div>
+              </div>
+        
             :
               <ul className={!cardState2D?"cardEnter cardlist":"cardExit cardlist"}>
                 <li>thing i want to say one</li>
@@ -175,16 +187,19 @@ useEffect(() => {
             }
             </div>
 
-          </div>
+        
 
           <div className="TC" onClick = {() => cardControl5()}>
-          <img src={digbubbles} alt="Icon by Muhammad Haq on freeicons.io"></img>
-          <div className="cardContentH1Image">
+       
+        
           {cardStateE ? 
-              <>
-              <h2 className={cardState2E?"cardEnter":"cardExit"}>Tracking</h2>
-              <p className={cardState2E?"cardEnter":"cardExit"}>Analytics, Tagging and Reporting</p>
-              </>
+               <div className={cardState2E?"cardEnter":"cardExit"}>
+               <img src={digbubbles} alt="Icon by Muhammad Haq on freeicons.io"/>
+               <div className="cardContentH1Image">
+               <h2>Tracking</h2>
+               <p>Analytics, Tagging and Reporting</p>
+               </div>
+               </div>
             :
               <ul className={!cardState2E?"cardEnter cardlist":"cardExit cardlist"}>
                 <li>thing i want to say one</li>
@@ -194,19 +209,22 @@ useEffect(() => {
             }
 
           </div>
-          </div>
+      
 
           <div className="GA" onClick = {() => cardControl6()}>
               
-          <img src={diglogo} alt="Icon by Muhammad Haq on freeicons.io"></img>
-          <div className="cardContentH1Image">
+         
           {cardStateF ? 
-              <>
-              <h2 className={cardState2F?"cardEnter":"cardExit"}>Google Ads</h2>
-              <p className={cardState2F?"cardEnter":"cardExit"}>Search, YouTube, Gmail and Display</p>
-              </>
+          <div className={cardState2F?"cardEnter":"cardExit"}>
+          <img src={diglogo} alt="Icon by Muhammad Haq on freeicons.io"/>
+          <div className="cardContentH1Image">
+          <h2>Google Ads</h2>
+          <p>Search, YouTube, Gmail and Display</p>
+          </div>
+          </div>
+            
             :
-              <ul className={!cardState2F?"cardEnter cardlist":"cardExit "}>
+              <ul className={!cardState2F?"cardEnter cardlist":"cardExit cardlist"}>
                 <li>thing i want to say one</li>
                 <li>thing i want to say two</li>
                 <li>thing i want to say three</li>
@@ -214,7 +232,7 @@ useEffect(() => {
             }
           </div>
             
-          </div>
+       
 
         </div>
       <div className="buttoncontainer">
@@ -261,13 +279,7 @@ const PackagesWrapper = styled.section`
     flex-flow: column;
     
    
-    // p{
-    //   font-family: var(--Font-Accent);
-    //   color: var(--Clr-Secondaryfade);
-    //   font-size: 1.1rem;
-    //   margin: 0px;
-    //   padding: 0.5rem 0.5rem;
-    // }
+
 
     h1 {
       font-weight: 600;
@@ -312,6 +324,7 @@ const PackagesWrapper = styled.section`
   .cardContentH1Image{
     display: flex;
     flex-flow: column;
+    justify-content: center;
     padding: 0 0.5rem;
 
     p{
@@ -343,10 +356,9 @@ const PackagesWrapper = styled.section`
     background-color: var(--Clr-tintPackageblue600);
     border-radius: 10px;
     width: 100%;
-    padding: 1rem 0.3rem;
-    
+    padding: 1.2rem 0.4rem;
+    margin-bottom: 0.4rem;
     display: flex;
-    
     align-items: center;
     box-shadow: inset 0px 0px 10px 5px  rgba(114, 113, 209, 0.4), 0px 0px 5px 1px rgba(114, 113, 209, 0.4);
     transition: 0.3s ease-out;
@@ -364,17 +376,20 @@ const PackagesWrapper = styled.section`
 
       .cardlist{
         padding: 0 0.9rem;
-        margin: 0.5rem 0.6rem;
+        margin: 0.45rem auto;
         font-size: 0.99rem;
         font-weight: 500;
         color: rgba(255,255,255, 0.8);
-       
         padding-right: 0.3rem;
         font-family: var(--Font-Second);
-        
+        flex-flow: column;
+        font-size: 1.1rem;
+        line-height: 1.05;
+
+      
         
         li{
-          padding: 0.2rem 0;
+          padding: 0.3rem 0;
         }
       }
     
@@ -396,10 +411,16 @@ const PackagesWrapper = styled.section`
 
  .cardEnter{
   animation: cardEnter 0.4s ease-out;
+  display: flex;
+  margin: 0 auto;
+ 
  }
 
  .cardExit{
   animation: cardExit 0.4s ease-out;
+  display: flex;
+  margin: 0 auto;
+  
 }
 
 @keyframes cardEnter {
@@ -427,20 +448,18 @@ const PackagesWrapper = styled.section`
 @media (min-width: 550px){
   padding: 5rem 3rem;
 
-//   .headerServices{
-//     p{
-//     font-size: 1.3rem;
-//   }
-// }
 
 .cardContentH1Image{
   margin-right: auto;
+ 
 }
   
 img{
   margin: 0.5rem 0.5rem;
   margin-left: auto;
 }
+
+
 
 }
 
@@ -457,6 +476,11 @@ padding-top: 3.5rem;
 
 .buttoncontainer{
   margin-top: 0.5rem;
+
+  button{
+    margin: 0;
+    margin-left: 1rem;
+  }
 }
 
   .maincontainer{
@@ -471,7 +495,7 @@ padding-top: 3.5rem;
   .headerServices{
     h1{
    padding: 1rem 0.5rem;
-   padding-top: 1rem;
+   
 
    @media (min-width: 1235px) and (min-height: 780px ){
         padding-top: 2.5rem;
@@ -480,8 +504,8 @@ padding-top: 3.5rem;
       }
 
       @media (min-width: 1499px){
-        padding-top:2rem;
-        padding-bottom: 1rem;
+        padding-top:1rem;
+        padding-bottom: 2rem;
         font-size: 2rem;
       }
   }
@@ -497,15 +521,25 @@ padding-top: 3.5rem;
   .ux, .dev, .des, .SM,.TC,.GA{
       flex-flow: column nowrap;  
       max-width: 400px; 
+      justify-content: center;
 
       li{
-        font-size: 0.8rem;
+        font-size: 1rem;
+        line-height: 1.4;
       }
 
       img{
         margin: auto;
       }
+      .cardEnter, .cardExit{
+        flex-flow: column;
+      }
+     
+    
   }
+  
+  
+  
 
   .ux, .dev, .des{
     
@@ -519,8 +553,6 @@ padding-top: 3.5rem;
 
  
 
-  
- 
 
 `
 

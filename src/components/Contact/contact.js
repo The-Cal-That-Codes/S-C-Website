@@ -112,7 +112,7 @@ const ContactWrapper = styled.section`
   }
 
   .button-area{
-  padding: 1.2rem 0rem;
+  padding: 0.5rem 0rem;
   }
 
   .content-container {
@@ -129,7 +129,8 @@ const ContactWrapper = styled.section`
       font-size: 2.2rem;
       text-align: center;
       margin: 0 0;
-      color: #4193e0;
+      color: var(--Clr-Primary500);
+      padding: 0.5rem 0rem;
     
     }
     p {
@@ -145,10 +146,23 @@ const ContactWrapper = styled.section`
     form {
       position: relative;
       overflow: hidden;
+      width: 100%;
+      margin: auto;
+
+      
+  @media(min-width: 450px){
+    width: 80%;
+  }
+  
+  @media(min-width: 1580px){
+    width: 100%;
+  }
 
       .input-area {
+        
         margin-bottom: 0.7rem;
         position: relative;
+        
 
         &.button-area {
           text-align: center;
@@ -172,6 +186,7 @@ const ContactWrapper = styled.section`
         box-sizing: border-box;
         outline: none;
         box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+    
 
         &:focus,
         &:valid {
@@ -222,6 +237,7 @@ const ContactWrapper = styled.section`
       }
     }
   }
+
 `
 
 export default Contact
