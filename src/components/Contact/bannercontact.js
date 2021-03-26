@@ -19,7 +19,7 @@ const BannerContact = ({ title, subtitle, className, onClick}) => {
         <h2>{title}</h2>
         <p>{subtitle}</p>
         </div>
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="bannercontact" method="POST" data-netlify="true">
           <div className="input-area">
             <input
               type="text"
