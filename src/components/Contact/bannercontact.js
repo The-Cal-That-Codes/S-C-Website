@@ -19,8 +19,8 @@ const BannerContact = ({ title, subtitle, className, onClick}) => {
         <h2>{title}</h2>
         <p>{subtitle}</p>
         </div>
-        <form name="bannercontact" method="POST" data-netlify="true">
-        <input type="hidden" name="bannercontact" value="bannercontact" />
+        <form name="bannercontact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="bannercontact"  />
           <div className="input-area">
             <input
               type="text"

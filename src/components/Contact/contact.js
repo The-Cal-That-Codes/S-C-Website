@@ -33,8 +33,8 @@ const Contact = ({ title, subtitle, className}) => {
       <div className="content-container" >
         <h2>{title}</h2>
         <p>{subtitle}</p>
-        <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="contact" value="contact" />
+        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
           <div className="input-area">
             <input
               type="text"
@@ -182,7 +182,7 @@ const ContactWrapper = styled.section`
         border: none;
         background-color: rgba(38, 82, 84, 0.6);
         color: #fff;
-        text-transform: uppercase;
+        
         position: relative;
         box-sizing: border-box;
         outline: none;
