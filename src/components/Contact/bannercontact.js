@@ -20,7 +20,7 @@ const BannerContact = ({ title, subtitle, className, onClick}) => {
         <p>{subtitle}</p>
         </div>
         <form name="bannercontact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="bannercontact"  />
+        <input type="hidden" name="form-name" value="contact"  />
           <div className="input-area">
             <input
               type="text"
