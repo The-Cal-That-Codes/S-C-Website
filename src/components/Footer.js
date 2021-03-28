@@ -32,13 +32,15 @@ const Footer = ({ Logo }) => {
           <div className="brand-cont">
             {/* If there is a logo, render this */}
             {Logo && (
-              <Link to="home" smooth={true} duration={500}>
+            
                 <img src={Logo} alt={`${footerData.title} logo`} />
-              </Link>
+              
             )}
             <address>
               CroftDigital@gmail.com
             </address>
+
+            <p className="privacy">Privacy Policy</p>
          
           </div>
         ) : null}
@@ -160,10 +162,15 @@ const FooterStyles = styled.footer`
     transition: var(--transMed);
 
     &:hover {
-      color: #7271d1;
+      color: #4193e0;
       cursor: pointer;
      
     }
+  }
+
+  .privacy:hover{
+    cursor: pointer;
+    color: #4193e0;
   }
 
   @media (min-width: 768px) {

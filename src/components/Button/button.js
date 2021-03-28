@@ -49,7 +49,7 @@ const ButtonWrapper = styled.button`
     scale: 1.015;
 
     &::before {
-      filter: blur(20px);
+      filter: blur(15px);
       opacity: 1;
       animation: animate 8s linear;
     }
@@ -63,9 +63,9 @@ const ButtonWrapper = styled.button`
     right: -5px;
     bottom: -5px;
     z-index: -1;
-    background: linear-gradient(90deg, #0c3f57,#1b4347, #1b4347,#0c3f57);
+    background: linear-gradient(85deg, #559fe3,#924fd5, #E05A42,#E0C342,#86EBD9,#559fe3);
     background-size: 400%;
-    border-radius: 40px;
+    
     opacity: 0;
     transition: 0.5s;
   }

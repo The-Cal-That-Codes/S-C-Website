@@ -480,7 +480,7 @@ h3{
 
     .marketingLink:hover{
      
-      transform: scale(1.2);
+      transform: scale(1.1);
       transition: 0.3s ease-out;
 
       .marketingIcon{
@@ -492,7 +492,7 @@ h3{
 
   .contactLink:hover{
      
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.3s ease-out;
 
     .contactIcon{

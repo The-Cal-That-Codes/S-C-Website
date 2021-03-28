@@ -115,6 +115,7 @@ const ContactWrapper = styled.section`
 
   .button-area{
   padding: 0.5rem 0rem;
+  overflow: visible;
   }
 
   .content-container {
@@ -169,6 +170,7 @@ const ContactWrapper = styled.section`
         &.button-area {
           text-align: center;
           margin-bottom: 0;
+          padding-bottom: 1.3rem;
         }
       }
 

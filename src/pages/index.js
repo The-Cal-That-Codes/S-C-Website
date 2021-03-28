@@ -17,7 +17,7 @@ import diglogo from "../images/diglogo.png"
 
 export default () => (
   <>
-    <Banner />
+    <Banner/>
     <Packages
       uximg={uximg}
       digchart={digchart}

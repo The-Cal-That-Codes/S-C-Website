@@ -360,7 +360,7 @@ const PackagesWrapper = styled.section`
     margin-bottom: 0.4rem;
     display: flex;
     align-items: center;
-    box-shadow: inset 0px 0px 10px 5px  rgba(114, 113, 209, 0.4), 0px 0px 5px 1px rgba(114, 113, 209, 0.4);
+    box-shadow: inset 0px 0px 10px 5px  rgba(65, 147, 224, 0.4), 0px 0px 5px 1px rgba(114, 113, 209, 0.4);
     transition: 0.3s ease-out;
 
 
