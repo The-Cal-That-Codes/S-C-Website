@@ -366,7 +366,7 @@ const PackagesWrapper = styled.section`
 
     :hover{
       transform: translateY(-4px);
-      box-shadow: inset 0px 0px 10px 5px  rgba(114, 113, 209, 0.4), 0px 0px 15px 6px rgba(114, 113, 209, 0.4);
+      // box-shadow: inset 0px 0px 10px 5px  rgba(114, 113, 209, 0.4), 0px 0px 15px 6px rgba(114, 113, 209, 0.4);
       cursor: pointer;
     }
     

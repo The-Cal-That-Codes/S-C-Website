@@ -126,8 +126,7 @@ const controller = (index) => {
           <Link to="contact" smooth={true} duration={500}>
             <div className="contactLink">
             
-            <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)",className: "countermedia contactIcon" }:
-                                                           {color:"#969ABE",className: "countermedia contactIcon"} }>
+            <IconContext.Provider value={{color:"#969ABE",className: "countermedia contactIcon"} }>
               <BsChatSquareDotsFill/>
             </IconContext.Provider>
             <p>Contact Now!</p>
@@ -157,8 +156,7 @@ const controller = (index) => {
           <Link to="perks" smooth={true} duration={500}>
           <div className="marketingLink">
             
-            <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)",className: "countermedia marketingIcon" }:
-                                                           {color:"#969ABE",className: "countermedia marketingIcon"} }>
+            <IconContext.Provider value={{color:"#969ABE",className: "countermedia marketingIcon"} }>
               <BsPeopleFill/>
             </IconContext.Provider>
             <p>To Development</p>

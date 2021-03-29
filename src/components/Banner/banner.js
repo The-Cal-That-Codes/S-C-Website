@@ -64,8 +64,8 @@ const removeContactonClick = () => {
 
       <BannerContact 
       className= {showContact === "leaving" ? "content-container" : "content-container contact-leave" }
-      title="Contact us now" 
-      subtitle="and make your dreams a reality"
+      
+      subtitle="Say Hi and get your project started today."
       onClick={removeContactonClick} 
       showContact={showContact}
         />    

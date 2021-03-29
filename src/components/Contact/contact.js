@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Button from "../Button/button"
 import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
+import { animateScroll as scroll} from "react-scroll"
 import "@fontsource/ibm-plex-sans"
 import "@fontsource/inter"
 
@@ -34,7 +35,7 @@ const Contact = ({ title, subtitle, className}) => {
       <div className="content-container" >
         <h2>{title}</h2>
         <p>{subtitle}</p>
-        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/">
+        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="">
         <input type="hidden" name="form-name" value="contact" />
           <div className="input-area">
             <input
@@ -74,6 +75,13 @@ const Contact = ({ title, subtitle, className}) => {
             <label className="label-name" for="message">
               <span className="content-name">Message</span>
             </label>
+          </div>
+
+          <div className="input-area privacyCheckbox">
+          <input type="checkbox" required name="checkbox" value="check" id="agree" />
+          <p className="privacyText">By ticking this box you agree to our <span onClick={()=> scroll.scrollToBottom()}>privacy policy</span> and for CroftDigital to contact you in regards to your message sent to them.
+           
+          </p>
           </div>
 
           <div className="input-area button-area">
@@ -125,21 +133,21 @@ const ContactWrapper = styled.section`
     
 
     h2 {
-      // background: -webkit-linear-gradient(45deg, #fd9126, #c33c33);
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
+      background: -webkit-linear-gradient( 102.1deg,  rgba(96,221,142,0.9) 8.7%, rgba(24,138,141,0.9) 88.1% );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-family: "IBM Plex Sans";
       font-size: 2.2rem;
       text-align: center;
       margin: 0 0;
-      color: var(--Clr-Primary500);
+      // color: var(--Clr-Primary500);
       padding: 0.5rem 0rem;
     
     }
     p {
       text-align: center;
       margin: 0 0;
-      font-size: 1rem;
+      font-size: 0.8rem;
       color: rgba(255,255,255,0.8);
       font-family: "Inter";
       padding: 0rem 0.5rem;
@@ -181,7 +189,7 @@ const ContactWrapper = styled.section`
         letter-spacing: 0.25rem;
         padding: 0.5rem;
         display: block;
-        width: 100% !important;
+        width: 100%;
         border: none;
         background-color: rgba(38, 82, 84, 0.6);
         color: #fff;
@@ -242,6 +250,30 @@ const ContactWrapper = styled.section`
     }
   }
 
+  .privacyCheckbox{
+    display: flex;
+    background-color: rgba(38, 82, 84, 0.6);
+    padding: 0.65rem;
+
+    input{
+      width: auto !important;
+      margin: 0.3rem 0.5rem;
+      transform: scale(1.5);
+
+    }
+    
+    .privacyText{
+      font-size: 0.6rem;
+      font-family: var(--Font-Second);
+      text-align: left!important;
+
+      span{
+        text-decoration: underline;
+        color: #E08F42;
+        cursor: pointer;
+      }
+    }
+  }
 `
 
 export default Contact

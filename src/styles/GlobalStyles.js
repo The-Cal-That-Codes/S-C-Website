@@ -153,20 +153,7 @@ body {
     white-space: normal !important;
   }
 
-  .perkmotiondiv{
-    
-   @media(max-width: 900px){
-    width: 30vw;
-    
-   } 
-  }
+  
 
-  .bbmotiondiv{
-    @media(max-width: 1050px){
-      animation: none !important;
-      opacity: 1 !important;
-    transform: none !important;
-     } 
-  }
 `
 export default GlobalStyles

@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Button from "../Button/button"
 import {motion} from 'framer-motion';
+import { animateScroll as scroll} from "react-scroll"
 import "@fontsource/ibm-plex-sans"
 import "@fontsource/inter"
 
@@ -16,10 +17,10 @@ const BannerContact = ({ title, subtitle, className, onClick}) => {
     className={className}
     >
         <div className="contactheaderbrick">
-        <h2>{title}</h2>
-        <p>{subtitle}</p>
+        <h2>Start your project <span>today</span>!</h2>
+        {/* <p>{subtitle}</p> */}
         </div>
-        <form name="bannercontact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/">
+        <form name="bannercontact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="">
         <input type="hidden" name="form-name" value="contact"  />
           <div className="input-area">
             <input
@@ -60,6 +61,12 @@ const BannerContact = ({ title, subtitle, className, onClick}) => {
               <span className="content-name">Message</span>
             </label>
           </div>
+          <div className="input-area privacyCheckbox">
+          <input type="checkbox" required name="checkbox" value="check" id="agree" />
+          <p className="privacyText">By ticking this box you agree to our <span onClick={()=> scroll.scrollToBottom()}>privacy policy</span> and for CroftDigital to contact you in regards to your message sent to them.
+           
+          </p>
+          </div>
           <div className="input-area button-area">
             <Button className="formsubmitbutton" label="Send Contact Form" cta="Send" type="submit" />
             <Button className="backbutton"  cta="back" type="button" onClick={onClick} />
@@ -81,12 +88,25 @@ const BannerContact = ({ title, subtitle, className, onClick}) => {
 const ContactWrapper = styled.div`
 
 margin: 0 0;
+margin-top: 1rem;
 padding: 2rem 0.5rem;
 padding-bottom: 0px;
 display: flex;
 flex-flow: column;
 align-items: center;
 justify-content: center;
+
+max-width: 650px;
+
+
+@media(min-width: 480px){
+  padding: 2rem 3rem;
+}
+
+@media(min-width: 1580px){
+  max-width: 800px;
+}
+
 
   .contactheaderbrick{
     padding: 1px 0;
@@ -97,6 +117,7 @@ justify-content: center;
   .formsubmitbutton{
     background: rgba(1,1,1,0);
     color: rgba(255,255,255,1);
+    border: 2px solid #43A0CF;
     font-size: 0.9rem;
     a{filter: drop-shadow(0px 2px 2px black);}
     &::before{
@@ -124,11 +145,23 @@ justify-content: center;
    
 
     h2 {
-      font-size: 2rem;
-      text-align: center;
-      color: var(--Clr-Primary500);
-      font-family: "IBM Plex Sans";
-      margin: 0rem 0.5rem;
+      // background: -webkit-linear-gradient(90deg, #43A0CF, #43A0CF,#41a4ef,#41a4ef);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      font-size: 2.05rem;
+      text-align: left;
+      width: 100%;
+      color: var(--Clr-Secondaryfade);
+      font-family: var(--Font-Title);
+      padding: 0.7rem 0rem;
+      margin: 0 0;
+      
+      span{
+      //   background: -webkit-linear-gradient( 135deg, #5EFCE8 10%, #736EFE 100%);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+        color: var(--Clr-Primary500);
+      }
 
     }
 
@@ -154,7 +187,7 @@ form {
 
    &.button-area {
    text-align: center;
-   padding: 1rem 1rem;
+   padding: 0rem 1rem;
    }
   }
 
@@ -224,7 +257,31 @@ form {
       }
     }
 
-   
+    .privacyCheckbox{
+      display: flex;
+      background-color: rgba(43, 102, 131, 0.5);
+      padding: 0.65rem;
+  
+      input{
+        width: auto !important;
+        margin: 0.3rem 0.5rem;
+        transform: scale(1.5);
+  
+      }
+      
+      .privacyText{
+        font-size: 0.6rem;
+        font-family: var(--Font-Second);
+        text-align: left!important;
+        margin-top: 0px;
+
+        span{
+          text-decoration: underline;
+          color: #E08F42;
+          cursor: pointer;
+        }
+      }
+    }
 
 `
 

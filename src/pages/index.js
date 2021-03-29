@@ -46,7 +46,7 @@ export default () => (
     <Contact
       id="contact"
       title="Contact us now"
-      subtitle="Get in touch and start your project today!"
+      subtitle="Whether its a new website or an ad campaign we've got you covered. Send us a message and get in touch today!"
     />
   </>
 )
