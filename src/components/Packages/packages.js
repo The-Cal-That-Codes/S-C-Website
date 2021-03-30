@@ -289,6 +289,8 @@ const PackagesWrapper = styled.section`
     
     img{
       max-width: 100px;
+      height: auto;
+      align-self: center;
       }
 
       .cardlist{

@@ -57,14 +57,14 @@ const controller = (index) => {
           iconColour === 1 ?
           <div className={classControl === 1 ? paraEnter : paraExit}>
           <p className="paraLeft">
-          First ipsum dolor, sit amet consectetur adipisicing elit.
-          Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-          Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+          Websites are almost a requirement for modern trade, they are your customers initial
+          contact with your brand and a key factor in gaining clientele.  
+          Our design and development process is geared towards providing you with a unique, captivating web identity
          </p>
          <p className="paraRight">
-           First ipsum dolor, sit amet consectetur adipisicing elit.
-           Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-           Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+          that utilises modern techniques to give you the online identity you deserve.
+         Whether you’re establishing or updating your businesses web identity our philosophy is to deliver a 
+         high-quality asset that will aid in the development of your business.
          </p>
          </div> : iconColour === 2 ?
        <div className={classControl === 2 ? paraEnter : paraExit}>
