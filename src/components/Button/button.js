@@ -50,13 +50,12 @@ const ButtonWrapper = styled.button`
 }
   &:hover {
     cursor: pointer;
-    animation: animate 18s linear infinite;
     scale: 1.015;
 
     &::before {
       filter: blur(15px);
       opacity: 1;
-      animation: animate 13s linear infinite;
+     
     }
   }
 
@@ -68,14 +67,10 @@ const ButtonWrapper = styled.button`
     right: -5px;
     bottom: -5px;
     z-index: -1;
-    // background: linear-gradient(85deg, #559fe3,#924fd5, #E05A42,#E0C342,#86EBD9,#559fe3);
-    // background: linear-gradient(85deg, #4193e0,#924fd5,#d24a5a,#924fd5,#4193e0);
-    // background: rgba(255,255,255,0.3);
     background: rgba(65, 147, 224,0.3);
     background-size: 400%;
-    
     opacity: 0;
-    transition: 0.5s;
+    -webkit-transition: 0.5s;
   }
 
 

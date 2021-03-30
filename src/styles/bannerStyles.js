@@ -123,6 +123,7 @@ export const BannerStyles = styled.section`
 
   .bannercontactbutton{
     font-size: 0.6rem;
+    padding: 1rem;
   }
 }
 
