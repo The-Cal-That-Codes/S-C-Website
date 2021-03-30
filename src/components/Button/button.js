@@ -13,12 +13,13 @@ const Button = props => {
                 onClick={props.onClick}
             >
               <Link to={props.index} smooth={true} duration={500}>
-                {props.cta}
+                
+                <div className="wordWrap">{props.cta}</div>
               </Link>
             </ButtonWrapper>
       ) : (
             <ButtonWrapper aria-label={props.label} type={props.type} className={props.className} onClick={props.onClick}>
-              {props.cta}
+              {props.cta}       
             </ButtonWrapper>
       )}
     </>
@@ -42,7 +43,10 @@ const ButtonWrapper = styled.button`
   filter: drop-shadow(0px 2px 2px black);
   background: rgba(1,1,1,0);
 
-
+.wordWrap{
+  height: 100%;
+  width: 100%;
+}
   &:hover {
     cursor: pointer;
     animation: animate 18s linear infinite;

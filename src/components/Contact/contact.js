@@ -4,10 +4,9 @@ import Button from "../Button/button"
 import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { animateScroll as scroll} from "react-scroll"
-import "@fontsource/ibm-plex-sans"
-import "@fontsource/inter"
 
-const Contact = ({ title, subtitle, className}) => {
+
+const Contact = ({ title}) => {
 
   const data = useStaticQuery(graphql`
     query {
@@ -31,10 +30,9 @@ const Contact = ({ title, subtitle, className}) => {
       fadeIn={false}
       
     >
-    <ContactWrapper id="contact" className={className} >
+    <ContactWrapper id="contact" className="flex-Col jcCenter marginNill" >
       <div className="content-container" >
-        <h2>{title}</h2>
-        <p>{subtitle}</p>
+        <h2 className="marginNill textCenter ">{title}</h2>
         <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="">
         <input type="hidden" name="form-name" value="contact" />
           <div className="input-area">
@@ -84,7 +82,7 @@ const Contact = ({ title, subtitle, className}) => {
           </p>
           </div>
 
-          <div className="input-area button-area">
+          <div className="input-area button-area textCenter">
             <Button label="Send Contact Form" cta="Send" type="submit" className="formsubmitbutton" />
           </div>
         </form>
@@ -96,10 +94,6 @@ const Contact = ({ title, subtitle, className}) => {
 
 const ContactWrapper = styled.section`
   min-height: 100vh;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  margin: 0 0;
   padding: 1rem 1rem;
   padding-top: 3rem;
 
@@ -136,22 +130,10 @@ const ContactWrapper = styled.section`
       background: -webkit-linear-gradient( 102.1deg,  rgba(96,221,142,0.9) 8.7%, rgba(24,138,141,0.9) 88.1% );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-family: "IBM Plex Sans";
-      font-size: 2.2rem;
-      text-align: center;
-      margin: 0 0;
-      // color: var(--Clr-Primary500);
-      padding: 0.5rem 0rem;
+      font-family: var(--Font-Title);
+      font-size: 2.5rem;
+      padding: 1rem 0rem;
     
-    }
-    p {
-      text-align: center;
-      margin: 0 0;
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.8);
-      font-family: "Inter";
-      padding: 0rem 0.5rem;
-      margin-bottom: 0.5rem;
     }
 
     form {
@@ -176,7 +158,6 @@ const ContactWrapper = styled.section`
         
 
         &.button-area {
-          text-align: center;
           margin-bottom: 0;
           padding-bottom: 1.3rem;
         }

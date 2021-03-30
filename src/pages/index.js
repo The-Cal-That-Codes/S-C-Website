@@ -25,7 +25,7 @@ export default () => (
       devimg={devimg}
       digbubbles={digbubbles}
       diglogo={diglogo}
-      
+      cardClass="cardContentH1Image flex-Col jcCenter"
       id="packages"
       title2="Digital Marketing"
      
@@ -34,12 +34,16 @@ export default () => (
   
     <TextBlockImg
       id="perks"
+      paraEnter="paraEnter flex-Col"
+      paraExit="paraExit flex-Col"
     />
 
     <TextBlock
       portraitimage1={portraitimage1}
       portraitimage2={portraitimage2}
       id="about"
+      paraEnter="paraEnter flex-Col"
+      paraExit="paraExit flex-Col"
        />
       
    

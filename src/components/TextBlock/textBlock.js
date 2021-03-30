@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-// import { useInView } from "react-intersection-observer";
-// import { useAnimation } from "framer-motion";
 import { BsXDiamondFill, BsDropletHalf , BsTerminalFill,BsLayersFill,BsFillCircleFill,BsPeopleFill, BsChatSquareDotsFill} from "react-icons/bs";
 import { IconContext } from "react-icons";
 import { Link } from "react-scroll";
 
 
-const TextBlockImg = ({id}) => {
+const TextBlockImg = ({id, paraEnter, paraExit}) => {
 
   
 
@@ -25,25 +23,12 @@ const controller = (index) => {
 
 
 
-  // const controls = useAnimation()
-  // const [ref, inView] = useInView({
-  //   // Percentage of item in view to trigger animation
-  //   threshold: 0.25,
-  // })
-
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     controls.start("visible")
-  //   }
-  // }, [controls, inView])
-
   return (
    
       <TextBlockImgWrapper id={id}>
         <div className="contentwrapper">
-          <h1>Digital Marketing title increase traffic stuff!</h1>
-          <div className="iconbox">
+          <h1 className="marginNill">Digital Marketing title increase traffic stuff!</h1>
+          <div className="iconbox flex-Row">
           <IconContext.Provider value={classControl === 1 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
                                                          {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" } }>
             <BsXDiamondFill onClick={() => controller(1)}/>
@@ -70,7 +55,7 @@ const controller = (index) => {
           <hr className="longLine"/>
           {
           iconColour === 1 ?
-          <div className={classControl === 1 ? "paraEnter" : "paraExit"}>
+          <div className={classControl === 1 ? paraEnter : paraExit}>
           <p className="paraLeft">
           First ipsum dolor, sit amet consectetur adipisicing elit.
           Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
@@ -82,7 +67,7 @@ const controller = (index) => {
            Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
          </p>
          </div> : iconColour === 2 ?
-       <div className={classControl === 2 ? "paraEnter" : "paraExit"}>
+       <div className={classControl === 2 ? paraEnter : paraExit}>
        <p className="paraLeft">
        Second ipsum dolor, sit amet consectetur adipisicing elit.
        Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
@@ -94,7 +79,7 @@ const controller = (index) => {
         Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
       </p>
       </div> : iconColour === 3 ?
-         <div className={classControl === 3 ? "paraEnter" : "paraExit"}>
+         <div className={classControl === 3 ? paraEnter : paraExit}>
          <p className="paraLeft">
          Third ipsum dolor, sit amet consectetur adipisicing elit.
          Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
@@ -106,7 +91,7 @@ const controller = (index) => {
           Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
         </p>
         </div> :
-          <div className={classControl === 4 ? "paraEnter" : "paraExit"}>
+          <div className={classControl === 4 ? paraEnter : paraExit}>
            <p className="paraLeft">
            FOURTH ipsum dolor, sit amet consectetur adipisicing elit.
            Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
@@ -119,9 +104,8 @@ const controller = (index) => {
           </p>
           </div>
            }
-          {/* <hr className="smallLine"/> */}
          
-          <div className="iconbox2 iconNav">
+          <div className="iconbox2 iconNav flex-Row">
 
           <Link to="contact" smooth={true} duration={500}>
             <div className="contactLink">
@@ -188,7 +172,6 @@ const TextBlockImgWrapper = styled.section`
  
 
 h1{
-  margin: 0 0;
   padding: 1rem 1rem;
   font-size: 1.5rem;
   font-family: var(--Font-Title);
@@ -199,7 +182,6 @@ h3{
 }
 
 .iconbox{
-  display: flex;
   justify-content: space-evenly;
   padding: 0.5rem 0rem;
   padding-top: 0px;
@@ -211,7 +193,6 @@ h3{
 }
 
 .iconbox2{
-  display: flex;
   justify-content: space-between;
   padding: 0.3rem 0rem;
 
@@ -228,11 +209,6 @@ h3{
 .iconNav{
   justify-content: center;
   
-
-  
-  >* + * {
-    margin-left: 0.5rem;
-  }
 }
 
 
@@ -247,14 +223,7 @@ h3{
 
 }
 
-.smallLine{
-  max-width: 80%;
-  margin: 0 auto;
-  height: 4px;
-  border: 0px;
-  background-color: #969ABE;
-  opacity: 0.8;
-}
+
 
 .icon{
   cursor: pointer;
@@ -268,8 +237,6 @@ h3{
   
 
 .paraEnter{
-  display: flex;
-  flex-flow: column;
   animation: paraEnter 0.45s ease-out;
 
   p{
@@ -285,8 +252,6 @@ h3{
 }
 
 .paraExit{
-  display: flex;
-  flex-flow: column;
   animation: paraExit 0.45s ease-out;
 
   p{
@@ -321,6 +286,8 @@ h3{
     transform: translateX(50px);
   }
 }
+
+// MEDIA QUERIES START HERE******************************************************************
 
 @media (min-width: 519px){
   padding: 3rem 3rem;

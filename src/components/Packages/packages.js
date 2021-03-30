@@ -1,248 +1,186 @@
-import React, { useState, useEffect } from "react"
+import React, { useState} from "react"
 import styled from "styled-components";
 import Button from "../Button/button";
-import { Link } from "react-scroll";
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
+
+const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardClass}) => {
+
+  let [cardState, setcardState] = useState(0)
+  let [cardState2, setcardState2] = useState(0)
 
 
-
-const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart}) => {
-
-  
-
-  let [cardState2A, setcardState2A] = useState(true);
-  let [cardStateA, setcardStateA] = useState(true);
-
-  let [cardState2B, setcardState2B] = useState(true);
-  let [cardStateB, setcardStateB] = useState(true);
-
-  let [cardState2C, setcardState2C] = useState(true);
-  let [cardStateC, setcardStateC] = useState(true);
-
-  let [cardState2D, setcardState2D] = useState(true);
-  let [cardStateD, setcardStateD] = useState(true);
-
-  let [cardState2E, setcardState2E] = useState(true);
-  let [cardStateE, setcardStateE] = useState(true);
-
-  let [cardState2F, setcardState2F] = useState(true);
-  let [cardStateF, setcardStateF] = useState(true);
-
-  const cardControl = () => {
-    setcardState2A(!cardState2A);
+  const cardControl = (index) => {
+    setcardState(index);
 
     setTimeout(() => {
-      setcardStateA(!cardStateA)
+      setcardState2(index)
     }, 400)
   }
 
-  const cardControl2 = () => {
-    setcardState2B(!cardState2B);
-
-    setTimeout(() => {setcardStateB(!cardStateB)}, 400);
-  }
-
-  const cardControl3 = () => {
-    setcardState2C(!cardState2C);
-
-    setTimeout(() => {setcardStateC(!cardStateC)}, 400);
-  }
-
-  const cardControl4 = () => {
-    setcardState2D(!cardState2D);
-
-    setTimeout(() => {setcardStateD(!cardStateD)}, 400);
-  }
-
-  const cardControl5 = () => {
-    setcardState2E(!cardState2E);
-
-    setTimeout(() => {setcardStateE(!cardStateE)}, 400);
-  }
-
-  const cardControl6 = () => {
-    setcardState2F(!cardState2F);
-
-    setTimeout(() => {setcardStateF(!cardStateF)}, 400);
-  }
-
-
-  const controls = useAnimation()
-  const [ref, inView] = useInView({
-    // Percentage of item in view to trigger animation
-    threshold: 0.25,
-  })
-
-
-
-useEffect(() => {
-  if (inView) {
-    controls.start("visible")
-  }
-}, [controls, inView])
 
 
   return (
  
-    <PackagesWrapper id="packages">
+    <PackagesWrapper id="packages" className="flex-Col">
        
-    <div className="maincontainer">
+    <div className="maincontainer flex-Row">
 
-      <div className="flex-container">
+      <div className="flex-container flex-Col">
 
-        <div className="headerServices">
-              <h1>Digital solutions for  <span className="marketing">Marketing</span> and <span className="devword">Development</span></h1>
+        <div className="headerServices flex-Col">
+              <h1 className="marginNill">Digital solutions for  <span className="marketing">Marketing</span> and <span className="devword">Development</span></h1>
           </div>
           
-        <div className="servicecards">
-          <div className="ux" onClick = {() => cardControl() } >
-          
-          
-            {cardStateA ? 
-              <div className={cardState2A?"cardEnter":"cardExit"}>
-              <img src={uximg} alt="Icon by Muhammad Haq on freeicons.io"/>
-              <div className="cardContentH1Image">
-              <h2>UX and SEO</h2>
-              <p>Industry practices applied to achieve your goals</p>
-              </div>
-              </div>
+        <div className="servicecards flex-Row jcCenter">
+          <div className="card" >
+            {cardState2 === 1 ? 
+              <ul className={cardState === 1?"cardEnter cardlist":"cardExit cardlist"} onClick = {() => cardControl(0) }>
+              <li>thing i want to say one</li>
+              <li>thing i want to say two</li>
+              <li>thing i want to say three</li>
+            </ul>
             :
-              <ul className={!cardState2A?"cardEnter cardlist":"cardExit cardlist"}>
-                <li>thing i want to say one</li>
-                <li>thing i want to say two</li>
-                <li>thing i want to say three</li>
-              </ul>
+            <div className={cardState === 1?"cardExit":"cardEnter"} onClick = {() => cardControl(1) } >
+            <img src={uximg} alt="Icon by Muhammad Haq on freeicons.io"/>
+            <div className={cardClass}>
+            <h2>UX and SEO</h2>
+            <p>Industry practices applied to achieve your goals</p>
+            </div>
+            </div>
+            
             }
            
          
             
           </div>
-          <div className="des" onClick = {() => cardControl2()}>
+          <div className="card">
           
           
-          {cardStateB ? 
-              <div className={cardState2B?"cardEnter":"cardExit"}>
+          {cardState2 === 2 ? 
+               <ul className={cardState === 2?"cardEnter cardlist":"cardExit cardlist"} onClick = {() => cardControl(0)}>
+               <li>thing i want to say one</li>
+               <li>thing i want to say two</li>
+               <li>thing i want to say three</li>
+             </ul>
+            :
+             
+              <div className={cardState === 2?"cardExit":"cardEnter"} onClick = {() => cardControl(2)}>
               <img src={desimg} alt="Icon by Muhammad Haq on freeicons.io"/>
-              <div className="cardContentH1Image">
+              <div className={cardClass}>
               <h2>Custom Designs</h2>
               <p>A modern web presence tailored to your brand</p>
               </div>
               </div>
-            :
-              <ul className={!cardState2B?"cardEnter cardlist":"cardExit cardlist"}>
-                <li>thing i want to say one</li>
-                <li>thing i want to say two</li>
-                <li>thing i want to say three</li>
-              </ul>
             }
             </div>
             
         
 
 
-          <div className="dev" onClick = {() => cardControl3()}>
+          <div className="card">
 
         
       
           
-        {cardStateC ? 
-          <div className={cardState2C?"cardEnter":"cardExit"}>
-            <img src={devimg} alt="Icon by Muhammad Haq on freeicons.io"/>
-          <div className="cardContentH1Image">
+        {cardState2 === 3 ? 
+
+          <ul className={cardState ===3?"cardEnter cardlist":"cardExit cardlist"}  onClick = {() => cardControl(0)}>
+          <li>thing i want to say one</li>
+          <li>thing i want to say two</li>
+          <li>thing i want to say three</li>
+        </ul>
+
+            :
+        <div className={cardState === 3?"cardExit ":"cardEnter"}  onClick = {() => cardControl(3)}>
+          <img src={devimg} alt="Icon by Muhammad Haq on freeicons.io"/>
+          <div className={cardClass}>
             <h2>Modern Principles</h2>
             <p>Responsive design and fast, optimised code</p>
           </div>
-          </div>
-
-            :
-              <ul className={!cardState2C?"cardEnter cardlist":"cardExit cardlist"}>
-                <li>thing i want to say one</li>
-                <li>thing i want to say two</li>
-                <li>thing i want to say three</li>
-              </ul>
+        </div>
             }
           </div>
 
        
 
 
-          <div className="SM" onClick = {() => cardControl4()}>
+          <div className="card" >
          
-          {cardStateD ? 
-              <div className={cardState2D?"cardEnter":"cardExit"}>
-              <img src={digchart} alt="Icon by Muhammad Haq on freeicons.io"/>
-              <div className="cardContentH1Image">
-              <h2>Social Media</h2>
-              <p>Facebook, Instagram, Linked In, Snapchat and more</p>
-              </div>
-              </div>
-        
+          {cardState2 === 4 ? 
+            <ul className={cardState === 4?"cardEnter cardlist":"cardExit cardlist"} onClick = {() => cardControl(0)}>
+            <li>thing i want to say one</li>
+            <li>thing i want to say two</li>
+            <li>thing i want to say three</li>
+          </ul>
             :
-              <ul className={!cardState2D?"cardEnter cardlist":"cardExit cardlist"}>
-                <li>thing i want to say one</li>
-                <li>thing i want to say two</li>
-                <li>thing i want to say three</li>
-              </ul>
+            
+                <div className={cardState === 4?"cardExit":"cardEnter"} onClick = {() => cardControl(4)}>
+                <img src={digchart} alt="Icon by Muhammad Haq on freeicons.io"/>
+                <div className={cardClass}>
+                <h2>Social Media</h2>
+                <p>Facebook, Instagram, Linked In, Snapchat</p>
+                </div>
+                </div>
             }
             </div>
 
         
 
-          <div className="TC" onClick = {() => cardControl5()}>
+          <div className="card">
        
         
-          {cardStateE ? 
-               <div className={cardState2E?"cardEnter":"cardExit"}>
-               <img src={digbubbles} alt="Icon by Muhammad Haq on freeicons.io"/>
-               <div className="cardContentH1Image">
-               <h2>Tracking</h2>
-               <p>Analytics, Tagging and Reporting</p>
-               </div>
-               </div>
+          {cardState2 === 5 ? 
+            <ul className={cardState===5?"cardEnter cardlist":"cardExit cardlist" } onClick = {() => cardControl(0)}>
+            <li>thing i want to say one</li>
+            <li>thing i want to say two</li>
+            <li>thing i want to say three</li>
+          </ul>
+             
             :
-              <ul className={!cardState2E?"cardEnter cardlist":"cardExit cardlist"}>
-                <li>thing i want to say one</li>
-                <li>thing i want to say two</li>
-                <li>thing i want to say three</li>
-              </ul>
+            <div className={cardState===5?"cardExit":"cardEnter"}  onClick = {() => cardControl(5)}>
+            <img src={digbubbles} alt="Icon by Muhammad Haq on freeicons.io"/>
+            <div className={cardClass}>
+            <h2>Tracking</h2>
+            <p>Analytics, Tagging and Reporting</p>
+            </div>
+            </div>
             }
 
           </div>
       
 
-          <div className="GA" onClick = {() => cardControl6()}>
+          <div className="card" >
               
          
-          {cardStateF ? 
-          <div className={cardState2F?"cardEnter":"cardExit"}>
+          {cardState2===6 ? 
+           <ul className={cardState ===6?"cardEnter cardlist":"cardExit cardlist"} onClick = {() => cardControl(0)}>
+           <li>thing i want to say one</li>
+           <li>thing i want to say two</li>
+           <li>thing i want to say three</li>
+         </ul>
+            :
+          <div className={cardState===6?"cardExit":"cardEnter"} onClick = {() => cardControl(6)}>
           <img src={diglogo} alt="Icon by Muhammad Haq on freeicons.io"/>
-          <div className="cardContentH1Image">
+          <div className={cardClass}>
           <h2>Google Ads</h2>
           <p>Search, YouTube, Gmail and Display</p>
           </div>
-          </div>
-            
-            :
-              <ul className={!cardState2F?"cardEnter cardlist":"cardExit cardlist"}>
-                <li>thing i want to say one</li>
-                <li>thing i want to say two</li>
-                <li>thing i want to say three</li>
-              </ul>
+          </div>     
             }
           </div>
             
        
 
         </div>
-      <div className="buttoncontainer">
+      <div className="buttoncontainer textCenter">
         
-              <span className="sr-only">Jump to marketing</span>
+              
             <Button label="Discover more" cta="Development and Design" className="discoverbutton" anchor={true} index="perks"/>
+            <span className="sr-only">Jump to marketing</span>
         
         
-              <span className="sr-only">Jump to Development</span>
+              
             <Button label="Discover more" cta="Digital Marketing" anchor={true} className="discoverbutton" index="about"/>
+            <span className="sr-only">Jump to Development</span>
       
     </div>
       </div>
@@ -260,32 +198,22 @@ useEffect(() => {
 const PackagesWrapper = styled.section`
   padding: 5rem 0.5rem;
   min-height: 100vh;
-  display:flex;
-  flex-flow: column;
   background: linear-gradient(to bottom, #101010,#03233c);
-  // background: #011727;
   justify-content: space-between;
   overflow: hidden;
  
   .maincontainer{
-    display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
   
   }
 
   .headerServices{
-    display: flex;
-    flex-flow: column;
-    
-   
-
 
     h1 {
       font-weight: 600;
       font-size: 2rem;
       font-family: var(--Font-Title);
-      margin: 0px;
       padding: 1rem 0.5rem;
       
        .marketing, .devword{
@@ -296,8 +224,6 @@ const PackagesWrapper = styled.section`
 
 
 .buttoncontainer{
-  text-align: center;
-
   button{
     margin: 0.5rem 0.5rem;
     padding: 0.9rem 2rem;
@@ -308,27 +234,20 @@ const PackagesWrapper = styled.section`
 
 
   .flex-container {
-    display:flex;
-    flex-flow: column;
     border-radius: 20px;
   }
 
   
 
  .servicecards{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-wrap: wrap;
 
   
   .cardContentH1Image{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
     padding: 0 0.5rem;
 
     p{
-      font-family: "Inter";
+      font-family: var(--Font-Second);
       font-weight: 500;
       color: rgba(255,255,255, 0.8);
       margin: 0px;
@@ -338,7 +257,7 @@ const PackagesWrapper = styled.section`
       }
 
       h2{
-        font-family: "Inter";
+        font-family: var(--Font-Second);
         font-weight: 600;
         margin: 0px;
         font-size: 1.3rem;
@@ -352,7 +271,7 @@ const PackagesWrapper = styled.section`
    
   }
 
-  .ux, .dev, .des, .SM,.TC,.GA{
+  .card{
     background-color: var(--Clr-tintPackageblue600);
     border-radius: 10px;
     width: 100%;
@@ -366,7 +285,6 @@ const PackagesWrapper = styled.section`
 
     :hover{
       transform: translateY(-4px);
-      // box-shadow: inset 0px 0px 10px 5px  rgba(114, 113, 209, 0.4), 0px 0px 15px 6px rgba(114, 113, 209, 0.4);
       cursor: pointer;
     }
     
@@ -396,17 +314,6 @@ const PackagesWrapper = styled.section`
   }
   
  }
-
-  .ux, .dev, .des{
-  
-  
- }
-  
- .SM,.TC,.GA{
-
- }
-
-
 
 
  .cardEnter{
@@ -475,7 +382,7 @@ img{
 padding-top: 3.5rem;
 
 .buttoncontainer{
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 
   button{
     margin: 0;
@@ -495,18 +402,17 @@ padding-top: 3.5rem;
   .headerServices{
     h1{
    padding: 1rem 0.5rem;
-   
+   text-align: center;
 
    @media (min-width: 1235px) and (min-height: 780px ){
-        padding-top: 2.5rem;
-        padding-bottom: 2rem;
+       
         font-size: 2.3rem;
       }
 
       @media (min-width: 1499px){
         padding-top:1rem;
-        padding-bottom: 2rem;
-        font-size: 2rem;
+        padding-bottom: 1rem;
+        font-size: 2.05rem;
       }
   }
 }
@@ -518,7 +424,8 @@ padding-top: 3.5rem;
     
     
   }
-  .ux, .dev, .des, .SM,.TC,.GA{
+
+  .card{
       flex-flow: column nowrap;  
       max-width: 400px; 
       justify-content: center;
@@ -536,17 +443,6 @@ padding-top: 3.5rem;
       }
      
     
-  }
-  
-  
-  
-
-  .ux, .dev, .des{
-    
-  }
-   
-  .SM,.TC,.GA{
- 
   }
 
  }

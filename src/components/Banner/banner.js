@@ -3,10 +3,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Button from "../Button/button"
 import TextLoop from "react-text-loop";
-import {motion} from "framer-motion"
 import BannerContact from "../Contact/bannercontact"
 import { BannerStyles } from "../../styles/bannerStyles"
-import { Link } from "react-scroll";
+
 
 const Banner = (id) => {
   const data = useStaticQuery(graphql`
@@ -21,11 +20,7 @@ const Banner = (id) => {
     }
   `)
 
-  const variants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 0 },
-  }
-
+ 
 
 let [showContact, setShowContact] = useState("starting");
 let [changetoContact, setchangetoContact] = useState(false);
@@ -55,7 +50,7 @@ const removeContactonClick = () => {
     <BannerStyles>
       <BackgroundImage
         Tag="section"
-        className="hero-image"
+        className="hero-image aiCenter jcCenter flex-Row"
         fluid={data.file.childImageSharp.fluid}
       >
 
@@ -73,14 +68,14 @@ const removeContactonClick = () => {
       :
       <div
 
-      className={showContact === "leaving" ? "hero-content hero-leave" : 
-                  showContact === "starting" ? "hero-content " :
-                  showContact=== "entering" ? "hero-enter hero-content" :
-                  "hero-content"
+      className={showContact === "leaving" ? "hero-content flex-column bgTrans hero-leave" : 
+                  showContact === "starting" ? "hero-content flex-column bgTrans " :
+                  showContact=== "entering" ? "hero-enter hero-content flex-column bgTrans" :
+                  "hero-content flex-column bgTrans"
                   }
        >
 
-            <h1>
+            <h1 className="marginNill">
               Elevate Your <TextLoop  mask={true} interval={2700}>
                               <span>Business</span>
                               <span>Revenue</span>
@@ -88,18 +83,13 @@ const removeContactonClick = () => {
                               <span>Potential</span>
                           </TextLoop>{" "}!
             </h1>
-            <motion.p
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-              transition={{ ease: "easeOut", duration: 0.8, delay: 0.2 }}
-            >
+            <p className="marginNill" >
               Personalised sites, support and advertising strategies to expand your client base and keep revenue coming in.
-            </motion.p>
+            </p>
            
               <span className="sr-only">Jump to about</span>
               <Button
-                className="mainbutton"
+                className="mainbutton .bgTrans"
                 cta="View our services"
                 label="Banner Learn More"
                 anchor={true}
@@ -110,8 +100,8 @@ const removeContactonClick = () => {
               <Button
                 cta="Or contact us now!"
                 label="Banner Learn More"
-                className="bannercontactbutton"
-                onClick={showContactonClick}
+                className="bannercontactbutton .bgTrans"
+                onClick={()=> showContactonClick()}
               />
   
           </div>

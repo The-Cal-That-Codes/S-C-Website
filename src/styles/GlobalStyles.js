@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components"
-import "@fontsource/ibm-plex-sans";
 import "@fontsource/inter";
 import "@fontsource/poppins";
 import "@fontsource/roboto-slab";
@@ -25,10 +24,7 @@ const GlobalStyles = createGlobalStyle`
     --footerMenuItem: 0.85rem;
     --para: 1rem;
     --spacing: 1rem;
-    // --Clr-Primary500: #B6C0F3;
-    // --Clr-Primary500: #7271d1;
     --Clr-Primary500: #4193E0;
-    // --Clr-tintPackageblue600: #183c4c;
     --Clr-tintPackageblue600: rgba(150, 154, 190, 0.3);
     --Clr-Secondaryfade: rgba(255,255,255, 0.9);
     --Font-Title: "Poppins", sans-serif;
@@ -76,16 +72,42 @@ const GlobalStyles = createGlobalStyle`
 
 .flex-column{
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
 }
 
 .display-block{
   margin: 0 auto;
 }
 
+.flex-Row{
+  display: flex;
+  flex-direction: row;
+}
 
+.flex-Col{
+  display: flex;
+  flex-direction: column;
+}
 
+.textCenter{
+  text-align: center;
+}
 
+.aiCenter{
+  align-items: center;
+}
+
+.jcCenter{
+  justify-content: center;
+}
+
+.bgTrans{
+  background: rgba(1,1,1,0);
+}
+
+.marginNill{
+  margin: 0 0;
+}
 
 * {
     box-sizing: border-box;
@@ -103,7 +125,9 @@ body {
   .content-container {
     margin: auto;
     
-    
+    @media(min-width: 768px){
+      max-width: 500px;
+    }
 
     @media (min-width: 1080px) {
       max-width: 650px;
@@ -123,9 +147,9 @@ body {
     padding: 100px 30px;
   }
 
-  .text-center {
-    text-align: center;
-  }
+  
+
+  
 
   .sr-only {
     border: 0 !important;

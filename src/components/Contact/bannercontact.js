@@ -1,24 +1,17 @@
 import React from "react"
 import styled from "styled-components"
 import Button from "../Button/button"
-import {motion} from 'framer-motion';
 import { animateScroll as scroll} from "react-scroll"
-import "@fontsource/ibm-plex-sans"
-import "@fontsource/inter"
 
-const BannerContact = ({ title, subtitle, className, onClick}) => {
+
+const BannerContact = ({className, onClick}) => {
   return (
-    <motion.div
-    
-    initial={{opacity:0, y: -50}}
-    animate={{opacity: 1, y: 0}}
-    transition={{duration: 0.6}}>
+  
     <ContactWrapper 
     className={className}
     >
         <div className="contactheaderbrick">
-        <h2>Start your project <span>today</span>!</h2>
-        {/* <p>{subtitle}</p> */}
+        <h2 className="marginNill">Start your project <span>today</span>!</h2>
         </div>
         <form name="bannercontact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="">
         <input type="hidden" name="form-name" value="contact"  />
@@ -61,13 +54,13 @@ const BannerContact = ({ title, subtitle, className, onClick}) => {
               <span className="content-name">Message</span>
             </label>
           </div>
-          <div className="input-area privacyCheckbox">
+          <div className="input-area privacyCheckbox flex-Row">
           <input type="checkbox" required name="checkbox" value="check" id="agree" />
           <p className="privacyText">By ticking this box you agree to our <span onClick={()=> scroll.scrollToBottom()}>privacy policy</span> and for CroftDigital to contact you in regards to your message sent to them.
            
           </p>
           </div>
-          <div className="input-area button-area">
+          <div className="input-area button-area textCenter">
             <Button className="formsubmitbutton" label="Send Contact Form" cta="Send" type="submit" />
             <Button className="backbutton"  cta="back" type="button" onClick={onClick} />
         </div>
@@ -76,7 +69,7 @@ const BannerContact = ({ title, subtitle, className, onClick}) => {
        
       
     </ContactWrapper>
-    </motion.div>
+ 
     
     )
    
@@ -95,9 +88,9 @@ display: flex;
 flex-flow: column;
 align-items: center;
 justify-content: center;
-
 max-width: 650px;
 
+animation: Enter 0.6s ease-out;
 
 @media(min-width: 480px){
   padding: 2rem 3rem;
@@ -145,34 +138,29 @@ max-width: 650px;
    
 
     h2 {
-      // background: -webkit-linear-gradient(90deg, #43A0CF, #43A0CF,#41a4ef,#41a4ef);
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
       font-size: 2.05rem;
-      text-align: left;
-      width: 100%;
+      width: 105%;
       color: var(--Clr-Secondaryfade);
       font-family: var(--Font-Title);
       padding: 0.7rem 0rem;
-      margin: 0 0;
       
       span{
-      //   background: -webkit-linear-gradient( 135deg, #5EFCE8 10%, #736EFE 100%);
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
         color: var(--Clr-Primary500);
       }
 
+      @media(min-width: 768px){
+        font-size: 2.3rem;
+        padding-bottom: 1.3rem;
+      }
+
+      @media(min-width: 1500px ){
+        font-size: 2.1rem;
+      }
     }
 
      
       
-    p {
-      text-align: center;
-      margin: 0.5rem 0;
-      color: rgba(255,255,255,0.8);
-     
-    }
+
 
 form {
   
@@ -186,7 +174,6 @@ form {
    position: relative;
 
    &.button-area {
-   text-align: center;
    padding: 0rem 1rem;
    }
   }
@@ -231,7 +218,7 @@ form {
         width: 100%;
         height: 100%;
         pointer-events: none;
-        font-family: "Inter";
+        font-family: var(--Font-Title);
 
         &::after {
           content: "";
@@ -258,7 +245,6 @@ form {
     }
 
     .privacyCheckbox{
-      display: flex;
       background-color: rgba(43, 102, 131, 0.5);
       padding: 0.65rem;
   
@@ -280,6 +266,17 @@ form {
           color: #E08F42;
           cursor: pointer;
         }
+      }
+    }
+
+    @keyframes Enter {
+      0%{
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100%{
+        opacity: 1;
+        transform: translateY(0px);
       }
     }
 

@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import links from "../constants/links"
 import styled from "styled-components"
 import { animateScroll as scroll, Link } from "react-scroll"
-import "@fontsource/roboto"
+
 
 
 const Navbar = ({ Logo }) => {
@@ -69,11 +69,6 @@ export const NavStyles = styled.nav`
   box-sizing: border-box;
   transition: 0.35s ease-out;
   
-  // :hover{
-  //   background: rgba(1,1,1, 0.9);
-  //   cursor: pointer;
-    
-  // }
 
 
   .logo-container{
@@ -166,7 +161,6 @@ export const NavStyles = styled.nav`
         color: var(--Clr-Primary500);
         transform: translateY(-3px);
         transition: transform 0.3s linear;
-        // filter: drop-shadow(3px 4px 2px #db4a37);
       }
 
       &.show-nav {

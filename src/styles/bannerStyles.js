@@ -4,9 +4,7 @@ export const BannerStyles = styled.section`
   .gatsby-image-wrapper {
     color: #fff;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
     padding: 1rem 0.5rem;
     padding-bottom: 2rem;
 
@@ -15,26 +13,15 @@ export const BannerStyles = styled.section`
     }
   }
 
-
-
-.hide{
-  display none;
-}
-
-
-
- 
 .mainbutton{
     a{filter: drop-shadow(0px 2px 2px black);}
     font-size: 0.9rem;
-    background: rgba(1,1,1,0);
     border: 3px solid var(--Clr-Primary500);
    margin: 1rem auto;
 }
 
 .bannercontactbutton{
   font-size: 0.8rem;
-  background: rgba(1,1,1,0);
   border: 0px;
   margin: 0 auto;
 }
@@ -51,28 +38,12 @@ export const BannerStyles = styled.section`
 }
 
 
-.displaynone{
-  display:none;
-
-  h1, p, button{
-    display:none;
-  }
-}
-
-
-  .hero-content {
+.hero-content {
     margin: 0 auto;
     margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
     padding: 0 0.5rem;
-    background-color: rgba(1, 1, 1, 0);
     
-
-
-
     h1 {
-      margin: 0px;
       font-size: 2rem;
       line-height: 1.2;
       padding: 0.5rem 0;
@@ -80,7 +51,6 @@ export const BannerStyles = styled.section`
        
       span{
         color: var(--Clr-Primary500);
-        
       }
 
       }
@@ -90,7 +60,6 @@ export const BannerStyles = styled.section`
       line-height: 1.5;
       font-size: 1.3rem; 
       font-family: var(--Font-Accent);
-      margin: 0 0;
       margin-bottom: 0.5rem;
       padding: 0.2rem 0;
      

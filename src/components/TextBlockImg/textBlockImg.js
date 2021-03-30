@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react"
-import styled from "styled-components"
-// import { useInView } from "react-intersection-observer";
-// import { useAnimation } from "framer-motion";
+import React, {useState } from "react";
+import styled from "styled-components";
 import { BsXDiamondFill, BsDropletHalf , BsTerminalFill,BsLayersFill,BsFillCircleFill,BsPeopleFill, BsChatSquareDotsFill} from "react-icons/bs";
 import { IconContext } from "react-icons";
 import { Link } from "react-scroll";
 
 
-const TextBlockImg = ({id}) => {
+const TextBlockImg = ({id, paraEnter, paraExit}) => {
 
   
 
@@ -25,24 +23,11 @@ const controller = (index) => {
 
 
 
-  // const controls = useAnimation()
-  // const [ref, inView] = useInView({
-  //   // Percentage of item in view to trigger animation
-  //   threshold: 0.25,
-  // })
-
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     controls.start("visible")
-  //   }
-  // }, [controls, inView])
-
   return (
    
       <TextBlockImgWrapper id={id}>
         <div className="contentwrapper">
-          <h1>Design, Dev and Deployment all in one place!</h1>
+          <h1 className="marginNill">Design, Dev and Deployment all in one place!</h1>
           <div className="iconbox">
           <IconContext.Provider value={classControl === 1 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
                                                          {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" } }>
@@ -70,7 +55,7 @@ const controller = (index) => {
           <hr className="longLine"/>
           {
           iconColour === 1 ?
-          <div className={classControl === 1 ? "paraEnter" : "paraExit"}>
+          <div className={classControl === 1 ? paraEnter : paraExit}>
           <p className="paraLeft">
           First ipsum dolor, sit amet consectetur adipisicing elit.
           Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
@@ -82,7 +67,7 @@ const controller = (index) => {
            Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
          </p>
          </div> : iconColour === 2 ?
-       <div className={classControl === 2 ? "paraEnter" : "paraExit"}>
+       <div className={classControl === 2 ? paraEnter : paraExit}>
        <p className="paraLeft">
        Second ipsum dolor, sit amet consectetur adipisicing elit.
        Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
@@ -94,7 +79,7 @@ const controller = (index) => {
         Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
       </p>
       </div> : iconColour === 3 ?
-         <div className={classControl === 3 ? "paraEnter" : "paraExit"}>
+         <div className={classControl === 3 ? paraEnter : paraExit}>
          <p className="paraLeft">
          Third ipsum dolor, sit amet consectetur adipisicing elit.
          Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
@@ -106,7 +91,7 @@ const controller = (index) => {
           Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
         </p>
         </div> :
-          <div className={classControl === 4 ? "paraEnter" : "paraExit"}>
+          <div className={classControl === 4 ? paraEnter : paraExit}>
            <p className="paraLeft">
            FOURTH ipsum dolor, sit amet consectetur adipisicing elit.
            Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
@@ -119,7 +104,6 @@ const controller = (index) => {
           </p>
           </div>
            }
-          {/* <hr className="smallLine"/> */}
          
           <div className="iconbox2 iconNav">
 
