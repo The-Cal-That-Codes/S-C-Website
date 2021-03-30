@@ -75,7 +75,7 @@ const Contact = ({ title}) => {
             </label>
           </div>
 
-          <div className="input-area privacyCheckbox">
+          <div className="input-area privacyCheckbox aiCenter">
           <input type="checkbox" required name="checkbox" value="check" id="agree" />
           <p className="privacyText">By ticking this box you agree to our <span onClick={()=> scroll.scrollToBottom()}>privacy policy</span> and for CroftDigital to contact you in regards to your message sent to them.
            

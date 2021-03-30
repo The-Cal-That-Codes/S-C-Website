@@ -28,7 +28,7 @@ const Button = props => {
 
 const ButtonWrapper = styled.button`
   
-  padding: 0.9rem;
+ 
   text-align: center;
   line-height: 1.4;
   color: #fff;
@@ -44,6 +44,7 @@ const ButtonWrapper = styled.button`
   background: rgba(1,1,1,0);
 
 .wordWrap{
+  padding: 0.9rem;
   height: 100%;
   width: 100%;
 }

@@ -226,7 +226,6 @@ const PackagesWrapper = styled.section`
 .buttoncontainer{
   button{
     margin: 0.5rem 0.5rem;
-    padding: 0.9rem 2rem;
     font-size: 0.8rem;
     a{filter: drop-shadow(0px 2px 2px black);}
   }
