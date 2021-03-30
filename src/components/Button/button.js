@@ -13,13 +13,14 @@ const Button = props => {
                 onClick={props.onClick}
             >
               <Link to={props.index} smooth={true} duration={500}>
-                
-                <div className="wordWrap">{props.cta}</div>
+                <div className="wordWrap">
+                {props.cta}
+                </div>
               </Link>
             </ButtonWrapper>
       ) : (
             <ButtonWrapper aria-label={props.label} type={props.type} className={props.className} onClick={props.onClick}>
-              {props.cta}       
+              {props.cta}
             </ButtonWrapper>
       )}
     </>
@@ -28,7 +29,7 @@ const Button = props => {
 
 const ButtonWrapper = styled.button`
   
- 
+  
   text-align: center;
   line-height: 1.4;
   color: #fff;
@@ -43,19 +44,22 @@ const ButtonWrapper = styled.button`
   filter: drop-shadow(0px 2px 2px black);
   background: rgba(1,1,1,0);
 
-.wordWrap{
-  padding: 0.9rem;
-  height: 100%;
-  width: 100%;
-}
+  .wordWrap{
+    height: 100%;
+    width: 100%;
+    padding: 0.9rem;
+  }
+
+
   &:hover {
     cursor: pointer;
+ 
     scale: 1.015;
 
     &::before {
       filter: blur(15px);
       opacity: 1;
-     
+    
     }
   }
 
@@ -74,14 +78,6 @@ const ButtonWrapper = styled.button`
   }
 
 
-  @keyframes animate {
-    0% {
-      background-position: 0%;
-    }
-    100% {
-      background-position: 400%;
-    }
-  }
 
   @media(min-width: 1100px){
     font-size: 1rem;

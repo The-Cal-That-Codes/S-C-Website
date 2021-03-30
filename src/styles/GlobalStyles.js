@@ -66,6 +66,7 @@ const GlobalStyles = createGlobalStyle`
 
 // utility
 
+
 .no-pointer:hover{
   cursor: default !important;
 }

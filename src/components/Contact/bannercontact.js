@@ -256,6 +256,7 @@ form {
   
       input{
         width: auto !important;
+        height: auto !important;
         margin: 0.3rem 0.5rem;
         transform: scale(1.5);
   

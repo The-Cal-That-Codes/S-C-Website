@@ -29,23 +29,23 @@ const controller = (index) => {
         <div className="contentwrapper">
           <h1 className="marginNill">Design, Dev and Deployment all in one place!</h1>
           <div className="iconbox">
-          <IconContext.Provider value={classControl === 1 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
-                                                         {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" } }>
+          <IconContext.Provider value={classControl === 1 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
+                                                         {color:"#969ABE", className:"icon iconmedia" } }>
             <BsXDiamondFill onClick={() => controller(1)}/>
           </IconContext.Provider>
           <h3>General</h3>
-          <IconContext.Provider value={classControl === 2 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
-                                      {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
+          <IconContext.Provider value={classControl === 2 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
+                                      {color:"#969ABE", className:"icon iconmedia" }}>
             <BsTerminalFill onClick={() => controller(2)} />
           </IconContext.Provider>
           <h3>Title 2</h3>
-          <IconContext.Provider value={classControl === 3 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
-                                      {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
+          <IconContext.Provider value={classControl === 3 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
+                                      {color:"#969ABE", className:"icon iconmedia" }}>
             <BsDropletHalf onClick={() => controller(3)}/>
           </IconContext.Provider>
           <h3>Title 3</h3>
-          <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
-                                      {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
+          <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
+                                      {color:"#969ABE", className:"icon iconmedia" }}>
           
             <BsLayersFill onClick={() => controller(4)}/>
           </IconContext.Provider>
@@ -219,7 +219,10 @@ h3{
   }
 }
 
-
+.iconmedia{
+  width: 2.5rem;
+  height: 2.5rem;
+}
  
 .longLine{
   max-width: 96%;

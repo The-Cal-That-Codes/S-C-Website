@@ -101,7 +101,6 @@ const ContactWrapper = styled.section`
 
   .formsubmitbutton{
     text-align: center;
-    // box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.4), 0 6px 10px 10px rgba(0, 0, 0, 0.39);
     border-radius: 0px;
     border: 2px solid rgba(255,255,255, 0.8);
     background: rgba(1,1,1,0);
@@ -238,6 +237,7 @@ const ContactWrapper = styled.section`
 
     input{
       width: auto !important;
+      height: auto !important;
       margin: 0.3rem 0.5rem;
       transform: scale(1.5);
 
