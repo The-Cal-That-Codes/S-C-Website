@@ -372,7 +372,7 @@ h3{
 
   h1{
     font-size: 2rem;
-   padding: 1rem 1rem;
+   padding: 2rem 1rem;
    
   }
 

@@ -106,12 +106,17 @@ animation: Enter 0.6s ease-out;
    
   }
 
+  .button-area{
+    margin-bottom: 1.4rem !important;
+  }
+
 
   .formsubmitbutton{
     background: rgba(1,1,1,0);
     color: rgba(255,255,255,1);
     border: 2px solid #43A0CF;
     font-size: 0.9rem;
+    padding: 0.8rem;
     a{filter: drop-shadow(0px 2px 2px black);}
     &::before{
       border-radius: 20px;
@@ -129,6 +134,7 @@ animation: Enter 0.6s ease-out;
     border-radius: 20px;
     filter: drop-shadow(0px 2px 2px black);
     margin-left: 1rem;
+    padding: 0.8rem;
     
   }
 

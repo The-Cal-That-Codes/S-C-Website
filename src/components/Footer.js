@@ -314,6 +314,7 @@ const FooterStyles = styled.footer`
 
     .backButton{
       margin-bottom: 1rem;
+      padding: 0.5rem;
     }
   }
 
