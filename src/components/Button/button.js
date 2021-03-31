@@ -55,15 +55,15 @@ const ButtonWrapper = styled.button`
 
   &:hover {
     cursor: pointer;
-    -webkit-animation: animate 8s linear infinite;
+   border: 0px !important;
     transform: scale(1.02);
     
 
     &::before {
       opacity: 1;
       filter: blur(15px);
-      -webkit-animation: animate 8s linear infinite;
-      -webkit-transform: translate3d(0,0,0);
+      -webkit-transition: 0.5s;
+     
     }
   }
 
@@ -75,12 +75,10 @@ const ButtonWrapper = styled.button`
     right: -5px;
     bottom: -5px;
     z-index: -1;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-    // background: rgba(65, 147, 224,0.3);
+    background: rgba(65, 147, 224,0.3);
     background-size: 400%;
     opacity: 0;
-    filter: blur(15px);
-    -webkit-transition: 1.5s;
+    -webkit-transition: 0.5s;
     
   }
 
@@ -90,14 +88,7 @@ const ButtonWrapper = styled.button`
     font-size: 1rem;
   }
 
-  @keyframes animate {
-    0% {
-      background-position: 0%;
-    }
-    100% {
-      background-position: 400%;
-    }
-  }
+ 
 `
 
 export default Button
