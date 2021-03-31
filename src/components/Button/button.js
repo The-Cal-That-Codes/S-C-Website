@@ -11,12 +11,14 @@ const Button = props => {
                 aria-label={props.label}
                 className={props.className}
                 onClick={props.onClick}
+                // href={props.href}
+                // as="a"
             >
               <Link to={props.index} smooth={true} duration={500}>
                 <div className="wordWrap">
                 {props.cta}
                 </div>
-              </Link>
+                </Link>
             </ButtonWrapper>
       ) : (
             <ButtonWrapper aria-label={props.label} type={props.type} className={props.className} onClick={props.onClick}>
@@ -28,8 +30,8 @@ const Button = props => {
 }
 
 const ButtonWrapper = styled.button`
-  
-  
+  position: relative;
+  display: inline-block;
   text-align: center;
   line-height: 1.4;
   color: #fff;
@@ -54,13 +56,13 @@ const ButtonWrapper = styled.button`
 
   &:hover {
     cursor: pointer;
- 
+    animation: animate 8s linear infinite;
     scale: 1.015;
 
     &::before {
       filter: blur(15px);
       opacity: 1;
-    
+      animation: animate 8s linear infinite;
     }
   }
 
@@ -83,6 +85,15 @@ const ButtonWrapper = styled.button`
 
   @media(min-width: 1100px){
     font-size: 1rem;
+  }
+
+  @keyframes animate {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
   }
 `
 

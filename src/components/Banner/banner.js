@@ -5,7 +5,7 @@ import Button from "../Button/button"
 import TextLoop from "react-text-loop";
 import BannerContact from "../Contact/bannercontact"
 import { BannerStyles } from "../../styles/bannerStyles"
-
+import { Link } from "react-scroll"
 
 const Banner = (id) => {
   const data = useStaticQuery(graphql`
@@ -87,6 +87,9 @@ const removeContactonClick = () => {
               Personalised sites, support and advertising strategies to expand your client base and keep revenue coming in.
             </p>
            
+              
+           
+              {/* <Link to="packages" smooth={true} duration={500}> */}
               <span className="sr-only">Jump to about</span>
               <Button
                 className="mainbutton .bgTrans"
@@ -94,7 +97,10 @@ const removeContactonClick = () => {
                 label="Banner Learn More"
                 anchor={true}
                 index="packages"
+                // href="linking"
               />
+              {/* </Link> */}
+
             
       
               <Button
@@ -103,7 +109,7 @@ const removeContactonClick = () => {
                 className="bannercontactbutton .bgTrans"
                 onClick={()=> showContactonClick()}
               />
-  
+            
           </div>
           }
 
