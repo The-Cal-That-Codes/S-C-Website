@@ -234,7 +234,7 @@ const PackagesWrapper = styled.section`
 
 .buttoncontainer{
   .discoverbutton{
-    margin: 0.5rem 0.5rem;
+    margin: 1rem 1rem;
     font-size: 0.8rem;
     a{filter: drop-shadow(0px 2px 2px black);}
   }
@@ -380,25 +380,25 @@ img{
 
 }
 
-@media(min-height: 880px){
-  .buttoncontainer{
-    margin-top: 1rem;
-  }
+// @media(min-height: 880px){
+//   .buttoncontainer{
+//     margin-top: 1rem;
+//   }
 
  
-}
+// }
 
 @media(min-width: 1000px){
 padding-top: 3.5rem;
 
-.buttoncontainer{
-  margin-top: 1rem;
+// .buttoncontainer{
+  
 
-  button{
-    margin: 0;
-    margin-left: 1rem;
-  }
-}
+//   button{
+//     margin: 0;
+//     margin-left: 1rem;
+//   }
+// }
 
   .maincontainer{
     margin: auto;
