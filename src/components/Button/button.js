@@ -55,14 +55,13 @@ const ButtonWrapper = styled.button`
 
   &:hover {
     cursor: pointer;
-   border: 0px !important;
-    transform: scale(1.02);
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transform: scale(1.02);
     
 
     &::before {
       opacity: 1;
       filter: blur(15px);
-      -webkit-transition: 0.5s;
      
     }
   }
