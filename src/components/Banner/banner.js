@@ -89,7 +89,6 @@ const removeContactonClick = () => {
            
               
            
-              {/* <Link to="packages" smooth={true} duration={500}> */}
               <span className="sr-only">Jump to about</span>
               <Button
                 className="mainbutton .bgTrans"
@@ -97,12 +96,12 @@ const removeContactonClick = () => {
                 label="Banner Learn More"
                 anchor={true}
                 index="packages"
-                // href="linking"
+            
               />
-              {/* </Link> */}
+             
 
             
-      
+              <span className="sr-only">Jump to contact</span>
               <Button
                 cta="Or contact us now!"
                 label="Banner Learn More"

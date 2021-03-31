@@ -173,14 +173,23 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
         </div>
       <div className="buttoncontainer textCenter">
         
-              
-            <Button label="Discover more" cta="Development and Design" className="discoverbutton" anchor={true} index="perks"/>
-            <span className="sr-only">Jump to marketing</span>
+      <span className="sr-only">Jump to Development</span>
+            <Button label="Discover more" 
+                    cta="Development and Design" 
+                    className="discoverbutton" 
+                    anchor={true} 
+                    index="perks"/>
+
+            
         
         
-              
-            <Button label="Discover more" cta="Digital Marketing" anchor={true} className="discoverbutton" index="about"/>
-            <span className="sr-only">Jump to Development</span>
+            <span className="sr-only">Jump to Marketing</span>
+            <Button label="Discover more" 
+                    cta="Digital Marketing" 
+                    anchor={true} 
+                    className="discoverbutton" 
+                    index="about"/>
+            
       
     </div>
       </div>
@@ -224,7 +233,7 @@ const PackagesWrapper = styled.section`
 
 
 .buttoncontainer{
-  button{
+  .discoverbutton{
     margin: 0.5rem 0.5rem;
     font-size: 0.8rem;
     a{filter: drop-shadow(0px 2px 2px black);}

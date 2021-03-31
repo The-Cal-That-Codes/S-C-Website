@@ -11,8 +11,6 @@ const Button = props => {
                 aria-label={props.label}
                 className={props.className}
                 onClick={props.onClick}
-                // href={props.href}
-                // as="a"
             >
               <Link to={props.index} smooth={true} duration={500}>
                 <div className="wordWrap">
@@ -62,7 +60,7 @@ const ButtonWrapper = styled.button`
     &::before {
       filter: blur(15px);
       opacity: 1;
-      animation: animate 8s linear infinite;
+      -webkit-animation: animate 8s linear infinite;
     }
   }
 
@@ -78,7 +76,7 @@ const ButtonWrapper = styled.button`
     // background: rgba(65, 147, 224,0.3);
     background-size: 400%;
     opacity: 0;
-    transition: 0.5s;
+    -webkit-transition: 0.5s;
   }
 
 
