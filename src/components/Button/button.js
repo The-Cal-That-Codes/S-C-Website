@@ -61,7 +61,9 @@ const ButtonWrapper = styled.button`
 
     &::before {
       opacity: 1;
+      filter: blur(15px);
       -webkit-animation: animate 8s linear infinite;
+      -webkit-transform: translate3d(0,0,0);
     }
   }
 
