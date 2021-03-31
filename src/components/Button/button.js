@@ -43,6 +43,7 @@ const ButtonWrapper = styled.button`
   font-family: var(--Font-Title);
   filter: drop-shadow(0px 2px 2px black);
   background: rgba(1,1,1,0);
+  height: 3rem;
 
   .wordWrap{
     height: 100%;
@@ -71,10 +72,11 @@ const ButtonWrapper = styled.button`
     right: -5px;
     bottom: -5px;
     z-index: -1;
-    background: rgba(65, 147, 224,0.3);
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    // background: rgba(65, 147, 224,0.3);
     background-size: 400%;
     opacity: 0;
-    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
 
 
