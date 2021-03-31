@@ -69,26 +69,22 @@ const controller = (index) => {
          </div> : iconColour === 2 ?
        <div className={classControl === 2 ? paraEnter : paraExit}>
        <p className="paraLeft">
-       Second ipsum dolor, sit amet consectetur adipisicing elit.
-       Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-       Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+       Forget about clunky website builders, we code everything from scratch to accurately translate your vision into a tailored online home for your business. 
+       Combining advanced HTML, CSS and JavaScript 
       </p>
       <p className="paraRight">
-        First ipsum dolor, sit amet consectetur adipisicing elit.
-        Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-        Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+      with powerful frameworks like React we blend engaging functionality with optimised performance.
+      Using responsive CSS we offer complete functionality over all devices, all inclusive to ensure every site we create is of high quality. 
       </p>
       </div> : iconColour === 3 ?
          <div className={classControl === 3 ? paraEnter : paraExit}>
          <p className="paraLeft">
-         Third ipsum dolor, sit amet consectetur adipisicing elit.
-         Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-         Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+         In order to ensure aesthetic quality all pages are designed in Figma and sent to you for review before the coding begins.
+        User experience principles are implemented from wireframes  
         </p>
         <p className="paraRight">
-          First ipsum dolor, sit amet consectetur adipisicing elit.
-          Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-          Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+        to prototypes giving your site the edge it needs to engage your customer base.
+        Sites are designed from a “mobile first” approach to keep your business accessible and exceptional across multiple devices. 
         </p>
         </div> :
           <div className={classControl === 4 ? paraEnter : paraExit}>

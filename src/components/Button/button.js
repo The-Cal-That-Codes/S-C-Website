@@ -57,9 +57,9 @@ const ButtonWrapper = styled.button`
     cursor: pointer;
     -webkit-animation: animate 8s linear infinite;
     transform: scale(1.02);
+    
 
     &::before {
-      
       opacity: 1;
       -webkit-animation: animate 8s linear infinite;
     }
@@ -77,8 +77,9 @@ const ButtonWrapper = styled.button`
     // background: rgba(65, 147, 224,0.3);
     background-size: 400%;
     opacity: 0;
-    -webkit-transition: 0.5s;
     filter: blur(15px);
+    -webkit-transition: 1.5s;
+    
   }
 
 

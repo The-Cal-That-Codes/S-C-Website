@@ -233,7 +233,9 @@ const PackagesWrapper = styled.section`
 
 
 .buttoncontainer{
+  background: rgba(1,1,1,0);
   margin-top: 1rem;
+  
   .discoverbutton{
     margin: 0rem auto;
     font-size: 0.8rem;
