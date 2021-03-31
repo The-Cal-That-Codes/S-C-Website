@@ -44,6 +44,7 @@ const ButtonWrapper = styled.button`
   filter: drop-shadow(0px 2px 2px black);
   background: rgba(1,1,1,0);
   height: 3rem;
+  
 
   .wordWrap{
     height: 100%;
@@ -54,11 +55,11 @@ const ButtonWrapper = styled.button`
 
   &:hover {
     cursor: pointer;
-    animation: animate 8s linear infinite;
-    scale: 1.015;
+    -webkit-animation: animate 8s linear infinite;
+    transform: scale(1.02);
 
     &::before {
-      filter: blur(15px);
+      
       opacity: 1;
       -webkit-animation: animate 8s linear infinite;
     }
@@ -77,6 +78,7 @@ const ButtonWrapper = styled.button`
     background-size: 400%;
     opacity: 0;
     -webkit-transition: 0.5s;
+    filter: blur(15px);
   }
 
 
