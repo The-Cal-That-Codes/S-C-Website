@@ -38,18 +38,18 @@ const controller = (index) => {
                                       {color:"#969ABE", className:"icon iconmedia" }}>
             <BsTerminalFill onClick={() => controller(2)} />
           </IconContext.Provider>
-          <h3>Title 2</h3>
+          <h3>Development</h3>
           <IconContext.Provider value={classControl === 3 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
                                       {color:"#969ABE", className:"icon iconmedia" }}>
             <BsDropletHalf onClick={() => controller(3)}/>
           </IconContext.Provider>
-          <h3>Title 3</h3>
+          <h3>Design</h3>
           <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
                                       {color:"#969ABE", className:"icon iconmedia" }}>
           
             <BsLayersFill onClick={() => controller(4)}/>
           </IconContext.Provider>
-          <h3>Title4</h3>
+          <h3>Our Process</h3>
           
           </div>
           <hr className="longLine"/>
@@ -57,46 +57,34 @@ const controller = (index) => {
           iconColour === 1 ?
           <div className={classControl === 1 ? paraEnter : paraExit}>
           <p className="paraLeft">
-          Websites are almost a requirement for modern trade, they are your customers initial
-          contact with your brand and a key factor in gaining clientele.  
-          Our design and development process is geared towards providing you with a unique, captivating web identity
+          Websites are a fundamental part of a modern presence they are your brands initial contact with potential customers and a key factor in gaining clientele. Our design and development process are geared towards providing you with a unique 
          </p>
          <p className="paraRight">
-          that utilises modern techniques to give you the online identity you deserve.
-         Whether you’re establishing or updating your businesses web identity our philosophy is to deliver a 
-         high-quality asset that will aid in the development of your business.
+         captivating web identity that utilises modern techniques to give your business the platform it deserves. Whether you are establishing or updating your website our philosophy is to deliver a high-quality asset that will aid in the development of your business.
          </p>
          </div> : iconColour === 2 ?
        <div className={classControl === 2 ? paraEnter : paraExit}>
        <p className="paraLeft">
-       Forget about clunky website builders, we code everything from scratch to accurately translate your vision into a tailored online home for your business. 
-       Combining advanced HTML, CSS and JavaScript 
+       Forget about clunky website builders, we code everything from scratch to accurately translate your vision into a tailored online home for your business. Combining advanced HTML, CSS and JavaScript with powerful frameworks like React 
       </p>
       <p className="paraRight">
-      with powerful frameworks like React we blend engaging functionality with optimised performance.
-      Using responsive CSS we offer complete functionality over all devices, all inclusive to ensure every site we create is of high quality. 
+      we blend engaging functionality with expansive options via NPM packages and custom scripts. Using responsive CSS we offer complete functionality over all devices, always included to ensure every site we create is up to modern web standards.  
       </p>
       </div> : iconColour === 3 ?
          <div className={classControl === 3 ? paraEnter : paraExit}>
          <p className="paraLeft">
-         In order to ensure aesthetic quality all pages are designed in Figma and sent to you for review before the coding begins.
-        User experience principles are implemented from wireframes  
+         In order to ensure aesthetic quality all pages are designed in Figma and sent to you for review before the coding begins. User experience principles are implemented from wireframes to prototypes giving your site the edge it needs to engage your customer base. Sites are designed 
         </p>
         <p className="paraRight">
-        to prototypes giving your site the edge it needs to engage your customer base.
-        Sites are designed from a “mobile first” approach to keep your business accessible and exceptional across multiple devices. 
+        from a “mobile first” approach to keep your business accessible and exceptional across multiple devices. We understand everyone has different tastes and ideas so we include multiple revisions free of charge so you’re satisfied with your product.  
         </p>
         </div> :
           <div className={classControl === 4 ? paraEnter : paraExit}>
            <p className="paraLeft">
-           FOURTH ipsum dolor, sit amet consectetur adipisicing elit.
-           Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-           Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+           As a freelance development start-up our focus is on customer understanding, engagement and satisfaction so that you are aware and as included in the process as you’d like to be, seeing the product you envision take shape. We take on the roles
           </p>
           <p className="paraRight">
-            First ipsum dolor, sit amet consectetur adipisicing elit.
-            Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-            Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+          of designer, developer and deployment so you can receive a competitive refined website while saving on costs. Development is our passion, and we are dedicated to going the extra mile to ensure all sites are an asset your business can be proud of. 
           </p>
           </div>
            }

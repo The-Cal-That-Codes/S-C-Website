@@ -171,7 +171,7 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
        
 
         </div>
-      {/* <div className="buttoncontainer textCenter"> */}
+      <div className="buttoncontainer textCenter">
         
       <span className="sr-only">Jump to Development</span>
             <Button label="Discover more" 
@@ -191,7 +191,7 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
                     index="about"/>
             
       
-    {/* </div> */}
+    </div>
       </div>
       
     </div>
@@ -232,17 +232,26 @@ const PackagesWrapper = styled.section`
   }
 
 
-// .buttoncontainer{
-//   background: rgba(1,1,1,0);
-//   margin-top: 0.5rem;
+.buttoncontainer{
+  background: rgba(1,1,1,0);
+  margin-top: 0.5rem;
   
   .discoverbutton{
     -webkit-align-self: center;
     margin: 0rem auto;
     font-size: 0.8rem;
     a{filter: drop-shadow(0px 2px 2px black);}
+
+    // &::before{
+    //   filter: blur(0px);
+    // }
+    // &:hover{
+    //   &::before{
+    //   filter: blur(0px);
+    //   }
+    // }
   }
-// }
+}
 
 
   .flex-container {
