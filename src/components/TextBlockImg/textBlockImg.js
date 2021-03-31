@@ -57,7 +57,7 @@ const controller = (index) => {
           iconColour === 1 ?
           <div className={classControl === 1 ? paraEnter : paraExit}>
           <p className="paraLeft">
-          Websites are a fundamental part of a modern presence they are your brands initial contact with potential customers and a key factor in gaining clientele. Our design and development process are geared towards providing you with a unique 
+          Websites are a fundamental part of a modern presence they are your brands initial contact with potential customers and a key factor in gaining clientele. Our design and development process is geared towards providing you with a unique 
          </p>
          <p className="paraRight">
          captivating web identity that utilises modern techniques to give your business the platform it deserves. Whether you are establishing or updating your website our philosophy is to deliver a high-quality asset that will aid in the development of your business.
@@ -65,10 +65,10 @@ const controller = (index) => {
          </div> : iconColour === 2 ?
        <div className={classControl === 2 ? paraEnter : paraExit}>
        <p className="paraLeft">
-       Forget about clunky website builders, we code everything from scratch to accurately translate your vision into a tailored online home for your business. Combining advanced HTML, CSS and JavaScript with powerful frameworks like React 
+       Forget about clunky website builders, we code everything from scratch to accurately translate your vision into a tailored online home for your business. Combining advanced HTML, CSS and JavaScript with powerful frameworks like React we blend engaging 
       </p>
       <p className="paraRight">
-      we blend engaging functionality with expansive options via NPM packages and custom scripts. Using responsive CSS we offer complete functionality over all devices, always included to ensure every site we create is up to modern web standards.  
+      functionality with expansive options via NPM packages and custom scripts. Using responsive CSS we offer complete functionality over all devices, always included to ensure every site we create is up to modern web standards.  
       </p>
       </div> : iconColour === 3 ?
          <div className={classControl === 3 ? paraEnter : paraExit}>
@@ -299,11 +299,12 @@ h3{
 
   h1{
     font-size: 1.7rem;
+    margin-top: 50px;
     padding: 2rem 1rem;
     padding-bottom: 1rem;
 
     @media(min-width: 790px){
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
       font-size: 2rem;
     }
   }
@@ -480,7 +481,7 @@ h3{
     
     .paraLeft,.paraRight{
       font-size: 1.3rem ;
-      padding: 2rem 1rem;
+      padding: 1rem 1rem;
       padding-bottom: 0.5rem;
       line-height: 1.6
     }
@@ -511,7 +512,7 @@ h3{
   h1{
 
     padding: 0rem 1rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
   
   }
   
@@ -602,11 +603,11 @@ h3{
  
 
     h1{
-      padding-bottom: 2rem;
+      padding-bottom: 1.5rem;
     }
 
     .iconbox2{
-      padding-top: 2rem;
+      padding-top: 1rem;
       
     }
   }

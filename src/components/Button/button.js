@@ -43,7 +43,7 @@ const ButtonWrapper = styled.button`
   font-family: var(--Font-Title);
   filter: drop-shadow(0px 2px 2px black);
   background: rgba(1,1,1,0);
-  height: 3rem;
+  
   
 
   .wordWrap{

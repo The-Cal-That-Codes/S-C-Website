@@ -266,7 +266,7 @@ form {
         font-size: 0.6rem;
         font-family: var(--Font-Second);
         text-align: left!important;
-        margin-top: 0px;
+        margin: 0px;
 
         span{
           text-decoration: underline;

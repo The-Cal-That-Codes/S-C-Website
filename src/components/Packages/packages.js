@@ -34,16 +34,16 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
           <div className="card" >
             {cardState2 === 1 ? 
               <ul className={cardState === 1?"cardEnter cardlist":"cardExit cardlist"} onClick = {() => cardControl(0) }>
-              <li>thing i want to say one</li>
-              <li>thing i want to say two</li>
-              <li>thing i want to say three</li>
+              <li>Custom Meta tags imbedded with react helmet</li>
+              <li>Content analysis focused on relevant keywords</li>
+              <li>Get the traffic your business deserves!</li>
             </ul>
             :
             <div className={cardState === 1?"cardExit":"cardEnter"} onClick = {() => cardControl(1) } >
             <img src={uximg} alt="Icon by Muhammad Haq on freeicons.io"/>
             <div className={cardClass}>
-            <h2>UX and SEO</h2>
-            <p>Industry practices applied to achieve your goals</p>
+            <h2>Meta Tags and SEO</h2>
+            <p>integrated for competitive google rankings </p>
             </div>
             </div>
             
@@ -57,9 +57,9 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
           
           {cardState2 === 2 ? 
                <ul className={cardState === 2?"cardEnter cardlist":"cardExit cardlist"} onClick = {() => cardControl(0)}>
-               <li>thing i want to say one</li>
-               <li>thing i want to say two</li>
-               <li>thing i want to say three</li>
+               <li>Designed in Figma from wireframe to prototype!</li>
+               <li>Coded using responsive CSS for mobile/tablet.</li>
+               <li>Stay in the loop with multiple updates + revisions.</li>
              </ul>
             :
              
@@ -84,17 +84,17 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
         {cardState2 === 3 ? 
 
           <ul className={cardState ===3?"cardEnter cardlist":"cardExit cardlist"}  onClick = {() => cardControl(0)}>
-          <li>thing i want to say one</li>
-          <li>thing i want to say two</li>
-          <li>thing i want to say three</li>
+          <li>Modern UI including micro-animations.</li>
+          <li>Helping your users and your business goals!</li>
+          <li>Giving your website the right “feel”.</li>
         </ul>
 
             :
         <div className={cardState === 3?"cardExit ":"cardEnter"}  onClick = {() => cardControl(3)}>
           <img src={devimg} alt="Icon by Muhammad Haq on freeicons.io"/>
           <div className={cardClass}>
-            <h2>Modern Principles</h2>
-            <p>Responsive design and fast, optimised code</p>
+            <h2>UX principles</h2>
+            <p>applied and personalised for your site</p>
           </div>
         </div>
             }
@@ -318,7 +318,6 @@ const PackagesWrapper = styled.section`
       .cardlist{
         padding: 0 0.9rem;
         margin: 0.45rem auto;
-        font-size: 0.99rem;
         font-weight: 500;
         color: rgba(255,255,255, 0.8);
         padding-right: 0.3rem;
@@ -453,8 +452,8 @@ padding-top: 3.5rem;
       justify-content: center;
 
       li{
-        font-size: 1rem;
-        line-height: 1.4;
+        font-size: 0.8rem;
+        line-height: 1.3;
       }
 
       img{

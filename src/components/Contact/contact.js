@@ -247,6 +247,7 @@ const ContactWrapper = styled.section`
       font-size: 0.6rem;
       font-family: var(--Font-Second);
       text-align: left!important;
+      margin: 0px;
 
       span{
         text-decoration: underline;
