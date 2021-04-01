@@ -20,7 +20,7 @@ const Banner = (id) => {
     }
   `)
 
-  let [loading, setLoading] = useState(false);
+  let [loading, setLoading] = useState(true);
  
   useEffect(()=> {
     setLoading(true)
