@@ -138,11 +138,20 @@ export const BannerStyles = styled.section`
     background: #121212;
     position: absolute;
     z-index: 2;
+
+    h2{
+      padding: 1rem 0;
+    }
+
+    h4{
+      font-weight: 500;
+      font-family: var(--Font-Accent);
+    }
   }
 }
 
 .loaderExit{
-
+display: none;
 
   @media(min-width: 768px){
     display: flex;
@@ -158,9 +167,11 @@ export const BannerStyles = styled.section`
 @keyframes loaderExit{
   0%{
     transform: translateY(0px);
+    
   }
   50%{
-    transform: translateY(2000px);
+    transform: translateY(-2000px);
+    
   }
   100%{
     width: auto;

@@ -26,7 +26,7 @@ const Banner = (id) => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false);
-    }, 2000)
+    }, 2500)
   },[])
 
  
@@ -58,8 +58,10 @@ const removeContactonClick = () => {
   return (
     <BannerStyles>
     
-    <div className={loading? "loaderScreen flex-Row jcCenter aiCenter textCenter" : "loaderExit flex-Row jcCenter aiCenter textCenter"}>
-      <ClimbingBoxLoader color={"#2479DD"} loading={loading} size={50} />
+    <div className={loading? "loaderScreen flex-Col jcCenter aiCenter textCenter" : "loaderExit flex-Row jcCenter aiCenter textCenter"}>
+      <ClimbingBoxLoader color={"#2479DD"} loading={loading} size={40} />
+      <h2>Loading...</h2>
+      <h4 className="marginNill">Content may not be supported on older/outdated browsers</h4>
     </div>
       
 

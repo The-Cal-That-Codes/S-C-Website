@@ -181,7 +181,7 @@ h3{
 .iconbox2{
   display: flex;
   justify-content: space-between;
-  padding: 0.3rem 0rem;
+  padding: 0.5rem 0rem;
 
   .contactLink, .marketingLink{
     display: none;
@@ -312,8 +312,8 @@ h3{
     flex-flow: row;
 
     p{
-    font-size: 1.1rem ;
-    padding: 1.5rem 0.5rem ;
+    
+    padding: 0.5rem 0.5rem ;
     
     }
   }
@@ -329,7 +329,7 @@ h3{
 
   .iconbox2{
     justify-content: center;
-    margin-top: 0.5rem;
+    
     
     
   }
@@ -378,6 +378,7 @@ h3{
   h1{
     font-size: 2rem;
    padding: 2rem 1rem;
+   margin-top: 0px;
    
   }
 
@@ -411,7 +412,7 @@ h3{
   padding: 0rem 1rem;
 }
   .iconbox2{
-  justify-content: space-around;
+  justify-content: space-between;
   display: flex;
   margin-top: 1rem;
 
@@ -480,7 +481,7 @@ h3{
     max-width: 100%;
     
     .paraLeft,.paraRight{
-      font-size: 1.3rem ;
+      font-size: 1.2rem ;
       padding: 1rem 1rem;
       padding-bottom: 0.5rem;
       line-height: 1.6
@@ -550,7 +551,7 @@ h3{
   .iconbox2{
     padding: 0rem;
     padding-top: 0.5rem;
-    margin-top: 0;
+    margin-top: 0.5rem;
     
 
     svg{

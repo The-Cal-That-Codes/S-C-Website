@@ -145,474 +145,475 @@ const controller = (index) => {
 }
 
 const TextBlockImgWrapper = styled.section`
-  text-align: left;
-  padding: 12vh 1rem;
-  padding-bottom: 7vh;
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #03233c, #00050c);
+text-align: left;
+padding: 12vh 1rem;
+padding-bottom: 7vh;
+min-height: 100vh;
+background: linear-gradient(to bottom, #03233c, #00050c);
 
-  .FooterButton{
-    display: none;
-  }
- 
+.FooterButton{
+  display: none;
+}
+
 
 h1{
-  margin: 0 0;
-  padding: 1rem 1rem;
-  font-size: 1.5rem;
-  font-family: var(--Font-Title);
+margin: 0 0;
+padding: 1rem 1rem;
+font-size: 1.5rem;
+font-family: var(--Font-Title);
 }
 
 h3{
-  display: none
+display: none
 }
 
 .iconbox{
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0.5rem 0rem;
-  padding-top: 0px;
+display: flex;
+justify-content: space-evenly;
+padding: 0.5rem 0rem;
+padding-top: 0px;
 
-  svg{
-    overflow: visible;
-  }
+svg{
+  overflow: visible;
+}
 
 }
 
 .iconbox2{
-  display: flex;
-  justify-content: space-between;
-  padding: 0.3rem 0rem;
+display: flex;
+justify-content: space-between;
+padding: 0.5rem 0rem;
 
-  .contactLink, .marketingLink{
-    display: none;
-  }
+.contactLink, .marketingLink{
+  display: none;
+}
 
-  .countermedia{
-    margin-left: 1rem;
-  }
+.countermedia{
+  margin-left: 1rem;
+}
 
 }
 
 .iconNav{
-  justify-content: center;
-  
+justify-content: center;
 
-  
-  >* + * {
-    margin-left: 0.5rem;
-  }
+
+
+>* + * {
+  margin-left: 0.5rem;
+}
 }
 
 .iconmedia{
-  width: 2.5rem;
-  height: 2.5rem;
+width: 2.5rem;
+height: 2.5rem;
 }
- 
+
 .longLine{
-  max-width: 96%;
-  margin: 0 auto;
-  height: 5px;
-  border: 0px;
-  background-color: var(--Clr-Primary500);
-  opacity: 0.8;
+max-width: 96%;
+margin: 0 auto;
+height: 5px;
+border: 0px;
+background-color: var(--Clr-Primary500);
+opacity: 0.8;
 
 }
 
 .smallLine{
-  max-width: 80%;
-  margin: 0 auto;
-  height: 4px;
-  border: 0px;
-  background-color: #969ABE;
-  opacity: 0.8;
+max-width: 80%;
+margin: 0 auto;
+height: 4px;
+border: 0px;
+background-color: #969ABE;
+opacity: 0.8;
 }
 
 .icon{
-  cursor: pointer;
-  transition: 0.3s ease-out;
+cursor: pointer;
+transition: 0.3s ease-out;
 }
 
 .icon:hover{
-  transform: translateY(-5px);
-  
+transform: translateY(-5px);
+
 }
-  
+
 
 .paraEnter{
-  display: flex;
-  flex-flow: column;
-  animation: paraEnter 0.45s ease-out;
+display: flex;
+flex-flow: column;
+animation: paraEnter 0.45s ease-out;
 
-  p{
-    padding: 0.5rem 1.2rem;
-    padding-right: 0.4rem;
-    margin: 0 0.3rem;
-    line-height: 1.5;
-    font-family: var(--Font-Second);
-    font-size: 1.1rem;
-    
-  }
+p{
+  padding: 0.5rem 1.2rem;
+  padding-right: 0.4rem;
+  margin: 0 0.3rem;
+  line-height: 1.5;
+  font-family: var(--Font-Second);
+  font-size: 1.1rem;
+  
+}
 
 }
 
 .paraExit{
-  display: flex;
-  flex-flow: column;
-  animation: paraExit 0.45s ease-out;
+display: flex;
+flex-flow: column;
+animation: paraExit 0.45s ease-out;
 
-  p{
-    padding: 0.5rem 1.2rem;
-    padding-right: 0.4rem;
-    margin: 0 0.3rem;
-    line-height: 1.5;
-    font-family: var(--Font-Second);
-    font-size: 1.1rem;
-  }
- 
+p{
+  padding: 0.5rem 1.2rem;
+  padding-right: 0.4rem;
+  margin: 0 0.3rem;
+  line-height: 1.5;
+  font-family: var(--Font-Second);
+  font-size: 1.1rem;
+}
+
 }
 
 @keyframes paraEnter{
-  0%{
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100%{
-    opacity: 1;
-    transform: translateX(0px);
-  }
+0%{
+  opacity: 0;
+  transform: translateX(-50px);
+}
+100%{
+  opacity: 1;
+  transform: translateX(0px);
+}
 }
 
 @keyframes paraExit{
-  0%{
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  100%{
-    opacity: 0;
-    transform: translateX(50px);
-  }
+0%{
+  opacity: 1;
+  transform: translateX(0px);
+}
+100%{
+  opacity: 0;
+  transform: translateX(50px);
+}
 }
 
 @media (min-width: 519px){
-  padding: 3rem 3rem;
-  padding-bottom: 0rem;
+padding: 3rem 3rem;
+padding-bottom: 0rem;
 
-  h1{
-    font-size: 1.7rem;
-    margin-top: 50px;
-    padding: 2rem 1rem;
+h1{
+  font-size: 1.7rem;
+  margin-top: 50px;
+  padding: 2rem 1rem;
+  padding-bottom: 1rem;
+
+  @media(min-width: 790px){
     padding-bottom: 1rem;
-
-    @media(min-width: 790px){
-      padding-bottom: 1rem;
-      font-size: 2rem;
-    }
+    font-size: 2rem;
   }
-  .paraEnter,.paraExit{
-    flex-flow: row;
+}
+.paraEnter,.paraExit{
+  flex-flow: row;
 
-    p{
-    font-size: 1.1rem ;
-    padding: 1.5rem 0.5rem ;
-    
-    }
-  }
+  p{
   
-  .iconbox{
-    justify-content: space-evenly;
+  padding: 0.5rem 0.5rem ;
   
+  }
+}
 
-    svg{
-      padding: 0.1rem;
+.iconbox{
+  justify-content: space-evenly;
+
+
+  svg{
+    padding: 0.1rem;
+  }
+}
+
+.iconbox2{
+  justify-content: center;
+  
+  
+  
+}
+
+.iconmedia{
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.countermedia{
+  height: 1.4rem;
+  width: 1.4rem;
+  margin-left: 1rem;
+
+}
+
+.contentwrapper{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 80vh;
+     
+   }
+
+   .footerWrap{
+     display: flex;
+     margin: 0.5rem auto;
+     width: 100%;
+     justify-content: space-evenly;
+     
+    .FooterButton{
+      display: block;
+      margin: 0 0.5rem;
+      background: rgba(1,1,1,0);
     }
-  }
+   }
 
-  .iconbox2{
-    justify-content: center;
-    margin-top: 0.5rem;
-    
-    
-  }
-
-  .iconmedia{
-    height: 3.5rem;
-    width: 3.5rem;
-  }
-
-  .countermedia{
-    height: 1.4rem;
-    width: 1.4rem;
-    margin-left: 1rem;
-
-  }
-
-  .contentwrapper{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    height: 80vh;
-       
-     }
-
-     .footerWrap{
-       display: flex;
-       margin: 0.5rem auto;
-       width: 100%;
-       justify-content: space-evenly;
-       
-      .FooterButton{
-        display: block;
-        margin: 0 0.5rem;
-        background: rgba(1,1,1,0);
-      }
-     }
-
-    
+  
 }
 
 @media(min-width: 1000px){
-  padding: 1rem 1rem;
+padding: 1rem 1rem;
+
+
+
+h1{
+  font-size: 2rem;
+ padding: 2rem 1rem;
+ margin-top: 0px;
+ 
+}
+
+h3{
+  display: block;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 2rem;
+}
+
+.longLine{
+  margin: 0rem 1rem;
+  width: 100%;
   
+}
+
+.smallLine{
+  width: 85%;
+}
+
+.contentwrapper{
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+height: 100vh;
   
-
-  h1{
-    font-size: 2rem;
-   padding: 2rem 1rem;
-   
-  }
-
-  h3{
-    display: block;
-    font-size: 1.5rem;
-    margin-left: 1rem;
-    margin-right: 2rem;
-  }
-
-  .longLine{
-    margin: 0rem 1rem;
-    width: 100%;
-    
-  }
-
-  .smallLine{
-    width: 85%;
-  }
-
-  .contentwrapper{
- display: flex;
- flex-flow: column nowrap;
- justify-content: center;
- height: 100vh;
-    
-  }
+}
 
 .iconbox{
-  justify-content: flex-start;
-  padding: 0rem 1rem;
+justify-content: flex-start;
+padding: 0rem 1rem;
 }
-  .iconbox2{
-  justify-content: space-around;
-  display: flex;
-  margin-top: 1rem;
+.iconbox2{
+justify-content: space-between;
+display: flex;
+margin-top: 1rem;
+
+svg{
+  margin-left: 1rem;
+}
+.contactLink, .marketingLink{
+  display: flex;   
+  cursor: pointer;
+
+
+  p{
+    margin: 0 0;
+    margin-bottom: 0.2rem;
+    align-self: center;
+    font-size: 1.2rem;
+  }
 
   svg{
-    margin-left: 1rem;
+    margin: 0 0.3rem;
+    margin-bottom: 0.3rem;
+    align-self: center;
   }
-  .contactLink, .marketingLink{
-    display: flex;   
-    cursor: pointer;
-
-
-    p{
-      margin: 0 0;
-      margin-bottom: 0.2rem;
-      align-self: center;
-      font-size: 1.2rem;
-    }
-
-    svg{
-      margin: 0 0.3rem;
-      margin-bottom: 0.3rem;
-      align-self: center;
-    }
-    .marketingIcon,.contactIcon{
-      transition: 0.3s ease-out;
-      height: 2rem;
-      width: 2rem;
-    }
-
-    
-    }
-
-    .marketingLink,.contactLink{
-      transition: 0.3s ease-out;
-    }
-
-    .marketingLink:hover{
-     
-      transform: scale(1.1);
-      transition: 0.3s ease-out;
-
-      .marketingIcon{
-        
-        fill: var(--Clr-Primary500);
-       
-      }
+  .marketingIcon,.contactIcon{
+    transition: 0.3s ease-out;
+    height: 2rem;
+    width: 2rem;
   }
 
-  .contactLink:hover{
-     
+  
+  }
+
+  .marketingLink,.contactLink{
+    transition: 0.3s ease-out;
+  }
+
+  .marketingLink:hover{
+   
     transform: scale(1.1);
     transition: 0.3s ease-out;
 
-    .contactIcon{
+    .marketingIcon{
       
       fill: var(--Clr-Primary500);
      
     }
 }
 
- 
+.contactLink:hover{
+   
+  transform: scale(1.1);
+  transition: 0.3s ease-out;
+
+  .contactIcon{
+    
+    fill: var(--Clr-Primary500);
+   
+  }
+}
+
+
 
 }
 
 .paraEnter, .paraExit {
-    max-width: 100%;
-    
-    .paraLeft,.paraRight{
-      font-size: 1.3rem ;
-      padding: 1rem 1rem;
-      padding-bottom: 0.5rem;
-      line-height: 1.6
-    }
-
-    .paraLeft{
-      margin-left: 8vw;
-    }
-   
-    .paraRight{
-      margin-right: 8vw;
-    }
+  max-width: 100%;
+  
+  .paraLeft,.paraRight{
+    font-size: 1.2rem ;
+    padding: 1rem 1rem;
+    padding-bottom: 0.5rem;
+    line-height: 1.6
   }
 
-  .countermedia{
-    max-height: 1.6rem;
-    max-width: 1.6rem;
-    margin-left: 0rem;
-    padding: 0.1rem;
-
+  .paraLeft{
+    margin-left: 8vw;
   }
+ 
+  .paraRight{
+    margin-right: 8vw;
+  }
+}
+
+.countermedia{
+  max-height: 1.6rem;
+  max-width: 1.6rem;
+  margin-left: 0rem;
+  padding: 0.1rem;
+
+}
 
 
 }
 
 @media(min-width: 1359px){
-  padding: 2rem 2rem;
+padding: 2rem 2rem;
 
-  h1{
+h1{
 
-    padding: 0rem 1rem;
-    padding-bottom: 1rem;
+  padding: 0rem 1rem;
+  padding-bottom: 1rem;
+
+}
+
+.iconbox{
+  padding-bottom: 0px;
+}
+
+.paraEnter, .paraExit {
+  max-width: 100%;
   
+  p{
+    font-size: 1.2rem ;
+    padding: 1rem 1rem;
   }
-  
-  .iconbox{
-    padding-bottom: 0px;
-  }
-
-  .paraEnter, .paraExit {
-    max-width: 100%;
-    
-    p{
-      font-size: 1.2rem ;
-      padding: 1rem 1rem;
-    }
-   
-  }
+ 
+}
 }
 
 @media(min-width: 1390px){
-  padding: 1rem 4rem;
+padding: 1rem 4rem;
+
+
+h1{
+
+  font-size: 2.3rem;
+}
+
+.iconbox{
+  margin-bottom: 0.5rem;
+
+  svg{
+    margin: 0.3rem;
+  }
+}
+.iconbox2{
+  padding: 0rem;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
   
 
-  h1{
- 
-    font-size: 2.3rem;
+  svg{
+    margin: 0.3rem;
+    overflow: visible;
   }
-
-  .iconbox{
-    margin-bottom: 0.5rem;
-
-    svg{
-      margin: 0.3rem;
-    }
-  }
-  .iconbox2{
-    padding: 0rem;
-    padding-top: 0.5rem;
-    margin-top: 0;
-    
-
-    svg{
-      margin: 0.3rem;
-      overflow: visible;
-    }
-  }
+}
 }  
 
 @media(min-height: 809px){
-  padding-bottom: 0.5rem;
+padding-bottom: 0.5rem;
+h1{
+  padding-bottom: 2.5rem;
+  font-size: 2.3rem;
+}
+
+@media(min-width: 1580px){
   h1{
-    padding-bottom: 2.5rem;
-    font-size: 2.3rem;
+    padding-bottom: 0rem;
   }
 
-  @media(min-width: 1580px){
-    h1{
-      padding-bottom: 0rem;
-    }
-
-    .iconbox2{
-      padding-top: 0.5rem;
-      
-    }
+  .iconbox2{
+    padding-top: 0.5rem;
+    
   }
+}
 }
 
 @media(min-height: 865px){
-  padding-bottom: 0.5rem;
+padding-bottom: 0.5rem;
+h1{
+  padding-bottom: 2.5rem;
+  font-size: 2.3rem;
+}
+
+@media(min-width: 1620px){
   h1{
-    padding-bottom: 2.5rem;
-    font-size: 2.3rem;
+    padding-bottom: 1rem;
   }
 
-  @media(min-width: 1620px){
-    h1{
-      padding-bottom: 1rem;
-    }
-
-    .iconbox2{
-      padding-top: 0.5rem;
-      
-    }
+  .iconbox2{
+    padding-top: 0.5rem;
+    
   }
+}
 }
 
 @media(min-height: 865px){
-  
-  @media(min-width: 1800px){
- 
 
-    h1{
-      padding-bottom: 1.5rem;
-    }
+@media(min-width: 1800px){
 
-    .iconbox2{
-      padding-top: 1rem;
-      
-    }
+
+  h1{
+    padding-bottom: 1.5rem;
   }
+
+  .iconbox2{
+    padding-top: 1rem;
+    
+  }
+}
 }
 
 `
