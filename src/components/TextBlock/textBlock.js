@@ -149,7 +149,7 @@ const TextBlockImgWrapper = styled.section`
   padding: 12vh 1rem;
   padding-bottom: 7vh;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #03233c, #03233c);
+  background: linear-gradient(to bottom, #03233c, #00050c);
 
   .FooterButton{
     display: none;

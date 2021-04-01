@@ -82,6 +82,7 @@ const removeContactonClick = () => {
         />    
 
       :
+
       <div
 
       className={showContact === "leaving" ? "hero-content flex-column bgTrans hero-leave" : 
@@ -90,40 +91,48 @@ const removeContactonClick = () => {
                   "hero-content flex-column bgTrans"
                   }
        >
+         {!loading ?
+         <>
+         <h1 className="marginNill">
+         Elevate Your <TextLoop  mask={true} interval={2700}>
+                         <span>Business</span>
+                         <span>Revenue</span>
+                         <span>Presence</span>
+                         <span>Potential</span>
+                     </TextLoop>{" "}!
+       </h1>
+       <p className="marginNill" >
+         Personalised sites, support and advertising strategies to expand your client base and keep revenue coming in.
+       </p>
+      
+         
+      
+         <span className="sr-only">Jump to about</span>
+         <Button
+           className="mainbutton .bgTrans"
+           cta="View our services"
+           label="Banner Learn More"
+           anchor={true}
+           index="packages"
+       
+         />
+        
 
-            <h1 className="marginNill">
-              Elevate Your <TextLoop  mask={true} interval={2700}>
-                              <span>Business</span>
-                              <span>Revenue</span>
-                              <span>Presence</span>
-                              <span>Potential</span>
-                          </TextLoop>{" "}!
-            </h1>
-            <p className="marginNill" >
-              Personalised sites, support and advertising strategies to expand your client base and keep revenue coming in.
-            </p>
-           
-              
-           
-              <span className="sr-only">Jump to about</span>
-              <Button
-                className="mainbutton .bgTrans"
-                cta="View our services"
-                label="Banner Learn More"
-                anchor={true}
-                index="packages"
+       
+         <span className="sr-only">Jump to contact</span>
+         <Button
+           cta="Or contact us now!"
+           label="Banner Learn More"
+           className="bannercontactbutton .bgTrans"
+           onClick={()=> showContactonClick()}
+         />
+         </>
+        :
+        <>
+        </>
+        }
+         
             
-              />
-             
-
-            
-              <span className="sr-only">Jump to contact</span>
-              <Button
-                cta="Or contact us now!"
-                label="Banner Learn More"
-                className="bannercontactbutton .bgTrans"
-                onClick={()=> showContactonClick()}
-              />
             
           </div>
           }
