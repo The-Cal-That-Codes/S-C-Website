@@ -57,34 +57,34 @@ const controller = (index) => {
           iconColour === 1 ?
           <div className={classControl === 1 ? paraEnter : paraExit}>
           <p className="paraLeft">
-          Websites are a fundamental part of a modern presence they are your brands initial contact with potential customers and a key factor in gaining clientele. Our design and development process is geared towards providing you with a unique 
+          Websites are a fundamental part of a modern presence they are your brands initial contact with potential customers and a key factor in gaining clientele. Our design and development process is geared towards providing you with a unique captivating web identity that utilises modern techniques to give your business the platform it deserves. 
          </p>
          <p className="paraRight">
-         captivating web identity that utilises modern techniques to give your business the platform it deserves. Whether you are establishing or updating your website our philosophy is to deliver a high-quality asset that will aid in the development of your business.
+         As business needs differ, we aim to provide a customised service that aligns with your goals, and your budget, from simple about pages to large highly interactive websites. Whether you are establishing or updating your online presence our philosophy is to deliver a high-quality asset that will aid in the development of your business. 
          </p>
          </div> : iconColour === 2 ?
        <div className={classControl === 2 ? paraEnter : paraExit}>
        <p className="paraLeft">
-       Forget about clunky website builders, we code everything from scratch to accurately translate your vision into a tailored online home for your business. Combining advanced HTML, CSS and JavaScript with powerful frameworks like React we blend engaging 
+       Forget about clunky website builders, we code everything from scratch to accurately translate your vision into a tailored online home for your business. Combining advanced HTML, CSS and JavaScript with powerful frameworks like React we blend engaging user experience with expansive options via NPM packages and custom scripts.  
       </p>
       <p className="paraRight">
-      functionality with expansive options via NPM packages and custom scripts. Using responsive CSS we offer complete functionality over all devices, always included to ensure every site we create is up to modern web standards.  
+      Additionally, using responsive CSS we offer complete functionality over all major devices which is always included to ensure your homepage is as accessible as possible to potential customers. Any updates or changes in the future are no problem, we’ll take care of it for below industry standard cost.  
       </p>
       </div> : iconColour === 3 ?
          <div className={classControl === 3 ? paraEnter : paraExit}>
          <p className="paraLeft">
-         In order to ensure aesthetic quality all pages are designed in Figma and sent to you for review before the coding begins. User experience principles are implemented from wireframes to prototypes giving your site the edge it needs to engage your customer base. Sites are designed 
+         To ensure a high aesthetic quality all pages are designed in Figma (the industry standard for web design), allowing us to test ideas and send them to you before the coding begins. User experience principles are crucial in directing web traffic efficiently and are implemented from wireframes to prototypes, giving your site the edge, it needs to engage your customer base.     
         </p>
         <p className="paraRight">
-        from a “mobile first” approach to keep your business accessible and exceptional across multiple devices. We understand everyone has different tastes and ideas so we include multiple revisions free of charge so you’re satisfied with your product.  
+        Sites are designed from a “mobile first” approach with complexity added for desktop keeping your business accessible and exceptional across multiple devices. We understand everyone has different tastes and ideas, so we include multiple revisions free of charge, so you are satisfied with your product.    
         </p>
         </div> :
           <div className={classControl === 4 ? paraEnter : paraExit}>
            <p className="paraLeft">
-           As a freelance development start-up our focus is on customer understanding, engagement and satisfaction so that you are aware and as included in the process as you’d like to be, seeing the product you envision take shape. We take on the roles
+           As a freelance web dev start-up our focus is on understanding your business so that we can effectively extend your brand into digital form and deliver a unique online experience for your customers. We value client engagement, and through updates and initial meetings, want you to be as included in the process as you’d like to be.    
           </p>
           <p className="paraRight">
-          of designer, developer and deployment so you can receive a competitive refined website while saving on costs. Development is our passion, and we are dedicated to going the extra mile to ensure all sites are an asset your business can be proud of. 
+          There are many aspects to creating a website but by taking on the roles of designer, developer, and deployment specialist you can receive a competitive refined website while saving on costs. Development is our passion, and we are dedicated to going the extra mile to ensure all sites are an asset your business can be proud of.    
           </p>
           </div>
            }
@@ -549,8 +549,9 @@ h3{
   }
   .iconbox2{
     padding: 0rem;
-    padding-top: 1rem;
-    margin-top: 1rem;
+    padding-top: 0.5rem;
+    margin-top: 0;
+    
 
     svg{
       margin: 0.3rem;

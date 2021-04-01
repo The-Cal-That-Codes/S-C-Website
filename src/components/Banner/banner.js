@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Button from "../Button/button"
 import TextLoop from "react-text-loop";
 import BannerContact from "../Contact/bannercontact"
 import { BannerStyles } from "../../styles/bannerStyles"
-import { Link } from "react-scroll"
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 const Banner = (id) => {
   const data = useStaticQuery(graphql`
@@ -19,6 +19,15 @@ const Banner = (id) => {
       }
     }
   `)
+
+  let [loading, setLoading] = useState(false);
+ 
+  useEffect(()=> {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000)
+  },[])
 
  
 
@@ -48,6 +57,13 @@ const removeContactonClick = () => {
 
   return (
     <BannerStyles>
+    
+    <div className={loading? "loaderScreen flex-Row jcCenter aiCenter textCenter" : "loaderExit flex-Row jcCenter aiCenter textCenter"}>
+      <ClimbingBoxLoader color={"#2479DD"} loading={loading} size={50} />
+    </div>
+      
+
+    
       <BackgroundImage
         Tag="section"
         className="hero-image aiCenter jcCenter flex-Row"
@@ -113,8 +129,8 @@ const removeContactonClick = () => {
           }
 
       </BackgroundImage>
-    </BannerStyles>
-  
+       
+        </BannerStyles>
   )
 }
 

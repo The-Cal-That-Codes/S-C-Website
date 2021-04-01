@@ -1,11 +1,12 @@
-import React, { useState } from "react"
-import styled from "styled-components"
-import { BsXDiamondFill, BsDropletHalf , BsTerminalFill,BsLayersFill,BsFillCircleFill,BsPeopleFill, BsChatSquareDotsFill} from "react-icons/bs";
+import React, {useState } from "react";
+import styled from "styled-components";
+import { BsXDiamondFill, BsTools , BsGraphUp,BsFillCircleFill,BsPeopleFill, BsChatSquareDotsFill} from "react-icons/bs";
+import { FaBlackTie} from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { Link } from "react-scroll";
 
 
-const TextBlockImg = ({id, paraEnter, paraExit}) => {
+const TextBlock = ({id, paraEnter, paraExit}) => {
 
   
 
@@ -27,29 +28,29 @@ const controller = (index) => {
    
       <TextBlockImgWrapper id={id}>
         <div className="contentwrapper">
-          <h1 className="marginNill">Digital Marketing title increase traffic stuff!</h1>
-          <div className="iconbox flex-Row">
-          <IconContext.Provider value={classControl === 1 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
-                                                         {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" } }>
+          <h1 className="marginNill">Design, Dev and Deployment all in one place!</h1>
+          <div className="iconbox">
+          <IconContext.Provider value={classControl === 1 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
+                                                         {color:"#969ABE", className:"icon iconmedia" } }>
             <BsXDiamondFill onClick={() => controller(1)}/>
           </IconContext.Provider>
           <h3>General</h3>
-          <IconContext.Provider value={classControl === 2 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
-                                      {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
-            <BsTerminalFill onClick={() => controller(2)} />
+          <IconContext.Provider value={classControl === 2 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
+                                      {color:"#969ABE", className:"icon iconmedia" }}>
+            <FaBlackTie onClick={() => controller(2)} />
           </IconContext.Provider>
-          <h3>Title 2</h3>
-          <IconContext.Provider value={classControl === 3 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
-                                      {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
-            <BsDropletHalf onClick={() => controller(3)}/>
+          <h3>Consulting</h3>
+          <IconContext.Provider value={classControl === 3 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
+                                      {color:"#969ABE", className:"icon iconmedia" }}>
+            <BsTools onClick={() => controller(3)}/>
           </IconContext.Provider>
-          <h3>Title 3</h3>
-          <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)", size: "2.5rem", className:"iconmedia" }:
-                                      {color:"#969ABE", size: "2.5rem", className:"icon iconmedia" }}>
+          <h3>Setup</h3>
+          <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
+                                      {color:"#969ABE", className:"icon iconmedia" }}>
           
-            <BsLayersFill onClick={() => controller(4)}/>
+            <BsGraphUp onClick={() => controller(4)}/>
           </IconContext.Provider>
-          <h3>Title4</h3>
+          <h3>Management</h3>
           
           </div>
           <hr className="longLine"/>
@@ -57,55 +58,39 @@ const controller = (index) => {
           iconColour === 1 ?
           <div className={classControl === 1 ? paraEnter : paraExit}>
           <p className="paraLeft">
-          First ipsum dolor, sit amet consectetur adipisicing elit.
-          Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-          Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+          In order to drive your business’ visibility, these days it is essential to have a strong online presence for both your brand and the product that you offer. Along with a website and organic content, this must be supported with a strong media strategy and careful selection of where you choose to advertise. If you’re selling a product nobody knows about, you don’t want to spend money in a channel where your customers need to find you. 
          </p>
          <p className="paraRight">
-           First ipsum dolor, sit amet consectetur adipisicing elit.
-           Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-           Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+         To receive the best return on your investment, we offer holistic digital advertising services across a wide range of channels to help you reach the right people in the right places at the right time, and see exactly how they interact with your website. 
          </p>
          </div> : iconColour === 2 ?
        <div className={classControl === 2 ? paraEnter : paraExit}>
        <p className="paraLeft">
-       Second ipsum dolor, sit amet consectetur adipisicing elit.
-       Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-       Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+       From building your brand and awareness for products & services, to making sure the people looking for them will find you first, we will help develop your marketing plan and how to action this via a multi-channel integrated media strategy tailored to your needs.  
       </p>
       <p className="paraRight">
-        First ipsum dolor, sit amet consectetur adipisicing elit.
-        Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-        Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+      No matter what industry you’re in, we will help you find and understand your audience and how to best reach them. This is offered as our basic package and is a one-time service, perfect for if you have the tools to run advertising yourself or require an in depth understanding of what you need to as part of your planning process.  
       </p>
       </div> : iconColour === 3 ?
          <div className={classControl === 3 ? paraEnter : paraExit}>
          <p className="paraLeft">
-         Third ipsum dolor, sit amet consectetur adipisicing elit.
-         Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-         Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+         If you need your ad accounts setup or are looking to create and run a singular or series of campaigns, we provide this as an intermediate service. This involves everything from account set up, linking your ad accounts to your website and Google Analytics, tagging, copywriting and targeting through to creating the campaigns and setting them live.     
         </p>
         <p className="paraRight">
-          First ipsum dolor, sit amet consectetur adipisicing elit.
-          Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-          Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+        Ensuring your account is set up correctly and campaigns have been built using placements and targeting that is relevant to your audience is essential to the success of your media strategy. We can help you with individual steps, as well as the entire process.    
         </p>
         </div> :
           <div className={classControl === 4 ? paraEnter : paraExit}>
            <p className="paraLeft">
-           FOURTH ipsum dolor, sit amet consectetur adipisicing elit.
-           Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-           Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+           As an advanced service offering, we will manage your entire advertising portfolio from planning through to implementation, reporting and ongoing optimisations to ensure your ads are always running as efficiently as possible.    
           </p>
           <p className="paraRight">
-            First ipsum dolor, sit amet consectetur adipisicing elit.
-            Nesciunt at perferendis harum quis reprehenderit ipsum animi quae rem?
-            Officiis repellat hic quisquam obcaecati mollitia quod ea dolorem maxime accusamus molestias?
+          If you simply want to promote your business on one platform, or desire an integrated channel mix, we will seamlessly manage this for you on an ongoing basis and provide you with detailed reports to help you track performance and ensure you are reaching your target.    
           </p>
           </div>
            }
          
-          <div className="iconbox2 iconNav flex-Row">
+          <div className="iconbox2 iconNav">
 
           <Link to="contact" smooth={true} duration={500}>
             <div className="contactLink">
@@ -137,13 +122,13 @@ const controller = (index) => {
               <BsFillCircleFill/>
             </IconContext.Provider>
           </div>
-          <Link to="perks" smooth={true} duration={500}>
+          <Link to="about" smooth={true} duration={500}>
           <div className="marketingLink">
             
             <IconContext.Provider value={{color:"#969ABE",className: "countermedia marketingIcon"} }>
               <BsPeopleFill/>
             </IconContext.Provider>
-            <p>To Development</p>
+            <p>To Marketing</p>
             
           </div>
           </Link>
@@ -164,7 +149,7 @@ const TextBlockImgWrapper = styled.section`
   padding: 12vh 1rem;
   padding-bottom: 7vh;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #03233c,#00060e);
+  background: linear-gradient(to bottom, #03233c, #03233c);
 
   .FooterButton{
     display: none;
@@ -172,6 +157,7 @@ const TextBlockImgWrapper = styled.section`
  
 
 h1{
+  margin: 0 0;
   padding: 1rem 1rem;
   font-size: 1.5rem;
   font-family: var(--Font-Title);
@@ -182,10 +168,11 @@ h3{
 }
 
 .iconbox{
+  display: flex;
   justify-content: space-evenly;
   padding: 0.5rem 0rem;
   padding-top: 0px;
-  
+
   svg{
     overflow: visible;
   }
@@ -193,6 +180,7 @@ h3{
 }
 
 .iconbox2{
+  display: flex;
   justify-content: space-between;
   padding: 0.3rem 0rem;
 
@@ -209,9 +197,17 @@ h3{
 .iconNav{
   justify-content: center;
   
+
+  
+  >* + * {
+    margin-left: 0.5rem;
+  }
 }
 
-
+.iconmedia{
+  width: 2.5rem;
+  height: 2.5rem;
+}
  
 .longLine{
   max-width: 96%;
@@ -223,7 +219,14 @@ h3{
 
 }
 
-
+.smallLine{
+  max-width: 80%;
+  margin: 0 auto;
+  height: 4px;
+  border: 0px;
+  background-color: #969ABE;
+  opacity: 0.8;
+}
 
 .icon{
   cursor: pointer;
@@ -237,6 +240,8 @@ h3{
   
 
 .paraEnter{
+  display: flex;
+  flex-flow: column;
   animation: paraEnter 0.45s ease-out;
 
   p{
@@ -252,6 +257,8 @@ h3{
 }
 
 .paraExit{
+  display: flex;
+  flex-flow: column;
   animation: paraExit 0.45s ease-out;
 
   p{
@@ -287,19 +294,18 @@ h3{
   }
 }
 
-// MEDIA QUERIES START HERE******************************************************************
-
 @media (min-width: 519px){
   padding: 3rem 3rem;
   padding-bottom: 0rem;
 
   h1{
     font-size: 1.7rem;
+    margin-top: 50px;
     padding: 2rem 1rem;
     padding-bottom: 1rem;
 
     @media(min-width: 790px){
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
       font-size: 2rem;
     }
   }
@@ -476,7 +482,7 @@ h3{
     
     .paraLeft,.paraRight{
       font-size: 1.3rem ;
-      padding: 2rem 1rem;
+      padding: 1rem 1rem;
       padding-bottom: 0.5rem;
       line-height: 1.6
     }
@@ -507,7 +513,7 @@ h3{
   h1{
 
     padding: 0rem 1rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
   
   }
   
@@ -544,8 +550,9 @@ h3{
   }
   .iconbox2{
     padding: 0rem;
-    padding-top: 1rem;
-    margin-top: 1rem;
+    padding-top: 0.5rem;
+    margin-top: 0;
+    
 
     svg{
       margin: 0.3rem;
@@ -598,11 +605,11 @@ h3{
  
 
     h1{
-      padding-bottom: 2rem;
+      padding-bottom: 1.5rem;
     }
 
     .iconbox2{
-      padding-top: 2rem;
+      padding-top: 1rem;
       
     }
   }
@@ -610,4 +617,4 @@ h3{
 
 `
 
-export default TextBlockImg
+export default TextBlock

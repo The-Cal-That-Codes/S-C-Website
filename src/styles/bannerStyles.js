@@ -127,4 +127,46 @@ export const BannerStyles = styled.section`
   }
 }
 
+
+.loaderScreen{
+ display: none;
+
+  @media(min-width: 768px){
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #121212;
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+.loaderExit{
+
+
+  @media(min-width: 768px){
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #121212;
+    position: absolute;
+    z-index: 2;
+    animation: loaderExit 2s forwards;
+  }
+}
+
+@keyframes loaderExit{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(2000px);
+  }
+  100%{
+    width: auto;
+    height: auto;
+    // background-color: rgba(1,1,1,0);
+    z-index: -1;
+  }
+}
 `

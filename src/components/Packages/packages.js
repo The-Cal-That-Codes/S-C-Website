@@ -238,18 +238,11 @@ const PackagesWrapper = styled.section`
   
   .discoverbutton{
     -webkit-align-self: center;
-    margin: 0rem auto;
+    margin: 0.5rem auto;
     font-size: 0.8rem;
     a{filter: drop-shadow(0px 2px 2px black);}
 
-    // &::before{
-    //   filter: blur(0px);
-    // }
-    // &:hover{
-    //   &::before{
-    //   filter: blur(0px);
-    //   }
-    // }
+  
   }
 }
 
@@ -398,6 +391,14 @@ img{
   }
 
  
+}
+
+@media(min-width: 636px){
+  .buttoncontainer{
+    .discoverbutton{
+      margin-right: 1rem;
+    }
+  }
 }
 
 @media(min-width: 1000px){
