@@ -28,7 +28,7 @@ const controller = (index) => {
    
       <TextBlockImgWrapper id={id}>
         <div className="contentwrapper">
-          <h1 className="marginNill">Design, Dev and Deployment all in one place!</h1>
+          <h1 className="marginNill">Marketing title needs to go here</h1>
           <div className="iconbox">
           <IconContext.Provider value={classControl === 1 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
                                                          {color:"#969ABE", className:"icon iconmedia" } }>

@@ -43,7 +43,7 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
             <img src={uximg} alt="Icon by Muhammad Haq on freeicons.io"/>
             <div className={cardClass}>
             <h2>Meta Tags and SEO</h2>
-            <p>integrated for competitive google rankings </p>
+            <p>Integrated for competitive google rankings </p>
             </div>
             </div>
             
@@ -94,7 +94,7 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
           <img src={devimg} alt="Icon by Muhammad Haq on freeicons.io"/>
           <div className={cardClass}>
             <h2>UX principles</h2>
-            <p>applied and personalised for your site</p>
+            <p>Applied and personalised for your site</p>
           </div>
         </div>
             }
@@ -107,9 +107,9 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
          
           {cardState2 === 4 ? 
             <ul className={cardState === 4?"cardEnter cardlist":"cardExit cardlist"} onClick = {() => cardControl(0)}>
-            <li>thing i want to say one</li>
-            <li>thing i want to say two</li>
-            <li>thing i want to say three</li>
+              <li>coming soon!</li>
+            <li>coming soon!</li>
+            <li>coming soon!</li>
           </ul>
             :
             
@@ -130,9 +130,9 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
         
           {cardState2 === 5 ? 
             <ul className={cardState===5?"cardEnter cardlist":"cardExit cardlist" } onClick = {() => cardControl(0)}>
-            <li>thing i want to say one</li>
-            <li>thing i want to say two</li>
-            <li>thing i want to say three</li>
+            <li>coming soon!</li>
+            <li>coming soon!</li>
+            <li>coming soon!</li>
           </ul>
              
             :
@@ -153,9 +153,9 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
          
           {cardState2===6 ? 
            <ul className={cardState ===6?"cardEnter cardlist":"cardExit cardlist"} onClick = {() => cardControl(0)}>
-           <li>thing i want to say one</li>
-           <li>thing i want to say two</li>
-           <li>thing i want to say three</li>
+          <li>coming soon!</li>
+          <li>coming soon!</li>
+          <li>coming!</li>
          </ul>
             :
           <div className={cardState===6?"cardExit":"cardEnter"} onClick = {() => cardControl(6)}>

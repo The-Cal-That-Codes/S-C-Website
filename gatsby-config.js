@@ -8,10 +8,10 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: "Websites and online advertising for any budget",
-    titleTemplate: "%s |Freelance web development and marketing services based in Australia",
+    title: "Croft Digital Websites and marketing",
+    titleTemplate: "%s |Freelance web development and marketing startup based in Melbourne and Sydney",
     description: "Websites and digital marketing personalised for your business on any budget. Customised professional designs hand coded to represent your business how you envision, no templates and no wordpress. Increase traffic and revenue with our digital marketing services specialising in google ads ect. ",
-    siteUrl: "https://thestartup.netlify.com",
+    siteUrl: "https://www.croftdigitalwebsitesandmarketing.com/",
     author: "Callan Wilson",
     authorSite: "Callan Wilson",
     image: "/yellow-metal-design-decoration.jpg",
