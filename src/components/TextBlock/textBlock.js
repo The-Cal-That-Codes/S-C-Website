@@ -58,10 +58,10 @@ const controller = (index) => {
           iconColour === 1 ?
           <div className={classControl === 1 ? paraEnter : paraExit}>
           <p className="paraLeft">
-          In order to drive your business’ visibility, these days it is essential to have a strong online presence for both your brand and the product that you offer. Along with a website and organic content, this must be supported with a strong media strategy and careful selection of where you choose to advertise. If you’re selling a product nobody knows about, you don’t want to spend money in a channel where your customers need to find you. 
+          In order to drive your business’ visibility, these days it is essential to have a strong online presence for both your brand and the product that you offer. Along with a website and organic content, this must be supported with a strong media strategy and careful selection of where you choose to advertise.  
          </p>
          <p className="paraRight">
-         To receive the best return on your investment, we offer holistic digital advertising services across a wide range of channels to help you reach the right people in the right places at the right time, and see exactly how they interact with your website. 
+         To receive the best return on your investment, we offer holistic digital advertising services across a wide range of channels to help you reach the right people in the right places at the right time, and see exactly how they interact with your website. If you’re selling a product nobody knows about, you don’t want to spend money in a channel where your customers need to find you.
          </p>
          </div> : iconColour === 2 ?
        <div className={classControl === 2 ? paraEnter : paraExit}>

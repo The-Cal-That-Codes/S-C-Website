@@ -129,9 +129,9 @@ export const BannerStyles = styled.section`
 
 
 .loaderScreen{
- display: none;
+ /* display: none; */
 
-  @media(min-width: 768px){
+  /* @media(min-width: 768px){ */
     display: flex;
     width: 100%;
     height: 100vh;
@@ -147,7 +147,7 @@ export const BannerStyles = styled.section`
       font-weight: 500;
       font-family: var(--Font-Accent);
     }
-  }
+  /* } */
 }
 
 .loaderExit{

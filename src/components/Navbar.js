@@ -11,12 +11,7 @@ const Navbar = ({ Logo }) => {
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
   }
-  // let scrollPercentage = (scroll.y / (document.documentElement.offsetHeight - window.innerHeight)) * 100;
-  // if (scrollPercentage > 50) {
-  //   classchange === true;
-  // } else {
-  //   classchange === false
-  // }
+ 
   
   return (
     <NavStyles>
