@@ -139,14 +139,8 @@ export const BannerStyles = styled.section`
     position: absolute;
     z-index: 2;
 
-    h2{
-      padding: 1rem 0;
-    }
 
-    h4{
-      font-weight: 500;
-      font-family: var(--Font-Accent);
-    }
+    
   /* } */
 }
 

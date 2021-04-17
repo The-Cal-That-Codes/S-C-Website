@@ -5,7 +5,7 @@ import Button from "../Button/button"
 import TextLoop from "react-text-loop";
 import BannerContact from "../Contact/bannercontact"
 import { BannerStyles } from "../../styles/bannerStyles"
-import BounceLoader from "react-spinners/ClimbingBoxLoader";
+import BounceLoader from "react-spinners/BounceLoader";
 
 const Banner = (id) => {
   const data = useStaticQuery(graphql`
@@ -60,8 +60,7 @@ const removeContactonClick = () => {
     
     <div className={loading? "loaderScreen flex-Col jcCenter aiCenter textCenter" : "loaderExit flex-Row jcCenter aiCenter textCenter"}>
       <BounceLoader color={"#2479DD"} loading={loading} size={60} />
-      <h2>Loading...</h2>
-      <h4 className="marginNill">Content may not be supported on older/outdated browsers</h4>
+      
     </div>
       
 
