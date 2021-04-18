@@ -30,14 +30,6 @@ const SEO = ({ title, description, lang, image, article }) => {
       title={seo.title}
       titleTemplate={titleTemplate}
     >
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H1GQ8XFXWC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H1GQ8XFXWC');
-</script>
     <meta name="google-site-verification" content="CgVGZHAoMElhxBthmQHwsZQAh908BW5G6910LL-Lc3o" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
