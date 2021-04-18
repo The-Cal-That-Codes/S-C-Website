@@ -31,23 +31,23 @@ const controller = (index) => {
           <div className="iconbox">
           <IconContext.Provider value={classControl === 1 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
                                                          {color:"#969ABE", className:"icon iconmedia" } }>
-            <BsXDiamondFill onClick={() => controller(1)}/>
+            <BsXDiamondFill onClick={() => controller(1)} onKeyDown={() => controller(1)}/>
           </IconContext.Provider>
           <h3>General</h3>
           <IconContext.Provider value={classControl === 2 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
                                       {color:"#969ABE", className:"icon iconmedia" }}>
-            <BsTerminalFill onClick={() => controller(2)} />
+            <BsTerminalFill onClick={() => controller(2)} onKeyDown={() => controller(2)}/>
           </IconContext.Provider>
           <h3>Development</h3>
           <IconContext.Provider value={classControl === 3 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
                                       {color:"#969ABE", className:"icon iconmedia" }}>
-            <BsDropletHalf onClick={() => controller(3)}/>
+            <BsDropletHalf onClick={() => controller(3)} onKeyDown={() => controller(3)}/>
           </IconContext.Provider>
           <h3>Design</h3>
           <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
                                       {color:"#969ABE", className:"icon iconmedia" }}>
           
-            <BsLayersFill onClick={() => controller(4)}/>
+            <BsLayersFill onClick={() => controller(4)} onKeyDown={() => controller(4)}/>
           </IconContext.Provider>
           <h3>Our Process</h3>
           
@@ -57,34 +57,34 @@ const controller = (index) => {
           iconColour === 1 ?
           <div className={classControl === 1 ? paraEnter : paraExit}>
           <p className="paraLeft">
-          Websites are a fundamental part of a modern presence they are your brands initial contact with potential customers and a key factor in gaining clientele. Our design and development process is geared towards providing you with a unique captivating web identity that utilises modern techniques to give your business the platform it deserves. 
+          Websites are a fundamental part of a modern presence they are your brands initial contact with potential customers and a key factor in gaining clientele. Our design and development process is geared towards providing you with a unique captivating website built with modern code to give your business the platform it deserves. 
          </p>
          <p className="paraRight">
-         As business needs differ, we aim to provide a customised service that aligns with your goals, and your budget, from simple about pages to large highly interactive websites. Whether you are establishing or updating your online presence our philosophy is to deliver a high-quality asset that will aid in the development of your business. 
+         As business needs differ, we aim to provide a customised service that aligns with your goals, and your budget, from simple about pages to large highly interactive websites. Whether you are establishing or updating your online presence our philosophy is to deliver a high-quality asset that will aid in the development of your business.  
          </p>
          </div> : iconColour === 2 ?
        <div className={classControl === 2 ? paraEnter : paraExit}>
        <p className="paraLeft">
-       Forget about clunky website builders, we code everything from scratch to accurately translate your vision into a tailored online home for your business. Combining advanced HTML, CSS and JavaScript with powerful frameworks like React we blend engaging user experience with expansive options via NPM packages and custom scripts.  
+       Forget about clunky website builders and restrictive templates, we code everything from scratch to accurately translate your vision into a tailored online home for your business. Combining advanced HTML, CSS and JavaScript with the powerful ReactJS we blend engaging user experience with customised functionality.   
       </p>
       <p className="paraRight">
-      Additionally, using responsive CSS we offer complete functionality over all major devices which is always included to ensure your homepage is as accessible as possible to potential customers. Any updates or changes in the future are no problem, we’ll take care of it for below industry standard cost.  
+      Additionally, using responsive CSS we offer complete useability over all major devices, always included to ensure your homepage is as accessible as possible to potential customers. Down the road you feel like you want things looking a bit different? Updates or changes in the future are no problem, as our customer we will take care of it for below industry cost.  
       </p>
       </div> : iconColour === 3 ?
          <div className={classControl === 3 ? paraEnter : paraExit}>
          <p className="paraLeft">
-         To ensure a high aesthetic quality all pages are designed in Figma (the industry standard for web design), allowing us to test ideas and send them to you before the coding begins. User experience principles are crucial in directing web traffic efficiently and are implemented from wireframes to prototypes, giving your site the edge, it needs to engage your customer base.     
+         To ensure a high aesthetic quality all pages are designed in Figma, allowing us test ideas and send them to you before the coding begins. We begin with creating flow charts and wireframes that form the blueprints for your design, implementing user experience principles to decide the best way to structure things for the site’s objectives.     
         </p>
         <p className="paraRight">
-        Sites are designed from a “mobile first” approach with complexity added for desktop keeping your business accessible and exceptional across multiple devices. We understand everyone has different tastes and ideas, so we include multiple revisions free of charge, so you are satisfied with your product.    
+        Utilizing modern design concepts prototypes are then constructed, incorporating your branding and vision into modern user-friendly designs for every page on your site. Websites are designed from a “mobile first” approach with complexity added for desktop, keeping your business accessible and exceptional across multiple devices.     
         </p>
         </div> :
           <div className={classControl === 4 ? paraEnter : paraExit}>
            <p className="paraLeft">
-           As a freelance web dev start-up our focus is on understanding your business so that we can effectively extend your brand into digital form and deliver a unique online experience for your customers. We value client engagement, and through updates and initial meetings, want you to be as included in the process as you’d like to be.    
+           As a web dev start-up our focus is on understanding your business so that we can effectively extend your brand into digital form and deliver a unique online experience for your current and future customers. We value client engagement throughout the decision process want you to be as included as you would like to be.     
           </p>
           <p className="paraRight">
-          There are many aspects to creating a website but by taking on the roles of designer, developer, and deployment specialist you can receive a competitive refined website while saving on costs. Development is our passion, and we are dedicated to going the extra mile to ensure all sites are an asset your business can be proud of.    
+          There are many aspects to creating a website, we take on the roles of designer, developer, and deployment specialist all in one so you can receive a competitive refined website while saving on costs. Web development is our passion and we are dedicated to going the extra mile to ensure your expectations are met and all sites are an asset your business can be proud of.     
           </p>
           </div>
            }

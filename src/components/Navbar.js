@@ -18,7 +18,11 @@ const Navbar = ({ Logo }) => {
       <div className="masthead flex-container">
        <div 
        className="logo-container" 
-       onClick={() => scroll.scrollToTop()}>
+       role="button"
+       tabIndex="0"
+       onClick={() => scroll.scrollToTop()}
+       onKeyDown={() => scroll.scrollToTop()}
+       >
          
        <img src={Logo} alt="Startup Logo" />
 
@@ -39,8 +43,8 @@ const Navbar = ({ Logo }) => {
       <ul className={isOpen ? "nav-links show-nav navfontplus" : "nav-links"}>
         {links.map((item, index) => {
           return (
-            <Link to={item.path} smooth={true} duration={500}>
-            <li key={index} className="navlist" onClick={toggleNav} >
+            <Link to={item.path} smooth={true} duration={500}  tabIndex={0} onClick={toggleNav} onKeyDown={toggleNav}>
+            <li key={index} className="navlist" >
               {item.text}
             </li>
             </Link>
@@ -151,7 +155,6 @@ export const NavStyles = styled.nav`
         }
       }
       .navlist:hover {
-        postion:relative;
         cursor: pointer;
         color: var(--Clr-Primary500);
         transform: translateY(-3px);

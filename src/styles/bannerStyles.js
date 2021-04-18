@@ -145,9 +145,9 @@ export const BannerStyles = styled.section`
 }
 
 .loaderExit{
-display: none;
 
-  @media(min-width: 768px){
+
+  /* @media(min-width: 768px){ */
     display: flex;
     width: 100%;
     height: 100vh;
@@ -155,16 +155,16 @@ display: none;
     position: absolute;
     z-index: 2;
     animation: loaderExit 2s forwards;
-  }
+  /* } */
 }
 
 @keyframes loaderExit{
   0%{
-    transform: translateY(0px);
+    opacity:1;
     
   }
   50%{
-    transform: translateY(-2000px);
+    opacity: 0;
     
   }
   100%{

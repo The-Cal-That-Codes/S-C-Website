@@ -126,6 +126,7 @@ const removeContactonClick = () => {
            label="Banner Learn More"
            className="bannercontactbutton .bgTrans"
            onClick={()=> showContactonClick()}
+           onKeyDown={()=> showContactonClick()}
          />
          </>
         :

@@ -23,7 +23,7 @@ const BannerContact = ({className, onClick}) => {
               required
               autoComplete="off"
             />
-            <label className="label-name" for="name">
+            <label className="label-name" htmlFor="name">
               <span className="content-name">Name</span>
             </label>
           </div>
@@ -36,7 +36,7 @@ const BannerContact = ({className, onClick}) => {
               required
               autoComplete="off"
             />
-            <label className="label-name" for="email">
+            <label className="label-name" htmlFor="email">
               <span className="content-name">Email</span>
             </label>
           </div>
@@ -50,19 +50,19 @@ const BannerContact = ({className, onClick}) => {
               autoComplete="off"
               aria-label="Message"
             />
-            <label className="label-name" for="message">
+            <label className="label-name" htmlFor="message">
               <span className="content-name">Message</span>
             </label>
           </div>
           <div className="input-area privacyCheckbox flex-Row">
           <input type="checkbox" required name="checkbox" value="check" id="agree" />
-          <p className="privacyText">By ticking this box you agree to our <span onClick={()=> scroll.scrollToBottom()}>privacy policy</span> and for CroftDigital to contact you in regards to your message sent to them.
+          <p className="privacyText">By ticking this box you agree to our <span role ="button" tabIndex={0} onClick={()=> scroll.scrollToBottom()} onKeyDown={() => scroll.scrollToBottom()}>privacy policy</span> and for CroftDigital to contact you in regards to your message sent to them.
            
           </p>
           </div>
           <div className="input-area button-area textCenter">
             <Button className="formsubmitbutton" label="Send Contact Form" cta="Send" type="submit" />
-            <Button className="backbutton"  cta="back" type="button" onClick={onClick} />
+            <Button className="backbutton"  cta="back" type="button" onClick={onClick} onKeyDown={onClick} />
         </div>
         
         </form>

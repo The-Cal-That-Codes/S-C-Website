@@ -32,23 +32,23 @@ const controller = (index) => {
           <div className="iconbox">
           <IconContext.Provider value={classControl === 1 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
                                                          {color:"#969ABE", className:"icon iconmedia" } }>
-            <BsXDiamondFill onClick={() => controller(1)}/>
+            <BsXDiamondFill onClick={() => controller(1)} onKeyDown={() => controller(1)}/>
           </IconContext.Provider>
           <h3>General</h3>
           <IconContext.Provider value={classControl === 2 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
                                       {color:"#969ABE", className:"icon iconmedia" }}>
-            <FaBlackTie onClick={() => controller(2)} />
+            <FaBlackTie onClick={() => controller(2)} onKeyDown={() => controller(2)}/>
           </IconContext.Provider>
           <h3>Consulting</h3>
           <IconContext.Provider value={classControl === 3 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
                                       {color:"#969ABE", className:"icon iconmedia" }}>
-            <BsTools onClick={() => controller(3)}/>
+            <BsTools onClick={() => controller(3)} onKeyDown={() => controller(3)}/>
           </IconContext.Provider>
           <h3>Setup</h3>
           <IconContext.Provider value={classControl === 4 ?{ color: "var(--Clr-Primary500)", className:"iconmedia" }:
                                       {color:"#969ABE", className:"icon iconmedia" }}>
           
-            <BsGraphUp onClick={() => controller(4)}/>
+            <BsGraphUp onClick={() => controller(4)} onKeyDown={() => controller(4)}/>
           </IconContext.Provider>
           <h3>Management</h3>
           

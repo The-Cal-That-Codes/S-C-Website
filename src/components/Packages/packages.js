@@ -33,13 +33,13 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
         <div className="servicecards flex-Row jcCenter">
           <div className="card" >
             {cardState2 === 1 ? 
-              <ul className={cardState === 1?"cardEnter cardlist":"cardExit cardlist"} onClick = {() => cardControl(0) }>
+              <div className={cardState === 1?"cardEnter cardlist":"cardExit cardlist"} role="button" tabIndex="0" onClick = {() => cardControl(0) } onKeyDown= {() => cardControl(0)}>
               <li>Custom Meta tags imbedded with react helmet</li>
               <li>Content analysis focused on relevant keywords</li>
               <li>Get the traffic your business deserves!</li>
-            </ul>
+            </div>
             :
-            <div className={cardState === 1?"cardExit":"cardEnter"} onClick = {() => cardControl(1) } >
+            <div className={cardState === 1?"cardExit":"cardEnter"} role="button" tabIndex="0" onClick = {() => cardControl(1) } onKeyDown= {() => cardControl(1)} >
             <img src={uximg} alt="Icon by Muhammad Haq on freeicons.io"/>
             <div className={cardClass}>
             <h2>Meta Tags and SEO</h2>
@@ -56,14 +56,14 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
           
           
           {cardState2 === 2 ? 
-               <ul className={cardState === 2?"cardEnter cardlist":"cardExit cardlist"} onClick = {() => cardControl(0)}>
+               <div className={cardState === 2?"cardEnter cardlist":"cardExit cardlist"} role="button" tabIndex="0" onClick = {() => cardControl(0)} onKeyDown= {() => cardControl(0)} >
                <li>Designed in Figma from wireframe to prototype!</li>
                <li>Coded using responsive CSS for mobile/tablet.</li>
                <li>Stay in the loop with multiple updates + revisions.</li>
-             </ul>
+             </div>
             :
              
-              <div className={cardState === 2?"cardExit":"cardEnter"} onClick = {() => cardControl(2)}>
+              <div className={cardState === 2?"cardExit":"cardEnter"} role="button" tabIndex="0" onClick = {() => cardControl(2)} onKeyDown= {() => cardControl(2)}>
               <img src={desimg} alt="Icon by Muhammad Haq on freeicons.io"/>
               <div className={cardClass}>
               <h2>Custom Designs</h2>
@@ -83,14 +83,14 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
           
         {cardState2 === 3 ? 
 
-          <ul className={cardState ===3?"cardEnter cardlist":"cardExit cardlist"}  onClick = {() => cardControl(0)}>
+          <div className={cardState ===3?"cardEnter cardlist":"cardExit cardlist"} role="button" tabIndex="0"  onClick = {() => cardControl(0)} onKeyDown= {() => cardControl(0)}>
           <li>Modern UI including micro-animations.</li>
           <li>Helping your users and your business goals!</li>
           <li>Giving your website the right “feel”.</li>
-        </ul>
+        </div>
 
             :
-        <div className={cardState === 3?"cardExit ":"cardEnter"}  onClick = {() => cardControl(3)}>
+        <div className={cardState === 3?"cardExit ":"cardEnter"} role="button" tabIndex="0"  onClick = {() => cardControl(3)} onKeyDown= {() => cardControl(3)}>
           <img src={devimg} alt="Icon by Muhammad Haq on freeicons.io"/>
           <div className={cardClass}>
             <h2>UX principles</h2>
@@ -106,14 +106,14 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
           <div className="card" >
          
           {cardState2 === 4 ? 
-            <ul className={cardState === 4?"cardEnter cardlist":"cardExit cardlist"} onClick = {() => cardControl(0)}>
+            <div className={cardState === 4?"cardEnter cardlist":"cardExit cardlist"} role="button" tabIndex="0" onClick = {() => cardControl(0)} onKeyDown= {() => cardControl(0)}>
               <li>coming soon!</li>
             <li>coming soon!</li>
             <li>coming soon!</li>
-          </ul>
+          </div>
             :
             
-                <div className={cardState === 4?"cardExit":"cardEnter"} onClick = {() => cardControl(4)}>
+                <div className={cardState === 4?"cardExit":"cardEnter"} role="button" tabIndex="0" onClick = {() => cardControl(4)} onKeyDown= {() => cardControl(4)}>
                 <img src={digchart} alt="Icon by Muhammad Haq on freeicons.io"/>
                 <div className={cardClass}>
                 <h2>Social Media</h2>
@@ -129,14 +129,14 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
        
         
           {cardState2 === 5 ? 
-            <ul className={cardState===5?"cardEnter cardlist":"cardExit cardlist" } onClick = {() => cardControl(0)}>
+            <div className={cardState===5?"cardEnter cardlist":"cardExit cardlist" } role="button" tabIndex="0" onClick = {() => cardControl(0)} onKeyDown= {() => cardControl(0)}>
             <li>coming soon!</li>
             <li>coming soon!</li>
             <li>coming soon!</li>
-          </ul>
+          </div>
              
             :
-            <div className={cardState===5?"cardExit":"cardEnter"}  onClick = {() => cardControl(5)}>
+            <div className={cardState===5?"cardExit":"cardEnter"} role="button" tabIndex="0"  onClick = {() => cardControl(5)} onKeyDown= {() => cardControl(5)}>
             <img src={digbubbles} alt="Icon by Muhammad Haq on freeicons.io"/>
             <div className={cardClass}>
             <h2>Tracking</h2>
@@ -152,13 +152,13 @@ const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardCla
               
          
           {cardState2===6 ? 
-           <ul className={cardState ===6?"cardEnter cardlist":"cardExit cardlist"} onClick = {() => cardControl(0)}>
+          <div className={cardState ===6?"cardEnter cardlist":"cardExit cardlist"} role="button" tabIndex="0" onClick = {() => cardControl(0)} onKeyDown= {() => cardControl(0)}>
           <li>coming soon!</li>
           <li>coming soon!</li>
-          <li>coming!</li>
-         </ul>
+          <li>coming soon!</li>
+         </div>
             :
-          <div className={cardState===6?"cardExit":"cardEnter"} onClick = {() => cardControl(6)}>
+          <div className={cardState===6?"cardExit":"cardEnter"} role="button" tabIndex="0" onClick = {() => cardControl(6)} onKeyDown= {() => cardControl(6)}>
           <img src={diglogo} alt="Icon by Muhammad Haq on freeicons.io"/>
           <div className={cardClass}>
           <h2>Google Ads</h2>
