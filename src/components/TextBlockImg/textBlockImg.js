@@ -81,10 +81,10 @@ const controller = (index) => {
         </div> :
           <div className={classControl === 4 ? paraEnter : paraExit}>
            <p className="paraLeft">
-           As a web dev start-up our focus is on understanding your business so that we can effectively extend your brand into digital form and deliver a unique online experience for your current and future customers. We value client engagement throughout the decision process want you to be as included as you would like to be.     
+           As a web dev start-up our focus is on understanding your needs so that we can effectively extend your brand into digital form and deliver a unique online experience for your current and future customers. We value client engagement and so, through regular updates, we try keep you in the loop and get your feedback at every major step.     
           </p>
           <p className="paraRight">
-          There are many aspects to creating a website, we take on the roles of designer, developer, and deployment specialist all in one so you can receive a competitive refined website while saving on costs. Web development is our passion and we are dedicated to going the extra mile to ensure your expectations are met and all sites are an asset your business can be proud of.     
+          There are many aspects to creating a website, we take on the roles of designer, developer, and devOps, all in one, so you can receive a competitive refined website while saving on costs. Web development is our passion and we are dedicated to going the extra mile to ensure your expectations are met and all sites are an asset your business can be proud of.     
           </p>
           </div>
            }

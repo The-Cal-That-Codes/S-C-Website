@@ -15,7 +15,7 @@ import diglogo from "../images/diglogo.png"
 
 
 
-export default () => (
+const index = () => (
   <>
     <Banner/>
     <Packages
@@ -54,3 +54,5 @@ export default () => (
     />
   </>
 )
+
+export default index;

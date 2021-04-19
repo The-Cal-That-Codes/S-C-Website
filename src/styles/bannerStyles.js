@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const BannerStyles = styled.section`
-  .gatsby-image-wrapper {
+  .hero-image {
     color: #fff;
     min-height: 100vh;
     

@@ -26,7 +26,7 @@ const Banner = (id) => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false);
-    }, 2500)
+    }, 1500)
   },[])
 
  

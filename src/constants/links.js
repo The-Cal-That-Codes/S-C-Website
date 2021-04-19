@@ -1,4 +1,4 @@
-export default [
+const array =[
   {
     path: "packages",
     text: "Services",
@@ -16,3 +16,6 @@ export default [
   }
  
 ]
+
+
+export default array;

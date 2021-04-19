@@ -43,7 +43,7 @@ const Navbar = ({ Logo }) => {
       <ul className={isOpen ? "nav-links show-nav navfontplus" : "nav-links"}>
         {links.map((item, index) => {
           return (
-            <Link to={item.path} smooth={true} duration={500}  tabIndex={0} onClick={toggleNav} onKeyDown={toggleNav}>
+            <Link key={index} to={item.path} smooth={true} duration={500}  tabIndex={0} onClick={toggleNav} onKeyDown={toggleNav}>
             <li key={index} className="navlist" >
               {item.text}
             </li>

@@ -8,24 +8,21 @@ import { animateScroll as scroll} from "react-scroll"
 
 const Contact = ({ title}) => {
 
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "purple-bg.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 6000, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  file(relativePath: {eq: "purple-bg.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 100, layout: FULL_WIDTH)
     }
-  `)
+  }
+}
+`)
   
 
   return (
     <BackgroundImage
       id="perks"
       Tag="section"
-      fluid={data.file.childImageSharp.fluid}
+      fluid={data.file.childImageSharp.gatsbyImageData}
       loading="eager"
       fadeIn={false}
       
@@ -89,7 +86,7 @@ const Contact = ({ title}) => {
       </div>
     </ContactWrapper>
     </BackgroundImage>
-  )
+  );
 }
 
 const ContactWrapper = styled.section`
