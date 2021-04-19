@@ -23,7 +23,7 @@ const Banner = (id) => {
   let [loading, setLoading] = useState(true);
  
   useEffect(()=> {
-    setLoading(true)
+    setLoading(false)
     setTimeout(() => {
       setLoading(false);
     }, 1500)
