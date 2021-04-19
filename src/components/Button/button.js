@@ -2,26 +2,28 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "react-scroll"
 
-
-const Button = props => {
+const Button = (props) => {
   return (
     <>
       {props.anchor ? (
-            <ButtonWrapper
-                aria-label={props.label}
-                className={props.className}
-                onClick={props.onClick}
-            >
-              <Link to={props.index} smooth={true} duration={500}>
-                <div className="wordWrap">
-                {props.cta}
-                </div>
-                </Link>
-            </ButtonWrapper>
+        <ButtonWrapper
+          aria-label={props.label}
+          className={props.className}
+          onClick={props.onClick}
+        >
+          <Link to={props.index} smooth={true} duration={500}>
+            <div className="wordWrap">{props.cta}</div>
+          </Link>
+        </ButtonWrapper>
       ) : (
-            <ButtonWrapper aria-label={props.label} type={props.type} className={props.className} onClick={props.onClick}>
-              {props.cta}
-            </ButtonWrapper>
+        <ButtonWrapper
+          aria-label={props.label}
+          type={props.type}
+          className={props.className}
+          onClick={props.onClick}
+        >
+          {props.cta}
+        </ButtonWrapper>
       )}
     </>
   )
@@ -42,22 +44,18 @@ const ButtonWrapper = styled.button`
   z-index: 1;
   font-family: var(--Font-Title);
   filter: drop-shadow(0px 2px 2px black);
-  background: rgba(1,1,1,0);
-  
-  
+  background: rgba(1, 1, 1, 0);
 
-  .wordWrap{
+  .wordWrap {
     height: 100%;
     width: 100%;
     padding: 0.9rem;
   }
 
-
   &:hover {
     cursor: pointer;
     -webkit-transform: scale(1.02);
     animation: animate 8s linear;
-    
 
     &::before {
       opacity: 1;
@@ -78,13 +76,10 @@ const ButtonWrapper = styled.button`
     background-size: 400%;
     opacity: 0;
     -webkit-transition: 0.5s;
-    -webkit-filter:blur(15px);
-    
+    -webkit-filter: blur(15px);
   }
 
-
-
-  @media(min-width: 1100px){
+  @media (min-width: 1100px) {
     font-size: 1rem;
   }
 
@@ -96,7 +91,6 @@ const ButtonWrapper = styled.button`
       background-position: 400%;
     }
   }
- 
 `
 
 export default Button

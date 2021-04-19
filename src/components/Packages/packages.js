@@ -1,208 +1,398 @@
-import React, { useState} from "react"
-import styled from "styled-components";
-import Button from "../Button/button";
+import React, { useState } from "react"
+import styled from "styled-components"
+import Button from "../Button/button"
+import { BsFillDiamondFill, BsCaretRight } from "react-icons/bs"
 
-const Packages = ({uximg, devimg, desimg, digbubbles, diglogo, digchart, cardClass}) => {
+import { IconContext } from "react-icons"
 
+const Packages = ({
+  uximg,
+  devimg,
+  desimg,
+  digbubbles,
+  diglogo,
+  digchart,
+  cardClass,
+}) => {
   let [cardState, setcardState] = useState(0)
   let [cardState2, setcardState2] = useState(0)
 
-
   const cardControl = (index) => {
-    setcardState(index);
+    setcardState(index)
 
     setTimeout(() => {
       setcardState2(index)
     }, 400)
   }
 
-
-
   return (
- 
     <PackagesWrapper id="packages" className="flex-Col">
-       
-    <div className="maincontainer flex-Row">
-
-      <div className="flex-container flex-Col">
-
-        <div className="headerServices flex-Col">
-              <h1 className="marginNill">Digital solutions for  <span className="marketing">Marketing</span> and <span className="devword">Development</span></h1>
-          </div>
-          
-        <div className="servicecards flex-Row jcCenter">
-          <div className="card" >
-            {cardState2 === 1 ? 
-              <div className={cardState === 1?"cardEnter cardlist":"cardExit cardlist"} role="button" tabIndex="0" onClick = {() => cardControl(0) } onKeyDown= {() => cardControl(0)}>
-              <li>Custom Meta tags imbedded with react helmet</li>
-              <li>Content analysis focused on relevant keywords</li>
-              <li>Get the traffic your business deserves!</li>
-            </div>
-            :
-            <div className={cardState === 1?"cardExit":"cardEnter"} role="button" tabIndex="0" onClick = {() => cardControl(1) } onKeyDown= {() => cardControl(1)} >
-            <img src={uximg} alt="Icon by Muhammad Haq on freeicons.io"/>
-            <div className={cardClass}>
-            <h2>Meta Tags and SEO</h2>
-            <p>Integrated for competitive google rankings </p>
-            </div>
-            </div>
-            
-            }
-           
-         
-            
-          </div>
-          <div className="card">
-          
-          
-          {cardState2 === 2 ? 
-               <div className={cardState === 2?"cardEnter cardlist":"cardExit cardlist"} role="button" tabIndex="0" onClick = {() => cardControl(0)} onKeyDown= {() => cardControl(0)} >
-               <li>Designed in Figma from wireframe to prototype!</li>
-               <li>Coded using responsive CSS for mobile/tablet.</li>
-               <li>Stay in the loop with multiple updates + revisions.</li>
-             </div>
-            :
-             
-              <div className={cardState === 2?"cardExit":"cardEnter"} role="button" tabIndex="0" onClick = {() => cardControl(2)} onKeyDown= {() => cardControl(2)}>
-              <img src={desimg} alt="Icon by Muhammad Haq on freeicons.io"/>
-              <div className={cardClass}>
-              <h2>Custom Designs</h2>
-              <p>A modern web presence tailored to your brand</p>
-              </div>
-              </div>
-            }
-            </div>
-            
-        
-
-
-          <div className="card">
-
-        
-      
-          
-        {cardState2 === 3 ? 
-
-          <div className={cardState ===3?"cardEnter cardlist":"cardExit cardlist"} role="button" tabIndex="0"  onClick = {() => cardControl(0)} onKeyDown= {() => cardControl(0)}>
-          <li>Modern UI including micro-animations.</li>
-          <li>Helping your users and your business goals!</li>
-          <li>Giving your website the right “feel”.</li>
-        </div>
-
-            :
-        <div className={cardState === 3?"cardExit ":"cardEnter"} role="button" tabIndex="0"  onClick = {() => cardControl(3)} onKeyDown= {() => cardControl(3)}>
-          <img src={devimg} alt="Icon by Muhammad Haq on freeicons.io"/>
-          <div className={cardClass}>
-            <h2>UX principles</h2>
-            <p>Applied and personalised for your site</p>
-          </div>
-        </div>
-            }
+      <div className="maincontainer flex-Row">
+        <div className="flex-container flex-Col">
+          <div className="headerServices flex-Col">
+            <h1 className="marginNill">
+              Digital solutions for <span className="marketing">Marketing</span>{" "}
+              and <span className="devword">Development</span>
+            </h1>
           </div>
 
-       
-
-
-          <div className="card" >
-         
-          {cardState2 === 4 ? 
-            <div className={cardState === 4?"cardEnter cardlist":"cardExit cardlist"} role="button" tabIndex="0" onClick = {() => cardControl(0)} onKeyDown= {() => cardControl(0)}>
-              <li>coming soon!</li>
-            <li>coming soon!</li>
-            <li>coming soon!</li>
-          </div>
-            :
-            
-                <div className={cardState === 4?"cardExit":"cardEnter"} role="button" tabIndex="0" onClick = {() => cardControl(4)} onKeyDown= {() => cardControl(4)}>
-                <img src={digchart} alt="Icon by Muhammad Haq on freeicons.io"/>
-                <div className={cardClass}>
-                <h2>Social Media</h2>
-                <p>Facebook, Instagram, Linked In, Snapchat</p>
+          <div className="servicecards flex-Row jcCenter">
+            <div className="card">
+              {cardState2 === 1 ? (
+                <div
+                  className={
+                    cardState === 1 ? "cardEnter cardlist" : "cardExit cardlist"
+                  }
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(0)}
+                  onKeyDown={() => cardControl(0)}
+                >
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Fullstack and database services to fit all your needs</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "1.9rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Built with the powerful reactJS JavaScript library.</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Comprehensive SEO meta tags and keyword analysis</li>
+                  </div>
                 </div>
+              ) : (
+                <div
+                  className={cardState === 1 ? "cardExit" : "cardEnter"}
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(1)}
+                  onKeyDown={() => cardControl(1)}
+                >
+                  <img src={devimg} alt="Icon by Muhammad Haq on freeicons.io" />
+                  <div className={cardClass}>
+                    <h2>Web Development</h2>
+                    <p>Original sites coded to your specifications</p>
+                  </div>
                 </div>
-            }
+              )}
+            </div>
+            <div className="card">
+              {cardState2 === 2 ? (
+                <div
+                  className={
+                    cardState === 2 ? "cardEnter cardlist" : "cardExit cardlist"
+                  }
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(0)}
+                  onKeyDown={() => cardControl(0)}
+                >
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Designed in Figma from wireframe to prototype</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Coded using responsive CSS for mobile/tablet</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Stay involved with multiple revisions & updates</li>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className={cardState === 2 ? "cardExit" : "cardEnter"}
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(2)}
+                  onKeyDown={() => cardControl(2)}
+                >
+                  <img
+                    src={desimg}
+                    alt="Icon by Muhammad Haq on freeicons.io"
+                  />
+                  <div className={cardClass}>
+                    <h2>Custom Designs</h2>
+                    <p>A modern web presence tailored to your brand</p>
+                  </div>
+                </div>
+              )}
             </div>
 
-        
-
-          <div className="card">
-       
-        
-          {cardState2 === 5 ? 
-            <div className={cardState===5?"cardEnter cardlist":"cardExit cardlist" } role="button" tabIndex="0" onClick = {() => cardControl(0)} onKeyDown= {() => cardControl(0)}>
-            <li>coming soon!</li>
-            <li>coming soon!</li>
-            <li>coming soon!</li>
-          </div>
-             
-            :
-            <div className={cardState===5?"cardExit":"cardEnter"} role="button" tabIndex="0"  onClick = {() => cardControl(5)} onKeyDown= {() => cardControl(5)}>
-            <img src={digbubbles} alt="Icon by Muhammad Haq on freeicons.io"/>
-            <div className={cardClass}>
-            <h2>Tracking</h2>
-            <p>Analytics, Tagging and Reporting</p>
+            <div className="card">
+              {cardState2 === 3 ? (
+                <div
+                  className={
+                    cardState === 3 ? "cardEnter cardlist" : "cardExit cardlist"
+                  }
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(0)}
+                  onKeyDown={() => cardControl(0)}
+                >
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Modern interactive UI including custom animations</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Have traffic flow optimised for your business goals</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "1.7rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Giving your website the right look and feel</li>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className={cardState === 3 ? "cardExit " : "cardEnter"}
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(3)}
+                  onKeyDown={() => cardControl(3)}
+                >
+                  <img
+                    src={uximg}
+                    alt="Icon by Muhammad Haq on freeicons.io"
+                  />
+                  <div className={cardClass}>
+                    <h2>UX principles</h2>
+                    <p>Applied and personalised for your site</p>
+                  </div>
+                </div>
+              )}
             </div>
+
+            <div className="card">
+              {cardState2 === 4 ? (
+                <div
+                  className={
+                    cardState === 4 ? "cardEnter cardlist" : "cardExit cardlist"
+                  }
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(0)}
+                  onKeyDown={() => cardControl(0)}
+                >
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Custom Meta tags imbedded with react helmet</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Custom Meta tags imbedded with react helmet</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "1.95rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Custom Meta tags imbedded with react helmet</li>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className={cardState === 4 ? "cardExit" : "cardEnter"}
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(4)}
+                  onKeyDown={() => cardControl(4)}
+                >
+                  <img
+                    src={digchart}
+                    alt="Icon by Muhammad Haq on freeicons.io"
+                  />
+                  <div className={cardClass}>
+                    <h2>Social Media</h2>
+                    <p>Facebook, Instagram, Linked In, Snapchat</p>
+                  </div>
+                </div>
+              )}
             </div>
-            }
 
+            <div className="card">
+              {cardState2 === 5 ? (
+                <div
+                  className={
+                    cardState === 5 ? "cardEnter cardlist" : "cardExit cardlist"
+                  }
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(0)}
+                  onKeyDown={() => cardControl(0)}
+                >
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Custom Meta tags imbedded with react helmet</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Custom Meta tags imbedded with react helmet</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "1.95rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Custom Meta tags imbedded with react helmet</li>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className={cardState === 5 ? "cardExit" : "cardEnter"}
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(5)}
+                  onKeyDown={() => cardControl(5)}
+                >
+                  <img
+                    src={digbubbles}
+                    alt="Icon by Muhammad Haq on freeicons.io"
+                  />
+                  <div className={cardClass}>
+                    <h2>Tracking</h2>
+                    <p>Analytics, Tagging and Reporting</p>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div className="card">
+              {cardState2 === 6 ? (
+                <div
+                  className={
+                    cardState === 6 ? "cardEnter cardlist" : "cardExit cardlist"
+                  }
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(0)}
+                  onKeyDown={() => cardControl(0)}
+                >
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Custom Meta tags imbedded with react helmet</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Custom Meta tags imbedded with react helmet</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "1.95rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Custom Meta tags imbedded with react helmet</li>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className={cardState === 6 ? "cardExit" : "cardEnter"}
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(6)}
+                  onKeyDown={() => cardControl(6)}
+                >
+                  <img
+                    src={diglogo}
+                    alt="Icon by Muhammad Haq on freeicons.io"
+                  />
+                  <div className={cardClass}>
+                    <h2>Google Ads</h2>
+                    <p>Search, YouTube, Gmail and Display</p>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
-      
+          <div className="buttoncontainer textCenter">
+            <span className="sr-only">Jump to Development</span>
+            <Button
+              label="Discover more"
+              cta="Development and Design"
+              className="discoverbutton"
+              anchor={true}
+              index="perks"
+            />
 
-          <div className="card" >
-              
-         
-          {cardState2===6 ? 
-          <div className={cardState ===6?"cardEnter cardlist":"cardExit cardlist"} role="button" tabIndex="0" onClick = {() => cardControl(0)} onKeyDown= {() => cardControl(0)}>
-          <li>coming soon!</li>
-          <li>coming soon!</li>
-          <li>coming soon!</li>
-         </div>
-            :
-          <div className={cardState===6?"cardExit":"cardEnter"} role="button" tabIndex="0" onClick = {() => cardControl(6)} onKeyDown= {() => cardControl(6)}>
-          <img src={diglogo} alt="Icon by Muhammad Haq on freeicons.io"/>
-          <div className={cardClass}>
-          <h2>Google Ads</h2>
-          <p>Search, YouTube, Gmail and Display</p>
-          </div>
-          </div>     
-            }
-          </div>
-            
-       
-
-        </div>
-      <div className="buttoncontainer textCenter">
-        
-      <span className="sr-only">Jump to Development</span>
-            <Button label="Discover more" 
-                    cta="Development and Design" 
-                    className="discoverbutton" 
-                    anchor={true} 
-                    index="perks"/>
-
-            
-        
-        
             <span className="sr-only">Jump to Marketing</span>
-            <Button label="Discover more" 
-                    cta="Digital Marketing" 
-                    anchor={true} 
-                    className="discoverbutton" 
-                    index="about"/>
-            
-      
-    </div>
+            <Button
+              label="Discover more"
+              cta="Digital Marketing"
+              anchor={true}
+              className="discoverbutton"
+              index="about"
+            />
+          </div>
+        </div>
       </div>
-      
-    </div>
-
-    
-
     </PackagesWrapper>
-
   )
 }
-
 
 const PackagesWrapper = styled.section`
   padding: 5rem 0.5rem;
@@ -237,6 +427,7 @@ const PackagesWrapper = styled.section`
   margin-top: 0.5rem;
   
   .discoverbutton{
+    align-self:center;
     -webkit-align-self: center;
     margin: 0.5rem auto;
     font-size: 0.8rem;
@@ -322,8 +513,11 @@ const PackagesWrapper = styled.section`
       
         
         li{
-          padding: 0.3rem 0;
+          list-style: none;
+          padding: 0.3rem 0.6rem;
         }
+
+       
       }
     
   }

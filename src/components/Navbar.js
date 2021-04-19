@@ -3,32 +3,26 @@ import links from "../constants/links"
 import styled from "styled-components"
 import { animateScroll as scroll, Link } from "react-scroll"
 
-
-
 const Navbar = ({ Logo }) => {
   const [isOpen, setNav] = useState(false)
 
   const toggleNav = () => {
-    setNav(isOpen => !isOpen)
+    setNav((isOpen) => !isOpen)
   }
- 
-  
+
   return (
     <NavStyles>
       <div className="masthead flex-container">
-       <div 
-       className="logo-container" 
-       role="button"
-       tabIndex="0"
-       onClick={() => scroll.scrollToTop()}
-       onKeyDown={() => scroll.scrollToTop()}
-       >
-         
-       <img src={Logo} alt="Startup Logo" />
+        <div
+          className="logo-container"
+          role="button"
+          tabIndex="0"
+          onClick={() => scroll.scrollToTop()}
+          onKeyDown={() => scroll.scrollToTop()}
+        >
+          <img src={Logo} alt="Startup Logo" />
+        </div>
 
-      </div> 
-        
-        
         <button
           className={isOpen ? "toggle-btn toggle-btn-active" : "toggle-btn"}
           type="button"
@@ -43,10 +37,18 @@ const Navbar = ({ Logo }) => {
       <ul className={isOpen ? "nav-links show-nav navfontplus" : "nav-links"}>
         {links.map((item, index) => {
           return (
-            <Link key={index} to={item.path} smooth={true} duration={500}  tabIndex={0} onClick={toggleNav} onKeyDown={toggleNav}>
-            <li key={index} className="navlist" >
-              {item.text}
-            </li>
+            <Link
+              key={index}
+              to={item.path}
+              smooth={true}
+              duration={500}
+              tabIndex={0}
+              onClick={toggleNav}
+              onKeyDown={toggleNav}
+            >
+              <li key={index} className="navlist">
+                {item.text}
+              </li>
             </Link>
           )
         })}

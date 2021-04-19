@@ -1,6 +1,3 @@
-
-
-
 export const mainMenuItems = [
   {
     path: "",
@@ -19,7 +16,6 @@ export const mainMenuItems = [
     title: "Marketing",
   },
 ]
-
 
 export const footerMenuItems = [
   {

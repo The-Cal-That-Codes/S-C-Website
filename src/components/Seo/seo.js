@@ -30,7 +30,10 @@ const Seo = ({ title, description, lang, image, article }) => {
       title={seo.title}
       titleTemplate={titleTemplate}
     >
-    <meta name="google-site-verification" content="CgVGZHAoMElhxBthmQHwsZQAh908BW5G6910LL-Lc3o" />
+      <meta
+        name="google-site-verification"
+        content="CgVGZHAoMElhxBthmQHwsZQAh908BW5G6910LL-Lc3o"
+      />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
@@ -53,7 +56,7 @@ const Seo = ({ title, description, lang, image, article }) => {
   )
 }
 
-export default Seo;
+export default Seo
 
 Seo.propTypes = {
   title: PropTypes.string,

@@ -1,8 +1,7 @@
 import { createGlobalStyle } from "styled-components"
-import "@fontsource/inter";
-import "@fontsource/poppins";
-import "@fontsource/roboto-slab";
-
+import "@fontsource/inter"
+import "@fontsource/poppins"
+import "@fontsource/roboto-slab"
 
 const GlobalStyles = createGlobalStyle`
 :root {

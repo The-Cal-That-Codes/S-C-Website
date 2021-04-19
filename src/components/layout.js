@@ -7,16 +7,13 @@ import GlobalStyles from "../styles/GlobalStyles"
 import TypographyStyles from "../styles/TypographyStyles"
 import Logo from "../images/logoalpha.svg"
 
-
 const Layout = ({ children }) => {
-
- 
   return (
     <>
       <Seo />
       <GlobalStyles />
       <TypographyStyles />
-      <Navbar Logo={Logo}/>
+      <Navbar Logo={Logo} />
       <div className="layout">{children}</div>
       <Footer Logo={Logo} />
     </>

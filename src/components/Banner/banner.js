@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Button from "../Button/button"
-import TextLoop from "react-text-loop";
+import TextLoop from "react-text-loop"
 import BannerContact from "../Contact/bannercontact"
 import { BannerStyles } from "../../styles/bannerStyles"
-import BounceLoader from "react-spinners/BounceLoader";
+import BounceLoader from "react-spinners/BounceLoader"
 
 const Banner = (id) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "flames.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 5184, quality: 90) {
+          fluid(maxWidth: 5184, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -20,127 +20,116 @@ const Banner = (id) => {
     }
   `)
 
-  let [loading, setLoading] = useState(true);
- 
-  useEffect(()=> {
-    setLoading(false)
+  let [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setLoading(true)
     setTimeout(() => {
-      setLoading(false);
+      setLoading(false)
     }, 1500)
-  },[])
+  }, [])
 
- 
+  let [showContact, setShowContact] = useState("starting")
+  let [changetoContact, setchangetoContact] = useState(false)
 
-let [showContact, setShowContact] = useState("starting");
-let [changetoContact, setchangetoContact] = useState(false);
-
-
-const showContactonClick = () => {
-
-    setShowContact("leaving");
+  const showContactonClick = () => {
+    setShowContact("leaving")
 
     setTimeout(() => {
       setchangetoContact(!changetoContact)
     }, 400)
-}
+  }
 
-const removeContactonClick = () => {
-  setShowContact("entering");
-  
+  const removeContactonClick = () => {
+    setShowContact("entering")
 
     setTimeout(() => {
       setchangetoContact(!changetoContact)
-      
     }, 400)
-}
-
+  }
 
   return (
     <BannerStyles>
-    
-    <div className={loading? "loaderScreen flex-Col jcCenter aiCenter textCenter" : "loaderExit flex-Row jcCenter aiCenter textCenter"}>
-      <BounceLoader color={"#2479DD"} loading={loading} size={60} />
-      
-    </div>
-      
+      <div
+        className={
+          loading
+            ? "loaderScreen flex-Col jcCenter aiCenter textCenter"
+            : "loaderExit flex-Row jcCenter aiCenter textCenter"
+        }
+      >
+        <BounceLoader color={"#2479DD"} loading={loading} size={60} />
+      </div>
 
-    
       <BackgroundImage
         Tag="section"
         className="hero-image aiCenter jcCenter flex-Row"
         fluid={data.file.childImageSharp.fluid}
+        loading="eager"
+        fadeIn={false}
       >
+        {changetoContact ? (
+          <BannerContact
+            className={
+              showContact === "leaving"
+                ? "content-container"
+                : "content-container contact-leave"
+            }
+            subtitle="Say Hi and get your project started today."
+            onClick={removeContactonClick}
+            showContact={showContact}
+          />
+        ) : (
+          <div
+            className={
+              showContact === "leaving"
+                ? "hero-content flex-column bgTrans hero-leave"
+                : showContact === "starting"
+                ? "hero-content flex-column bgTrans "
+                : showContact === "entering"
+                ? "hero-enter hero-content flex-column bgTrans"
+                : "hero-content flex-column bgTrans"
+            }
+          >
+            {!loading ? (
+              <>
+                <h1 className="marginNill">
+                  Elevate Your{" "}
+                  <TextLoop mask={true} interval={2700}>
+                    <span>Business</span>
+                    <span>Revenue</span>
+                    <span>Presence</span>
+                    <span>Potential</span>
+                  </TextLoop>{" "}
+                  !
+                </h1>
+                <p className="marginNill">
+                  Personalised sites, support and advertising strategies to
+                  expand your client base and keep revenue coming in.
+                </p>
 
-   {changetoContact ?
-  
+                <span className="sr-only">Jump to about</span>
+                <Button
+                  className="mainbutton .bgTrans"
+                  cta="View our services"
+                  label="Banner Learn More"
+                  anchor={true}
+                  index="packages"
+                />
 
-      <BannerContact 
-      className= {showContact === "leaving" ? "content-container" : "content-container contact-leave" }
-      
-      subtitle="Say Hi and get your project started today."
-      onClick={removeContactonClick} 
-      showContact={showContact}
-        />    
-
-      :
-
-      <div
-
-      className={showContact === "leaving" ? "hero-content flex-column bgTrans hero-leave" : 
-                  showContact === "starting" ? "hero-content flex-column bgTrans " :
-                  showContact=== "entering" ? "hero-enter hero-content flex-column bgTrans" :
-                  "hero-content flex-column bgTrans"
-                  }
-       >
-         {!loading ?
-         <>
-         <h1 className="marginNill">
-         Elevate Your <TextLoop  mask={true} interval={2700}>
-                         <span>Business</span>
-                         <span>Revenue</span>
-                         <span>Presence</span>
-                         <span>Potential</span>
-                     </TextLoop>{" "}!
-       </h1>
-       <p className="marginNill" >
-         Personalised sites, support and advertising strategies to expand your client base and keep revenue coming in.
-       </p>
-      
-         
-      
-         <span className="sr-only">Jump to about</span>
-         <Button
-           className="mainbutton .bgTrans"
-           cta="View our services"
-           label="Banner Learn More"
-           anchor={true}
-           index="packages"
-       
-         />
-        
-
-       
-         <span className="sr-only">Jump to contact</span>
-         <Button
-           cta="Or contact us now!"
-           label="Banner Learn More"
-           className="bannercontactbutton .bgTrans"
-           onClick={()=> showContactonClick()}
-           onKeyDown={()=> showContactonClick()}
-         />
-         </>
-        :
-       null
-        }
-         
-            
-            
+                <span className="sr-only">Jump to contact</span>
+                <Button
+                  cta="Or contact us now!"
+                  label="Banner Learn More"
+                  className="bannercontactbutton .bgTrans"
+                  onClick={() => showContactonClick()}
+                  onKeyDown={() => showContactonClick()}
+                />
+              </>
+            ) : null}
           </div>
-          }
-
+        )}
       </BackgroundImage>
-       
-        </BannerStyles>
+    </BannerStyles>
   )
 }
 

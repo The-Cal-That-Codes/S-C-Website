@@ -13,11 +13,9 @@ import digchart from "../images/digchart.png"
 import digbubbles from "../images/digbubbles.png"
 import diglogo from "../images/diglogo.png"
 
-
-
 const index = () => (
   <>
-    <Banner/>
+    <Banner />
     <Packages
       uximg={uximg}
       digchart={digchart}
@@ -28,10 +26,8 @@ const index = () => (
       cardClass="cardContentH1Image flex-Col jcCenter"
       id="packages"
       title2="Digital Marketing"
-     
     />
-    
-  
+
     <TextBlockImg
       id="perks"
       paraEnter="paraEnter flex-Col"
@@ -44,9 +40,8 @@ const index = () => (
       id="about"
       paraEnter="paraEnter flex-Col"
       paraExit="paraExit flex-Col"
-       />
-      
-   
+    />
+
     <Contact
       id="contact"
       title="Contact us now"
@@ -55,4 +50,4 @@ const index = () => (
   </>
 )
 
-export default index;
+export default index
