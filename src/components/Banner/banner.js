@@ -26,7 +26,7 @@ const Banner = (id) => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 1500)
+    }, 1000)
   }, [])
 
   let [showContact, setShowContact] = useState("starting")

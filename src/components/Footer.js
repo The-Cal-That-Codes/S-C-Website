@@ -34,7 +34,9 @@ const Footer = ({ Logo }) => {
               <div className="brand-cont">
                 {/* If there is a logo, render this */}
                 {Logo && <img src={Logo} alt={`${footerData.title} logo`} />}
-                <address style={{fontSize:1+"rem"}}>CroftDigitalWebServices@gmail.com</address>
+                <address style={{ fontSize: 1 + "rem" }}>
+                  CroftDigitalWebServices@gmail.com
+                </address>
 
                 <span
                   className="privacy"
@@ -107,6 +109,15 @@ const Footer = ({ Logo }) => {
             onClick={() => setshowPrivacy(!showPrivacy)}
             onKeyDown={() => setshowPrivacy(!showPrivacy)}
           />
+          <h1>
+            READ FIRST: Hi, Cal here, co-owner of Croft Digital and developer of
+            this site, this privacy policy is taken from a template, its just
+            here to cover us legally as a privacy policy is a requirement in
+            Australia if you have a contact form. We would NEVER use your data
+            inapropriately and we will only ever use your information to contact
+            you if you have contacted us through the forms. Just wanted to clear
+            up any doubts as I know these kinds of things can be intimidating.{" "}
+          </h1>
           <h1>Privacy Policy</h1>
           <p>Last updated: March 28, 2021</p>
           <p>

@@ -98,7 +98,7 @@ export const BannerStyles = styled.section`
 
     .hero-content {
       padding-top: 3rem;
-    
+
       h1 {
         font-size: 2.2rem;
       }

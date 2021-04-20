@@ -54,7 +54,9 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Fullstack and database services to fit all your needs</li>
+                    <li>
+                      Fullstack and database services to fit all your needs
+                    </li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
@@ -81,7 +83,10 @@ const Packages = ({
                   onClick={() => cardControl(1)}
                   onKeyDown={() => cardControl(1)}
                 >
-                  <img src={devimg} alt="Icon by Muhammad Haq on freeicons.io" />
+                  <img
+                    src={devimg}
+                    alt="Icon by Muhammad Haq on freeicons.io"
+                  />
                   <div className={cardClass}>
                     <h2>Web Development</h2>
                     <p>Original sites coded to your specifications</p>
@@ -189,10 +194,7 @@ const Packages = ({
                   onClick={() => cardControl(3)}
                   onKeyDown={() => cardControl(3)}
                 >
-                  <img
-                    src={uximg}
-                    alt="Icon by Muhammad Haq on freeicons.io"
-                  />
+                  <img src={uximg} alt="Icon by Muhammad Haq on freeicons.io" />
                   <div className={cardClass}>
                     <h2>UX principles</h2>
                     <p>Applied and personalised for your site</p>
@@ -230,7 +232,10 @@ const Packages = ({
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "1.95rem" }}
+                      value={{
+                        color: "var(--Clr-Primary500)",
+                        size: "1.95rem",
+                      }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -286,7 +291,10 @@ const Packages = ({
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "1.95rem" }}
+                      value={{
+                        color: "var(--Clr-Primary500)",
+                        size: "1.95rem",
+                      }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -342,7 +350,10 @@ const Packages = ({
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "1.95rem" }}
+                      value={{
+                        color: "var(--Clr-Primary500)",
+                        size: "1.95rem",
+                      }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
