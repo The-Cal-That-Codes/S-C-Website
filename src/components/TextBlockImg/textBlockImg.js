@@ -88,7 +88,7 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
         {iconColour === 1 ? (
           <div className={classControl === 1 ? paraEnter : paraExit}>
             <p className="paraLeft">
-              Websites are a fundamental part of a modern presence they are your
+              Websites are a fundamental part of a modern presence, they are your
               brands initial contact with potential customers and a key factor
               in gaining clientele. Our design and development process is geared
               towards providing you with a unique captivating website built with
@@ -96,8 +96,8 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
             </p>
             <p className="paraRight">
               As business needs differ, we aim to provide a customised service
-              that aligns with your goals, and your budget, from simple about
-              pages to large highly interactive websites. Whether you are
+              that aligns with your goals, and your budget. From simple about
+              pages to large, highly interactive websites. Whether you are
               establishing or updating your online presence our philosophy is to
               deliver a high-quality asset that will aid in the development of
               your business.
@@ -125,15 +125,15 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
           <div className={classControl === 3 ? paraEnter : paraExit}>
             <p className="paraLeft">
               To ensure a high aesthetic quality all pages are designed in
-              Figma, allowing us test ideas and send them to you before the
+              Figma, allowing us to test ideas and send them to you before the
               coding begins. We begin with creating flow charts and wireframes
-              that form the blueprints for your design, implementing user
+              that form the blueprints of your design, implementing user
               experience principles to decide the best way to structure things
               for the site’s objectives.
             </p>
             <p className="paraRight">
               Utilizing modern design concepts prototypes are then constructed,
-              incorporating your branding and vision into modern user-friendly
+              incorporating your branding and vision into sleek user-friendly
               designs for every page on your site. Websites are designed from a
               “mobile first” approach with complexity added for desktop, keeping
               your business accessible and exceptional across multiple devices.

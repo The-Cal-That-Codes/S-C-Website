@@ -64,7 +64,7 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Built with the powerful reactJS JavaScript library.</li>
+                    <li>Google analytics linked to your Gmail on deployment</li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
