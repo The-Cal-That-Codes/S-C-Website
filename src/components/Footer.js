@@ -34,7 +34,7 @@ const Footer = ({ Logo }) => {
               <div className="brand-cont">
                 {/* If there is a logo, render this */}
                 {Logo && <img src={Logo} alt={`${footerData.title} logo`} />}
-                <address>CroftDigitalWebServices@gmail.com</address>
+                <address style={{fontSize:1+"rem"}}>CroftDigitalWebServices@gmail.com</address>
 
                 <span
                   className="privacy"
