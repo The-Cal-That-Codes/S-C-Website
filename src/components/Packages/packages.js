@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import Button from "../Button/button"
-import { BsFillDiamondFill, BsCaretRight } from "react-icons/bs"
+import { BsCaretRight } from "react-icons/bs"
 
 import { IconContext } from "react-icons"
 

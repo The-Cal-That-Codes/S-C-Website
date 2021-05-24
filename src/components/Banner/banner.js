@@ -12,7 +12,7 @@ const Banner = (id) => {
     query {
       file(relativePath: { eq: "flames.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 5184, quality: 100) {
+          fluid(maxWidth: 5184, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

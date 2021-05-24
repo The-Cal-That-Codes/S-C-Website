@@ -10,7 +10,7 @@ const Contact = ({ title }) => {
     query {
       file(relativePath: { eq: "purple-bg.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 6000, quality: 100) {
+          fluid(maxWidth: 6000, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
