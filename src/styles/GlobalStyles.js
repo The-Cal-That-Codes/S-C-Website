@@ -62,6 +62,10 @@ const GlobalStyles = createGlobalStyle`
       font-size: 1.55rem;
     }
   }
+  
+  *:focus {
+    outline: none;
+}
 
 // utility
 

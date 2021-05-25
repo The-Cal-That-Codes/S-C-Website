@@ -27,72 +27,83 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
   return (
     <TextBlockImgWrapper id={id}>
       <div className="contentwrapper">
-        <h1 className="marginNill">
-          Design, Dev and Deployment all in one place!
-        </h1>
+        <h1 className="marginNill">Design and Development for any project!</h1>
         <div className="iconbox">
-          <IconContext.Provider
-            value={
-              classControl === 1
-                ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                : { color: "#969ABE", className: "icon iconmedia" }
-            }
+          <div
+            className="Uitem"
+            onClick={() => controller(1)}
+            onKeyDown={() => controller(1)}
           >
-            <BsXDiamondFill
-              onClick={() => controller(1)}
-              onKeyDown={() => controller(1)}
-            />
-          </IconContext.Provider>
-          <h3>General</h3>
-          <IconContext.Provider
-            value={
-              classControl === 2
-                ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                : { color: "#969ABE", className: "icon iconmedia" }
-            }
+            <IconContext.Provider
+              value={
+                classControl === 1
+                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
+                  : { color: "#969ABE", className: "icon iconmedia" }
+              }
+            >
+              <BsXDiamondFill />
+            </IconContext.Provider>
+            <h3>General</h3>
+          </div>
+          <div
+            className="Uitem"
+            onClick={() => controller(2)}
+            onKeyDown={() => controller(2)}
           >
-            <BsTerminalFill
-              onClick={() => controller(2)}
-              onKeyDown={() => controller(2)}
-            />
-          </IconContext.Provider>
-          <h3>Development</h3>
-          <IconContext.Provider
-            value={
-              classControl === 3
-                ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                : { color: "#969ABE", className: "icon iconmedia" }
-            }
+            <IconContext.Provider
+              value={
+                classControl === 2
+                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
+                  : { color: "#969ABE", className: "icon iconmedia" }
+              }
+            >
+              <BsTerminalFill />
+            </IconContext.Provider>
+            <h3>Development</h3>
+          </div>
+          <div
+            className="Uitem"
+            onClick={() => controller(3)}
+            onKeyDown={() => controller(3)}
           >
-            <BsDropletHalf
-              onClick={() => controller(3)}
-              onKeyDown={() => controller(3)}
-            />
-          </IconContext.Provider>
-          <h3>Design</h3>
-          <IconContext.Provider
-            value={
-              classControl === 4
-                ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                : { color: "#969ABE", className: "icon iconmedia" }
-            }
+            <IconContext.Provider
+              value={
+                classControl === 3
+                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
+                  : { color: "#969ABE", className: "icon iconmedia" }
+              }
+            >
+              <BsDropletHalf />
+            </IconContext.Provider>
+            <h3>Design</h3>
+          </div>
+          <div
+            className="Uitem"
+            onClick={() => controller(4)}
+            onKeyDown={() => controller(4)}
           >
-            <BsLayersFill
-              onClick={() => controller(4)}
-              onKeyDown={() => controller(4)}
-            />
-          </IconContext.Provider>
-          <h3>Our Process</h3>
+            <IconContext.Provider
+              value={
+                classControl === 4
+                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
+                  : { color: "#969ABE", className: "icon iconmedia" }
+              }
+            >
+              <BsLayersFill />
+            </IconContext.Provider>
+            <h3>Our Process</h3>
+          </div>
         </div>
         <hr className="longLine" />
         {iconColour === 1 ? (
           <div className={classControl === 1 ? paraEnter : paraExit}>
             <p className="paraLeft">
-              Websites are a fundamental part of a modern presence, they are your
-              brands initial contact with potential customers and a key factor
-              in gaining clientele. Our design and development process is geared
-              towards providing you with a unique captivating website built with
-              modern code to give your business the platform it deserves.
+              Websites are a fundamental part of a modern presence, they are
+              your brands initial contact with potential customers and a key
+              factor in gaining clientele. Our design and development process is
+              geared towards providing you with a unique captivating website
+              built with modern code to give your business the platform it
+              deserves.
             </p>
             <p className="paraRight">
               As business needs differ, we aim to provide a customised service
@@ -276,6 +287,16 @@ const TextBlockImgWrapper = styled.section`
     svg {
       overflow: visible;
     }
+
+    .Uitem {
+      display: inline-flex;
+      cursor: pointer;
+      transition: 0.3s ease-out;
+
+      :hover {
+        transform: translateY(-5px);
+      }
+    }
   }
 
   .iconbox2 {
@@ -311,26 +332,8 @@ const TextBlockImgWrapper = styled.section`
     margin: 0 auto;
     height: 5px;
     border: 0px;
-    background-color: var(--Clr-Primary500);
+    background-color: #6191be;
     opacity: 0.8;
-  }
-
-  .smallLine {
-    max-width: 80%;
-    margin: 0 auto;
-    height: 4px;
-    border: 0px;
-    background-color: #969abe;
-    opacity: 0.8;
-  }
-
-  .icon {
-    cursor: pointer;
-    transition: 0.3s ease-out;
-  }
-
-  .icon:hover {
-    transform: translateY(-5px);
   }
 
   .paraEnter {
@@ -457,6 +460,7 @@ const TextBlockImgWrapper = styled.section`
     padding: 1rem 1rem;
 
     h1 {
+      text-align: center;
       font-size: 2rem;
       padding: 2rem 1rem;
       margin-top: 0px;
@@ -486,11 +490,11 @@ const TextBlockImgWrapper = styled.section`
     }
 
     .iconbox {
-      justify-content: flex-start;
+      justify-content: center;
       padding: 0rem 1rem;
     }
     .iconbox2 {
-      justify-content: space-between;
+      justify-content: space-evenly;
       display: flex;
       margin-top: 1rem;
 

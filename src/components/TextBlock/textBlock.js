@@ -29,58 +29,70 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
       <div className="contentwrapper">
         <h1 className="marginNill">Marketing title needs to go here</h1>
         <div className="iconbox">
-          <IconContext.Provider
-            value={
-              classControl === 1
-                ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                : { color: "#969ABE", className: "icon iconmedia" }
-            }
+          <div
+            className="Uitem"
+            onClick={() => controller(1)}
+            onKeyDown={() => controller(1)}
           >
-            <BsXDiamondFill
-              onClick={() => controller(1)}
-              onKeyDown={() => controller(1)}
-            />
-          </IconContext.Provider>
-          <h3>General</h3>
-          <IconContext.Provider
-            value={
-              classControl === 2
-                ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                : { color: "#969ABE", className: "icon iconmedia" }
-            }
+            <IconContext.Provider
+              value={
+                classControl === 1
+                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
+                  : { color: "#969ABE", className: "icon iconmedia" }
+              }
+            >
+              <BsXDiamondFill />
+            </IconContext.Provider>
+            <h3 className="iconTitle">General</h3>
+          </div>
+          <div
+            className="Uitem"
+            onClick={() => controller(2)}
+            onKeyDown={() => controller(2)}
           >
-            <FaBlackTie
-              onClick={() => controller(2)}
-              onKeyDown={() => controller(2)}
-            />
-          </IconContext.Provider>
-          <h3>Consulting</h3>
-          <IconContext.Provider
-            value={
-              classControl === 3
-                ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                : { color: "#969ABE", className: "icon iconmedia" }
-            }
+            <IconContext.Provider
+              value={
+                classControl === 2
+                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
+                  : { color: "#969ABE", className: "icon iconmedia" }
+              }
+            >
+              <FaBlackTie />
+            </IconContext.Provider>
+            <h3>Consulting</h3>
+          </div>
+          <div
+            className="Uitem"
+            onClick={() => controller(3)}
+            onKeyDown={() => controller(3)}
           >
-            <BsTools
-              onClick={() => controller(3)}
-              onKeyDown={() => controller(3)}
-            />
-          </IconContext.Provider>
-          <h3>Setup</h3>
-          <IconContext.Provider
-            value={
-              classControl === 4
-                ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                : { color: "#969ABE", className: "icon iconmedia" }
-            }
+            <IconContext.Provider
+              value={
+                classControl === 3
+                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
+                  : { color: "#969ABE", className: "icon iconmedia" }
+              }
+            >
+              <BsTools />
+            </IconContext.Provider>
+            <h3>Setup</h3>
+          </div>
+          <div
+            className="Uitem"
+            onClick={() => controller(4)}
+            onKeyDown={() => controller(4)}
           >
-            <BsGraphUp
-              onClick={() => controller(4)}
-              onKeyDown={() => controller(4)}
-            />
-          </IconContext.Provider>
-          <h3>Management</h3>
+            <IconContext.Provider
+              value={
+                classControl === 4
+                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
+                  : { color: "#969ABE", className: "icon iconmedia" }
+              }
+            >
+              <BsGraphUp />
+            </IconContext.Provider>
+            <h3>Management</h3>
+          </div>
         </div>
         <hr className="longLine" />
         {iconColour === 1 ? (
@@ -219,7 +231,7 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
               <BsFillCircleFill />
             </IconContext.Provider>
           </div>
-          <Link to="about" smooth={true} duration={500}>
+          <Link to="perks" smooth={true} duration={500}>
             <div className="marketingLink">
               <IconContext.Provider
                 value={{
@@ -229,7 +241,7 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
               >
                 <BsPeopleFill />
               </IconContext.Provider>
-              <p>To Marketing</p>
+              <p>To Development</p>
             </div>
           </Link>
         </div>
@@ -268,6 +280,15 @@ const TextBlockImgWrapper = styled.section`
 
     svg {
       overflow: visible;
+    }
+    .Uitem {
+      display: inline-flex;
+      cursor: pointer;
+      transition: 0.3s ease-out;
+
+      :hover {
+        transform: translateY(-5px);
+      }
     }
   }
 
@@ -317,14 +338,6 @@ const TextBlockImgWrapper = styled.section`
     opacity: 0.8;
   }
 
-  .icon {
-    cursor: pointer;
-    transition: 0.3s ease-out;
-  }
-
-  .icon:hover {
-    transform: translateY(-5px);
-  }
 
   .paraEnter {
     display: flex;
@@ -450,6 +463,7 @@ const TextBlockImgWrapper = styled.section`
     padding: 1rem 1rem;
 
     h1 {
+      text-align: center;
       font-size: 2rem;
       padding: 2rem 1rem;
       margin-top: 0px;
@@ -479,11 +493,11 @@ const TextBlockImgWrapper = styled.section`
     }
 
     .iconbox {
-      justify-content: flex-start;
+      justify-content: center;
       padding: 0rem 1rem;
     }
     .iconbox2 {
-      justify-content: space-between;
+      justify-content: space-evenly;
       display: flex;
       margin-top: 1rem;
 
