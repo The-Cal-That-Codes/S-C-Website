@@ -135,12 +135,18 @@ const ContactWrapper = styled.div`
     border: 2px solid #43a0cf;
     font-size: 0.9rem;
     padding: 0.8rem;
+    transition: 0.3s;
     a {
       filter: drop-shadow(0px 2px 2px black);
     }
-    &::before {
-      border-radius: 20px;
-      border: 2px solid rgba(255, 255, 255, 0.8);
+    span{
+     opacity: 0;
+    }
+
+    &:hover{
+      transform: scale(1.05);
+      border: 2px solid #42b080;
+      
     }
   }
 
@@ -154,6 +160,17 @@ const ContactWrapper = styled.div`
     filter: drop-shadow(0px 2px 2px black);
     margin-left: 1rem;
     padding: 0.8rem;
+    transition: 0.3s;
+
+    span{
+     opacity: 0;
+    }
+
+    &:hover{
+      transform: scale(1.05);
+     
+      
+    }
   }
 
   h2 {

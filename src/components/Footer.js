@@ -35,7 +35,7 @@ const Footer = ({ Logo }) => {
                 {/* If there is a logo, render this */}
                 {Logo && <img src={Logo} alt={`${footerData.title} logo`} />}
                 <address style={{ fontSize: 1 + "rem" }}>
-                  CroftDigitalWebServices@gmail.com
+                  croftdigitalwebservices@gmail.com
                 </address>
 
                 <span

@@ -31,6 +31,8 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
         <div className="iconbox">
           <div
             className="Uitem"
+            role="button"
+            tabIndex="0"
             onClick={() => controller(1)}
             onKeyDown={() => controller(1)}
           >
@@ -47,6 +49,8 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
           </div>
           <div
             className="Uitem"
+            role="button"
+            tabIndex="0"
             onClick={() => controller(2)}
             onKeyDown={() => controller(2)}
           >
@@ -63,6 +67,8 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
           </div>
           <div
             className="Uitem"
+            role="button"
+            tabIndex="0"
             onClick={() => controller(3)}
             onKeyDown={() => controller(3)}
           >
@@ -79,6 +85,8 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
           </div>
           <div
             className="Uitem"
+            role="button"
+            tabIndex="0"
             onClick={() => controller(4)}
             onKeyDown={() => controller(4)}
           >

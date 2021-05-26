@@ -18,7 +18,7 @@ export const BannerStyles = styled.section`
       filter: drop-shadow(0px 2px 2px black);
     }
     font-size: 0.9rem;
-    border: 3px solid var(--Clr-Primary500);
+    
     margin: 1rem auto;
   }
 
@@ -26,6 +26,7 @@ export const BannerStyles = styled.section`
     font-size: 0.8rem;
     border: 0px;
     margin: 0 auto;
+    background: none;
   }
 
   .hero-hide {

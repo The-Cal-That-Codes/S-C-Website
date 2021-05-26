@@ -127,10 +127,16 @@ const ContactWrapper = styled.section`
     background: rgba(1, 1, 1, 0);
     font-size: 1rem;
     padding: 0.5rem 0.5rem;
+    transition: 0.2s;
 
-    &::before {
-      border-radius: 0px;
-      border: 2px solid rgba(255, 255, 255, 0.8);
+    span{
+     opacity: 0;
+    }
+
+    &:hover{
+      transform: scale(1.05);
+      border: 2px solid #42b080;
+      
     }
   }
 

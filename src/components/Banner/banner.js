@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React, { useState} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Button from "../Button/button"
 import TextLoop from "react-text-loop"
 import BannerContact from "../Contact/bannercontact"
 import { BannerStyles } from "../../styles/bannerStyles"
-import BounceLoader from "react-spinners/BounceLoader"
+
 
 const Banner = (id) => {
   const data = useStaticQuery(graphql`
@@ -20,14 +20,8 @@ const Banner = (id) => {
     }
   `)
 
-  let [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-    }, 1000)
-  }, [])
+ 
 
   let [showContact, setShowContact] = useState("starting")
   let [changetoContact, setchangetoContact] = useState(false)
@@ -50,15 +44,7 @@ const Banner = (id) => {
 
   return (
     <BannerStyles>
-      <div
-        className={
-          loading
-            ? "loaderScreen flex-Col jcCenter aiCenter textCenter"
-            : "loaderExit flex-Row jcCenter aiCenter textCenter"
-        }
-      >
-        <BounceLoader color={"#2479DD"} loading={loading} size={60} />
-      </div>
+      
 
       <BackgroundImage
         Tag="section"
@@ -90,7 +76,7 @@ const Banner = (id) => {
                 : "hero-content flex-column bgTrans"
             }
           >
-            {!loading ? (
+            
               <>
                 <h1 className="marginNill">
                   Elevate Your{" "}
@@ -125,7 +111,7 @@ const Banner = (id) => {
                   onKeyDown={() => showContactonClick()}
                 />
               </>
-            ) : null}
+            
           </div>
         )}
       </BackgroundImage>
