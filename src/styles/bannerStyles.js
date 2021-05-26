@@ -132,7 +132,7 @@ export const BannerStyles = styled.section`
     position: absolute;
     z-index: 2;
 
-    /* } */
+    }
   }
 
   .loaderExit {

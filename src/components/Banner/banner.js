@@ -1,4 +1,4 @@
-import React, { useState} from "react"
+import React, {useEffect, useState} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Button from "../Button/button"
