@@ -5,6 +5,7 @@ import Button from "../Button/button"
 import TextLoop from "react-text-loop"
 import BannerContact from "../Contact/bannercontact"
 import { BannerStyles } from "../../styles/bannerStyles"
+import BounceLoader from "react-spinners/BounceLoader"
 
 
 const Banner = (id) => {
@@ -21,7 +22,14 @@ const Banner = (id) => {
   `)
 
 
+let [loading, setLoading] = useState(true);
  
+useEffect(()=> {
+  setLoading(true)
+  setTimeout(() => {
+    setLoading(false);
+  }, 2500)
+},[])
 
   let [showContact, setShowContact] = useState("starting")
   let [changetoContact, setchangetoContact] = useState(false)
@@ -44,7 +52,11 @@ const Banner = (id) => {
 
   return (
     <BannerStyles>
-      
+
+    <div className={loading? "loaderScreen flex-Col jcCenter aiCenter textCenter" : "loaderExit flex-Row jcCenter aiCenter textCenter"}>
+    <BounceLoader color={"#2479DD"} loading={loading} size={60} />
+    
+    </div>
 
       <BackgroundImage
         Tag="section"
@@ -76,11 +88,11 @@ const Banner = (id) => {
                 : "hero-content flex-column bgTrans"
             }
           >
-            
+          {!loading ?
               <>
                 <h1 className="marginNill">
                   Elevate Your{" "}
-                  <TextLoop mask={true} interval={2700}>
+                  <TextLoop mask={true} interval={2800}>
                     <span>Business</span>
                     <span>Revenue</span>
                     <span>Presence</span>
@@ -111,6 +123,8 @@ const Banner = (id) => {
                   onKeyDown={() => showContactonClick()}
                 />
               </>
+              :
+              null}
             
           </div>
         )}
