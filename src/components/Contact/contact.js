@@ -129,14 +129,13 @@ const ContactWrapper = styled.section`
     padding: 0.5rem 0.5rem;
     transition: 0.2s;
 
-    span{
-     opacity: 0;
+    span {
+      opacity: 0;
     }
 
-    &:hover{
+    &:hover {
       transform: scale(1.05);
       border: 2px solid #42b080;
-      
     }
   }
 

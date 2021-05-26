@@ -139,14 +139,13 @@ const ContactWrapper = styled.div`
     a {
       filter: drop-shadow(0px 2px 2px black);
     }
-    span{
-     opacity: 0;
+    span {
+      opacity: 0;
     }
 
-    &:hover{
+    &:hover {
       transform: scale(1.05);
       border: 2px solid #42b080;
-      
     }
   }
 
@@ -162,14 +161,12 @@ const ContactWrapper = styled.div`
     padding: 0.8rem;
     transition: 0.3s;
 
-    span{
-     opacity: 0;
+    span {
+      opacity: 0;
     }
 
-    &:hover{
+    &:hover {
       transform: scale(1.05);
-     
-      
     }
   }
 

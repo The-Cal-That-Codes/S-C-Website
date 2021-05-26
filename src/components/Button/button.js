@@ -11,12 +11,11 @@ const Button = (props) => {
           className={props.className}
           onClick={props.onClick}
         >
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
           <Link to={props.index} smooth={true} duration={500}>
-            
             <div className="wordWrap">{props.cta}</div>
           </Link>
         </ButtonWrapper>
@@ -27,10 +26,10 @@ const Button = (props) => {
           className={props.className}
           onClick={props.onClick}
         >
-        <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
           {props.cta}
         </ButtonWrapper>
       )}
@@ -53,7 +52,6 @@ const ButtonWrapper = styled.button`
   filter: drop-shadow(0px 2px 2px black);
   background: rgba(105, 150, 236, 0.1);
   border: none;
-  
 
   .wordWrap {
     height: 100%;
@@ -61,13 +59,13 @@ const ButtonWrapper = styled.button`
     padding: 0.9rem;
   }
 
-  span{
+  span {
     display: block;
     position: absolute;
     background: var(--Clr-Primary500);
   }
 
-   span:nth-child(1){
+  span:nth-child(1) {
     left: 0;
     bottom: 0;
     width: 2px;
@@ -77,14 +75,14 @@ const ButtonWrapper = styled.button`
     transition: transform 0.3s;
   }
 
-  &:hover span:nth-child(1){
+  &:hover span:nth-child(1) {
     transform: scaleY(1);
     transform-origin: bottom;
-   
+
     z-index: 1;
   }
 
-  span:nth-child(2){
+  span:nth-child(2) {
     left: 0;
     bottom: 0;
     width: 100%;
@@ -92,16 +90,15 @@ const ButtonWrapper = styled.button`
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s;
-    
   }
 
-  &:hover span:nth-child(2){
+  &:hover span:nth-child(2) {
     transform: scaleX(1);
     transform-origin: left;
     z-index: 1;
   }
 
-  span:nth-child(3){
+  span:nth-child(3) {
     right: 0;
     bottom: 0;
     width: 2px;
@@ -112,14 +109,14 @@ const ButtonWrapper = styled.button`
     transition-delay: 0.3s;
   }
 
-  &:hover span:nth-child(3){
+  &:hover span:nth-child(3) {
     transform: scaleY(1);
     transform-origin: bottom;
-  
+
     z-index: 1;
   }
 
-  span:nth-child(4){
+  span:nth-child(4) {
     top: 0;
     left: 0px;
     bottom: 0;
@@ -131,22 +128,18 @@ const ButtonWrapper = styled.button`
     transition-delay: 0.3s;
   }
 
-  &:hover span:nth-child(4){
+  &:hover span:nth-child(4) {
     transform: scaleX(1);
     transform-origin: left;
-    
+
     z-index: 1;
   }
 
-
   &:hover {
     cursor: pointer;
-    
-    border: 0px;
-    
-  }
 
-  
+    border: 0px;
+  }
 
   @media (min-width: 1100px) {
     font-size: 1rem;

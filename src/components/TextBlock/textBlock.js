@@ -346,7 +346,6 @@ const TextBlockImgWrapper = styled.section`
     opacity: 0.8;
   }
 
-
   .paraEnter {
     display: flex;
     flex-flow: column;
