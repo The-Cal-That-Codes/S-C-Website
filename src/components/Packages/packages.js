@@ -220,7 +220,7 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Custom Meta tags imbedded with react helmet</li>
+                    <li>Branding & awareness for your products & services</li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
@@ -228,7 +228,7 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Custom Meta tags imbedded with react helmet</li>
+                    <li>Increase consideration & intent</li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
@@ -239,7 +239,7 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Custom Meta tags imbedded with react helmet</li>
+                    <li>Drive your target audience to convert</li>
                   </div>
                 </div>
               ) : (
@@ -256,7 +256,7 @@ const Packages = ({
                   />
                   <div className={cardClass}>
                     <h2>Social Media</h2>
-                    <p>Facebook, Instagram, Linked In, Snapchat</p>
+                    <p>Facebook, Instagram, Linked In</p>
                   </div>
                 </div>
               )}
@@ -279,7 +279,7 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Custom Meta tags imbedded with react helmet</li>
+                    <li>Monitor exactly what people do on your website</li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
@@ -287,7 +287,7 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Custom Meta tags imbedded with react helmet</li>
+                    <li>See how people engage with your ads</li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
@@ -298,7 +298,7 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Custom Meta tags imbedded with react helmet</li>
+                    <li>Create custom audiences using first party data</li>
                   </div>
                 </div>
               ) : (
@@ -338,7 +338,7 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Custom Meta tags imbedded with react helmet</li>
+                    <li>Get your business shown first</li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
@@ -346,7 +346,7 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Custom Meta tags imbedded with react helmet</li>
+                    <li>Reach people whilst they’re most engaged</li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
@@ -357,7 +357,7 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Custom Meta tags imbedded with react helmet</li>
+                    <li>Only pay if someone clicks on your search ad</li>
                   </div>
                 </div>
               ) : (
@@ -374,7 +374,7 @@ const Packages = ({
                   />
                   <div className={cardClass}>
                     <h2>Google Ads</h2>
-                    <p>Search, YouTube, Gmail and Display</p>
+                    <p>Search, YouTube, and Display</p>
                   </div>
                 </div>
               )}

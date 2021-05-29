@@ -106,19 +106,19 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
         {iconColour === 1 ? (
           <div className={classControl === 1 ? paraEnter : paraExit}>
             <p className="paraLeft">
-              In order to drive your business’ visibility, these days it is
-              essential to have a strong online presence for both your brand and
-              the product that you offer. Along with a website and organic
-              content, this must be supported with a strong media strategy and
-              careful selection of where you choose to advertise.
+              Having a strong digital presence and reaching the right people
+              through various online channels has become increasingly crucial to
+              business success. Advertising your business online can achieve
+              many goals, from increasing brand awareness and loyalty, promoting
+              products and services, generating leads, and multiplying your
+              revenue via ecommerce solutions.
             </p>
             <p className="paraRight">
-              To receive the best return on your investment, we offer holistic
-              digital advertising services across a wide range of channels to
-              help you reach the right people in the right places at the right
-              time, and see exactly how they interact with your website. If
-              you’re selling a product nobody knows about, you don’t want to
-              spend money in a channel where your customers need to find you.
+              With a range of packages available, from account set up, to one
+              off campaigns all the way through to ongoing management, we will
+              work with you to provide a tailored media solution that suits your
+              business needs. See how advertising online can improve your
+              business and get in touch today!
             </p>
           </div>
         ) : iconColour === 2 ? (
@@ -141,34 +141,36 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
         ) : iconColour === 3 ? (
           <div className={classControl === 3 ? paraEnter : paraExit}>
             <p className="paraLeft">
-              If you need your ad accounts setup or are looking to create and
-              run a singular or series of campaigns, we provide this as an
-              intermediate service. This involves everything from account set
-              up, linking your ad accounts to your website and Google Analytics,
-              tagging, copywriting and targeting through to creating the
-              campaigns and setting them live.
+              From setting up your ad accounts setup to creating a singular or
+              series of campaigns, we provide this as an intermediate service.
+              This involves everything from account set up, linking your ad
+              accounts to your website and Google Analytics, tagging,
+              copywriting and targeting through to creating the campaigns and
+              setting them live.
             </p>
             <p className="paraRight">
-              Ensuring your account is set up correctly and campaigns have been
-              built using placements and targeting that is relevant to your
-              audience is essential to the success of your media strategy. We
-              can help you with individual steps, as well as the entire process.
+              At Croft Digital, we are in the business of connecting our clients
+              to their ideal customers. We will ensure your account is set up
+              correctly and campaigns have been built using placements and
+              targeting that is relevant to your audience as this is essential
+              to the success of your media strategy. We can help you with
+              individual steps, as well as the entire process.
             </p>
           </div>
         ) : (
           <div className={classControl === 4 ? paraEnter : paraExit}>
             <p className="paraLeft">
-              As an advanced service offering, we will manage your entire
-              advertising portfolio from planning through to implementation,
+              As an advanced service, we offer ongoing management of your entire
+              advertising portfolio from, planning through to implementation,
               reporting and ongoing optimisations to ensure your ads are always
               running as efficiently as possible.
             </p>
             <p className="paraRight">
               If you simply want to promote your business on one platform, or
               desire an integrated channel mix, we will seamlessly manage this
-              for you on an ongoing basis and provide you with detailed reports
-              to help you track performance and ensure you are reaching your
-              target.
+              for you on a continuing basis and provide you with detailed
+              reports to help you track performance and ensure you are reaching
+              your target and receiving a great return on your investment.
             </p>
           </div>
         )}
