@@ -216,30 +216,30 @@ const Packages = ({
                 >
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "var(--Clr-Primary500)", size: "2.1rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Branding & awareness for your products & services</li>
+                    <li>Branding and awareness for your products and services</li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "var(--Clr-Primary500)", size: "1.9rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Increase consideration & intent</li>
+                    <li>Increase your businesses consideration and intent</li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
                       value={{
                         color: "var(--Clr-Primary500)",
-                        size: "1.95rem",
+                        size: "1.9rem",
                       }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Drive your target audience to convert</li>
+                    <li>Drive more of online target audiences to convert</li>
                   </div>
                 </div>
               ) : (
@@ -283,11 +283,11 @@ const Packages = ({
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "var(--Clr-Primary500)", size: "2.1rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>See how people engage with your ads</li>
+                    <li>See how people engage and interact with your ads</li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
@@ -338,15 +338,15 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Get your business shown first</li>
+                    <li>Get your business listed first on search engines</li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "var(--Clr-Primary500)", size: "1.8rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Reach people whilst they’re most engaged</li>
+                    <li>Reach people whilst they are most engaged</li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider

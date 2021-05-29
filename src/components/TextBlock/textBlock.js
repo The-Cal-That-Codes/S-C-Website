@@ -141,7 +141,7 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
         ) : iconColour === 3 ? (
           <div className={classControl === 3 ? paraEnter : paraExit}>
             <p className="paraLeft">
-              From setting up your ad accounts setup to creating a singular or
+              From setting up your ad accounts to creating a singular or
               series of campaigns, we provide this as an intermediate service.
               This involves everything from account set up, linking your ad
               accounts to your website and Google Analytics, tagging,
