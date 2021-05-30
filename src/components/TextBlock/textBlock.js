@@ -16,6 +16,9 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
   let [iconColour, seticonColour] = useState(1)
   let [classControl, setclassControl] = useState(1)
 
+  {
+    /*controller works the same as the packages one using the index as an argument to trigger hooks.*/
+  }
   const controller = (index) => {
     setclassControl(index)
 
@@ -27,7 +30,9 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
   return (
     <TextBlockImgWrapper id={id}>
       <div className="contentwrapper">
-        <h1 className="marginNill">Marketing title needs to go here</h1>
+        <h1 className="marginNill">
+          Digital Marketing to boost your presence!
+        </h1>
         <div className="iconbox">
           <div
             className="Uitem"
@@ -141,36 +146,35 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
         ) : iconColour === 3 ? (
           <div className={classControl === 3 ? paraEnter : paraExit}>
             <p className="paraLeft">
-              From setting up your ad accounts to creating a singular or
-              series of campaigns, we provide this as an intermediate service.
-              This involves everything from account set up, linking your ad
-              accounts to your website and Google Analytics, tagging,
-              copywriting and targeting through to creating the campaigns and
-              setting them live.
+              As an intermediate service will set up your ad accounts and create
+              a singular or series of campaigns. This involves everything from
+              account set up, linking your ad accounts to your website and
+              Google Analytics, tagging, copywriting and targeting through to
+              creating the campaigns and setting them live.
             </p>
             <p className="paraRight">
               At Croft Digital, we are in the business of connecting our clients
-              to their ideal customers. We will ensure your account is set up
-              correctly and campaigns have been built using placements and
-              targeting that is relevant to your audience as this is essential
-              to the success of your media strategy. We can help you with
-              individual steps, as well as the entire process.
+              to their ideal customers. We will ensure your campaigns have been
+              built using placements and targeting that is relevant to your
+              audience as this is essential to the success of your media
+              strategy. We can help you with individual steps, as well as the
+              entire process.
             </p>
           </div>
         ) : (
           <div className={classControl === 4 ? paraEnter : paraExit}>
-            <p className="paraLeft">
+            <p className="paraLeft paddingBottom">
               As an advanced service, we offer ongoing management of your entire
               advertising portfolio from, planning through to implementation,
               reporting and ongoing optimisations to ensure your ads are always
               running as efficiently as possible.
             </p>
-            <p className="paraRight">
+            <p className="paraRight paddingBottom">
               If you simply want to promote your business on one platform, or
               desire an integrated channel mix, we will seamlessly manage this
               for you on a continuing basis and provide you with detailed
-              reports to help you track performance and ensure you are reaching
-              your target and receiving a great return on your investment.
+              reports to help you track performance and ensure you are receiving
+              a great return on your investment.
             </p>
           </div>
         )}

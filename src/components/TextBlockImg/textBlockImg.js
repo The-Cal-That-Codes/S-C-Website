@@ -16,6 +16,10 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
   let [iconColour, seticonColour] = useState(1)
   let [classControl, setclassControl] = useState(1)
 
+  {
+    /*controller works the same as the packages one using the index to trigger hooks.*/
+  }
+
   const controller = (index) => {
     setclassControl(index)
 

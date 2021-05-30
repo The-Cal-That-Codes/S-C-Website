@@ -70,6 +70,10 @@ const GlobalStyles = createGlobalStyle`
 // utility
 
 
+.paddingBottom{
+  padding-bottom: 2.4rem !important;
+}
+
 .no-pointer:hover{
   cursor: default !important;
 }

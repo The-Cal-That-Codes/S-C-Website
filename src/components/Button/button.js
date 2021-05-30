@@ -5,12 +5,14 @@ import { Link } from "react-scroll"
 const Button = (props) => {
   return (
     <>
+      {/* two different buttons for whether it links to other page or just has onClick event, if anchor is true then it has the Link component from react scroll*/}
       {props.anchor ? (
         <ButtonWrapper
           aria-label={props.label}
           className={props.className}
           onClick={props.onClick}
         >
+          {/*spans form the outside border animation*/}
           <span></span>
           <span></span>
           <span></span>

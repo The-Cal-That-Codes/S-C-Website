@@ -14,8 +14,18 @@ const Packages = ({
   digchart,
   cardClass,
 }) => {
+  {
+    /*works on same logic as banner contact, one hook triggers the animation and a second hook triggers the change in content*/
+  }
   let [cardState, setcardState] = useState(0)
   let [cardState2, setcardState2] = useState(0)
+
+  {
+    /* this controller is used as the onClick event for the cards, each card has unique index which when used as the controller argument
+changes the state to the cards index, activating the corresponding animation and change in content.
+ the drawback of this method is only one card can be viewed at a time although cards are self closing 
+used to have each card be able to work independently but required a seperate controller for each and so performance suffered. */
+  }
 
   const cardControl = (index) => {
     setcardState(index)
@@ -220,7 +230,9 @@ const Packages = ({
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
-                    <li>Branding and awareness for your products and services</li>
+                    <li>
+                      Branding and awareness for your products and services
+                    </li>
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider

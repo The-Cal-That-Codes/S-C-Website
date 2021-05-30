@@ -15,7 +15,10 @@ import diglogo from "../images/diglogo.png"
 
 const index = () => (
   <>
+    {/*landing page with alternate contact form via button press*/}
     <Banner />
+
+    {/*page showing cards of all services 3 for dev 3 for marketing*/}
     <Packages
       uximg={uximg}
       digchart={digchart}
@@ -27,13 +30,14 @@ const index = () => (
       id="packages"
       title2="Digital Marketing"
     />
-
+    {/* dedicated web development page with sections: general, development, design and process*/}
     <TextBlockImg
       id="perks"
       paraEnter="paraEnter flex-Col"
       paraExit="paraExit flex-Col"
     />
 
+    {/* dedicated marketing page with sections: general, consulting, */}
     <TextBlock
       portraitimage1={portraitimage1}
       portraitimage2={portraitimage2}
@@ -41,7 +45,7 @@ const index = () => (
       paraEnter="paraEnter flex-Col"
       paraExit="paraExit flex-Col"
     />
-
+    {/*main contact page */}
     <Contact
       id="contact"
       title="Contact us now"
