@@ -102,9 +102,8 @@ const BannerContact = ({ className, onClick }) => {
 
 const ContactWrapper = styled.div`
   margin: 0 0;
-  margin-top: 1rem;
-  padding: 2rem 0.5rem;
-  padding-bottom: 0px;
+  padding: 0rem 0.5rem;
+  margin-top: 2rem;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -114,7 +113,7 @@ const ContactWrapper = styled.div`
   animation: Enter 0.6s ease-out;
 
   @media (min-width: 480px) {
-    padding: 2rem 3rem;
+    padding: 0rem 3rem;
   }
 
   @media (min-width: 1580px) {
@@ -130,12 +129,13 @@ const ContactWrapper = styled.div`
   }
 
   .formsubmitbutton {
-    background: rgba(1, 1, 1, 0);
+    background: var(--Clr-Primary500);
     color: rgba(255, 255, 255, 1);
-    border: 2px solid #43a0cf;
+    
     font-size: 0.9rem;
     padding: 0.8rem;
     transition: 0.3s;
+    width: auto;
     a {
       filter: drop-shadow(0px 2px 2px black);
     }
@@ -151,16 +151,14 @@ const ContactWrapper = styled.div`
 
   .backbutton {
     background: rgb(1, 1, 1, 0);
-    border: 2px solid rgba(1, 1, 1, 0);
-    color: rgba(255, 255, 255, 1);
-    font-weight: 600;
+    border: 2px solid #43a0cf;
+    color: black;
+    font-weight: bold;
     font-size: 0.8rem;
-    border-radius: 20px;
-    filter: drop-shadow(0px 2px 2px black);
     margin-left: 1rem;
     padding: 0.8rem;
     transition: 0.3s;
-
+    width: auto;
     span {
       opacity: 0;
     }
@@ -173,7 +171,7 @@ const ContactWrapper = styled.div`
   h2 {
     font-size: 2.05rem;
     width: 105%;
-    color: var(--Clr-Secondaryfade);
+    color: black;
     font-family: var(--Font-Title);
     padding: 0.7rem 0rem;
 

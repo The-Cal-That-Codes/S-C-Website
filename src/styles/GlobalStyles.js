@@ -4,6 +4,8 @@ import "@fontsource/poppins"
 import "@fontsource/roboto-slab"
 
 const GlobalStyles = createGlobalStyle`
+
+
 :root {
   
     --heavyWeight: 900;
@@ -24,13 +26,19 @@ const GlobalStyles = createGlobalStyle`
     --para: 1rem;
     --spacing: 1rem;
     --Clr-Primary500: #4193E0;
-    --Clr-tintPackageblue600: rgba(150, 154, 190, 0.3);
+    --Clr-Primary300: #3478B9;
+    --Clr-tintPackageblue600: rgba(150, 154, 190, 1);
     --Clr-Secondaryfade: rgba(255,255,255, 0.9);
     --Font-Title: "Poppins", sans-serif;
     --Font-Second: "Inter", sans-serif;
     --Font-Accent: "Roboto Slab", serif;
 
     font-size: 16px;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
     @media (min-width: 670px) {
       font-size: 1.2rem;
@@ -90,6 +98,10 @@ const GlobalStyles = createGlobalStyle`
 .flex-Row{
   display: flex;
   flex-direction: row;
+}
+
+.flex-wrap{
+  flex-flow: wrap;
 }
 
 .flex-Col{

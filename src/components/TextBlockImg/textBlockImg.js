@@ -43,8 +43,8 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
             <IconContext.Provider
               value={
                 classControl === 1
-                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                  : { color: "#969ABE", className: "icon iconmedia" }
+                  ? { color: "#4871E2", className: "iconmedia" }
+                  : { color: "#4871E2", className: "icon iconmedia" }
               }
             >
               <BsXDiamondFill />
@@ -61,8 +61,8 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
             <IconContext.Provider
               value={
                 classControl === 2
-                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                  : { color: "#969ABE", className: "icon iconmedia" }
+                  ? { color: "#FF463C", className: "iconmedia" }
+                  : { color: "#FF463C", className: "icon iconmedia" }
               }
             >
               <BsTerminalFill />
@@ -79,8 +79,8 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
             <IconContext.Provider
               value={
                 classControl === 3
-                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                  : { color: "#969ABE", className: "icon iconmedia" }
+                  ? { color: "#FFC03C", className: "iconmedia" }
+                  : { color: "#FFC03C", className: "icon iconmedia" }
               }
             >
               <BsDropletHalf />
@@ -97,8 +97,8 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
             <IconContext.Provider
               value={
                 classControl === 4
-                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                  : { color: "#969ABE", className: "icon iconmedia" }
+                  ? { color: "#BE62EA", className: "iconmedia" }
+                  : { color: "#BE62EA", className: "icon iconmedia" }
               }
             >
               <BsLayersFill />
@@ -106,7 +106,7 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
             <h3>Our Process</h3>
           </div>
         </div>
-        <hr className="longLine" />
+        
         {iconColour === 1 ? (
           <div className={classControl === 1 ? paraEnter : paraExit}>
             <p className="paraLeft">
@@ -188,7 +188,7 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
             <div className="contactLink">
               <IconContext.Provider
                 value={{
-                  color: "#969ABE",
+                  color: "#969abe",
                   className: "countermedia contactIcon",
                 }}
               >
@@ -203,7 +203,7 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
               value={
                 classControl === 1
                   ? {
-                      color: "var(--Clr-Primary500)",
+                      color: "#4871e2",
                       className: "countermedia",
                     }
                   : { color: "#969ABE", className: "countermedia" }
@@ -216,7 +216,7 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
               value={
                 classControl === 2
                   ? {
-                      color: "var(--Clr-Primary500)",
+                      color: "#ff463c",
                       className: "countermedia",
                     }
                   : { color: "#969ABE", className: "countermedia" }
@@ -228,7 +228,7 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
               value={
                 classControl === 3
                   ? {
-                      color: "var(--Clr-Primary500)",
+                      color: "#ffc03c",
                       className: "countermedia",
                     }
                   : { color: "#969ABE", className: "countermedia" }
@@ -240,7 +240,7 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
               value={
                 classControl === 4
                   ? {
-                      color: "var(--Clr-Primary500)",
+                      color: "#BE62EA",
                       className: "countermedia",
                     }
                   : { color: "#969ABE", className: "countermedia" }
@@ -253,7 +253,7 @@ const TextBlockImg = ({ id, paraEnter, paraExit }) => {
             <div className="marketingLink">
               <IconContext.Provider
                 value={{
-                  color: "#969ABE",
+                  color: "#969abe",
                   className: "countermedia marketingIcon",
                 }}
               >
@@ -273,10 +273,11 @@ const TextBlockImgWrapper = styled.section`
   padding: 12vh 1rem;
   padding-bottom: 7vh;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #03233c, #03233c);
+  background: #edeff1;
 
   .FooterButton {
     display: none;
+    
   }
 
   h1 {
@@ -284,10 +285,12 @@ const TextBlockImgWrapper = styled.section`
     padding: 1rem 1rem;
     font-size: 1.5rem;
     font-family: var(--Font-Title);
+    color: black;
   }
 
   h3 {
     display: none;
+    color: black;
   }
 
   .iconbox {
@@ -344,7 +347,7 @@ const TextBlockImgWrapper = styled.section`
     margin: 0 auto;
     height: 5px;
     border: 0px;
-    background-color: #6191be;
+    background: black;
     opacity: 0.8;
   }
 
@@ -360,6 +363,7 @@ const TextBlockImgWrapper = styled.section`
       line-height: 1.5;
       font-family: var(--Font-Second);
       font-size: 1.1rem;
+      color: black;
     }
   }
 
@@ -367,6 +371,7 @@ const TextBlockImgWrapper = styled.section`
     display: flex;
     flex-flow: column;
     animation: paraExit 0.45s ease-out;
+    
 
     p {
       padding: 0.5rem 1.2rem;
@@ -375,6 +380,7 @@ const TextBlockImgWrapper = styled.section`
       line-height: 1.5;
       font-family: var(--Font-Second);
       font-size: 1.1rem;
+      color: black;
     }
   }
 
@@ -485,10 +491,7 @@ const TextBlockImgWrapper = styled.section`
       margin-right: 2rem;
     }
 
-    .longLine {
-      margin: 0rem 1rem;
-      width: 100%;
-    }
+    
 
     .smallLine {
       width: 85%;
@@ -523,6 +526,8 @@ const TextBlockImgWrapper = styled.section`
           margin-bottom: 0.2rem;
           align-self: center;
           font-size: 1.2rem;
+          color: black;
+          font-weight: bold;
         }
 
         svg {
@@ -544,7 +549,7 @@ const TextBlockImgWrapper = styled.section`
       }
 
       .marketingLink:hover {
-        transform: scale(1.1);
+        transform: translateY(-5px);
         transition: 0.3s ease-out;
 
         .marketingIcon {
@@ -553,7 +558,7 @@ const TextBlockImgWrapper = styled.section`
       }
 
       .contactLink:hover {
-        transform: scale(1.1);
+        transform:  translateY(-5px);
         transition: 0.3s ease-out;
 
         .contactIcon {
@@ -569,13 +574,14 @@ const TextBlockImgWrapper = styled.section`
       .paraLeft,
       .paraRight {
         font-size: 1.2rem;
-        padding: 1rem 1rem;
+        padding: 0rem 1rem;
         padding-bottom: 0.5rem;
         line-height: 1.6;
       }
 
       .paraLeft {
         margin-left: 8vw;
+        
       }
 
       .paraRight {
@@ -595,8 +601,8 @@ const TextBlockImgWrapper = styled.section`
     padding: 2rem 2rem;
 
     h1 {
-      padding: 0rem 1rem;
-      padding-bottom: 1rem;
+      padding: 1rem 1rem;
+      
     }
 
     .iconbox {
@@ -622,7 +628,7 @@ const TextBlockImgWrapper = styled.section`
     }
 
     .iconbox {
-      margin-bottom: 0.5rem;
+    
 
       svg {
         margin: 0.3rem;
@@ -643,13 +649,13 @@ const TextBlockImgWrapper = styled.section`
   @media (min-height: 809px) {
     padding-bottom: 0.5rem;
     h1 {
-      padding-bottom: 2.5rem;
+      padding-bottom: 1rem;
       font-size: 2.3rem;
     }
 
     @media (min-width: 1580px) {
       h1 {
-        padding-bottom: 0rem;
+        padding-bottom: 1rem;
       }
 
       .iconbox2 {
@@ -661,7 +667,7 @@ const TextBlockImgWrapper = styled.section`
   @media (min-height: 865px) {
     padding-bottom: 0.5rem;
     h1 {
-      padding-bottom: 2.5rem;
+      padding-bottom: 1rem;
       font-size: 2.3rem;
     }
 
@@ -679,7 +685,8 @@ const TextBlockImgWrapper = styled.section`
   @media (min-height: 865px) {
     @media (min-width: 1800px) {
       h1 {
-        padding-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
       }
 
       .iconbox2 {

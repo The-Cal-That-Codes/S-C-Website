@@ -123,11 +123,13 @@ const ContactWrapper = styled.section`
   .formsubmitbutton {
     text-align: center;
     border-radius: 0px;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    background: rgba(1, 1, 1, 0);
+    border: 2px solid #36581b;
     font-size: 1rem;
-    padding: 0.5rem 0.5rem;
+    padding: 0.75rem;
     transition: 0.2s;
+    width: auto;
+    color: black;
+    
 
     span {
       opacity: 0;
@@ -135,7 +137,7 @@ const ContactWrapper = styled.section`
 
     &:hover {
       transform: scale(1.05);
-      border: 2px solid #42b080;
+      
     }
   }
 
@@ -146,11 +148,7 @@ const ContactWrapper = styled.section`
 
   .content-container {
     h2 {
-      background: -webkit-linear-gradient(
-        102.1deg,
-        rgba(96, 221, 142, 0.9) 8.7%,
-        rgba(24, 138, 141, 0.9) 88.1%
-      );
+      background: black;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-family: var(--Font-Title);
@@ -163,6 +161,7 @@ const ContactWrapper = styled.section`
       overflow: hidden;
       width: 100%;
       margin: auto;
+  
 
       @media (min-width: 450px) {
         width: 80%;
@@ -191,14 +190,14 @@ const ContactWrapper = styled.section`
         display: block;
         width: 100%;
         border: none;
-        background-color: rgba(38, 82, 84, 0.6);
+        border-radius: 5px;
+        background-color: rgba(91, 147, 45, 0.6);
         color: #fff;
 
         position: relative;
         box-sizing: border-box;
         outline: none;
-        box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.4),
-          0 6px 20px 0 rgba(0, 0, 0, 0.39);
+        
 
         &:focus,
         &:valid {
@@ -252,7 +251,7 @@ const ContactWrapper = styled.section`
 
   .privacyCheckbox {
     display: flex;
-    background-color: rgba(38, 82, 84, 0.6);
+    background-color: rgba(91, 147, 45, 0.6);
     padding: 0.65rem;
 
     input {

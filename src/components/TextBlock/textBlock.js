@@ -44,8 +44,8 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
             <IconContext.Provider
               value={
                 classControl === 1
-                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                  : { color: "#969ABE", className: "icon iconmedia" }
+                  ? { color: "#4871e2", className: "iconmedia" }
+                  : { color: "#4871e2", className: "icon iconmedia" }
               }
             >
               <BsXDiamondFill />
@@ -62,8 +62,8 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
             <IconContext.Provider
               value={
                 classControl === 2
-                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                  : { color: "#969ABE", className: "icon iconmedia" }
+                  ? { color: "#ff463c", className: "iconmedia" }
+                  : { color: "#ff463c", className: "icon iconmedia" }
               }
             >
               <FaBlackTie />
@@ -80,8 +80,8 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
             <IconContext.Provider
               value={
                 classControl === 3
-                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                  : { color: "#969ABE", className: "icon iconmedia" }
+                  ? { color: "#ffc03c", className: "iconmedia" }
+                  : { color: "#ffc03c", className: "icon iconmedia" }
               }
             >
               <BsTools />
@@ -98,8 +98,8 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
             <IconContext.Provider
               value={
                 classControl === 4
-                  ? { color: "var(--Clr-Primary500)", className: "iconmedia" }
-                  : { color: "#969ABE", className: "icon iconmedia" }
+                  ? { color: "#be62ea", className: "iconmedia" }
+                  : { color: "#be62ea", className: "icon iconmedia" }
               }
             >
               <BsGraphUp />
@@ -107,7 +107,7 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
             <h3>Management</h3>
           </div>
         </div>
-        <hr className="longLine" />
+
         {iconColour === 1 ? (
           <div className={classControl === 1 ? paraEnter : paraExit}>
             <p className="paraLeft">
@@ -128,13 +128,13 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
           </div>
         ) : iconColour === 2 ? (
           <div className={classControl === 2 ? paraEnter : paraExit}>
-            <p className="paraLeft">
+            <p className="paraLeft paddingBottom">
               From building your brand and awareness for products & services, to
               making sure the people looking for them will find you first, we
               will help develop your marketing plan and how to action this via a
               multi-channel integrated media strategy tailored to your needs.
             </p>
-            <p className="paraRight">
+            <p className="paraRight paddingBottom">
               No matter what industry you’re in, we will help you find and
               understand your audience and how to best reach them. This is
               offered as our basic package and is a one-time service, perfect
@@ -199,7 +199,7 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
               value={
                 classControl === 1
                   ? {
-                      color: "var(--Clr-Primary500)",
+                      color: "#4871e2",
                       className: "countermedia",
                     }
                   : { color: "#969ABE", className: "countermedia" }
@@ -212,7 +212,7 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
               value={
                 classControl === 2
                   ? {
-                      color: "var(--Clr-Primary500)",
+                      color: "#ff463c",
                       className: "countermedia",
                     }
                   : { color: "#969ABE", className: "countermedia" }
@@ -224,7 +224,7 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
               value={
                 classControl === 3
                   ? {
-                      color: "var(--Clr-Primary500)",
+                      color: "#ffc03c",
                       className: "countermedia",
                     }
                   : { color: "#969ABE", className: "countermedia" }
@@ -236,7 +236,7 @@ const TextBlock = ({ id, paraEnter, paraExit }) => {
               value={
                 classControl === 4
                   ? {
-                      color: "var(--Clr-Primary500)",
+                      color: "#be62ea",
                       className: "countermedia",
                     }
                   : { color: "#969ABE", className: "countermedia" }
@@ -269,7 +269,7 @@ const TextBlockImgWrapper = styled.section`
   padding: 12vh 1rem;
   padding-bottom: 7vh;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #03233c, #00050c);
+  background: #edeff1;
 
   .FooterButton {
     display: none;
@@ -280,10 +280,12 @@ const TextBlockImgWrapper = styled.section`
     padding: 1rem 1rem;
     font-size: 1.5rem;
     font-family: var(--Font-Title);
+    color: black;
   }
 
   h3 {
     display: none;
+    color: black;
   }
 
   .iconbox {
@@ -334,14 +336,7 @@ const TextBlockImgWrapper = styled.section`
     height: 2.5rem;
   }
 
-  .longLine {
-    max-width: 96%;
-    margin: 0 auto;
-    height: 5px;
-    border: 0px;
-    background-color: var(--Clr-Primary500);
-    opacity: 0.8;
-  }
+  
 
   .smallLine {
     max-width: 80%;
@@ -364,6 +359,7 @@ const TextBlockImgWrapper = styled.section`
       line-height: 1.5;
       font-family: var(--Font-Second);
       font-size: 1.1rem;
+      color: black;
     }
   }
 
@@ -379,6 +375,7 @@ const TextBlockImgWrapper = styled.section`
       line-height: 1.5;
       font-family: var(--Font-Second);
       font-size: 1.1rem;
+      color: black;
     }
   }
 
@@ -398,8 +395,8 @@ const TextBlockImgWrapper = styled.section`
       opacity: 1;
       transform: translateX(0px);
     }
-    100% {
-      opacity: 0;
+      100% {
+        opacity: 0;
       transform: translateX(50px);
     }
   }
@@ -527,6 +524,7 @@ const TextBlockImgWrapper = styled.section`
           margin-bottom: 0.2rem;
           align-self: center;
           font-size: 1.2rem;
+          color: black;
         }
 
         svg {
@@ -573,7 +571,7 @@ const TextBlockImgWrapper = styled.section`
       .paraLeft,
       .paraRight {
         font-size: 1.2rem;
-        padding: 1rem 1rem;
+        padding: 0rem 1rem;
         padding-bottom: 0.5rem;
         line-height: 1.6;
       }
@@ -626,7 +624,7 @@ const TextBlockImgWrapper = styled.section`
     }
 
     .iconbox {
-      margin-bottom: 0.5rem;
+     
 
       svg {
         margin: 0.3rem;
@@ -647,7 +645,7 @@ const TextBlockImgWrapper = styled.section`
   @media (min-height: 809px) {
     padding-bottom: 0.5rem;
     h1 {
-      padding-bottom: 2.5rem;
+      padding-bottom: 0.5rem;
       font-size: 2.3rem;
     }
 
@@ -665,7 +663,7 @@ const TextBlockImgWrapper = styled.section`
   @media (min-height: 865px) {
     padding-bottom: 0.5rem;
     h1 {
-      padding-bottom: 2.5rem;
+      padding-bottom: 0.5rem;
       font-size: 2.3rem;
     }
 
@@ -683,7 +681,7 @@ const TextBlockImgWrapper = styled.section`
   @media (min-height: 865px) {
     @media (min-width: 1800px) {
       h1 {
-        padding-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
       }
 
       .iconbox2 {

@@ -1,6 +1,9 @@
 import styled from "styled-components"
 
 export const BannerStyles = styled.section`
+
+
+
   .hero-image {
     color: #fff;
     min-height: 100vh;
@@ -13,20 +16,24 @@ export const BannerStyles = styled.section`
     }
   }
 
+  
   .mainbutton {
     a {
-      filter: drop-shadow(0px 2px 2px black);
+      /* filter: drop-shadow(0px 2px 2px black); */
     }
     font-size: 0.9rem;
-    
-    margin: 1rem auto;
+ 
+    margin: 1rem 0;
+
+  
   }
 
   .bannercontactbutton {
     font-size: 0.8rem;
     border: 0px;
-    margin: 0 auto;
-    background: none;
+    
+    background:  var(--Clr-Primary500);
+    
   }
 
   .hero-hide {
@@ -40,15 +47,17 @@ export const BannerStyles = styled.section`
   }
 
   .hero-content {
-    margin: 0 auto;
-    margin-top: 3rem;
+    margin: 0 0;
+    margin-top: 1rem;
     padding: 0 0.5rem;
+    
 
     h1 {
       font-size: 2rem;
       line-height: 1.2;
       padding: 0.5rem 0;
       font-family: var(--Font-Title);
+     
 
       span {
         color: var(--Clr-Primary500);
@@ -61,6 +70,7 @@ export const BannerStyles = styled.section`
       font-family: var(--Font-Accent);
       margin-bottom: 0.5rem;
       padding: 0.2rem 0;
+     
     }
   }
 
@@ -98,45 +108,49 @@ export const BannerStyles = styled.section`
     }
 
     .hero-content {
-      padding-top: 3rem;
+      padding-left: 6rem;
 
       h1 {
         font-size: 2.2rem;
+        color: black;
       }
 
       p {
         font-size: 1.4rem;
-        padding-right: 2rem;
-        margin-bottom: 1rem;
+        width: 35vw;
+        margin-bottom: 0.5rem;
+        color: black;
       }
     }
 
     .mainbutton {
-      font-size: 0.7rem;
+      font-size: 1rem;
+      margin-right: 1rem;
     }
 
     .bannercontactbutton {
-      font-size: 0.6rem;
-      padding: 1rem;
+      font-size: 0.9rem;
+      padding: 0.9rem;
+      color: #fff;
     }
   }
 
   .loaderScreen {
-    /* display: none; */
+   
 
-    /* @media(min-width: 768px){ */
+    
     display: flex;
     width: 100%;
     height: 100vh;
-    background: #121212;
+    background: #fff;
     position: absolute;
     z-index: 2;
 
-    }
+    
   }
 
   .loaderExit {
-    /* @media(min-width: 768px){ */
+   
     display: flex;
     width: 100%;
     height: 100vh;
@@ -144,7 +158,7 @@ export const BannerStyles = styled.section`
     position: absolute;
     z-index: 2;
     animation: loaderExit 2s forwards;
-    /* } */
+    
   }
 
   @keyframes loaderExit {
@@ -161,4 +175,5 @@ export const BannerStyles = styled.section`
       z-index: -1;
     }
   }
+
 `

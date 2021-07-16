@@ -139,7 +139,7 @@ export const NavStyles = styled.nav`
       margin-left: 0;
       margin-right: 5px;
       padding: 0.75rem 0;
-      color: #ffffff;
+      color: black;
       padding-bottom: 5vh;
     }
 
@@ -252,6 +252,7 @@ export const NavStyles = styled.nav`
     .masthead {
       img {
         padding: 0rem 3rem ;
+        margin-left: 8rem;
         width: 18rem ;
       }
     }

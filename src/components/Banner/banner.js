@@ -11,23 +11,28 @@ const Banner = (id) => {
   {
     /*data constant for fluid argument for the gatsby background image plugin*/
   }
+ 
+
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "flames.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 5184, quality: 90) {
+          fluid(maxWidth: 4838, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
     }
   `)
+ 
+
 
   {
     /*state for loading page, starts as true so the loading page shows and then turns to false after 1.5seconds*/
   }
 
   let [loading, setLoading] = useState(true)
+  
 
   {
     /* useEffect changing the loading state after a Timeout function of 1.5s should be long enough for title to load properly*/
@@ -73,7 +78,7 @@ const Banner = (id) => {
   }
 
   return (
-    <>
+    <div className="shader">
       {/* styled components tag, BannerStyles is a styled.Section*/}
       <BannerStyles>
         {/* div containg loading screen and loading spinner, change happens due to if statement*/}
@@ -89,7 +94,7 @@ const Banner = (id) => {
         {/* background image component from gatsby background image. loading "eager" to encourage quick display.*/}
         <BackgroundImage
           Tag="section"
-          className="hero-image aiCenter jcCenter flex-Row"
+          className="hero-image aiCenter flex-Row"
           fluid={data.file.childImageSharp.fluid}
           loading="eager"
           fadeIn={false}
@@ -136,29 +141,30 @@ const Banner = (id) => {
                       !
                     </h1>
                     <p className="marginNill">
-                      Personalised sites, support and advertising strategies to
-                      expand your client base and keep revenue coming in.
+                      Personalised websites and marketing for local businesses.
                     </p>
 
-                    <span className="sr-only">Jump to about</span>
-                    {/* button to go to services*/}
-                    <Button
-                      className="mainbutton .bgTrans"
-                      cta="View our services"
-                      label="Banner Learn More"
-                      anchor={true}
-                      index="packages"
-                    />
-                    {/* screen reader tag*/}
-                    <span className="sr-only">Jump to contact</span>
-                    {/* button to go to contact*/}
-                    <Button
-                      cta="Or contact us now!"
-                      label="Banner Learn More"
-                      className="bannercontactbutton .bgTrans"
-                      onClick={() => showContactonClick()}
-                      onKeyDown={() => showContactonClick()}
-                    />
+                    <div className="flex-row flex-wrap buttonDiv">
+                      <span className="sr-only">Jump to about</span>
+                      {/* button to go to services*/}
+                      <Button
+                        className="mainbutton .bgTrans"
+                        cta="View our services"
+                        label="Banner Learn More"
+                        anchor={true}
+                        index="packages"
+                      />
+                      {/* screen reader tag*/}
+                      <span className="sr-only">Jump to contact</span>
+                      {/* button to go to contact*/}
+                      <Button
+                        cta="Or contact us now!"
+                        label="Banner Learn More"
+                        className="bannercontactbutton .bgTrans"
+                        onClick={() => showContactonClick()}
+                        onKeyDown={() => showContactonClick()}
+                      />
+                    </div>
                   </>
                 ) : null}
               </div>
@@ -166,7 +172,7 @@ const Banner = (id) => {
           )}
         </BackgroundImage>
       </BannerStyles>
-    </>
+    </div>
   )
 }
 

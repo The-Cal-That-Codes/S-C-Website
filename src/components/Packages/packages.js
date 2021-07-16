@@ -39,240 +39,71 @@ used to have each card be able to work independently but required a seperate con
     <PackagesWrapper id="packages" className="flex-Col">
       <div className="maincontainer flex-Row">
         <div className="flex-container flex-Col">
-          <div className="headerServices flex-Col">
-            <h1 className="marginNill">
-              Digital solutions for <span className="marketing">Marketing</span>{" "}
-              and <span className="devword">Development</span>
-            </h1>
-          </div>
+        
 
           <div className="servicecards flex-Row jcCenter">
-            <div className="card">
-              {cardState2 === 1 ? (
-                <div
-                  className={
-                    cardState === 1 ? "cardEnter cardlist" : "cardExit cardlist"
-                  }
-                  role="button"
-                  tabIndex="0"
-                  onClick={() => cardControl(0)}
-                  onKeyDown={() => cardControl(0)}
-                >
-                  <div className="flex-Row aiCenter">
-                    <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
-                    >
-                      <BsCaretRight />
-                    </IconContext.Provider>
-                    <li>
-                      Fullstack and database services to fit all your needs
-                    </li>
-                  </div>
-                  <div className="flex-Row aiCenter">
-                    <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "1.9rem" }}
-                    >
-                      <BsCaretRight />
-                    </IconContext.Provider>
-                    <li>Google analytics linked to your Gmail on deployment</li>
-                  </div>
-                  <div className="flex-Row aiCenter">
-                    <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
-                    >
-                      <BsCaretRight />
-                    </IconContext.Provider>
-                    <li>Comprehensive SEO meta tags and keyword analysis</li>
-                  </div>
-                </div>
-              ) : (
-                <div
-                  className={cardState === 1 ? "cardExit" : "cardEnter"}
-                  role="button"
-                  tabIndex="0"
-                  onClick={() => cardControl(1)}
-                  onKeyDown={() => cardControl(1)}
-                >
-                  <img
-                    src={devimg}
-                    alt="Icon by Muhammad Haq on freeicons.io"
-                  />
-                  <div className={cardClass}>
-                    <h2>Web Development</h2>
-                    <p>Original sites coded to your specifications</p>
-                  </div>
-                </div>
-              )}
-            </div>
-            <div className="card">
-              {cardState2 === 2 ? (
-                <div
-                  className={
-                    cardState === 2 ? "cardEnter cardlist" : "cardExit cardlist"
-                  }
-                  role="button"
-                  tabIndex="0"
-                  onClick={() => cardControl(0)}
-                  onKeyDown={() => cardControl(0)}
-                >
-                  <div className="flex-Row aiCenter">
-                    <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
-                    >
-                      <BsCaretRight />
-                    </IconContext.Provider>
-                    <li>Designed in Figma from wireframe to prototype</li>
-                  </div>
-                  <div className="flex-Row aiCenter">
-                    <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
-                    >
-                      <BsCaretRight />
-                    </IconContext.Provider>
-                    <li>Coded using responsive CSS for mobile/tablet</li>
-                  </div>
-                  <div className="flex-Row aiCenter">
-                    <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
-                    >
-                      <BsCaretRight />
-                    </IconContext.Provider>
-                    <li>Stay involved with multiple revisions & updates</li>
-                  </div>
-                </div>
-              ) : (
-                <div
-                  className={cardState === 2 ? "cardExit" : "cardEnter"}
-                  role="button"
-                  tabIndex="0"
-                  onClick={() => cardControl(2)}
-                  onKeyDown={() => cardControl(2)}
-                >
-                  <img
-                    src={desimg}
-                    alt="Icon by Muhammad Haq on freeicons.io"
-                  />
-                  <div className={cardClass}>
-                    <h2>Custom Designs</h2>
-                    <p>A modern web presence tailored to your brand</p>
-                  </div>
-                </div>
-              )}
-            </div>
+            
 
             <div className="card">
-              {cardState2 === 3 ? (
-                <div
-                  className={
-                    cardState === 3 ? "cardEnter cardlist" : "cardExit cardlist"
-                  }
-                  role="button"
-                  tabIndex="0"
-                  onClick={() => cardControl(0)}
-                  onKeyDown={() => cardControl(0)}
-                >
-                  <div className="flex-Row aiCenter">
-                    <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
-                    >
-                      <BsCaretRight />
-                    </IconContext.Provider>
-                    <li>Modern interactive UI including custom animations</li>
-                  </div>
-                  <div className="flex-Row aiCenter">
-                    <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
-                    >
-                      <BsCaretRight />
-                    </IconContext.Provider>
-                    <li>Have traffic flow optimised for your business goals</li>
-                  </div>
-                  <div className="flex-Row aiCenter">
-                    <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "1.7rem" }}
-                    >
-                      <BsCaretRight />
-                    </IconContext.Provider>
-                    <li>Giving your website the right look and feel</li>
-                  </div>
+            {cardState2 === 4 ? (
+              <div
+                className={
+                  cardState === 4 ? "cardEnter cardlist " : "cardExit cardlist"
+                }
+                role="button"
+                tabIndex="0"
+                onClick={() => cardControl(0)}
+                onKeyDown={() => cardControl(0)}
+              >
+                <div className="flex-Row aiCenter">
+                  <IconContext.Provider
+                    value={{ color: "var(--Clr-Primary500)", size: "2.1rem" }}
+                  >
+                    <BsCaretRight />
+                  </IconContext.Provider>
+                  <li>
+                    Branding and awareness for your products and services
+                  </li>
                 </div>
-              ) : (
-                <div
-                  className={cardState === 3 ? "cardExit " : "cardEnter"}
-                  role="button"
-                  tabIndex="0"
-                  onClick={() => cardControl(3)}
-                  onKeyDown={() => cardControl(3)}
-                >
-                  <img src={uximg} alt="Icon by Muhammad Haq on freeicons.io" />
-                  <div className={cardClass}>
-                    <h2>UX principles</h2>
-                    <p>Applied and personalised for your site</p>
-                  </div>
+                <div className="flex-Row aiCenter">
+                  <IconContext.Provider
+                    value={{ color: "var(--Clr-Primary500)", size: "1.9rem" }}
+                  >
+                    <BsCaretRight />
+                  </IconContext.Provider>
+                  <li>Increase your businesses consideration and intent</li>
                 </div>
-              )}
-            </div>
-
-            <div className="card">
-              {cardState2 === 4 ? (
-                <div
-                  className={
-                    cardState === 4 ? "cardEnter cardlist" : "cardExit cardlist"
-                  }
-                  role="button"
-                  tabIndex="0"
-                  onClick={() => cardControl(0)}
-                  onKeyDown={() => cardControl(0)}
-                >
-                  <div className="flex-Row aiCenter">
-                    <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2.1rem" }}
-                    >
-                      <BsCaretRight />
-                    </IconContext.Provider>
-                    <li>
-                      Branding and awareness for your products and services
-                    </li>
-                  </div>
-                  <div className="flex-Row aiCenter">
-                    <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "1.9rem" }}
-                    >
-                      <BsCaretRight />
-                    </IconContext.Provider>
-                    <li>Increase your businesses consideration and intent</li>
-                  </div>
-                  <div className="flex-Row aiCenter">
-                    <IconContext.Provider
-                      value={{
-                        color: "var(--Clr-Primary500)",
-                        size: "1.9rem",
-                      }}
-                    >
-                      <BsCaretRight />
-                    </IconContext.Provider>
-                    <li>Drive more of online target audiences to convert</li>
-                  </div>
+                <div className="flex-Row aiCenter">
+                  <IconContext.Provider
+                    value={{
+                      color: "var(--Clr-Primary500)",
+                      size: "1.9rem",
+                    }}
+                  >
+                    <BsCaretRight />
+                  </IconContext.Provider>
+                  <li>Drive more of online target audiences to convert</li>
                 </div>
-              ) : (
-                <div
-                  className={cardState === 4 ? "cardExit" : "cardEnter"}
-                  role="button"
-                  tabIndex="0"
-                  onClick={() => cardControl(4)}
-                  onKeyDown={() => cardControl(4)}
-                >
-                  <img
-                    src={digchart}
-                    alt="Icon by Muhammad Haq on freeicons.io"
-                  />
-                  <div className={cardClass}>
-                    <h2>Social Media</h2>
-                    <p>Facebook, Instagram, Linked In</p>
-                  </div>
+              </div>
+            ) : (
+              <div
+                className={cardState === 4 ? "cardExit" : "cardEnter"}
+                role="button"
+                tabIndex="0"
+                onClick={() => cardControl(4)}
+                onKeyDown={() => cardControl(4)}
+              >
+                <img
+                  src={digchart}
+                  alt="Icon by Muhammad Haq on freeicons.io"
+                />
+                <div className={cardClass}>
+                  <h2>Social Media</h2>
+                  <p>Facebook, Instagram, Linked In</p>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
+          </div>
 
             <div className="card">
               {cardState2 === 5 ? (
@@ -391,13 +222,182 @@ used to have each card be able to work independently but required a seperate con
                 </div>
               )}
             </div>
+          
+            <div className="card cardRed">
+              {cardState2 === 1 ? (
+                <div
+                  className={
+                    cardState === 1 ? "cardEnter cardlist" : "cardExit cardlist"
+                  }
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(0)}
+                  onKeyDown={() => cardControl(0)}
+                >
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>
+                      Fullstack and database services to fit all your needs
+                    </li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "1.9rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Google analytics linked to your Gmail on deployment</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Comprehensive SEO meta tags and keyword analysis</li>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className={cardState === 1 ? "cardExit" : "cardEnter"}
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(1)}
+                  onKeyDown={() => cardControl(1)}
+                >
+                  <img
+                    src={devimg}
+                    alt="Icon by Muhammad Haq on freeicons.io"
+                  />
+                  <div className={cardClass}>
+                    <h2>Web Development</h2>
+                    <p>Original sites coded to your specifications</p>
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className="card cardRed">
+              {cardState2 === 2 ? (
+                <div
+                  className={
+                    cardState === 2 ? "cardEnter cardlist " : "cardExit cardlist "
+                  }
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(0)}
+                  onKeyDown={() => cardControl(0)}
+                >
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Designed in Figma from wireframe to prototype</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Coded using responsive CSS for mobile/tablet</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Stay involved with multiple revisions & updates</li>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className={cardState === 2 ? "cardExit" : "cardEnter"}
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(2)}
+                  onKeyDown={() => cardControl(2)}
+                >
+                  <img
+                    src={desimg}
+                    alt="Icon by Muhammad Haq on freeicons.io"
+                  />
+                  <div className={cardClass}>
+                    <h2>Custom Designs</h2>
+                    <p>A modern web presence tailored to your brand</p>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            
+            <div className="card cardRed">
+              {cardState2 === 3 ? (
+                <div
+                  className={
+                    cardState === 3 ? "cardEnter cardlist " : "cardExit cardlist "
+                  }
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(0)}
+                  onKeyDown={() => cardControl(0)}
+                >
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Modern interactive UI including custom animations</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Have traffic flow optimised for your business goals</li>
+                  </div>
+                  <div className="flex-Row aiCenter">
+                    <IconContext.Provider
+                      value={{ color: "var(--Clr-Primary500)", size: "1.7rem" }}
+                    >
+                      <BsCaretRight />
+                    </IconContext.Provider>
+                    <li>Giving your website the right look and feel</li>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className={cardState === 3 ? "cardExit " : "cardEnter"}
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => cardControl(3)}
+                  onKeyDown={() => cardControl(3)}
+                >
+                  <img src={uximg} alt="Icon by Muhammad Haq on freeicons.io" />
+                  <div className={cardClass}>
+                    <h2>UX principles</h2>
+                    <p>Applied and personalised for your site</p>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
+
+
           <div className="buttoncontainer textCenter">
             <span className="sr-only">Jump to Development</span>
             <Button
               label="Discover more"
               cta="Development and Design"
-              className="discoverbutton"
+              className="discoverbutton cardRed"
               anchor={true}
               index="perks"
             />
@@ -418,9 +418,9 @@ used to have each card be able to work independently but required a seperate con
 }
 
 const PackagesWrapper = styled.section`
-  padding: 5rem 0.5rem;
+  padding: 2rem 0.5rem;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #101010,#03233c);
+  background: #edeff1;
   justify-content: space-between;
   overflow: hidden;
  
@@ -430,19 +430,7 @@ const PackagesWrapper = styled.section`
   
   }
 
-  .headerServices{
-
-    h1 {
-      font-weight: 600;
-      font-size: 2rem;
-      font-family: var(--Font-Title);
-      padding: 1rem 0.5rem;
-      
-       .marketing, .devword{
-         color: #4193e0;
-       }
-    }
-  }
+  
 
 
 .buttoncontainer{
@@ -450,11 +438,13 @@ const PackagesWrapper = styled.section`
   margin-top: 0.5rem;
   
   .discoverbutton{
+    background-color: var(--Clr-Primary300);
     align-self:center;
     -webkit-align-self: center;
     margin: 0.5rem auto;
     font-size: 0.8rem;
-    a{filter: drop-shadow(0px 2px 2px black);}
+    border: none;
+    color: white;
 
   
   }
@@ -469,6 +459,7 @@ const PackagesWrapper = styled.section`
 
  .servicecards{
   flex-wrap: wrap;
+  margin-top: 1rem;
 
   
   .cardContentH1Image{
@@ -477,7 +468,7 @@ const PackagesWrapper = styled.section`
     p{
       font-family: var(--Font-Second);
       font-weight: 500;
-      color: rgba(255,255,255, 0.8);
+      color: white;
       margin: 0px;
       font-size: 1rem;
       padding: 0.3rem 0.5rem;
@@ -490,7 +481,7 @@ const PackagesWrapper = styled.section`
         margin: 0px;
         font-size: 1.3rem;
         padding: 0.3rem 0.3rem;
-        color: rgba(255,255,255, 0.9);
+        color: white;
        
         
        }
@@ -499,8 +490,10 @@ const PackagesWrapper = styled.section`
    
   }
 
+ 
+
   .card{
-    background-color: var(--Clr-tintPackageblue600);
+    background-color: var(--Clr-Primary300);
     border-radius: 10px;
     width: 100%;
     padding: 1.2rem 0.4rem;
@@ -545,7 +538,9 @@ const PackagesWrapper = styled.section`
     
   }
   
- }
+  .cardRed{
+    background-color: #564EE4  !important;  
+  }
 
 
  .cardEnter{
@@ -586,6 +581,7 @@ const PackagesWrapper = styled.section`
 
 @media (min-width: 550px){
   padding: 5rem 3rem;
+  padding-bottom: 2rem;
 
 
 .cardContentH1Image{
@@ -619,7 +615,7 @@ img{
 }
 
 @media(min-width: 1000px){
-padding-top: 3.5rem;
+
 
 .buttoncontainer{
   
