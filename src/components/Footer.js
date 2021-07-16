@@ -642,11 +642,11 @@ Footer.propTypes = {
 
 const FooterStyles = styled.footer`
   padding: calc(var(--spacing) * 2);
-  background-color: #f9fbfc;
+  background-color: var(--Clr-Primary500);
   font-family: var(--Font-Accent);
   font-weight: 300;
   font-style: normal;
-  color: black;
+  color: #fff;
 
   .flex {
     width: 100%;
@@ -682,13 +682,13 @@ const FooterStyles = styled.footer`
   address,
   li {
     font-size: var(--footerMenuItem);
-    color: black;
+    color: #fff;
   }
 
   address {
     font-style: normal;
     margin-bottom: var(--spacing);
-    color: black;
+    color: #fff;
 
     @media( max-width: 1050px){
       font-size: 1.5rem;
@@ -710,11 +710,11 @@ const FooterStyles = styled.footer`
 
   a {
     text-decoration: none;
-    color: black;
+    color: #fff;
     transition: var(--transMed);
 
     &:hover {
-      color: #4193e0;
+      color: black;
       cursor: pointer;
      
     }

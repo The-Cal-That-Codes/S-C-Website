@@ -420,7 +420,7 @@ used to have each card be able to work independently but required a seperate con
 const PackagesWrapper = styled.section`
   padding: 2rem 0.5rem;
   min-height: 100vh;
-  background: #edeff1;
+  background: #f9fbfc;
   justify-content: space-between;
   overflow: hidden;
  

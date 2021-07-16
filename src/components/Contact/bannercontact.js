@@ -213,8 +213,7 @@ const ContactWrapper = styled.div`
       color: #fff;
       box-sizing: border-box;
       outline: none;
-      box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 0.4),
-        0 6px 20px 0 rgba(0, 0, 0, 0.39);
+   
       width: 100% !important;
       height: 100%;
       padding: 0.8rem 0.4rem;

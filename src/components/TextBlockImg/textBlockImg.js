@@ -273,7 +273,7 @@ const TextBlockImgWrapper = styled.section`
   padding: 12vh 1rem;
   padding-bottom: 7vh;
   min-height: 100vh;
-  background: #edeff1;
+  background: #f9fbfc;
 
   .FooterButton {
     display: none;

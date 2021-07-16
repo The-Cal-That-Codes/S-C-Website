@@ -28,7 +28,7 @@ const Contact = ({ title }) => {
     >
       <ContactWrapper id="contact" className="flex-Col jcCenter marginNill">
         <div className="content-container">
-          <h2 className="marginNill textCenter ">{title}</h2>
+          <h2 className="marginNill textCenter ">Contact Us <span>Now</span>!</h2>
           <form
             name="contact"
             method="post"
@@ -148,12 +148,14 @@ const ContactWrapper = styled.section`
 
   .content-container {
     h2 {
-      background: black;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: black;
       font-family: var(--Font-Title);
       font-size: 2.5rem;
       padding: 1rem 0rem;
+      
+      span{
+        color: var(--Clr-Primary500);
+      }
     }
 
     form {

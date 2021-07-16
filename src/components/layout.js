@@ -6,6 +6,7 @@ import Seo from "../components/Seo/seo"
 import GlobalStyles from "../styles/GlobalStyles"
 import TypographyStyles from "../styles/TypographyStyles"
 import Logo from "../images/logoblack.png"
+import Logo2 from "../images/logowhite.svg"
 
 const Layout = ({ children }) => {
   return (
@@ -15,7 +16,7 @@ const Layout = ({ children }) => {
       <TypographyStyles />
       <Navbar Logo={Logo} />
       <div className="layout">{children}</div>
-      <Footer Logo={Logo} />
+      <Footer Logo={Logo2} />
     </>
   )
 }
