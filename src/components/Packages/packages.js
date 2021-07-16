@@ -57,7 +57,7 @@ used to have each card be able to work independently but required a seperate con
               >
                 <div className="flex-Row aiCenter">
                   <IconContext.Provider
-                    value={{ color: "var(--Clr-Primary500)", size: "2.1rem" }}
+                    value={{ color: "#FFD13C", size: "2.1rem" }}
                   >
                     <BsCaretRight />
                   </IconContext.Provider>
@@ -67,7 +67,7 @@ used to have each card be able to work independently but required a seperate con
                 </div>
                 <div className="flex-Row aiCenter">
                   <IconContext.Provider
-                    value={{ color: "var(--Clr-Primary500)", size: "1.9rem" }}
+                    value={{ color: "#FFD13C", size: "1.9rem" }}
                   >
                     <BsCaretRight />
                   </IconContext.Provider>
@@ -76,7 +76,7 @@ used to have each card be able to work independently but required a seperate con
                 <div className="flex-Row aiCenter">
                   <IconContext.Provider
                     value={{
-                      color: "var(--Clr-Primary500)",
+                      color: "#FFD13C",
                       size: "1.9rem",
                     }}
                   >
@@ -118,7 +118,7 @@ used to have each card be able to work independently but required a seperate con
                 >
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "#FFD13C", size: "2rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -126,7 +126,7 @@ used to have each card be able to work independently but required a seperate con
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2.1rem" }}
+                      value={{ color: "#FFD13C", size: "2.1rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -135,7 +135,7 @@ used to have each card be able to work independently but required a seperate con
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
                       value={{
-                        color: "var(--Clr-Primary500)",
+                        color: "#FFD13C",
                         size: "1.95rem",
                       }}
                     >
@@ -177,7 +177,7 @@ used to have each card be able to work independently but required a seperate con
                 >
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "#FFD13C", size: "2rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -185,7 +185,7 @@ used to have each card be able to work independently but required a seperate con
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "1.8rem" }}
+                      value={{ color: "#FFD13C", size: "1.8rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -194,7 +194,7 @@ used to have each card be able to work independently but required a seperate con
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
                       value={{
-                        color: "var(--Clr-Primary500)",
+                        color: "#FFD13C",
                         size: "1.95rem",
                       }}
                     >
@@ -236,7 +236,7 @@ used to have each card be able to work independently but required a seperate con
                 >
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "#FFD13C", size: "2rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -246,7 +246,7 @@ used to have each card be able to work independently but required a seperate con
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "1.9rem" }}
+                      value={{ color: "#FFD13C", size: "1.9rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -254,7 +254,7 @@ used to have each card be able to work independently but required a seperate con
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "#FFD13C", size: "2rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -293,7 +293,7 @@ used to have each card be able to work independently but required a seperate con
                 >
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "#FFD13C", size: "2rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -301,7 +301,7 @@ used to have each card be able to work independently but required a seperate con
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "#FFD13C", size: "2rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -309,7 +309,7 @@ used to have each card be able to work independently but required a seperate con
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "#FFD13C", size: "2rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -350,7 +350,7 @@ used to have each card be able to work independently but required a seperate con
                 >
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "#FFD13C", size: "2rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -358,7 +358,7 @@ used to have each card be able to work independently but required a seperate con
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "2rem" }}
+                      value={{ color: "#FFD13C", size: "2rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
@@ -366,7 +366,7 @@ used to have each card be able to work independently but required a seperate con
                   </div>
                   <div className="flex-Row aiCenter">
                     <IconContext.Provider
-                      value={{ color: "var(--Clr-Primary500)", size: "1.7rem" }}
+                      value={{ color: "#FFD13C", size: "1.7rem" }}
                     >
                       <BsCaretRight />
                     </IconContext.Provider>
