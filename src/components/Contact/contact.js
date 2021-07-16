@@ -26,7 +26,7 @@ const Contact = ({ title }) => {
       loading="eager"
       fadeIn={false}
     >
-      <ContactWrapper id="contact" className="flex-Col jcCenter marginNill">
+      <ContactWrapper id="contact" className="flex-Col aiCenter jcCenter marginNill">
         <div className="content-container">
           <h2 className="marginNill textCenter ">Contact Us <span>Now</span>!</h2>
           <form
@@ -119,11 +119,12 @@ const ContactWrapper = styled.section`
   min-height: 100vh;
   padding: 1rem 1rem;
   padding-top: 3rem;
+  
 
   .formsubmitbutton {
     text-align: center;
     border-radius: 0px;
-    border: 2px solid #36581b;
+    border: 2px solid rgba(65, 147, 224, 1);
     font-size: 1rem;
     padding: 0.75rem;
     transition: 0.2s;
@@ -147,6 +148,10 @@ const ContactWrapper = styled.section`
   }
 
   .content-container {
+    margin: 0 0;
+    transform: translateX(10vw);
+    padding: 0 1rem;
+
     h2 {
       color: black;
       font-family: var(--Font-Title);
@@ -176,6 +181,7 @@ const ContactWrapper = styled.section`
       .input-area {
         margin-bottom: 0.7rem;
         position: relative;
+        box-shadow: rgba(0, 0, 0, 0.2) 5px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 10px 0px;
 
         &.button-area {
           margin-bottom: 0;
@@ -192,8 +198,8 @@ const ContactWrapper = styled.section`
         display: block;
         width: 100%;
         border: none;
-        border-radius: 5px;
-        background-color: rgba(91, 147, 45, 0.6);
+        
+        background-color: rgba(65, 147, 224, 0.6);
         color: #fff;
 
         position: relative;
@@ -253,7 +259,7 @@ const ContactWrapper = styled.section`
 
   .privacyCheckbox {
     display: flex;
-    background-color: rgba(91, 147, 45, 0.6);
+    background-color: rgba(65, 147, 224, 0.6);
     padding: 0.65rem;
 
     input {
