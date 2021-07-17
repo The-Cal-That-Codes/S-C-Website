@@ -135,7 +135,7 @@ const GlobalStyles = createGlobalStyle`
 
 body {
   font-family: "Gothic A1", sans-serif;
-    color: #fff;
+    color: black;
     /* background-color: #060c21; */
     background: black;
 }

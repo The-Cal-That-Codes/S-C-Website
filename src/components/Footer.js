@@ -669,6 +669,9 @@ const FooterStyles = styled.footer`
     .backButton{
       margin-bottom: 1rem;
       padding: 0.5rem;
+      color: #fff;
+      border: 2px solid white;
+      width: auto;
     }
   }
 
@@ -722,7 +725,7 @@ const FooterStyles = styled.footer`
 
   .privacy:hover{
     cursor: pointer;
-    color: #4193e0;
+    color: black;
   }
 
   @media (min-width: 768px) {

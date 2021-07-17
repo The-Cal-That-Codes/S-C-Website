@@ -149,8 +149,11 @@ const ContactWrapper = styled.section`
 
   .content-container {
     margin: 0 0;
-    transform: translateX(10vw);
     padding: 0 1rem;
+
+    @media(min-width: 768px) {
+      transform: translateX(10vw);
+    }
 
     h2 {
       color: black;
@@ -237,7 +240,7 @@ const ContactWrapper = styled.section`
           left: 0px;
           bottom: -1px;
           height: 1px;
-          background: linear-gradient(90deg, #42b080, #42b080);
+          background: coral;
           width: 100%;
           transform: translateX(-100%);
           transition: transform 0.3s ease;

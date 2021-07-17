@@ -108,7 +108,7 @@ export const NavStyles = styled.nav`
     align-items: flex-start;
     position: fixed;
     text-align: center;
-    background: linear-gradient(45deg, rgba(25, 54, 64, 0.95), rgba(25, 54, 64, 0.95));
+    background: rgba(65, 147, 224, 0.85);
     margin: 0;
     height: 100%;
     top: 0;
@@ -139,7 +139,7 @@ export const NavStyles = styled.nav`
       margin-left: 0;
       margin-right: 5px;
       padding: 0.75rem 0;
-      color: black;
+      color: #fff;
       padding-bottom: 5vh;
     }
 
@@ -187,7 +187,7 @@ export const NavStyles = styled.nav`
       display: block;
       width: 30px;
       height: 2px;
-      background-color: #fff;
+      background-color: black;
       transition: 0.2s ease-in;
 
       &:nth-child(1) {

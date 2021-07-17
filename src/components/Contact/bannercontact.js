@@ -108,7 +108,8 @@ const ContactWrapper = styled.div`
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  max-width: 650px;
+  max-width: 100%;
+  
 
   animation: Enter 0.6s ease-out;
 
@@ -118,15 +119,15 @@ const ContactWrapper = styled.div`
 
   @media (min-width: 1580px) {
     max-width: 800px;
+    margin-left: 6rem;
+    padding-left: 0px;
   }
 
   .contactheaderbrick {
     padding: 1px 0;
   }
 
-  .button-area {
-    margin-bottom: 1.4rem !important;
-  }
+ 
 
   .formsubmitbutton {
     background: var(--Clr-Primary500);
@@ -145,7 +146,7 @@ const ContactWrapper = styled.div`
 
     &:hover {
       transform: scale(1.05);
-      border: 2px solid #42b080;
+      
     }
   }
 
@@ -169,7 +170,7 @@ const ContactWrapper = styled.div`
   }
 
   h2 {
-    font-size: 2.05rem;
+    font-size: 1.5rem;
     width: 105%;
     color: black;
     font-family: var(--Font-Title);
@@ -192,6 +193,14 @@ const ContactWrapper = styled.div`
   form {
     position: relative;
     overflow: hidden;
+
+    @media(min-width: 768px) {
+      max-width: 500px;
+    }
+
+    @media(min-width: 1100px){
+      max-width: 600px;
+    }
 
     .input-area {
       margin-bottom: 1rem;
@@ -300,6 +309,14 @@ const ContactWrapper = styled.div`
       opacity: 1;
       transform: translateY(0px);
     }
+  }
+
+  @media (min-width:1100px){
+    .button-area {
+    margin-bottom: 1.4rem !important;
+
+    
+  }
   }
 `
 

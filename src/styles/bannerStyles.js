@@ -5,7 +5,7 @@ export const BannerStyles = styled.section`
 
 
   .hero-image {
-    color: #fff;
+    
     min-height: 100vh;
 
     padding: 1rem 0.5rem;
@@ -22,17 +22,20 @@ export const BannerStyles = styled.section`
       /* filter: drop-shadow(0px 2px 2px black); */
     }
     font-size: 0.9rem;
- 
+    width: 80%;
     margin: 1rem 0;
-
+    max-width: 300px;
   
   }
 
   .bannercontactbutton {
     font-size: 0.8rem;
     border: 0px;
-    
+    padding: 0.9rem;
+    color: #fff;
     background:  var(--Clr-Primary500);
+    width: 70%;
+    max-width: 300px;
     
   }
 
@@ -101,6 +104,12 @@ export const BannerStyles = styled.section`
     }
   }
 
+  @media(min-width: 716px) {
+    .mainbutton{
+      margin: 0.5rem;
+    }
+  }
+
   @media (min-width: 1100px) {
     .hero-image {
       padding: 1rem 6rem;
@@ -122,16 +131,25 @@ export const BannerStyles = styled.section`
         color: black;
       }
     }
-
+.buttonDiv{
+  justify-content:flex-start;
+}
     .mainbutton {
       font-size: 1rem;
       margin-right: 1rem;
+      margin-left: 0rem;
+      width: 350px;
     }
 
     .bannercontactbutton {
       font-size: 0.9rem;
-      padding: 0.9rem;
-      color: #fff;
+      width: 350px;
+    }
+  }
+
+  @media(min-width: 1580px){
+    .mainbutton, .bannercontactbutton{
+      max-width: 350px;
     }
   }
 

@@ -418,7 +418,7 @@ used to have each card be able to work independently but required a seperate con
 }
 
 const PackagesWrapper = styled.section`
-  padding: 2rem 0.5rem;
+  padding: 4rem 0.5rem;
   min-height: 100vh;
   background: #f9fbfc;
   justify-content: space-between;
@@ -615,7 +615,7 @@ img{
 }
 
 @media(min-width: 1000px){
-
+padding: 2rem 0.5rem;
 
 .buttoncontainer{
   
@@ -656,7 +656,7 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
-    
+    margin-top: 3rem;
     
   }
 

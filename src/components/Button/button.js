@@ -38,7 +38,8 @@ const ButtonWrapper = styled.button`
   display: inline-block;
   text-align: center;
   line-height: 1.2;
-  width: 350px;
+  
+  max-width: 100%;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   text-decoration: none;

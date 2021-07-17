@@ -144,7 +144,7 @@ const Banner = (id) => {
                       Personalised websites and marketing for local businesses.
                     </p>
 
-                    <div className="flex-row flex-wrap buttonDiv">
+                    <div className="flex-Row flex-wrap jcCenter aiCenter buttonDiv">
                       <span className="sr-only">Jump to about</span>
                       {/* button to go to services*/}
                       <Button
