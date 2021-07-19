@@ -5,54 +5,66 @@ import { animateScroll as scroll, Link } from "react-scroll"
 
 const Navbar = ({ Logo }) => {
   const [isOpen, setNav] = useState(false)
+  const [navClass, setNavClass] = useState(false)
 
   const toggleNav = () => {
     setNav((isOpen) => !isOpen)
   }
 
+  const setNavBackground = () => {
+    if (window.scrollY >= 100) {
+      setNavClass(true);
+    } else {
+      setNavClass(false);
+    }
+  }
+
+  window.addEventListener('scroll', setNavBackground);
+
   return (
     <NavStyles>
-      <div className="masthead flex-container">
-        <div
-          className="logo-container"
-          role="button"
-          tabIndex="0"
-          onClick={() => scroll.scrollToTop()}
-          onKeyDown={() => scroll.scrollToTop()}
-        >
-          <img src={Logo} alt="Startup Logo" />
+      <div className={ navClass ? "navColour navdiv" : "navdiv"}>
+        <div className="masthead flex-container">
+          <div
+            className="logo-container"
+            role="button"
+            tabIndex="0"
+            onClick={() => scroll.scrollToTop()}
+            onKeyDown={() => scroll.scrollToTop()}
+          >
+            <img src={Logo} alt="Startup Logo" />
+          </div>
+          <button
+            className={isOpen ? "toggle-btn toggle-btn-active" : "toggle-btn"}
+            type="button"
+            onClick={toggleNav}
+            aria-label="Menu Button"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-
-        <button
-          className={isOpen ? "toggle-btn toggle-btn-active" : "toggle-btn"}
-          type="button"
-          onClick={toggleNav}
-          aria-label="Menu Button"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <ul className={isOpen ? "nav-links show-nav navfontplus" : "nav-links"}>
+          {links.map((item, index) => {
+            return (
+              <Link
+                key={index}
+                to={item.path}
+                smooth={true}
+                duration={500}
+                tabIndex={0}
+                onClick={toggleNav}
+                onKeyDown={toggleNav}
+              >
+                <li key={index} className="navlist">
+                  {item.text}
+                </li>
+              </Link>
+            )
+          })}
+        </ul>
       </div>
-      <ul className={isOpen ? "nav-links show-nav navfontplus" : "nav-links"}>
-        {links.map((item, index) => {
-          return (
-            <Link
-              key={index}
-              to={item.path}
-              smooth={true}
-              duration={500}
-              tabIndex={0}
-              onClick={toggleNav}
-              onKeyDown={toggleNav}
-            >
-              <li key={index} className="navlist">
-                {item.text}
-              </li>
-            </Link>
-          )
-        })}
-      </ul>
     </NavStyles>
   )
 }
@@ -64,13 +76,22 @@ export const NavStyles = styled.nav`
   width: 100%;
   left: 0;
   right: 0;
-  display: flex;
-  padding: 1rem 0.5rem;
-  padding-top: 0.5rem;
+  
   box-sizing: border-box;
   transition: 0.35s ease-out;
-  
 
+  .navdiv{
+    display: flex;
+  padding: 0rem 0.5rem;
+  padding-top: 0.5rem;
+  transition: 0.35s ease-out;
+  }
+
+  .navColour{
+    background: rgba(255, 255, 255, 0.7);
+  }
+  
+ 
 
   .logo-container{
     height:100%;
@@ -84,8 +105,10 @@ export const NavStyles = styled.nav`
 
     @media (max-width: 1128px){
       width: 95%;
+      
     }
 
+    
     img {
       width: 11rem;
       height: auto;
