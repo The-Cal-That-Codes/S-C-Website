@@ -126,6 +126,10 @@ export const NavStyles = styled.nav`
 
       @media(min-width: 1128px ){
       padding-left: 0vw;
+
+      li{
+        color: black;
+      }
     }
 
 
