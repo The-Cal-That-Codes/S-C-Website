@@ -177,7 +177,7 @@ export const NavStyles = styled.nav`
     }
 
     
-  }
+  
 
   .toggle-btn {
     width: 40px;
@@ -224,6 +224,7 @@ export const NavStyles = styled.nav`
   @media (min-width: 1128px) {
 
     padding-bottom: 0px;
+
     .masthead {
       flex-direction: column;
       justify-content: center;
@@ -250,6 +251,7 @@ export const NavStyles = styled.nav`
       li {
         padding: 0 0;
         margin-left: 1rem;
+        color: black;
       }
     }
 
