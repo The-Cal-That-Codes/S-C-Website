@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import links from "../constants/links"
 import styled from "styled-components"
 import { animateScroll as scroll, Link } from "react-scroll"
@@ -11,6 +11,12 @@ const Navbar = ({ Logo }) => {
     setNav((isOpen) => !isOpen)
   }
 
+  useEffect(() => {
+    window.addEventListener('scroll', setNavBackground);
+
+    
+  })
+
   const setNavBackground = () => {
     if (window.scrollY >= 100) {
       setNavClass(true);
@@ -19,7 +25,7 @@ const Navbar = ({ Logo }) => {
     }
   }
 
-  window.addEventListener('scroll', setNavBackground);
+  
 
   return (
     <NavStyles>
