@@ -37,7 +37,7 @@ const pluginImage = getImage(data.file);
     /* useEffect changing the loading state after a Timeout function of 1.5s should be long enough for title to load properly*/
   }
   useEffect(() => {
-    setLoading(false)
+    setLoading(true)
     setTimeout(() => {
       setLoading(false)
     }, 1500)
