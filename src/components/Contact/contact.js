@@ -12,7 +12,7 @@ const Contact = ({ title }) => {
   const data = useStaticQuery(graphql`{
   file(relativePath: {eq: "purple-bg.jpg"}) {
     childImageSharp {
-      gatsbyImageData(quality: 90, layout: FULL_WIDTH)
+      gatsbyImageData(quality: 90, layout: FULL_WIDTH, placeholder: BLURRED)
     }
   }
 }

@@ -18,7 +18,7 @@ const Banner = (id) => {
   const data = useStaticQuery(graphql`{
   file(relativePath: {eq: "flames.jpg"}) {
     childImageSharp {
-      gatsbyImageData(quality: 90, layout: FULL_WIDTH)
+      gatsbyImageData(quality: 90, layout: FULL_WIDTH, placeholder: BLURRED)
     }
   }
 }
@@ -30,14 +30,14 @@ const pluginImage = getImage(data.file);
     /*state for loading page, starts as true so the loading page shows and then turns to false after 1.5seconds*/
   }
 
-  let [loading, setLoading] = useState(true)
+  let [loading, setLoading] = useState(false)
   
 
   {
     /* useEffect changing the loading state after a Timeout function of 1.5s should be long enough for title to load properly*/
   }
   useEffect(() => {
-    setLoading(true)
+    setLoading(false)
     setTimeout(() => {
       setLoading(false)
     }, 1500)
