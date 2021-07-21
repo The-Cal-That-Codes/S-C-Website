@@ -387,7 +387,7 @@ const TextBlockImgWrapper = styled.section`
   @keyframes paraEnter {
     0% {
       opacity: 0;
-      transform: translateX(-50px);
+      transform: translateX(-10px);
     }
     100% {
       opacity: 1;
@@ -402,7 +402,7 @@ const TextBlockImgWrapper = styled.section`
     }
     100% {
       opacity: 0;
-      transform: translateX(50px);
+      transform: translateX(10px);
     }
   }
 

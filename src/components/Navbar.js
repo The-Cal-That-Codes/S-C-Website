@@ -90,6 +90,7 @@ export const NavStyles = styled.nav`
     display: flex;
   padding: 0rem 0.5rem;
   padding-top: 0.5rem;
+  padding-right: 0rem;
   transition: 0.35s ease-out;
   }
 
@@ -213,8 +214,10 @@ export const NavStyles = styled.nav`
     height: 40px;
     padding: 5px;
     padding-top: 1.4rem;
+    z-index: 3;
     background-color: transparent;
     border: none;
+    
 
     span {
       display: block;
