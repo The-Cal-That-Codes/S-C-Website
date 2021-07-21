@@ -2,29 +2,29 @@ import React from "react"
 import styled from "styled-components"
 import Button from "../Button/button"
 import BackgroundImage from "gatsby-background-image"
+import { getImage } from 'gatsby-plugin-image';
+import { BgImage } from 'gbimage-bridge';
 import { useStaticQuery, graphql } from "gatsby"
 import { animateScroll as scroll } from "react-scroll"
 
+
 const Contact = ({ title }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "purple-bg.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 6000, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  file(relativePath: {eq: "purple-bg.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 90, layout: FULL_WIDTH)
     }
-  `)
+  }
+}
+`)
+
+const pluginImage = getImage(data.file);
 
   return (
-    <BackgroundImage
+    <BgImage
+    image={pluginImage}
       id="perks"
       Tag="section"
-      fluid={data.file.childImageSharp.fluid}
-      loading="eager"
-      fadeIn={false}
     >
       <ContactWrapper id="contact" className="flex-Col aiCenter jcCenter marginNill">
         <div className="content-container">
@@ -111,8 +111,8 @@ const Contact = ({ title }) => {
           </form>
         </div>
       </ContactWrapper>
-    </BackgroundImage>
-  )
+    </BgImage>
+  );
 }
 
 const ContactWrapper = styled.section`

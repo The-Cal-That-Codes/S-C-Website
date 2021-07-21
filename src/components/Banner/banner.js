@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import { getImage } from 'gatsby-plugin-image';
+import { BgImage } from 'gbimage-bridge';
 import Button from "../Button/button"
 import TextLoop from "react-text-loop"
 import BannerContact from "../Contact/bannercontact"
@@ -13,19 +15,16 @@ const Banner = (id) => {
   }
  
 
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "flames.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 4838, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  file(relativePath: {eq: "flames.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 90, layout: FULL_WIDTH)
     }
-  `)
+  }
+}
+`)
  
-
+const pluginImage = getImage(data.file);
 
   {
     /*state for loading page, starts as true so the loading page shows and then turns to false after 1.5seconds*/
@@ -38,7 +37,7 @@ const Banner = (id) => {
     /* useEffect changing the loading state after a Timeout function of 1.5s should be long enough for title to load properly*/
   }
   useEffect(() => {
-    setLoading(true)
+    setLoading(false)
     setTimeout(() => {
       setLoading(false)
     }, 1500)
@@ -92,12 +91,10 @@ const Banner = (id) => {
           <BounceLoader color={"#2479DD"} loading={loading} size={60} />
         </div>
         {/* background image component from gatsby background image. loading "eager" to encourage quick display.*/}
-        <BackgroundImage
+        <BgImage image={pluginImage}
           Tag="section"
           className="hero-image aiCenter flex-Row"
-          fluid={data.file.childImageSharp.fluid}
-          loading="eager"
-          fadeIn={false}
+         
         >
           {/* if statement for change to contact. if true shows contact if false shows landing content*/}
           {changetoContact ? (
@@ -170,10 +167,10 @@ const Banner = (id) => {
               </div>
             ))
           )}
-        </BackgroundImage>
+        </BgImage>
       </BannerStyles>
     </div>
-  )
+  );
 }
 
 export default Banner
